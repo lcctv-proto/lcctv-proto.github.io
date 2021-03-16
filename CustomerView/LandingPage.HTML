@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body></body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+      #background-tint{
+        background-color: rgba(0, 0, 0, 0.5) !important;
+      }
+
+      @media only screen and (min-width: 680px){
+        body, html{
+          background-image: url(BlueImage.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto auto;
+          height: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div id="background-tint" class="row h-100">
+        <div class="row d-flex text-center justify-content-center align-items-center p-5 text-light">
+          <div class="row">
+            <span class="h3">LAKE COMMUNITY CABLE TV</span>
+            <span class="h4">Welcome to our new and improved portal! Apply for pure fiber internet quickly, pay your Converge subscription online, and manage your account easily.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">Place sticky footer content here.</span>
+    </div>
+  </footer>
+  </body>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </html>
