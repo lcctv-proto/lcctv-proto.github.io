@@ -1,7 +1,7 @@
 # Lake Community Cable TV
 
 ## AdminViews
-- Applications.html
+- [Applications.html](https://lcctv-proto.github.io/AdminView/Applications.html)
 - CreateAccount.html
 - Dispatch.html
 - Employees.html
