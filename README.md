@@ -12,9 +12,9 @@
 - [Teams.html](https://lcctv-proto.github.io/AdminView/Teams.html)
 
 ## CashierView
-- LandingPage.html
-- Login.html
-- UserInfo.html
+- [LandingPage.html](https://lcctv-proto.github.io/CashierView/LandingPage.html)
+- [Login.html](https://lcctv-proto.github.io/CashierView/Login.html)
+- [UserInfo.html](https://lcctv-proto.github.io/CashierView/UserInfo.html)
 
 ## CustomerView
 - ExistingCustomer
