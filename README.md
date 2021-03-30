@@ -18,21 +18,21 @@
 
 ## CustomerView
 - ExistingCustomer
-  - CustomerDashboard.html
-  - Login.html
-  - Payment.html
-  - ServiceChange.html
-  - ServiceTermination.html
-  - ViewAccount.html
+  - [CustomerDashboard.html](https://lcctv-proto.github.io/CustomerView/ExistingCustomer/CustomerDashboard.html)
+  - [Login.html](https://lcctv-proto.github.io/CustomerView/ExistingCustomer/Login.html)
+  - [Payment.html](https://lcctv-proto.github.io/CustomerView/ExistingCustomer/Payment.html)
+  - [ServiceChange.html](https://lcctv-proto.github.io/CustomerView/ExistingCustomer/ServiceChange.html)
+  - [ServiceTermination.html](https://lcctv-proto.github.io/CustomerView/ExistingCustomer/ServiceTermination.html)
+  - [ViewAccount.html](https://lcctv-proto.github.io/CustomerView/ExistingCustomer/ViewAccount.html)
  
 - NewCustomer
-  - Application.html
-  - CheckAppStatus.html
+  - [Application.html](https://lcctv-proto.github.io/CustomerView/NewCustomer/Application.html)
+  - [CheckAppStatus.html](https://lcctv-proto.github.io/CustomerView/NewCustomer/CheckAppStatus.html)
   
-- AboutUs.html
-- ContactUs.html
-- LandingPage.html
-- ServiceCatalog.html
+- [AboutUs.html](https://lcctv-proto.github.io/CustomerView/AboutUs.html)
+- [ContactUs.html](https://lcctv-proto.github.io/CustomerView/ContactUs.html)
+- [LandingPage.html](https://lcctv-proto.github.io/CustomerView/LandingPage.html)
+- [ServiceCatalog.html](https://lcctv-proto.github.io/CustomerView/ServiceCatalog.html)
 
 ## HeadView
 - Employees.html
