@@ -40,11 +40,11 @@
 - [Login.html](https://lcctv-proto.github.io/HeadView/Login.html)
 
 ## SupportView
-- LandingPage.html
-- Login.html
+- [LandingPage.html](https://lcctv-proto.github.io/SupportView/Employees.html)
+- [Login.html](https://lcctv-proto.github.io/SupportView/Login.html)
 
 ## TechnicianView
-- Area.html
-- Dispatch.html
-- LandingPage.html
-- Login.html
+- [Area.html](https://lcctv-proto.github.io/TechnicianView/Area.html)
+- [Dispatch.html](https://lcctv-proto.github.io/TechnicianView/Dispatch.html)
+- [LandingPage.html](https://lcctv-proto.github.io/TechnicianView/LandingPage.html)
+- [Login.html](https://lcctv-proto.github.io/TechnicianView/Login.html)
