@@ -1,13 +1,81 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <div class="container-fluid">
 
+<head>
+    <meta charset="utf-8">
+    <style media="screen">
+        body,
+        html {
+            background-color: #FFF !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #14274e">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="Login.html">LCC TV</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="CustomerDashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ViewAccount.html">View Accounts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ServiceTermination.html">Service Termination</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ServiceChange.html">Service Change</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-light" type="submit">Logout</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-center mt-5">
+            <div class="col-6">
+                <div class="card-header text-light text-center" style="background-color: #14274e;">
+                    <span class="h1">Payment Form</span>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Account Number (13-Digit):</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Account Number (13-Digit)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Account Name:</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Account Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Amount:</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Amount">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="" placeholder="Enter Email Address (Optional)">
+                        </div>
+                        <button class="btn btn-outline-light" style="background-color: #14274e; float: right;" type="submit">Pay Bills</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
 </html>
