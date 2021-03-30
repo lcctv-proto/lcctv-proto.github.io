@@ -35,9 +35,9 @@
 - [ServiceCatalog.html](https://lcctv-proto.github.io/CustomerView/ServiceCatalog.html)
 
 ## HeadView
-- Employees.html
-- LandingPage.html
-- LandingPage.html
+- [Employees.html](https://lcctv-proto.github.io/HeadView/Employees.html)
+- [LandingPage.html](https://lcctv-proto.github.io/HeadView/LandingPage.html)
+- [Login.html](https://lcctv-proto.github.io/HeadView/Login.html)
 
 ## SupportView
 - LandingPage.html
