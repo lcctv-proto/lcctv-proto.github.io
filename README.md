@@ -2,14 +2,14 @@
 
 ## AdminViews
 - [Applications.html](https://lcctv-proto.github.io/AdminView/Applications.html)
-- CreateAccount.html
-- Dispatch.html
-- Employees.html
-- Equipments.html
-- LandingPage.html
-- Login.html
-- MyNotes.html
-- Teams.html
+- [CreateAccount.html](https://lcctv-proto.github.io/AdminView/CreateAccount.html)
+- [Dispatch.html](https://lcctv-proto.github.io/AdminView/Dispatch.html)
+- [Employees.html](https://lcctv-proto.github.io/AdminView/Employees.html)
+- [Equipments.html](https://lcctv-proto.github.io/AdminView/Equipments.html)
+- [LandingPage.html](https://lcctv-proto.github.io/AdminView/LandingPage.html)
+- [Login.html](https://lcctv-proto.github.io/AdminView/Login.html)
+- [MyNotes.html](https://lcctv-proto.github.io/AdminView/MyNotes.html)
+- [Teams.html](https://lcctv-proto.github.io/AdminView/Teams.html)
 
 ## CashierView
 - LandingPage.html
