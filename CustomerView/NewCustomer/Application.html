@@ -32,6 +32,55 @@
         table.blueBorder>tbody>tr>td {
             border-color: #14274e !important;
         }
+
+        .imagePreview {
+            width: 100%;
+            height: 180px;
+            background-position: center center;
+            background: url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+            background-color: #fff;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: inline-block;
+            box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-upload {
+            display: block;
+            border-radius: 0px;
+            box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.2);
+            margin-top: -5px;
+        }
+
+        .imgUp {
+            margin-bottom: 15px;
+        }
+
+        .del {
+            position: absolute;
+            top: 0px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+        }
+
+        .imgAdd {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #4bd7ef;
+            color: #fff;
+            box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            line-height: 30px;
+            margin-top: 0px;
+            cursor: pointer;
+            font-size: 15px;
+        }
     </style>
 </head>
 
@@ -90,7 +139,7 @@
                                     <th colspan=6>Personal Information</th>
                                 </thead>
 
-                                <tbody>
+                                <tbody style="background-color:#">
                                     <tr>
                                         <td>
                                             <label for="Surname" class="form-label">Surname: </label>
@@ -177,7 +226,9 @@
                             </table>
                         </td>
                     </tr>
-                    <tr style="height: 40px;"><td></td></tr>
+                    <tr style="height: 40px;">
+                        <td></td>
+                    </tr>
                     <tr>
                         <td class="p-0 my-3" colspan=6>
                             <table class="border blueBorder" style="border-color: #14274e">
@@ -257,106 +308,169 @@
                             </table>
                         </td>
                     </tr>
-                    <tr style="height: 40px;"><td></td></tr>
+                    <tr style="height: 40px;">
+                        <td></td>
+                    </tr>
                     <tr>
-                        <td class="p-0 my-3" colspan=6>
+                        <td class="p-0 my-3" colspan=3>
                             <table class="border blueBorder" style="border-color: #14274e">
                                 <thead class=" text-white" style="background-color: #14274e">
-                                    <th colspan=6>Contact Information</th>
+                                    <th colspan=3>Government's ID</th>
                                 </thead>
 
+
+
                                 <tbody>
-
                                     <tr>
                                         <td>
-                                            <label for="CellphoneNumber" class="form-label">Cellphone Number: </label>
-                                        </td>
-                                        <td>
-                                            <input type="textbox" class="form-control" id="CellphoneNumber">
-                                        </td>
-                                        <td>
-                                            <label for="TelephoneNumber" class="form-label">Telephone Number: </label>
-                                        </td>
-                                        <td>
-                                            <input type="textbox" class="form-control" id="TelephoneNumber">
-                                        </td>
-                                        <td>
-                                            <label for="Email" class="form-label">Email: </label>
-                                        </td>
-                                        <td>
-                                            <input type="email" class="form-control" id="Email">
-                                        </td>
+                                            <div class="container-fluid">
+                                                <div class="row p-2 ">
+                                                    <div class="col-6 imgUp mx-auto">
+                                                        <div class="imagePreview"></div>
 
+                                                        <label class="btn btn-upload w-100">
+                                                            Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+                                                        </label>
+                                                    </div><!-- col-2 -->
 
-                                    </tr>
-                                    <tr>
-                                        <th colspan="6">Mother's Maiden Name</th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label for="Surname" class="form-label">Surname: </label>
+                                                </div><!-- row -->
+                                            </div><!-- container -->
                                         </td>
                                         <td>
-                                            <input type="textbox" class="form-control" id="Surname">
+                                            <ul>
+                                                <li>Passport</li>
+                                                <li>Driver's License</li>
+                                                <li>SSS ID</li>
+                                                <li>PhilHealth ID</li>
+                                            </ul>
+
                                         </td>
                                         <td>
-                                            <label for="FirstName" class="form-label">First Name: </label>
-                                        </td>
-                                        <td>
-                                            <input type="textbox" class="form-control" id="FirstName">
-                                        </td>
-                                        <td>
-                                            <label for="MiddleName" class="form-label">Middle Name: </label>
-                                        </td>
-                                        <td>
-                                            <input type="textbox" class="form-control" id="MiddleName">
+                                            <ul>
+                                                <li>Passport</li>
+                                                <li>Driver's License</li>
+                                                <li>SSS ID</li>
+                                                <li>PhilHealth ID</li>
+                                            </ul>
                                         </td>
 
                                     </tr>
                                     <tr>
-                                        <th colspan="6">Spouse Name</th>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <label for="Surname" class="form-label">Surname: </label>
-                                        </td>
-                                        <td>
-                                            <input type="textbox" class="form-control" id="Surname">
-                                        </td>
-                                        <td>
-                                            <label for="FirstName" class="form-label">First Name: </label>
-                                        </td>
-                                        <td>
-                                            <input type="textbox" class="form-control" id="FirstName">
-                                        </td>
-                                        <td>
-                                            <label for="MiddleName" class="form-label">Middle Name: </label>
-                                        </td>
-                                        <td>
-                                            <input type="textbox" class="form-control" id="MiddleName">
+                                        <td colspan="3">
+                                            <p>Note: I accept shit</p>
                                         </td>
 
                                     </tr>
-                                    <tr>
-                                        <td colspan="6"></td>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="6">
-                                            <p class="text-center">By providing the Information above. I certify that I have secured the permission of my secondary contact person to recieve calls for Installation activities, bill reminder, service
-                                                repairs on my behalf.</p>
-
-                                        </th>
-
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
                     </tr>
+                    </tbody>
                 </table>
+                </td>
+                </tr>
+                <tr style="height: 40px;">
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="p-0 my-3" colspan=6>
+                        <table class="border blueBorder" style="border-color: #14274e">
+                            <thead class=" text-white" style="background-color: #14274e">
+                                <th colspan=6>Contact Information</th>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <label for="CellphoneNumber" class="form-label">Cellphone Number: </label>
+                                    </td>
+                                    <td>
+                                        <input type="textbox" class="form-control" id="CellphoneNumber">
+                                    </td>
+                                    <td>
+                                        <label for="TelephoneNumber" class="form-label">Telephone Number: </label>
+                                    </td>
+                                    <td>
+                                        <input type="textbox" class="form-control" id="TelephoneNumber">
+                                    </td>
+                                    <td>
+                                        <label for="Email" class="form-label">Email: </label>
+                                    </td>
+                                    <td>
+                                        <input type="email" class="form-control" id="Email">
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <th colspan="6">Mother's Maiden Name</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="Surname" class="form-label">Surname: </label>
+                                    </td>
+                                    <td>
+                                        <input type="textbox" class="form-control" id="Surname">
+                                    </td>
+                                    <td>
+                                        <label for="FirstName" class="form-label">First Name: </label>
+                                    </td>
+                                    <td>
+                                        <input type="textbox" class="form-control" id="FirstName">
+                                    </td>
+                                    <td>
+                                        <label for="MiddleName" class="form-label">Middle Name: </label>
+                                    </td>
+                                    <td>
+                                        <input type="textbox" class="form-control" id="MiddleName">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th colspan="6">Spouse Name</th>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <label for="Surname" class="form-label">Surname: </label>
+                                    </td>
+                                    <td>
+                                        <input type="textbox" class="form-control" id="Surname">
+                                    </td>
+                                    <td>
+                                        <label for="FirstName" class="form-label">First Name: </label>
+                                    </td>
+                                    <td>
+                                        <input type="textbox" class="form-control" id="FirstName">
+                                    </td>
+                                    <td>
+                                        <label for="MiddleName" class="form-label">Middle Name: </label>
+                                    </td>
+                                    <td>
+                                        <input type="textbox" class="form-control" id="MiddleName">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="6"></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="6">
+                                        <p class="text-center">By providing the Information above. I certify that I have secured the permission of my secondary contact person to recieve calls for Installation activities, bill reminder, service
+                                            repairs on my behalf.</p>
+
+                                    </th>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </table>
+                <button type="button" class="btn btn-outline-success float-end">Submit</button>
             </div>
         </div>
     </div>
+
+
 
     </div>
 </body>
