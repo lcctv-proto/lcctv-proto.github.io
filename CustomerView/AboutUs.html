@@ -18,7 +18,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #14274e">
+	<nav class="navbar navbar-expand-lg fixed-top navbar-dark p-4" style="background-color: #14274e">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Lake Community Cable TV</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
@@ -27,13 +27,13 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a class="nav-link" href="NewCustomer/Application.html">Application</a>
+						<a class="nav-link" href="NewCustomer/Plans.html">Plans</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="NewCustomer/CheckAppStatus.html">Application Status</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" href="#">About Us</a>
+						<a class="nav-link active" href="AboutUs.html">About Us</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="ContactUs.html">Contact Us</a>
@@ -42,12 +42,10 @@
 						<a class="nav-link" href="ServiceCatalog.html">Service Catalog</a>
 					</li>
 				</ul>
-				<form class="d-flex">
-					<a href="/ExistingCustomer/Login.html"><button class="btn btn-outline-light" type="submit">Sign-In</button></a>
-				</form>
 			</div>
 		</div>
 	</nav>
+
 	<div class="container h-100">
 		<div class="row h-100">
 			<div class="row d-flex text-center align-items-center justify-content-center p-5">
@@ -64,9 +62,67 @@
 			</div>
 		</div>
 	</div>
-	<footer class="footer mt-auto py-3">
+	<footer class="mt-5 p-5 bg-light shadow-sm">
 		<div class="container">
-			<span class="text-muted">Place sticky footer content here.</span>
+			<div class="row">
+				<div class="col">
+					<a href="#"><img src="https://www.convergeict.com/wp-content/uploads/2020/10/footer-logo2020.png" alt="" /></a>
+					<p class="mt-2 ms-3">
+						Reliance IT Building<br />
+						99 E. Rodriguez Jr. Ave, <br />Brgy. Ugong Pasig
+						City
+					</p>
+					<p class="ms-3">+632 8667 0848</p>
+				</div>
+				<div class="col mt-5">
+					<h5>SERVICES</h5>
+					<ul class="list-unstyled text-small">
+						<li>
+							<a class="text-dark ms-2" href="#">Plan Offerings</a>
+						</li>
+						<li>
+							<a class="text-dark ms-2" href="#">Application Status</a>
+						</li>
+						<li>
+							<a class="text-dark ms-2" href="#">Channel List</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col mt-5">
+					<h5>ABOUT US</h5>
+					<ul class="list-unstyled text-small">
+						<li>
+							<a class="text-dark ms-2" href="#">About Us</a>
+						</li>
+						<li>
+							<a class="text-dark ms-2" href="#">News</a>
+						</li>
+						<li>
+							<a class="text-dark ms-2" href="#">Careers</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col mt-5">
+					<h5>HELPFUL LINKS</h5>
+					<ul class="list-unstyled text-small">
+						<li>
+							<a class="text-dark ms-2" href="#">Customer Support</a>
+						</li>
+						<li>
+							<a class="text-dark ms-2" href="#">Promos & Announcements</a>
+						</li>
+						<li>
+							<a class="text-dark ms-2" href="#">FAQ</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer class="footer bg-secondary py-3">
+		<div class="container text-center">
+			<span class="text-light">© 2021 Converge ICT Solutions Inc.. All rights
+				reserved.</span>
 		</div>
 	</footer>
 </body>
