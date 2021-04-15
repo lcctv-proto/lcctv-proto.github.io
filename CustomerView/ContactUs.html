@@ -1,174 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body {
+                padding-top: 70px;
+            }
+            .zoomable:hover {
+                transform: scale(1.5);
+            }
 
-<head>
-    <meta charset="utf-8">
-    <style>
-        i:hover {
-            transform: scale(1.5);
-        }
+            .zoomable {
+                display: block;
+                transition: transform 0.75s;
+            }
+        </style>
+    </head>
 
-        i {
-            transition: transform 1s;
-        }
+    <body>
+        <nav
+            class="navbar navbar-expand-lg fixed-top navbar-dark p-4"
+            style="background-color: #14274e"
+        >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Lake Community Cable TV</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="NewCustomer/Plans.html"
+                                >Plans</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="NewCustomer/CheckAppStatus.html"
+                                >Application Status</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="AboutUs.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="ContactUs2.html"
+                                >Contact Us</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ServiceCatalog.html"
+                                >Service Catalog</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-    </style>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark p-4" style="background-color: #14274e">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Lake Community Cable TV</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="NewCustomer/Plans.html">Plans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="NewCustomer/CheckAppStatus.html">Application Status</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="AboutUs.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="ContactUs2.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ServiceCatalog.html">Service Catalog</a>
-                    </li>
-                </ul>
+            <div class="row py-5" style="background-color: #14274e">
+                <span class="h1 fw-bolder text-center text-light"
+                    >CONTACT US</span
+                >
+            </div>
+            <div class="row pt-5 text-center">
+                <div
+                    class="col-6 border-end border-5"
+                    style="border-right-color: #14274e !important"
+                >
+                    <i
+                        class="bi bi-tools zoomable"
+                        style="color: #14274e !important; font-size: 5rem"
+                    ></i>
+                    <br />
+                    <span
+                        class="fs-4 fw-bolder text-wrap"
+                        style="color: #14274e"
+                        >TECHNICAL SUPPORT</span
+                    >
+                    <br />
+                    <span class="fs-6 text-wrap" style="color: #14274e"
+                        >Diagnose common technical and non-technical problems
+                        and perform basic troubleshooting by yourself.</span
+                    >
+                </div>
+                <div class="col-6">
+                    <i
+                        class="bi bi-person-badge-fill zoomable"
+                        style="color: #14274e !important; font-size: 5rem"
+                    ></i>
+                    <br />
+                    <span
+                        class="fs-4 fw-bolder text-wrap"
+                        style="color: #14274e"
+                        >GENERAL INQUIRIES</span
+                    >
+                    <br />
+                    <span class="fs-6 text-wrap" style="color: #14274e"
+                        >For general inquiries and other questions, you may
+                        contact us through this form.</span
+                    >
+                </div>
+            </div>
+            <div class="row pt-5">
+                <div class="col text-center">
+                    <span
+                        class="fs-1 text-wrap fw-bolder"
+                        style="color: #14274e"
+                        >You may also contact us through our hotline numbers
+                        below</span
+                    >
+                </div>
+            </div>
+            <div class="row pt-5">
+                <div class="col-6 mx-auto">
+                    <table class="table table-bordered">
+                        <thead
+                            style="background-color: #14274e"
+                            class="text-light"
+                        >
+                            <tr>
+                                <th scope="col">Location</th>
+                                <th scope="col">Contact Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">NCR</th>
+                                <td>
+                                    Sales: (02) 8667 0848 <br />
+                                    Customer Care: (02) 8667 0850
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">North Luzon</th>
+                                <td>(045) 598 3000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Calamba, Laguna</th>
+                                <td>
+                                    0928 769 7292 <br />
+                                    0967 372 1336
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Lipa City, Batangas</th>
+                                <td>
+                                    0995 235 4780 <br />
+                                    0998 381 3076
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bacoor, Cavite</th>
+                                <td>
+                                    0905 665 0845 <br />
+                                    0921 748 0975
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Trece Martires, Cavite</th>
+                                <td>
+                                    0927 852 4101 <br />
+                                    0918 542 9485
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </nav>
 
-    <div class="container">
-        <div class="row pt-5">
-            <span class="h1 fw-bolder text-center" style="color: #14274e;">CONTACT US</span>
-        </div>
-        <div class="row pt-5 text-center">
-            <div class="col-6 border-end border-5" style="border-right-color: #14274e !important;">
-                <i class="bi bi-pencil-square fs-1" style="color: #14274e !important;"></i>
-                <br>
-                <span class="fs-4 fw-bolder text-wrap" style="color: #14274e;">TECHNICAL SUPPORT</span>
-                <br>
-                <span class="fs-6 text-wrap" style="color: #14274e;">Diagnose common technical and non-technical problems and perform basic troubleshooting by yourself.</span>
-            </div>
-            <div class="col-6">
-                <i class="bi bi-person-badge-fill fs-1" style="color: #14274e !important;"></i>
-                <br>
-                <span class="fs-4 fw-bolder text-wrap" style="color: #14274e;">GENERAL INQUIRIES</span>
-                <br>
-                <span class="fs-6 text-wrap" style="color: #14274e;">For general inquiries and other questions, you may contact us through this form.</span>
-            </div>
-        </div>
-        <div class="row pt-5">
-            <span class="fs-1 text-wrap fw-bolder text-center" style="color: #14274e;">You may also contact us through our hotline numbers below</span>
-        </div>
-        <div class="row pt-5 ">
-            <table class="table table-bordered">
-                <thead style="background-color: #14274e;" class="text-light">
-                    <tr>
-                        <th scope="col">Location</th>
-                        <th scope="col">Contact Number</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">NCR</th>
-                        <td>Sales: (02) 8667 0848 <br> Customer Care: (02) 8667 0850</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">North Luzon</th>
-                        <td>(045) 598 3000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Calamba, Laguna</th>
-                        <td>0928 769 7292 <br> 0967 372 1336</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Lipa City, Batangas</th>
-                        <td>0995 235 4780 <br> 0998 381 3076</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Bacoor, Cavite</th>
-                        <td>0905 665 0845 <br> 0921 748 0975</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Trece Martires, Cavite</th>
-                        <td>0927 852 4101 <br> 0918 542 9485</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <footer class="mt-5 p-5 bg-light shadow-sm">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <a href="#"><img src="https://www.convergeict.com/wp-content/uploads/2020/10/footer-logo2020.png" alt="" /></a>
-                    <p class="mt-2 ms-3">
-                        Reliance IT Building<br />
-                        99 E. Rodriguez Jr. Ave, <br />Brgy. Ugong Pasig
-                        City
-                    </p>
-                    <p class="ms-3">+632 8667 0848</p>
-                </div>
-                <div class="col mt-5">
-                    <h5>SERVICES</h5>
-                    <ul class="list-unstyled text-small">
-                        <li>
-                            <a class="text-dark ms-2" href="#">Plan Offerings</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="#">Application Status</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="#">Channel List</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col mt-5">
-                    <h5>ABOUT US</h5>
-                    <ul class="list-unstyled text-small">
-                        <li>
-                            <a class="text-dark ms-2" href="#">About Us</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="#">News</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="#">Careers</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col mt-5">
-                    <h5>HELPFUL LINKS</h5>
-                    <ul class="list-unstyled text-small">
-                        <li>
-                            <a class="text-dark ms-2" href="#">Customer Support</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="#">Promos & Announcements</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="#">FAQ</a>
-                        </li>
-                    </ul>
+        <footer class="mt-5 p-5 bg-light shadow-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a href="#"
+                            ><img
+                                src="https://www.convergeict.com/wp-content/uploads/2020/10/footer-logo2020.png"
+                                alt=""
+                        /></a>
+                        <p class="mt-2 ms-3">
+                            Reliance IT Building<br />
+                            99 E. Rodriguez Jr. Ave, <br />Brgy. Ugong Pasig
+                            City
+                        </p>
+                        <p class="ms-3">+632 8667 0848</p>
+                    </div>
+                    <div class="col mt-5">
+                        <h5>SERVICES</h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-dark ms-2" href="#"
+                                    >Plan Offerings</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#"
+                                    >Application Status</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#"
+                                    >Channel List</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col mt-5">
+                        <h5>ABOUT US</h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-dark ms-2" href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#">News</a>
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#">Careers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col mt-5">
+                        <h5>HELPFUL LINKS</h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-dark ms-2" href="#"
+                                    >Customer Support</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#"
+                                    >Promos & Announcements</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <footer class="footer bg-secondary py-3">
-        <div class="container text-center">
-            <span class="text-light">© 2021 Converge ICT Solutions Inc.. All rights
-                reserved.</span>
-        </div>
-    </footer>
-</body>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-
+        </footer>
+        <footer class="footer bg-secondary py-3">
+            <div class="container text-center">
+                <span class="text-light"
+                    >© 2021 Converge ICT Solutions Inc. All rights
+                    reserved.</span
+                >
+            </div>
+        </footer>
+    </body>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+        crossorigin="anonymous"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+    />
 </html>
