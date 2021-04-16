@@ -1,67 +1,196 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            body {
+                padding-top: 100px;
+            }
+        </style>
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <title></title>
-    <style>
-        body {
-            padding-top: 70px;
-        }
-
-    </style>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark p-4" style="background-color: #14274e">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Lake Community Cable TV</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="Plans.html">Plans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="CheckAppStatus.html">Application Status</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../AboutUs.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../ContactUs.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../ServiceCatalog.html">Service Catalog</a>
-                    </li>
-                </ul>
+    <body class="d-flex flex-column min-vh-100">
+        <nav
+            class="navbar navbar-expand-lg fixed-top navbar-dark p-4"
+            style="background-color: #14274e"
+        >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Lake Community Cable TV</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Plans.html">Plans</a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                href="CheckAppStatus.html"
+                                >Application Status</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../AboutUs.html"
+                                >About Us</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../ContactUs.html"
+                                >Contact Us</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../ServiceCatalog.html"
+                                >Service Catalog</a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <div class="container-fluid">
-        <div class="row align-items center justify-content-center text-center p-5">
-            <span class="h1">APPLICATION STATUS</span>
-            <br>
-            <span class="h5">To check the status of your existing application, please enter the reference number we sent, or the email address you used to create and verify your application:</span>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-body">
-                        <span class="h5">REFERENCE # OR EMAIL</span>
-                        <input type="text" class="form-control" id="">
-                        <span class="h6">Ex: SS-xx-xxxxxx or email@yyyy.com</span>
-                        <br>
-                        <a href="CheckAppStatus2.html"><button type="button" class="btn btn-success btn-lg" style="float: right">CHECK STATUS</button></a>
+        </nav>
+        <div class="container">
+            <div class="row text-center p-5">
+                <span class="h1">APPLICATION STATUS</span>
+                <span class="h5"
+                    >To check the status of your existing application, please
+                    enter the reference number we sent, or the email address you
+                    used to create and verify your application:</span
+                >
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <form>
+                                <div>
+                                    <label for="email" class="form-label"
+                                        >REFERENCE # OR EMAIL</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="email"
+                                    />
+                                    <span class="h6"
+                                        >Ex: SS-xx-xxxxxx or
+                                        email@yyyy.com</span
+                                    >
+                                </div>
+                            </form>
+
+                            <a href="CheckAppStatus2.html"
+                                ><button
+                                    type="button"
+                                    class="btn btn-success btn-lg"
+                                    style="float: right"
+                                >
+                                    CHECK STATUS
+                                </button></a
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-
+        <footer class="mt-auto p-5 bg-light shadow-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a href="#"
+                            ><img
+                                src="https://www.convergeict.com/wp-content/uploads/2020/10/footer-logo2020.png"
+                                alt=""
+                        /></a>
+                        <p class="mt-2 ms-3">
+                            Reliance IT Building<br />
+                            99 E. Rodriguez Jr. Ave, <br />Brgy. Ugong Pasig
+                            City
+                        </p>
+                        <p class="ms-3">+632 8667 0848</p>
+                    </div>
+                    <div class="col mt-5">
+                        <h5>SERVICES</h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-dark ms-2" href="#"
+                                    >Plan Offerings</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#"
+                                    >Application Status</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#"
+                                    >Channel List</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col mt-5">
+                        <h5>ABOUT US</h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-dark ms-2" href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#">News</a>
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#">Careers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col mt-5">
+                        <h5>HELPFUL LINKS</h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-dark ms-2" href="#"
+                                    >Customer Support</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#"
+                                    >Promos & Announcements</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer class="footer bg-secondary py-3">
+            <div class="container text-center">
+                <span class="text-light"
+                    >© 2021 Converge ICT Solutions Inc. All rights
+                    reserved.</span
+                >
+            </div>
+        </footer>
+    </body>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+        crossorigin="anonymous"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+    />
 </html>
