@@ -4,18 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <style>
-        tr,
-        td {
-            padding-top: 10px !important;
-            padding-bottom: 15px !important;
-        }
-
-        th {
-            padding-top: 20px !important;
-            padding-bottom: 25px !important;
-        }
-    </style>
+    <style></style>
     <link rel="stylesheet" href="./Styles/customer.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
@@ -60,56 +49,43 @@
         </div>
     </nav>
 
-    <div class="container-fluid pt-5">
-        <div class="row align-items center justify-content-center text-center p-5">
-            <p class="h1" style="color: #14274e">APPLICATIONS</p>
-            <small>Click on the reference number to view further details:
-            </small>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-6">
-                <table class="table table-borderless shadow">
-                    <thead class="text-light" style="
+    <div class="container-fluid">
+        <div class="row p-5">
+            <div class="col-6 mx-auto">
+                <div class="card border-0 shadow">
+                    <div class="card-header text-light" style="
                                 background-color: #14274e;
-                                border-bottom: 3px #f0b917 solid;
+                                border-bottom: 5px #f0b917 solid;
                             ">
-                        <tr class="py-4">
-                            <th>REFERENCE NUMBER</th>
-                            <th>APPLICATION STATUS</th>
-                            <th>REMARKS</th>
-                            <th>APPLICATION DATE</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-bottom">
-                            <td>
-                                <a href="./CheckAppStatus3.html">SS-091569895</a>
-                            </td>
-                            <td>Active</td>
-                            <td></td>
-                            <td>September 12, 2020 11:53 AM</td>
-                        </tr>
-                        <tr class="border-bottom">
-                            <td>
-                                <a href="./CheckAppStatus4.html">SS-091217896</a>
-                            </td>
-                            <td>For Installation</td>
-                            <td></td>
-                            <td>March 22, 2021 09:10 AM</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="./CheckAppStatus5.html">SS-091569897</a>
-                            </td>
-                            <td>For Validation</td>
-                            <td></td>
-                            <td>April 17, 2021 08:33 PM</td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <p class="fs-2 fw-normal m-0">
+                            YOUR APPLICATION STATUS IS:
+                        </p>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <div class="card-text" style="color: #14274e">
+                            <p class="fs-3 fw-bold">CHECKING REQUIREMENTS</p>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="
+                                            width: 33%;
+                                            background-color: #f0b917;
+                                        "></div>
+                            </div>
+                            <p class="fs-4">STEP 3/9</p>
+                            <p>
+                                Our employee will check your application document. Wait for 24 hours for further notice.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card-footer border-0 bg-white">
+                        <a href="./CheckAppStatus2.html" class="btn btn-warning fw-bold d-block mx-auto w-25" style="color: #14274e">GO BACK</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
     <footer class="mt-auto p-5 bg-light">
         <div class="container">
             <div class="row">
