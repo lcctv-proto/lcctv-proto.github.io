@@ -25,6 +25,15 @@
             a.list-group-item {
                 padding: 20px 20px !important;
             }
+
+            input[type="number"] {
+                -moz-appearance: textfield;
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
         </style>
     </head>
 
@@ -46,7 +55,7 @@
                                     href="./Login.HTML"
                                     >Lake Community Cable TV</a
                                 >
-                                <li class="nav-item">
+                                <li class="nav-item active">
                                     <a
                                         class="nav-link text-light px-3"
                                         href="./LandingPage.html"
@@ -54,7 +63,7 @@
                                         ><span class="px-3">DASHBOARD</span></a
                                     >
                                 </li>
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                     <a
                                         class="nav-link text-light px-3"
                                         href="./CustomerInfo.html"
@@ -119,39 +128,45 @@
                                 >Account Number:</label
                             >
                             <input
-                                type="text"
+                                type="number"
                                 name="acc-number"
                                 id="acc-number"
                                 class="form-control form-control-lg w-50 d-inline"
+                                value="ACC-1230123"
                             />
                             <button
                                 class="btn btn-lg text-light align-top ms-2 d-inline"
                                 style="background-color: #14274e"
-                                onclick="validate()"
                             >
-                                <i class="bi bi-search"></i>
+                                <i
+                                    class="bi bi-search"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal5"
+                                ></i>
                             </button>
                         </div>
                         <div class="col-6">
                             <small>Account Status:</small>
-                            <h3 class="ms-2 text-success"></h3>
+                            <h3 class="ms-2 text-success">ACTIVE</h3>
                         </div>
                     </div>
                     <div class="row pt-3 px-4">
                         <div class="col-6">
                             <small>Account Name:</small>
-                            <h3 class="ms-2"></h3>
+                            <h3 class="ms-2">Charles Edward A. Umali</h3>
                         </div>
                         <div class="col-6">
                             <small>Account Address:</small>
-                            <h3 class="ms-2"></h3>
+                            <h3 class="ms-2">
+                                #1626 J. Fajardo St., Sampaloc, Manila
+                            </h3>
                         </div>
                     </div>
 
                     <div class="row pt-3 px-4 mb-4">
                         <div class="col-6">
                             <small>Package:</small>
-                            <h3 class="ms-2"></h3>
+                            <h3 class="ms-2">BASIC 640</h3>
                         </div>
                     </div>
 
@@ -179,15 +194,134 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>2021112435</td>
+                                        <td>10/01/20</td>
+                                        <td>MONTHLY BILLING</td>
+                                        <td>M. LINE SUBS FEE</td>
+                                        <td class="text-end">640.00</td>
+                                        <td class="text-end">640.00</td>
+                                        <td class="text-end">0.00</td>
+                                        <td>OCT/01/2020 to OCT/31/2020</td>
+                                        <td>
+                                            <button
+                                                class="btn"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal3"
+                                            >
+                                                <i
+                                                    class="bi bi-pencil-square"
+                                                ></i>
+                                                PAY
+                                            </button>
+                                            <a href="#" class="btn"
+                                                ><i class="bi bi-receipt"></i>
+                                                GENERATE RECEIPT</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2021112436</td>
+                                        <td>09/01/20</td>
+                                        <td>MONTHLY BILLING</td>
+                                        <td>M. LINE SUBS FEE</td>
+                                        <td class="text-end">1672.00</td>
+                                        <td class="text-end">1672.00</td>
+                                        <td class="text-end">0.00</td>
+                                        <td>SEP/01/2020 to SEP/31/2020</td>
+                                        <td>
+                                            <button
+                                                class="btn"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal4"
+                                            >
+                                                <i
+                                                    class="bi bi-pencil-square"
+                                                ></i>
+                                                PAY
+                                            </button>
+                                            <a href="#" class="btn"
+                                                ><i class="bi bi-receipt"></i>
+                                                GENERATE RECEIPT</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2021112437</td>
+                                        <td>08/01/20</td>
+                                        <td>MONTHLY BILLING</td>
+                                        <td>M. LINE SUBS FEE</td>
+                                        <td class="text-end">640.00</td>
+                                        <td class="text-end">0.00</td>
+                                        <td class="text-end">640.00</td>
+                                        <td>AUG/01/2020 to AUG/31/2020</td>
+                                        <td>
+                                            <button
+                                                class="btn"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                            >
+                                                <i
+                                                    class="bi bi-pencil-square"
+                                                ></i>
+                                                PAY
+                                            </button>
+                                            <a href="#" class="btn"
+                                                ><i class="bi bi-receipt"></i>
+                                                GENERATE RECEIPT</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2021112438</td>
+                                        <td>07/01/20</td>
+                                        <td>MONTHLY BILLING</td>
+                                        <td>M. LINE SUBS FEE</td>
+                                        <td class="text-end">640.00</td>
+                                        <td class="text-end">0.00</td>
+                                        <td class="text-end">640.00</td>
+                                        <td>JUL/01/2020 to JUL/31/2020</td>
+                                        <td>
+                                            <button
+                                                class="btn"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                            >
+                                                <i
+                                                    class="bi bi-pencil-square"
+                                                ></i>
+                                                PAY
+                                            </button>
+                                            <a href="#" class="btn"
+                                                ><i class="bi bi-receipt"></i>
+                                                GENERATE RECEIPT</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2021112439</td>
+                                        <td>06/01/20</td>
+                                        <td>MONTHLY BILLING</td>
+                                        <td>M. LINE SUBS FEE</td>
+                                        <td class="text-end">640.00</td>
+                                        <td class="text-end">0.00</td>
+                                        <td class="text-end">640.00</td>
+                                        <td>JUN/01/2020 to JUN/31/2020</td>
+                                        <td>
+                                            <button
+                                                class="btn"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                            >
+                                                <i
+                                                    class="bi bi-pencil-square"
+                                                ></i>
+                                                PAY
+                                            </button>
+                                            <a href="#" class="btn"
+                                                ><i class="bi bi-receipt"></i>
+                                                GENERATE RECEIPT</a
+                                            >
+                                        </td>
                                     </tr>
                                 </tbody>
                                 <tfoot style="border-top: 3px black double">
@@ -196,9 +330,9 @@
                                         <td></td>
                                         <td></td>
                                         <th>TOTAL BALANCE:</th>
-                                        <th class="text-end">0.00</th>
-                                        <th class="text-end">0.00</th>
-                                        <th class="text-end">0.00</th>
+                                        <th class="text-end">3500.00</th>
+                                        <th class="text-end">1380.00</th>
+                                        <th class="text-end">1920.00</th>
                                         <td></td>
                                         <td></td>
                                     </tr>
@@ -644,13 +778,13 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <a
+                        <button
                             type="button"
+                            data-bs-dismiss="modal"
                             class="btn btn-primary"
-                            href="./CustomerInfo2.html"
                         >
                             SAVE
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -671,21 +805,4 @@
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"
     ></script>
-    <script>
-        function validate() {
-            let x = document.getElementById("acc-number").value;
-            var myModal = new bootstrap.Modal(
-                document.getElementById("exampleModal5"),
-                {
-                    keyboard: false,
-                }
-            );
-
-            if (x === "RA027801") {
-                window.location.replace("./CustomerInfo2.html");
-            } else {
-                myModal.show();
-            }
-        }
-    </script>
 </html>
