@@ -77,7 +77,7 @@
                     </nav>
                 </div>
                 <div
-                    class="col-md-12 col-lg-10 h-1000 bg-light p-lg-3 container-fluid"
+                    class="col-md-12 col-lg-10 h-100 bg-light p-lg-3 container-fluid"
                     style="background-color: #f6f8fb"
                 >
                     <div class="row d-block d-lg-none d-xl-none">
@@ -152,58 +152,6 @@
                         <div class="col-6">
                             <small>Package:</small>
                             <h3 class="ms-2"></h3>
-                        </div>
-                    </div>
-
-                    <div class="row pt-3 px-4 border-top mb-3">
-                        <div class="col">
-                            <h3>A/R BALANCE</h3>
-                            <table
-                                class="table table-borderless table-striped mt-3 border border-dark"
-                            >
-                                <thead
-                                    class="text-light"
-                                    style="background-color: #14274e"
-                                >
-                                    <tr>
-                                        <td>TRANSACTION NUMBER</td>
-                                        <td>TRANSACTION DATE</td>
-                                        <td>TRANSACTION TYPE</td>
-                                        <td>A/R TYPE</td>
-                                        <td>AMOUNT</td>
-                                        <td>PAID AMOUNT</td>
-                                        <td>BALANCE</td>
-                                        <td>REMARKS</td>
-                                        <td>ACTION</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                                <tfoot style="border-top: 3px black double">
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <th>TOTAL BALANCE:</th>
-                                        <th class="text-end">0.00</th>
-                                        <th class="text-end">0.00</th>
-                                        <th class="text-end">0.00</th>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tfoot>
-                            </table>
                         </div>
                     </div>
                 </div>
@@ -583,6 +531,7 @@
                                                         class="form-check-input"
                                                         type="radio"
                                                         name="check"
+                                                        value="1"
                                                     />
                                                 </td>
                                                 <td>RA027801</td>
@@ -598,6 +547,7 @@
                                                         class="form-check-input"
                                                         type="radio"
                                                         name="check"
+                                                        value="2"
                                                     />
                                                 </td>
                                                 <td>RA027811</td>
@@ -613,6 +563,7 @@
                                                         class="form-check-input"
                                                         type="radio"
                                                         name="check"
+                                                        value="3"
                                                     />
                                                 </td>
                                                 <td>RA027851</td>
@@ -628,6 +579,7 @@
                                                         class="form-check-input"
                                                         type="radio"
                                                         name="check"
+                                                        value="4"
                                                     />
                                                 </td>
                                                 <td>RA027899</td>
@@ -644,12 +596,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <a
-                            type="button"
-                            class="btn btn-primary"
-                            href="./CustomerInfo2.html"
-                        >
-                            SAVE
+                        <a type="button" class="btn btn-primary" id="select">
+                            SELECT
                         </a>
                     </div>
                 </div>
@@ -683,9 +631,36 @@
 
             if (x === "RA027801") {
                 window.location.replace("./CustomerInfo2.html");
+            } else if (x === "RA027811") {
+                window.location.replace("./CustomerInfo3.html");
+            } else if (x === "RA027851") {
+                window.location.replace("./CustomerInfo4.html");
+            } else if (x === "RA027899") {
+                window.location.replace("./CustomerInfo5.html");
             } else {
                 myModal.show();
             }
         }
+
+        document.getElementById("select").addEventListener(
+            "click",
+            () => {
+                let radios = document.getElementsByTagName("input");
+                for (let i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        if (radios[i].value == "1") {
+                            window.location.replace("./CustomerInfo2.html");
+                        } else if (radios[i].value == "2") {
+                            window.location.replace("./CustomerInfo3.html");
+                        } else if (radios[i].value == "3") {
+                            window.location.replace("./CustomerInfo4.html");
+                        } else if (radios[i].value == "4") {
+                            window.location.replace("./CustomerInfo5.html");
+                        }
+                    }
+                }
+            },
+            false
+        );
     </script>
 </html>
