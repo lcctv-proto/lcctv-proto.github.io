@@ -1,161 +1,242 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>LCCTV | Application Status</title>
+        <style></style>
+        <link rel="stylesheet" href="./Styles/customer.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+        />
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <title>LCCTV | Application Status</title>
-    <style></style>
-    <link rel="stylesheet" href="./Styles/customer.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
-</head>
-
-<body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="
+    <body class="d-flex flex-column min-vh-100">
+        <nav
+            class="navbar navbar-expand-lg fixed-top navbar-dark"
+            style="
                 background-color: #14274e;
                 border-bottom: 3px #f0b917 solid !important;
-            ">
-        <div class="container-fluid">
-            <a class="navbar-brand py-1 ps-3 me-0" href="LandingPage.html"><img height="75px" class="d-block mx-auto mb-2" src="../icon_10.png" alt="" />
-                <p class="ms-3 pe-4 h6 text-center" style="font-family: 'Nunito Sans'">
-                    LAKE COMMUNITY CABLE TV
-                </p>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item px-2">
-                        <a class="nav-link" href="./Plans.html">PLANS</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link active" href="./CheckAppStatus.html"><small><i class="bi bi-circle-fill me-2" style="
+            "
+        >
+            <div class="container-fluid">
+                <a class="navbar-brand py-1 ps-3 me-0" href="LandingPage.html"
+                    ><img
+                        height="75px"
+                        class="d-block mx-auto mb-2"
+                        src="../icon_10.png"
+                        alt=""
+                    />
+                    <p class="ms-3 pe-4 h6 text-center ff-logo">
+                        Lake Community Cable TV
+                    </p>
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="./Plans.html">PLANS</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a
+                                class="nav-link active"
+                                href="./CheckAppStatus.html"
+                                ><small
+                                    ><i
+                                        class="bi bi-circle-fill me-2"
+                                        style="
                                             color: #f0b917;
                                             font-size: x-small;
-                                        "></i></small>APPLICATION STATUS</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link" href="./AboutUs.html">ABOUT US</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link" href="./ContactUs.html">CONTACT US</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link" href="./ServiceCatalog.html">SERVICE CATALOG</a>
-                    </li>
-                </ul>
+                                        "
+                                    ></i></small
+                                >APPLICATION STATUS</a
+                            >
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="./AboutUs.html"
+                                >ABOUT US</a
+                            >
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="./ContactUs.html"
+                                >CONTACT US</a
+                            >
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="./ServiceCatalog.html"
+                                >SERVICE CATALOG</a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <div class="container-fluid">
-        <div class="row p-5">
-            <div class="col-6 mx-auto">
-                <div class="card">
-                    <div class="card-header text-light" style="
+        <div class="container-fluid">
+            <div class="row p-5">
+                <div class="col-6 mx-auto">
+                    <div class="card">
+                        <div
+                            class="card-header text-light"
+                            style="
                                 background-color: #14274e;
                                 border-bottom: 5px #f0b917 solid;
-                            ">
-                        <p class="fs-2 fw-normal m-0">
-                            YOUR APPLICATION STATUS IS:
-                        </p>
-                    </div>
-
-                    <div class="card-body text-center">
-                        <div class="card-text" style="color: #14274e">
-                            <p class="fs-3 fw-bold">CURRENTLY ACTIVE</p>
-                            <div class="progress mb-2">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="
-                                            width: 100%;
-                                            background-color: #158467;
-                                        "></div>
-                            </div>
-
-                            <p class="fs-4">
-                                Welcome to Lake Community Cable TV!
-                            </p>
-                            <p>
-                                You may now settle your installation fee and
-                                one-month advance payment (if applicable)
-                                within 3 days after your installation date
-                                to avoid cancellation of service.
+                            "
+                        >
+                            <p class="fs-2 fw-normal m-0">
+                                YOUR APPLICATION STATUS IS:
                             </p>
                         </div>
-                    </div>
 
-                    <div class="card-footer border-0 bg-white">
-                        <a href="./CheckAppStatus2.html" class="btn btn-warning fw-bold d-block mx-auto w-25" style="color: #14274e">GO BACK</a>
+                        <div class="card-body text-center">
+                            <div class="card-text" style="color: #14274e">
+                                <p class="fs-3 fw-bold">CURRENTLY ACTIVE</p>
+                                <div class="progress mb-2">
+                                    <div
+                                        class="progress-bar progress-bar-striped progress-bar-animated"
+                                        role="progressbar"
+                                        style="
+                                            width: 100%;
+                                            background-color: #158467;
+                                        "
+                                    ></div>
+                                </div>
+
+                                <p class="fs-4">
+                                    Welcome to Lake Community Cable TV!
+                                </p>
+                                <p>
+                                    You may now settle your installation fee and
+                                    one-month advance payment (if applicable)
+                                    within 3 days after your installation date
+                                    to avoid cancellation of service.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-footer border-0 bg-white">
+                            <a
+                                href="./CheckAppStatus2.html"
+                                class="btn btn-warning fw-bold d-block mx-auto w-25"
+                                style="color: #14274e"
+                                >GO BACK</a
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <footer class="mt-auto p-5 bg-light" style="font-family: 'Nunito Sans'">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <a class="mx-4" href="LandingPage.html"><img height="150" src="../icon_10.png" alt="" /></a>
-                    <p class="text-center fw-bolder pt-3" style="color: #14274e;">Lake Community Cable TV</p>
-                </div>
-                <div class="col ms-5 mt-4">
-                    <h5>SERVICES</h5>
-                    <ul class="list-unstyled text-small">
-                        <li>
-                            <a class="text-dark ms-2" href="Plans.html">Plan Offerings</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="CheckAppStatus.html">Application Status</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="Channels.html">Channel List</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col mt-4">
-                    <h5>ABOUT US</h5>
-                    <ul class="list-unstyled text-small">
-                        <li>
-                            <a class="text-dark ms-2" href="AboutUs.html">About Us</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="#">News</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="#">Careers</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col mt-4">
-                    <h5>HELPFUL LINKS</h5>
-                    <ul class="list-unstyled text-small">
-                        <li>
-                            <a class="text-dark ms-2" href="ContactUs.html">Customer Support</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="#">Promos & Announcements</a>
-                        </li>
-                        <li>
-                            <a class="text-dark ms-2" href="ServiceCatalog.html">FAQ</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <iframe class="shadow"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2368.594677387614!2d121.32316158513572!3d14.072248015335425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb2d20f46e6a2a7fd!2sLAKE%20COMMUNITY%20CABLE%20TV%20MULTI-SUPPOSE%20COOPERATIVE!5e0!3m2!1sen!2sph!4v1618666168055!5m2!1sen!2sph"
-                      width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+        <footer class="mt-auto p-5 bg-light" style="font-family: 'Nunito Sans'">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a class="mx-4" href="LandingPage.html"
+                            ><img height="150" src="../icon_10.png" alt=""
+                        /></a>
+                        <p
+                            class="text-center fw-bolder pt-3"
+                            style="color: #14274e"
+                        >
+                            Lake Community Cable TV
+                        </p>
+                    </div>
+                    <div class="col ms-5 mt-4">
+                        <h5>SERVICES</h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-dark ms-2" href="Plans.html"
+                                    >Plan Offerings</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="text-dark ms-2"
+                                    href="CheckAppStatus.html"
+                                    >Application Status</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="Channels.html"
+                                    >Channel List</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col mt-4">
+                        <h5>ABOUT US</h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-dark ms-2" href="AboutUs.html"
+                                    >About Us</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#">News</a>
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#">Careers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col mt-4">
+                        <h5>HELPFUL LINKS</h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-dark ms-2" href="ContactUs.html"
+                                    >Customer Support</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-dark ms-2" href="#"
+                                    >Promos & Announcements</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="text-dark ms-2"
+                                    href="ServiceCatalog.html"
+                                    >FAQ</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <iframe
+                            class="shadow"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2368.594677387614!2d121.32316158513572!3d14.072248015335425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb2d20f46e6a2a7fd!2sLAKE%20COMMUNITY%20CABLE%20TV%20MULTI-SUPPOSE%20COOPERATIVE!5e0!3m2!1sen!2sph!4v1618666168055!5m2!1sen!2sph"
+                            width="300"
+                            height="200"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                        ></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <footer class="footer bg-secondary py-3">
-        <div class="container text-center">
-            <span class="text-light">© 2021 Lake Community Cable TV All rights
-                reserved.</span>
-        </div>
-    </footer>
-</body>
-
+        </footer>
+        <footer class="footer bg-secondary py-3">
+            <div class="container text-center">
+                <span class="text-light"
+                    >© 2021 Lake Community Cable TV All rights reserved.</span
+                >
+            </div>
+        </footer>
+    </body>
 </html>
