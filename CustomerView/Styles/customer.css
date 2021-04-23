@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
 
 body {
-    padding-top: 100px;
+    padding-top: 120px;
 }
 
 table.blueBorder {
@@ -81,4 +81,20 @@ table.blueBorder > tbody > tr > td {
 
 .ff-logo {
     font-family: "Mate SC";
+}
+
+.text-navy {
+    color: #14274e !important;
+}
+
+.text-gold {
+    color: #f0b917 !important;
+}
+
+.bg-navy {
+    background-color: #14274e !important;
+}
+
+.bg-gold {
+    background-color: #f0b917 !important;
 }
