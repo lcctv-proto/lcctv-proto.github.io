@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .calendar th {
+                width: 200px !important;
+                padding: 10px 0 30px;
+            }
+
+            .calendar td {
+                height: 200px;
+                border: 1px rgb(221, 221, 221) solid !important;
+                padding: 5px;
+            }
+
+            .not-this-month {
+                background-color: rgb(114, 114, 114);
+                color: white;
+            }
+        </style>
+        <link rel="stylesheet" href="./Styles/jo.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
+                    <nav class="navbar mt-5">
+                        <ul class="navbar-nav fs-5">
+                            <a
+                                class="navbar-brand text-light fs-2 text-wrap text-center"
+                                href="./Login.html"
+                                ><img
+                                    height="100px"
+                                    class="d-block mx-auto mb-2"
+                                    src="../icon_10.png"
+                                    alt=""
+                                />
+                                <p class="ms-3 ff-logo pb-3 border-bottom">
+                                    Lake Community Cable TV
+                                </p></a
+                            >
+                            <li class="nav-item mt-3">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./LandingPage.html"
+                                    ><i class="bi bi-speedometer2 pl-3"></i
+                                    ><span class="px-3">Dashboard</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./CreateJO.html"
+                                    ><i class="bi bi-pen"></i
+                                    ><span class="px-3">Create JOs</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./Activation.html"
+                                    ><i class="bi bi-lightning-charge"></i
+                                    ><span class="px-3">Activation</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./Maintenance.html"
+                                    ><i class="bi bi-tools"></i
+                                    ><span class="px-3">Maintenance</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./CloseJO.html"
+                                    ><i class="bi bi-check2-circle"></i
+                                    ><span class="px-3">Close JOs</span></a
+                                >
+                            </li>
+                            <li class="nav-item active">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./Calendar.html"
+                                    ><i class="bi bi-calendar-week"></i
+                                    ><span class="px-3">Calendar</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./ViewJO.html"
+                                    ><i class="bi bi-journal-album"></i>
+                                    <span class="px-3">View JOs</span></a
+                                >
+                            </li>
+                            <li class="nav-item mt-5 bg-dark-navy">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./Login.html"
+                                    ><i class="bi bi-box-arrow-left"></i
+                                    ><span class="px-3">Logout</span></a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div
+                    class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid"
+                    style="background-color: #f6f8fb"
+                >
+                    <div class="row d-block d-lg-none d-xl-none">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="bg-dark p-4">
+                                <h5 class="text-white h4">Collapsed content</h5>
+                                <span class="text-muted"
+                                    >Toggleable via the navbar brand.</span
+                                >
+                            </div>
+                        </div>
+                        <nav
+                            class="navbar navbar-dark"
+                            style="background-color: #14274e"
+                        >
+                            <div class="container-fluid">
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbarToggleExternalContent"
+                                >
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="row py-3 border-bottom">
+                        <div class="col">
+                            <h3>Calendar View</h3>
+                        </div>
+                        <div class="col text-end">JO123</div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-12">
+                            <h5 class="mx-5">April 2021</h5>
+                            <table class="calendar mx-auto fs-5">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">SUN</th>
+                                        <th class="text-center">MON</th>
+                                        <th class="text-center">TUE</th>
+                                        <th class="text-center">WED</th>
+                                        <th class="text-center">THU</th>
+                                        <th class="text-center">FRI</th>
+                                        <th class="text-center">SAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="align-top">
+                                    <tr>
+                                        <td class="not-this-month">28</td>
+                                        <td class="not-this-month">29</td>
+                                        <td class="not-this-month">30</td>
+                                        <td class="not-this-month">31</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            5
+                                            <p class="d-block badge bg-success">
+                                                TEAM A
+                                            </p>
+                                            <p
+                                                class="d-block badge bg-warning text-decoration-line-through"
+                                            >
+                                                TEAM C
+                                            </p>
+                                            <p
+                                                class="d-block badge bg-danger text-decoration-line-through"
+                                            >
+                                                TEAM D
+                                            </p>
+                                        </td>
+                                        <td>
+                                            6
+                                            <p
+                                                class="d-block badge bg-success text-decoration-line-through"
+                                            >
+                                                TEAM A
+                                            </p>
+                                            <p
+                                                class="d-block badge bg-info text-decoration-line-through"
+                                            >
+                                                TEAM B
+                                            </p>
+                                        </td>
+                                        <td>
+                                            7
+                                            <p
+                                                class="d-block badge bg-success text-decoration-line-through"
+                                            >
+                                                TEAM A
+                                            </p>
+                                            <p
+                                                class="d-block badge bg-info text-decoration-line-through"
+                                            >
+                                                TEAM B
+                                            </p>
+                                            <p
+                                                class="d-block badge bg-warning text-decoration-line-through"
+                                            >
+                                                TEAM C
+                                            </p>
+                                        </td>
+                                        <td>
+                                            8
+                                            <p
+                                                class="d-block badge bg-info text-decoration-line-through"
+                                            >
+                                                TEAM B
+                                            </p>
+                                            <p
+                                                class="d-block badge bg-warning text-decoration-line-through"
+                                            >
+                                                TEAM C
+                                            </p>
+                                        </td>
+                                        <td>
+                                            9
+                                            <p
+                                                class="d-block badge bg-success text-decoration-line-through"
+                                            >
+                                                TEAM A
+                                            </p>
+                                        </td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>12</td>
+                                        <td>13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td>17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                        <td>24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>30</td>
+                                        <td class="not-this-month">1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script
+        src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+        crossorigin="anonymous"
+    ></script>
+</html>
