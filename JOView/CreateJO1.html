@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        table,
+        thead,
+        th,
+        td {
+            padding: 9px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+    </style>
+    <link rel="stylesheet" href="./Styles/jo.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
+                <nav class="navbar mt-5">
+                    <ul class="navbar-nav fs-5">
+                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../icon_10.png" alt="" />
+                            <p class="ms-3 ff-logo pb-3 border-bottom">
+                                Lake Community Cable TV
+                            </p>
+                        </a>
+                        <li class="nav-item mt-3">
+                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">Dashboard</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light px-3" href="./CreateJO.html"><i class="bi bi-pen"></i><span class="px-3">Create JOs</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Activation.html"><i class="bi bi-lightning-charge"></i><span class="px-3">Activation</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Maintenance.html"><i class="bi bi-tools"></i><span class="px-3">Maintenance</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./CloseJO.html"><i class="bi bi-check2-circle"></i><span class="px-3">Close JOs</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Calendar.html"><i class="bi bi-calendar-week"></i><span class="px-3">Calendar</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./ViewJO.html"><i class="bi bi-journal-album"></i>
+                                <span class="px-3">View JOs</span></a>
+                        </li>
+                        <li class="nav-item mt-5 bg-dark-navy">
+                            <a class="nav-link text-light px-3" href="./Login.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">Logout</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
+                <div class="row d-block d-lg-none d-xl-none">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-dark" style="background-color: #14274e">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="row py-3 border-bottom">
+                    <div class="col">
+                        <h3>Job Order Creation</h3>
+                    </div>
+                    <div class="col text-end">JO123</div>
+                </div>
+
+                <div class="row pt-3 px-4">
+                    <div class="col-4">
+                        <label for="acc-number" class="form-label d-block">Account Number:</label>
+                        <input type="text" name="acc-number" id="acc-number" class="form-control form-control-lg w-75 d-inline" />
+                        <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <label for="jo-num" class="form-label">JO Number:</label>
+                        <input type="text" name="jo-num" id="jo-num" class="form-control form-control-lg w-75" value="JO-000001" disabled />
+                    </div>
+                    <div class="col-4">
+                        <label for="team-assigned" class="form-label d-block">Assign Team:</label>
+                        <input type="text" name="team-assigned" id="team-assigned" class="form-control form-control-lg w-75 d-inline" />
+                        <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row pt-3 px-4">
+                    <div class="col-4">
+                        <label for="branch" class="form-label">Branch:</label>
+                        <select name="branch" id="branch" class="form-select form-select-lg w-75">
+                            <option value="1">PLEASE SELECT A BRANCH</option>
+                            <option value="2" selected>BRANCH 1</option>
+                            <option value="3">BRANCH 2</option>
+                            <option value="4">BRANCH 3</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <label for="trans-date" class="form-label">Date of Transaction:</label>
+                        <input type="date" name="trans-date" id="trans-date" class="form-control form-control-lg w-75" />
+                    </div>
+                    <div class="col-4">
+                        <label for="trans-date2" class="form-label">Installation Date:</label>
+                        <input type="date" name="trans-date2" id="trans-date2" class="form-control form-control-lg w-75" />
+                    </div>
+                </div>
+                <div class="row border-top mt-5">
+                    <div class="col-12 d-flex justify-content-end py-2">
+                        <button class="btn btn-navy me-auto btn-lg">
+                            <i class="bi bi-box-arrow-in-left me-2"></i> BACK
+                        </button>
+                        <button class="btn btn-navy me-2 btn-lg">
+                            <i class="bi bi-save2 me-2"></i> SAVE
+                        </button>
+                        <button class="btn btn-navy btn-lg"><i class="bi bi-printer me-2"></i> PRINT</button>
+                    </div>
+                </div>
+                <div class="row border-top">
+                    <div class="col-12">
+                        <table class="mx-auto my-5">
+                            <tr>
+                                <td class="p-0" colspan="6">
+                                    <table class="border blueBorder" style="border-color: #14274e">
+                                        <thead class="text-white" style="
+                                                    background-color: #14274e;
+                                                ">
+                                            <th colspan="6">
+                                                Personal Information
+                                            </th>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label for="Surname" class="form-label">Family Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Surname" value="UMALI" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="FirstName" class="form-label">First Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="FirstName" value="CHARLES EDWARD" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="MiddleName" class="form-label">Middle Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="MiddleName" value="ALALAN" disabled />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="Nationality" class="form-label">Nationality:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Nationality" value="FILIPINO" disabled />
+                                                </td>
+
+                                                <td>
+                                                    <label for="BirthDate" class="form-label">Birth Date:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="date" class="form-control" id="BirthDate" value="1999-12-29" disabled />
+                                                </td>
+
+                                                <td>
+                                                    <label for="Gender" class="form-label">Gender:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" id="Gender" value="MALE" disabled />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="CivilStatus: " class="form-label">Civil Status:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <select class="form-select" aria-label="Default select example" disabled>
+                                                        <option hidden>
+                                                            Civil Status
+                                                        </option>
+                                                        <option value="1">
+                                                            Single
+                                                        </option>
+                                                        <option value="2" selected>
+                                                            Married
+                                                        </option>
+                                                        <option value="3">
+                                                            Widowed
+                                                        </option>
+                                                        <option value="4">
+                                                            Separated
+                                                        </option>
+                                                        <option value="5">
+                                                            Divorced
+                                                        </option>
+                                                    </select>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr style="height: 40px">
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td class="p-0 my-3" colspan="6">
+                                    <table class="border blueBorder" style="border-color: #14274e">
+                                        <thead class="text-white" style="
+                                                    background-color: #14274e;
+                                                ">
+                                            <th colspan="6">
+                                                Service Address
+                                            </th>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <th colspan="6">
+                                                    Home/Installation
+                                                    Address
+                                                </th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <label for="Unit/HouseNo." class="form-label">Unit/House Number:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Unit/HouseNo." value="#160" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="Street" class="form-label">Street:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Street" value="SAN SALVADOR ST." disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="Barangay" class="form-label">Barangay:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Barangay" value="MANGGAHAN" disabled />
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <label for="Municipality" class="form-label">Municipality:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Municipality" value="PASIG" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="HomeOwnerShip" class="form-label">Home Owner Ship:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="HomeOwnerShip" value="OWNED" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="ResidencyYear" class="form-label">Residency Year:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="ResidencyYear" value="21" disabled />
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <label for="Province" class="form-label">Province:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Province" value="NCR" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="ZipCode" class="form-label">Zip Code:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="ZipCode" value="1612" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="NearestLandmark" class="form-label">Nearest Landmark:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="NearestLandmark" value="Near Sta. Lucia Mall" disabled />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr style="height: 40px">
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td class="p-0 my-3" colspan="3">
+                                    <table class="border blueBorder" style="border-color: #14274e">
+                                        <thead class="text-white" style="
+                                                    background-color: #14274e;
+                                                ">
+                                            <th colspan="3">
+                                                Government issued ID
+                                            </th>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="./Images/id.png" target="_blank">
+                                                        <img src="./Images/id.png" alt="ID PICTURE" class="d-block my-3 mx-auto shadow" style="
+                                                                    height: 360px;
+                                                                " />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr style="height: 40px">
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="p-0 my-3" colspan="3">
+                                    <table class="border blueBorder" style="border-color: #14274e">
+                                        <thead class="text-white" style="
+                                                    background-color: #14274e;
+                                                ">
+                                            <th colspan="3">
+                                                Proof of Billing
+                                            </th>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="./Images/pob.png" target="_blank">
+                                                        <img src="./Images/pob.png" alt="Proof of Billing" class="d-block my-3 mx-auto shadow" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr style="height: 40px">
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td class="p-0 my-3" colspan="6">
+                                    <table class="border blueBorder" style="border-color: #14274e">
+                                        <thead class="text-white" style="
+                                                    background-color: #14274e;
+                                                ">
+                                            <th colspan="6">
+                                                Contact Information
+                                            </th>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label for="CellphoneNumber" class="form-label">Cellphone Number:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="CellphoneNumber" value="09153355864" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="TelephoneNumber" class="form-label">Telephone Number:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="TelephoneNumber" value="N/A" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="Email" class="form-label">Email:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="email" class="form-control" id="Email" value="UMALI.CHARLESEDWARD@UE.EDU.PH" disabled />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="6">
+                                                    Mother's Maiden Name
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="Surname" class="form-label">Family Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Surname" value="ALALAN" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="FirstName" class="form-label">First Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="FirstName" value="GRACE" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="MiddleName" class="form-label">Middle Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="MiddleName" value="FAJARDO" disabled />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="6">
+                                                    Spouse Name
+                                                </th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <label for="Surname" class="form-label">Family Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Surname" value="CUMPA" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="FirstName" class="form-label">First Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="FirstName" value="ANDREA" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="MiddleName" class="form-label">Middle Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="MiddleName" value="GONZALES" disabled />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-end">
+                        <a class="btn btn-dark btn-lg" href="#">BACK TO TOP <i class="bi bi-chevron-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script>
+    Date.prototype.toDateInputValue = function() {
+        var local = new Date(this);
+        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+        return local.toJSON().slice(0, 10);
+    };
+    document.getElementById(
+        "trans-date"
+    ).value = new Date().toDateInputValue();
+
+</script>
+
+</html>
