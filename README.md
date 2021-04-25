@@ -58,6 +58,20 @@
 -   [Login.html](https://lcctv-proto.github.io/FrontDeskView/Login.html)
 -   [Support.html](https://lcctv-proto.github.io/FrontDeskView/Support.html)
 
+## JOView
+
+-   [Activation.html](https://lcctv-proto.github.io/FrontDeskView/Activation.html)
+-   [Activation1.html](https://lcctv-proto.github.io/FrontDeskView/Activation1.html)
+-   [Calendar.html](https://lcctv-proto.github.io/FrontDeskView/LandingPage.html)
+-   [CloseJO.html](https://lcctv-proto.github.io/FrontDeskView/CloseJO.html)
+-   [CloseJO1.html](https://lcctv-proto.github.io/FrontDeskView/CloseJO1.html)
+-   [CreateJO.html](https://lcctv-proto.github.io/FrontDeskView/CreateJO.html)
+-   [CreateJO1.html](https://lcctv-proto.github.io/FrontDeskView/CreateJO1.html)
+-   [Login.html](https://lcctv-proto.github.io/FrontDeskView/Login.html)
+-   [Maintenance.html](https://lcctv-proto.github.io/FrontDeskView/Maintenance.html)
+-   [Maintenance1.html](https://lcctv-proto.github.io/FrontDeskView/Maintenance1.html)
+-   [ViewJO.html](https://lcctv-proto.github.io/FrontDeskView/ViewJO.html)
+
 ## TechnicianView
 
 -   [Area.html](https://lcctv-proto.github.io/TechnicianView/Area.html)
