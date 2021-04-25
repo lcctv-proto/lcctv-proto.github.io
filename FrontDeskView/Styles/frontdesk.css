@@ -18,3 +18,7 @@ h1 {
 .ff-logo {
     font-family: "Mate SC";
 }
+
+.bg-dark-navy {
+    background-color: rgb(11, 22, 42);
+}
