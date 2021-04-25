@@ -1,864 +1,1188 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style></style>
+        <link rel="stylesheet" href="./Styles/cashier.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-        body,
-        html {
-            height: 100%;
-            background-color: #14274e !important;
-        }
-
-        h1 {
-            font-size: 3.75em !important;
-        }
-
-        .active>.nav-link {
-            color: #14274e !important;
-            background-color: #fff !important;
-            border-right: #14274e solid 1px;
-        }
-
-        a.list-group-item {
-            padding: 20px 20px !important;
-        }
-
-        input[type="number"] {
-            -moz-appearance: textfield;
-        }
-
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-        }
-
-        .btn-gcash {
-            background-color: #002cb8 !important;
-            color: #fff !important;
-        }
-
-        .btn-gcash:hover {
-            background-color: #fff !important;
-            color: #002cb8 !important;
-            border-color: #002cb8 !important;
-        }
-
-        .btn-paymaya {
-            background-color: #177fff !important;
-            color: #fff !important;
-        }
-
-        .btn-paymaya:hover {
-            background-color: #fff !important;
-            color: #8dc640 !important;
-            border-color: #8dc640 !important;
-        }
-
-        .btn-shopee {
-            background-color: #e74c2b !important;
-            color: #fff !important;
-        }
-
-        .btn-shopee:hover {
-            background-color: #fff !important;
-            color: #e74c2b !important;
-            border-color: #e74c2b !important;
-        }
-
-        .btn-dragonpay {
-            background-color: #92181c !important;
-            color: #fdc611 !important;
-        }
-
-        .btn-dragonpay:hover {
-            background-color: #fdc611 !important;
-            color: #92181c !important;
-            border-color: #92181c !important;
-        }
-
-        .btn-bayadcenter {
-            background-color: #d00a39 !important;
-            color: #fff !important;
-        }
-
-        .btn-bayadcenter:hover {
-            background-color: #fff !important;
-            color: #d00a39 !important;
-            border-color: #0077c0 !important;
-        }
-    </style>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-</head>
-
-<body>
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <div class="col-2 p-0 text-light d-none d-lg-block">
-                <nav class="navbar mt-5">
-                    <ul class="navbar-nav fs-5">
-                        <a class="navbar-brand py-1 ps-3 me-0" href="#"><img height="55px" class="d-block mx-auto mb-2" src="../icon_5.png" alt="" />
-                            <a class="navbar-brand text-light fs-2 fw-bold text-wrap text-center m-2 mb-5" href="./Login.HTML">Lake Community Cable TV</a>
+    <body>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-2 p-0 text-light d-none d-lg-block">
+                    <nav class="navbar mt-5">
+                        <ul class="navbar-nav fs-5">
+                            <a
+                                class="navbar-brand text-light fs-2 text-wrap text-center"
+                                href="./Login.html"
+                                ><img
+                                    height="100px"
+                                    class="d-block mx-auto mb-2"
+                                    src="../icon_10.png"
+                                    alt=""
+                                />
+                                <p class="ms-3 ff-logo pb-3 border-bottom">
+                                    Lake Community Cable TV
+                                </p>
+                            </a>
                             <li class="nav-item active">
-                                <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">DASHBOARD</span></a>
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./LandingPage.html"
+                                    ><i class="bi bi-speedometer2 pl-3"></i
+                                    ><span class="px-3">DASHBOARD</span></a
+                                >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light px-3" href="./CustomerInfo.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">WALK-IN</span></a>
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./CustomerInfo.html"
+                                    ><i class="bi bi-speedometer2 pl-3"></i
+                                    ><span class="px-3">WALK-IN</span></a
+                                >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light px-3" href="./UserInfo.html"><i class="bi bi-people"></i><span class="px-3">PAYMENT PORTAL</span></a>
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./UserInfo.html"
+                                    ><i class="bi bi-people"></i
+                                    ><span class="px-3">PAYMENT PORTAL</span></a
+                                >
                             </li>
-                        </a>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-12 col-lg-10 h-1000 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
-                <div class="row d-block d-lg-none d-xl-none">
-                    <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="bg-dark p-4">
-                            <h5 class="text-white h4">Collapsed content</h5>
-                            <span class="text-muted">Toggleable via the navbar brand.</span>
-                        </div>
-                    </div>
-                    <nav class="navbar navbar-dark" style="background-color: #14274e">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
+                        </ul>
                     </nav>
                 </div>
-
-                <div class="row py-3 border-bottom">
-                    <div class="col">
-                        <h3>Customer Payment</h3>
-                    </div>
-                    <div class="col text-end">Cashier123</div>
-                </div>
-
-                <div class="row pt-3 px-4">
-                    <div class="col-6">
-                        <label for="acc-number" class="form-label d-block">Account Number:</label>
-                        <input type="number" name="acc-number" id="acc-number" class="form-control form-control-lg w-50 d-inline" value="ACC-1230123" />
-                        <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e">
-                            <i class="bi bi-search" data-bs-toggle="modal" data-bs-target="#exampleModal5"></i>
-                        </button>
-                    </div>
-                    <div class="col-6">
-                        <small>Account Status:</small>
-                        <h3 class="ms-2 text-success">ACTIVE</h3>
-                    </div>
-                </div>
-                <div class="row pt-3 px-4">
-                    <div class="col-6">
-                        <small>Account Name:</small>
-                        <h3 class="ms-2">Charles Edward A. Umali</h3>
-                    </div>
-                    <div class="col-6">
-                        <small>Account Address:</small>
-                        <h3 class="ms-2">
-                            #1626 J. Fajardo St., Sampaloc, Manila
-                        </h3>
-                    </div>
-                </div>
-
-                <div class="row pt-3 px-4 mb-4">
-                    <div class="col-6">
-                        <small>Package:</small>
-                        <h3 class="ms-2">BASIC 640</h3>
-                    </div>
-                    <div class="col-6">
-                        <small>Date Installed:</small>
-                        <h3 class="ms-2">May 2, 2020</h3>
-                    </div>
-                </div>
-                <div class="row pt-3 px-4 mb-4">
-                    <div class="col">
-                        <button class="btn btn-lg text-light" style="background-color: #14274e" data-bs-toggle="modal" data-bs-target="#exampleModal6">
-                            VIEW BALANCE
-                        </button>
-                        <button class="btn btn-lg text-light" style="background-color: #14274e" data-bs-toggle="modal" data-bs-target="#exampleModal7">
-                            PAYMENT PORTAL
-                        </button>
-                        <button class="btn btn-lg text-light" style="background-color: #14274e" data-bs-toggle="modal" data-bs-target="#exampleModal8">
-                            WALK IN
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        MONTHLY BILL
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col mx-auto">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th colspan="4">BREAKDOWN</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">PACKAGE</td>
-                                        <td colspan="2" class="text-end">
-                                            640.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">PENALTY</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">OVERDUE</td>
-                                        <td colspan="2" class="text-end">
-                                            0.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            REPAIRED/ DAMAGED MATERIALS
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Remote</td>
-                                        <td>0 pcs</td>
-                                        <td>₱500.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Digital Box</td>
-                                        <td>0 pcs</td>
-                                        <td>₱1000.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Smart Card</td>
-                                        <td>0 pcs</td>
-                                        <td>₱1000.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <th colspan="3">Total</th>
-                                    <th class="text-end">₱ 640.00</th>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal2">
-                        ADD PAYMENT DETAILS
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="exampleModal2" tabindex="-2">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        ADD PAYMENT DETAILS
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="amount-paid" class="form-label">PAYMENT AMOUNT</label>
-                                    <input type="text" class="form-control" id="amount-paid" />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="mop" class="form-label">MODE OF PAYMENT</label>
-                                    <select id="mop" class="form-select">
-                                        <option value="1">CASH</option>
-                                        <option value="2">GCASH</option>
-                                        <option value="3">
-                                            BAYAD CENTER
-                                        </option>
-                                        <option value="4">
-                                            DRAGON PAY
-                                        </option>
-                                    </select>
-                                </div>
+                <div
+                    class="col-md-12 col-lg-10 h-1000 bg-light p-lg-3 container-fluid"
+                    style="background-color: #f6f8fb"
+                >
+                    <div class="row d-block d-lg-none d-xl-none">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="bg-dark p-4">
+                                <h5 class="text-white h4">Collapsed content</h5>
+                                <span class="text-muted"
+                                    >Toggleable via the navbar brand.</span
+                                >
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">
-                        SAVE
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="exampleModal3" tabindex="-3">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        MONTHLY BILL
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col mx-auto">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th colspan="4">BREAKDOWN</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">PACKAGE</td>
-                                        <td colspan="2" class="text-end">
-                                            640.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">PENALTY</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">OVERDUE</td>
-                                        <td colspan="2" class="text-end">
-                                            0.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            REPAIRED/ DAMAGED MATERIALS
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Remote</td>
-                                        <td>0 pcs</td>
-                                        <td>₱500.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Digital Box</td>
-                                        <td>0 pcs</td>
-                                        <td>₱1000.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Smart Card</td>
-                                        <td>0 pcs</td>
-                                        <td>₱1000.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <th colspan="3">Total</th>
-                                    <th class="text-end">₱ 640.00</th>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal2" disabled>
-                        ADD PAYMENT DETAILS
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="exampleModal4" tabindex="-4">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        MONTHLY BILL
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col mx-auto">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th colspan="4">BREAKDOWN</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">PACKAGE</td>
-                                        <td colspan="2" class="text-end">
-                                            640.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">PENALTY</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">OVERDUE</td>
-                                        <td colspan="2" class="text-end">
-                                            32.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            REPAIRED/ DAMAGED MATERIALS
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Remote</td>
-                                        <td>0 pcs</td>
-                                        <td>₱500.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Digital Box</td>
-                                        <td>0 pcs</td>
-                                        <td>₱1000.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Smart Card</td>
-                                        <td>1 pcs</td>
-                                        <td>₱1000.00/unit</td>
-                                        <td class="text-end">1000.00</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <th colspan="3">Total</th>
-                                    <th class="text-end">₱ 1672.00</th>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal2" disabled>
-                        ADD PAYMENT DETAILS
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="exampleModal5" tabindex="-5">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Search Customer</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col d-flex">
-                                <input class="form-control me-2" type="search" value="RA027" />
-                                <button class="btn btn-outline-success" type="submit">
-                                    Search
+                        <nav
+                            class="navbar navbar-dark"
+                            style="background-color: #14274e"
+                        >
+                            <div class="container-fluid">
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbarToggleExternalContent"
+                                >
+                                    <span class="navbar-toggler-icon"></span>
                                 </button>
                             </div>
+                        </nav>
+                    </div>
+
+                    <div class="row py-3 border-bottom">
+                        <div class="col">
+                            <h2>Customer Payment</h2>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <table class="table table-borderless table-striped border border-dark table-responsive">
+                        <div class="col text-end">Cashier123</div>
+                    </div>
+
+                    <div class="row pt-3 px-4">
+                        <div class="col-6">
+                            <label for="acc-number" class="form-label d-block"
+                                >Account Number:</label
+                            >
+                            <input
+                                type="number"
+                                name="acc-number"
+                                id="acc-number"
+                                class="form-control form-control-lg w-50 d-inline"
+                                value="ACC-1230123"
+                            />
+                            <button
+                                class="btn btn-lg text-light align-top ms-2 d-inline"
+                                style="background-color: #14274e"
+                            >
+                                <i
+                                    class="bi bi-search"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal5"
+                                ></i>
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <small>Account Status:</small>
+                            <h2 class="ms-2 text-success">ACTIVE</h2>
+                        </div>
+                    </div>
+                    <div class="row pt-3 px-4">
+                        <div class="col-6">
+                            <small>Account Name:</small>
+                            <h2 class="ms-2">Charles Edward A. Umali</h2>
+                        </div>
+                        <div class="col-6">
+                            <small>Account Address:</small>
+                            <h2 class="ms-2">
+                                #1626 J. Fajardo St., Sampaloc, Manila
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="row pt-3 px-4">
+                        <div class="col-6">
+                            <small>Package:</small>
+                            <h2 class="ms-2">BASIC 640</h2>
+                        </div>
+                        <div class="col-6">
+                            <small>Monthly Recurring Charges:</small>
+                            <h2 class="ms-2">Php 640.00</h2>
+                        </div>
+                    </div>
+
+                    <div class="row pt-3 px-4 pb-4 mb-4 border-bottom">
+                        <div class="col-6">
+                            <small>Date of activation:</small>
+                            <h2 class="ms-2">May 02, 2020</h2>
+                        </div>
+                        <div class="col-3">
+                            <small># of Main-line:</small>
+                            <h2 class="ms-2">1</h2>
+                        </div>
+                        <div class="col-3">
+                            <small># of Extensions:</small>
+                            <h2 class="ms-2">0</h2>
+                        </div>
+                    </div>
+
+                    <div class="row pt-3 px-4 mb-4">
+                        <div class="col-lg-4 col-sm-12 mt-2">
+                            <button
+                                class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal6"
+                            >
+                                <i
+                                    class="bi bi-file-ruled"
+                                    style="font-size: 8rem"
+                                ></i>
+                                <p
+                                    class="fs-5 fw-light pt-2 border-top ff-jumbo"
+                                >
+                                    VIEW BALANCE
+                                </p>
+                            </button>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 mt-2">
+                            <button
+                                class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal7"
+                            >
+                                <i
+                                    class="bi bi-window-sidebar"
+                                    style="font-size: 8rem"
+                                ></i>
+                                <p
+                                    class="fs-5 fw-light pt-2 border-top ff-jumbo"
+                                >
+                                    PAYMENT PORTAL
+                                </p>
+                            </button>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 mt-2">
+                            <button
+                                class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal8"
+                            >
+                                <i
+                                    class="bi bi-door-open"
+                                    style="font-size: 8rem"
+                                ></i>
+                                <p
+                                    class="fs-5 fw-light pt-2 border-top ff-jumbo"
+                                >
+                                    WALK IN
+                                </p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            MONTHLY BILL
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col mx-auto">
+                                <table class="table table-bordered">
                                     <thead>
-                                        <tr class="text-light" style="
-                                                    background-color: #14274e;
-                                                ">
-                                            <th></th>
-                                            <th>SUBS ID</th>
-                                            <th>FAMILYNAME</th>
-                                            <th>FIRSTNAME</th>
-                                            <th>INACTIVE</th>
-                                            <th>INET ID</th>
-                                            <th>CATV ID</th>
+                                        <tr>
+                                            <th colspan="4">BREAKDOWN</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                <input class="form-check-input" type="radio" name="check" />
+                                            <td colspan="2">PACKAGE</td>
+                                            <td colspan="2" class="text-end">
+                                                640.00
                                             </td>
-                                            <td>RA027801</td>
-                                            <td>UMALI</td>
-                                            <td>CHARLES EDWARD</td>
-                                            <td>NO</td>
-                                            <td>NONE</td>
-                                            <td>0939302291711</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <input class="form-check-input" type="radio" name="check" />
-                                            </td>
-                                            <td>RA027811</td>
-                                            <td>VIZCOCHO</td>
-                                            <td>GERARD DOMINIC</td>
-                                            <td>YES</td>
-                                            <td>NONE</td>
-                                            <td>NONE</td>
+                                            <td colspan="4">PENALTY</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <input class="form-check-input" type="radio" name="check" />
+                                            <td colspan="2">OVERDUE</td>
+                                            <td colspan="2" class="text-end">
+                                                0.00
                                             </td>
-                                            <td>RA027851</td>
-                                            <td>REGUYAL</td>
-                                            <td>JON JESTER</td>
-                                            <td>NO</td>
-                                            <td>0939302016121</td>
-                                            <td>NONE</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <input class="form-check-input" type="radio" name="check" />
+                                            <td colspan="4">
+                                                REPAIRED/ DAMAGED MATERIALS
                                             </td>
-                                            <td>RA027899</td>
-                                            <td>LABORTE</td>
-                                            <td>LAVILLE</td>
-                                            <td>NO</td>
-                                            <td>0939302017433</td>
-                                            <td>0949010042661</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Remote</td>
+                                            <td>0 pcs</td>
+                                            <td>₱500.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Digital Box</td>
+                                            <td>0 pcs</td>
+                                            <td>₱1000.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Smart Card</td>
+                                            <td>0 pcs</td>
+                                            <td>₱1000.00/unit</td>
+                                            <td class="text-end">0.00</td>
                                         </tr>
                                     </tbody>
+                                    <tfoot>
+                                        <th colspan="3">Total</th>
+                                        <th class="text-end">₱ 640.00</th>
+                                    </tfoot>
                                 </table>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" data-bs-dismiss="modal" class="btn btn-primary">
-                        SAVE
-                    </button>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#exampleModal2"
+                        >
+                            ADD PAYMENT DETAILS
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="exampleModal6" tabindex="-6">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        A/R BALANCE
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col mx-auto">
-                            <table class="table table-borderless table-striped mt-3 border border-dark">
-                                <thead class="text-light" style="background-color: #14274e">
-                                    <tr>
-                                        <td>TRANSACTION NUMBER</td>
-                                        <td>TRANSACTION DATE</td>
-                                        <td>TRANSACTION TYPE</td>
-                                        <td>A/R TYPE</td>
-                                        <td>AMOUNT</td>
-                                        <td>PAID AMOUNT</td>
-                                        <td>BALANCE</td>
-                                        <td>REMARKS</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>2021112435</td>
-                                        <td>10/01/20</td>
-                                        <td>MONTHLY BILLING</td>
-                                        <td>M. LINE SUBS FEE</td>
-                                        <td class="text-end">640.00</td>
-                                        <td class="text-end">640.00</td>
-                                        <td class="text-end">0.00</td>
-                                        <td>OCT/01/2020 to OCT/31/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2021112436</td>
-                                        <td>09/01/20</td>
-                                        <td>MONTHLY BILLING</td>
-                                        <td>M. LINE SUBS FEE</td>
-                                        <td class="text-end">1672.00</td>
-                                        <td class="text-end">1672.00</td>
-                                        <td class="text-end">0.00</td>
-                                        <td>SEP/01/2020 to SEP/31/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2021112437</td>
-                                        <td>08/01/20</td>
-                                        <td>MONTHLY BILLING</td>
-                                        <td>M. LINE SUBS FEE</td>
-                                        <td class="text-end">640.00</td>
-                                        <td class="text-end">0.00</td>
-                                        <td class="text-end">640.00</td>
-                                        <td>AUG/01/2020 to AUG/31/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2021112438</td>
-                                        <td>07/01/20</td>
-                                        <td>MONTHLY BILLING</td>
-                                        <td>M. LINE SUBS FEE</td>
-                                        <td class="text-end">640.00</td>
-                                        <td class="text-end">0.00</td>
-                                        <td class="text-end">640.00</td>
-                                        <td>JUL/01/2020 to JUL/31/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2021112439</td>
-                                        <td>06/01/20</td>
-                                        <td>MONTHLY BILLING</td>
-                                        <td>M. LINE SUBS FEE</td>
-                                        <td class="text-end">640.00</td>
-                                        <td class="text-end">0.00</td>
-                                        <td class="text-end">640.00</td>
-                                        <td>JUN/01/2020 to JUN/31/2020</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot style="border-top: 3px black double">
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <th>TOTAL BALANCE:</th>
-                                        <th class="text-end">3500.00</th>
-                                        <th class="text-end">1380.00</th>
-                                        <th class="text-end">1920.00</th>
-                                        <td></td>
-                                    </tr>
-                                </tfoot>
-                            </table>
+        <div class="modal fade" id="exampleModal2" tabindex="-2">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            ADD PAYMENT DETAILS
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label
+                                            for="amount-paid"
+                                            class="form-label"
+                                            >PAYMENT AMOUNT</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="amount-paid"
+                                        />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="mop" class="form-label"
+                                            >MODE OF PAYMENT</label
+                                        >
+                                        <select id="mop" class="form-select">
+                                            <option value="1">CASH</option>
+                                            <option value="2">GCASH</option>
+                                            <option value="3">
+                                                BAYAD CENTER
+                                            </option>
+                                            <option value="4">
+                                                DRAGON PAY
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                        Close
-                    </button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">
+                            SAVE
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="exampleModal7" tabindex="-7">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        PAYMENT PORTALS
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <ul class="list-unstyled text-center">
-                                <li class="my-2">
-                                    <a class="btn btn-gcash btn-lg w-50" href="#gcash" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#gcash" data-bs-title="GCash">
-                                        <i class="bi bi-credit-card-2-front"></i>
-                                        GCash
-                                    </a>
-                                </li>
-                                <li class="my-2">
-                                    <a class="btn btn-paymaya btn-lg w-50" href="" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#gcash" data-bs-title="PayMaya">
-                                        <i class="bi bi-credit-card-2-front"></i>
-                                        PayMaya
-                                    </a>
-                                </li>
-                                <li class="my-2">
-                                    <a class="btn btn-shopee btn-lg w-50" href="" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#gcash" data-bs-title="ShopeePay">
-                                        <i class="bi bi-credit-card-2-front"></i>
-                                        ShopeePay
-                                    </a>
-                                </li>
-                                <li class="my-2">
-                                    <a class="btn btn-dragonpay btn-lg w-50" href="" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#gcash" data-bs-title="dragonpay">
-                                        <i class="bi bi-credit-card-2-front"></i>
-                                        dragonpay
-                                    </a>
-                                </li>
-                                <li class="my-2">
-                                    <a class="btn btn-bayadcenter btn-lg w-50" href="" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#gcash" data-bs-title="Bayad Center">
-                                        <i class="bi bi-credit-card-2-front"></i>
-                                        Bayad Center
-                                    </a>
-                                </li>
-                            </ul>
+        <div class="modal fade" id="exampleModal3" tabindex="-3">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            MONTHLY BILL
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col mx-auto">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">BREAKDOWN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">PACKAGE</td>
+                                            <td colspan="2" class="text-end">
+                                                640.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">PENALTY</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">OVERDUE</td>
+                                            <td colspan="2" class="text-end">
+                                                0.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                REPAIRED/ DAMAGED MATERIALS
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Remote</td>
+                                            <td>0 pcs</td>
+                                            <td>₱500.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Digital Box</td>
+                                            <td>0 pcs</td>
+                                            <td>₱1000.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Smart Card</td>
+                                            <td>0 pcs</td>
+                                            <td>₱1000.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <th colspan="3">Total</th>
+                                        <th class="text-end">₱ 640.00</th>
+                                    </tfoot>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer justify-content-start">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                        Close
-                    </button>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#exampleModal2"
+                            disabled
+                        >
+                            ADD PAYMENT DETAILS
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="exampleModal8" tabindex="-8">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        WALK IN PAYMENT
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <ul class="list-unstyled text-center">
-                                <li class="my-2">
-                                    <a class="btn btn-success btn-lg w-50" href="#cash" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#cash">
-                                        <i class="bi bi-cash-stack"></i>
-                                        CASH
-                                    </a>
-                                </li>
-                                <li class="my-2">
-                                    <a class="btn btn-info btn-lg w-50" href="">
-                                        <i class="bi bi-card-text"></i>
-                                        CHECK
-                                    </a>
-                                </li>
-                            </ul>
+        <div class="modal fade" id="exampleModal4" tabindex="-4">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            MONTHLY BILL
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col mx-auto">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">BREAKDOWN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">PACKAGE</td>
+                                            <td colspan="2" class="text-end">
+                                                640.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">PENALTY</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">OVERDUE</td>
+                                            <td colspan="2" class="text-end">
+                                                32.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                REPAIRED/ DAMAGED MATERIALS
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Remote</td>
+                                            <td>0 pcs</td>
+                                            <td>₱500.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Digital Box</td>
+                                            <td>0 pcs</td>
+                                            <td>₱1000.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Smart Card</td>
+                                            <td>1 pcs</td>
+                                            <td>₱1000.00/unit</td>
+                                            <td class="text-end">1000.00</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <th colspan="3">Total</th>
+                                        <th class="text-end">₱ 1672.00</th>
+                                    </tfoot>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                        Close
-                    </button>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#exampleModal2"
+                            disabled
+                        >
+                            ADD PAYMENT DETAILS
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="gcash" tabindex="-9">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <label for="trans-date" class="form-label">Date of Transaction:</label>
-                            <input type="date" name="trans-date" id="trans-date" class="form-control" />
+        <div class="modal fade" id="exampleModal5" tabindex="-5">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Search Customer</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <input
+                                        class="form-control me-2"
+                                        type="search"
+                                        value="RA027"
+                                    />
+                                    <button
+                                        class="btn btn-outline-success"
+                                        type="submit"
+                                    >
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <table
+                                        class="table table-borderless table-striped border border-dark table-responsive"
+                                    >
+                                        <thead>
+                                            <tr
+                                                class="text-light"
+                                                style="
+                                                    background-color: #14274e;
+                                                "
+                                            >
+                                                <th></th>
+                                                <th>SUBS ID</th>
+                                                <th>FAMILYNAME</th>
+                                                <th>FIRSTNAME</th>
+                                                <th>INACTIVE</th>
+                                                <th>INET ID</th>
+                                                <th>CATV ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="check"
+                                                        value="1"
+                                                    />
+                                                </td>
+                                                <td>RA027801</td>
+                                                <td>UMALI</td>
+                                                <td>CHARLES EDWARD</td>
+                                                <td>NO</td>
+                                                <td>NONE</td>
+                                                <td>0939302291711</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="check"
+                                                        value="2"
+                                                    />
+                                                </td>
+                                                <td>RA027811</td>
+                                                <td>VIZCOCHO</td>
+                                                <td>GERARD DOMINIC</td>
+                                                <td>YES</td>
+                                                <td>NONE</td>
+                                                <td>NONE</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="check"
+                                                        value="3"
+                                                    />
+                                                </td>
+                                                <td>RA027851</td>
+                                                <td>REGUYAL</td>
+                                                <td>JON JESTER</td>
+                                                <td>NO</td>
+                                                <td>0939302016121</td>
+                                                <td>NONE</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="check"
+                                                        value="4"
+                                                    />
+                                                </td>
+                                                <td>RA027899</td>
+                                                <td>LABORTE</td>
+                                                <td>LAVILLE</td>
+                                                <td>YES</td>
+                                                <td>0939302017433</td>
+                                                <td>0949010042661</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="ref-number" class="form-label">Reference Number:</label>
-                            <input type="text" name="ref-number" id="ref-number" class="form-control" />
-                        </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-primary" id="select">
+                            SELECT
+                        </a>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="amount-paid" class="form-label">Amount Paid:</label>
-                            <input type="text" name="amount-paid" id="amount-paid" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-start">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal7">
-                        BACK
-                    </button>
-
-                    <button type="button" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
-                        SAVE PAYMENT
-                    </button>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="cash" tabindex="-9">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Cash Payment
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <label for="trans-date2" class="form-label">Date of Transaction:</label>
-                            <input type="date" name="trans-date2" id="trans-date2" class="form-control" />
+        <div class="modal fade" id="exampleModal6" tabindex="-6">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            A/R BALANCE
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col mx-auto">
+                                <table
+                                    class="table table-borderless table-striped mt-3 border border-dark"
+                                >
+                                    <thead
+                                        class="text-light"
+                                        style="background-color: #14274e"
+                                    >
+                                        <tr>
+                                            <td>TRANSACTION NUMBER</td>
+                                            <td>TRANSACTION DATE</td>
+                                            <td>TRANSACTION TYPE</td>
+                                            <td>A/R TYPE</td>
+                                            <td>AMOUNT</td>
+                                            <td>PAID AMOUNT</td>
+                                            <td>BALANCE</td>
+                                            <td>REMARKS</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2021112435</td>
+                                            <td>10/01/20</td>
+                                            <td>MONTHLY BILLING</td>
+                                            <td>M. LINE SUBS FEE</td>
+                                            <td class="text-end">640.00</td>
+                                            <td class="text-end">640.00</td>
+                                            <td class="text-end">0.00</td>
+                                            <td>OCT/01/2020 to OCT/31/2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021112436</td>
+                                            <td>09/01/20</td>
+                                            <td>MONTHLY BILLING</td>
+                                            <td>M. LINE SUBS FEE</td>
+                                            <td class="text-end">1672.00</td>
+                                            <td class="text-end">1672.00</td>
+                                            <td class="text-end">0.00</td>
+                                            <td>SEP/01/2020 to SEP/31/2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021112437</td>
+                                            <td>08/01/20</td>
+                                            <td>MONTHLY BILLING</td>
+                                            <td>M. LINE SUBS FEE</td>
+                                            <td class="text-end">640.00</td>
+                                            <td class="text-end">0.00</td>
+                                            <td class="text-end">640.00</td>
+                                            <td>AUG/01/2020 to AUG/31/2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021112438</td>
+                                            <td>07/01/20</td>
+                                            <td>MONTHLY BILLING</td>
+                                            <td>M. LINE SUBS FEE</td>
+                                            <td class="text-end">640.00</td>
+                                            <td class="text-end">0.00</td>
+                                            <td class="text-end">640.00</td>
+                                            <td>JUL/01/2020 to JUL/31/2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021112439</td>
+                                            <td>06/01/20</td>
+                                            <td>MONTHLY BILLING</td>
+                                            <td>M. LINE SUBS FEE</td>
+                                            <td class="text-end">640.00</td>
+                                            <td class="text-end">0.00</td>
+                                            <td class="text-end">640.00</td>
+                                            <td>JUN/01/2020 to JUN/31/2020</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot style="border-top: 3px black double">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <th>TOTAL BALANCE:</th>
+                                            <th class="text-end">3500.00</th>
+                                            <th class="text-end">1380.00</th>
+                                            <th class="text-end">1920.00</th>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="ref-number" class="form-label">Reference Number:</label>
-                            <input type="text" name="ref-number" id="ref-number" class="form-control" />
-                        </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="amount-paid" class="form-label">Amount Due:</label>
-                            <input type="text" name="amount-paid" id="amount-paid" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="amount-paid" class="form-label">Amount Paid:</label>
-                            <input type="text" name="amount-paid" id="amount-paid" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-start">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal7">
-                        BACK
-                    </button>
-
-                    <button type="button" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
-                        SAVE PAYMENT
-                    </button>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<script>
-    var exampleModal = document.getElementById("gcash");
-    exampleModal.addEventListener("show.bs.modal", function(event) {
-        var button = event.relatedTarget;
-        var recipient = button.getAttribute("data-bs-title");
-        var modalTitle = exampleModal.querySelector(".modal-title");
-        modalTitle.textContent = recipient + " PAYMENT";
-    });
 
-    Date.prototype.toDateInputValue = function() {
-        var local = new Date(this);
-        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
-        return local.toJSON().slice(0, 10);
-    };
-    document.getElementById(
-        "trans-date"
-    ).value = new Date().toDateInputValue();
-    document.getElementById(
-        "trans-date2"
-    ).value = new Date().toDateInputValue();
-</script>
+        <div class="modal fade" id="exampleModal7" tabindex="-7">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            PAYMENT PORTALS
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <ul class="list-unstyled text-center">
+                                    <li class="my-2">
+                                        <a
+                                            class="btn btn-gcash btn-lg w-50"
+                                            href="#gcash"
+                                            data-bs-toggle="modal"
+                                            data-bs-dismiss="modal"
+                                            data-bs-target="#gcash"
+                                            data-bs-title="GCash"
+                                        >
+                                            <i
+                                                class="bi bi-credit-card-2-front"
+                                            ></i>
+                                            GCash
+                                        </a>
+                                    </li>
+                                    <li class="my-2">
+                                        <a
+                                            class="btn btn-paymaya btn-lg w-50"
+                                            href=""
+                                            data-bs-toggle="modal"
+                                            data-bs-dismiss="modal"
+                                            data-bs-target="#gcash"
+                                            data-bs-title="PayMaya"
+                                        >
+                                            <i
+                                                class="bi bi-credit-card-2-front"
+                                            ></i>
+                                            PayMaya
+                                        </a>
+                                    </li>
+                                    <li class="my-2">
+                                        <a
+                                            class="btn btn-shopee btn-lg w-50"
+                                            href=""
+                                            data-bs-toggle="modal"
+                                            data-bs-dismiss="modal"
+                                            data-bs-target="#gcash"
+                                            data-bs-title="ShopeePay"
+                                        >
+                                            <i
+                                                class="bi bi-credit-card-2-front"
+                                            ></i>
+                                            ShopeePay
+                                        </a>
+                                    </li>
+                                    <li class="my-2">
+                                        <a
+                                            class="btn btn-dragonpay btn-lg w-50"
+                                            href=""
+                                            data-bs-toggle="modal"
+                                            data-bs-dismiss="modal"
+                                            data-bs-target="#gcash"
+                                            data-bs-title="dragonpay"
+                                        >
+                                            <i
+                                                class="bi bi-credit-card-2-front"
+                                            ></i>
+                                            dragonpay
+                                        </a>
+                                    </li>
+                                    <li class="my-2">
+                                        <a
+                                            class="btn btn-bayadcenter btn-lg w-50"
+                                            href=""
+                                            data-bs-toggle="modal"
+                                            data-bs-dismiss="modal"
+                                            data-bs-target="#gcash"
+                                            data-bs-title="Bayad Center"
+                                        >
+                                            <i
+                                                class="bi bi-credit-card-2-front"
+                                            ></i>
+                                            Bayad Center
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-start">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="modal fade" id="exampleModal8" tabindex="-8">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            WALK IN PAYMENT
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <ul class="list-unstyled text-center">
+                                    <li class="my-2">
+                                        <a
+                                            class="btn btn-success btn-lg w-50"
+                                            href="#cash"
+                                            data-bs-toggle="modal"
+                                            data-bs-dismiss="modal"
+                                            data-bs-target="#cash"
+                                        >
+                                            <i class="bi bi-cash-stack"></i>
+                                            CASH
+                                        </a>
+                                    </li>
+                                    <li class="my-2">
+                                        <a
+                                            class="btn btn-info btn-lg w-50"
+                                            href=""
+                                        >
+                                            <i class="bi bi-card-text"></i>
+                                            CHECK
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="gcash" tabindex="-9">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <label for="trans-date" class="form-label"
+                                    >Date of Transaction:</label
+                                >
+                                <input
+                                    type="date"
+                                    name="trans-date"
+                                    id="trans-date"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="ref-number" class="form-label"
+                                    >Reference Number:</label
+                                >
+                                <input
+                                    type="text"
+                                    name="ref-number"
+                                    id="ref-number"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="amount-paid" class="form-label"
+                                    >Amount Paid:</label
+                                >
+                                <input
+                                    type="text"
+                                    name="amount-paid"
+                                    id="amount-paid"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-start">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#exampleModal7"
+                        >
+                            BACK
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary ms-auto"
+                            data-bs-dismiss="modal"
+                        >
+                            SAVE PAYMENT
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="cash" tabindex="-9">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Cash Payment
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <label for="trans-date2" class="form-label"
+                                    >Date of Transaction:</label
+                                >
+                                <input
+                                    type="date"
+                                    name="trans-date2"
+                                    id="trans-date2"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="ref-number" class="form-label"
+                                    >Reference Number:</label
+                                >
+                                <input
+                                    type="text"
+                                    name="ref-number"
+                                    id="ref-number"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="amount-paid" class="form-label"
+                                    >Amount Due:</label
+                                >
+                                <input
+                                    type="text"
+                                    name="amount-paid"
+                                    id="amount-paid"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="amount-paid" class="form-label"
+                                    >Amount Paid:</label
+                                >
+                                <input
+                                    type="text"
+                                    name="amount-paid"
+                                    id="amount-paid"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-start">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#exampleModal7"
+                        >
+                            BACK
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary ms-auto"
+                            data-bs-dismiss="modal"
+                        >
+                            SAVE PAYMENT
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"
+    ></script>
+    <script>
+        var exampleModal = document.getElementById("gcash");
+        exampleModal.addEventListener("show.bs.modal", function (event) {
+            var button = event.relatedTarget;
+            var recipient = button.getAttribute("data-bs-title");
+            var modalTitle = exampleModal.querySelector(".modal-title");
+            modalTitle.textContent = recipient + " PAYMENT";
+        });
+
+        Date.prototype.toDateInputValue = function () {
+            var local = new Date(this);
+            local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+            return local.toJSON().slice(0, 10);
+        };
+        document.getElementById(
+            "trans-date"
+        ).value = new Date().toDateInputValue();
+        document.getElementById(
+            "trans-date2"
+        ).value = new Date().toDateInputValue();
+
+        function validate() {
+            let x = document.getElementById("acc-number").value;
+            var myModal = new bootstrap.Modal(
+                document.getElementById("exampleModal5"),
+                {
+                    keyboard: false,
+                }
+            );
+
+            if (x === "RA027801") {
+                window.location.replace("./CustomerInfo2.html");
+            } else if (x === "RA027811") {
+                window.location.replace("./CustomerInfo3.html");
+            } else if (x === "RA027851") {
+                window.location.replace("./CustomerInfo4.html");
+            } else if (x === "RA027899") {
+                window.location.replace("./CustomerInfo5.html");
+            } else {
+                myModal.show();
+            }
+        }
+
+        document.getElementById("select").addEventListener(
+            "click",
+            () => {
+                let radios = document.getElementsByTagName("input");
+                for (let i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        if (radios[i].value == "1") {
+                            window.location.replace("./CustomerInfo2.html");
+                        } else if (radios[i].value == "2") {
+                            window.location.replace("./CustomerInfo3.html");
+                        } else if (radios[i].value == "3") {
+                            window.location.replace("./CustomerInfo4.html");
+                        } else if (radios[i].value == "4") {
+                            window.location.replace("./CustomerInfo5.html");
+                        }
+                    }
+                }
+            },
+            false
+        );
+    </script>
 </html>

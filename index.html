@@ -5,168 +5,139 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+
+            body {
+                background-color: #14274e !important;
+            }
+
+            .ff-logo {
+                font-family: "Mate SC";
+            }
+
+            .btn-jumbo {
+                height: 300px;
+                background-color: white !important;
+                color: #14274e !important;
+                font-family: "Nunito Sans";
+            }
+        </style>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"
+        />
     </head>
     <body>
-        <h1>Index of lcctv-proto.github.io</h1>
-        <ul>
-            <li>/AdminViews</li>
-            <ul>
-                <li>
-                    <a href="./AdminView/Applications.html"
-                        >Applications.html</a
-                    >
-                </li>
-                <li>
-                    <a href="./AdminView/CreateAccount.html"
-                        >CreateAccount.html</a
-                    >
-                </li>
-                <li>
-                    <a href="./AdminView/Dispatch.html">Dispatch.html</a>
-                </li>
-                <li>
-                    <a href="./AdminView/Employees.html">Employees.html</a>
-                </li>
-                <li>
-                    <a href="./AdminView/Equipments.html">Equipments.html</a>
-                </li>
-                <li>
-                    <a href="./AdminView/LandingPage.html">LandingPage.html</a>
-                </li>
-                <li>
-                    <a href="./AdminView/Login.html">Login.html</a>
-                </li>
-                <li>
-                    <a href="./AdminView/MyNotes.html">MyNotes.html</a>
-                </li>
-                <li>
-                    <a href="./AdminView/Teams.html">Teams.html</a>
-                </li>
-            </ul>
+        <div class="container-fluid text-white p-5 mt-5">
+            <div class="row mt-5">
+                <div class="col-lg-3 col-sm-12 mx-auto text-center">
+                    <img src="./Images/logo.png" width="150" alt="Icon" />
 
-            <li>/CashierView</li>
-            <ul>
-                <li>
-                    <a href="./CashierView/LandingPage.html"
-                        >LandingPage.html</a
+                    <h2 class="ff-logo">Lake Community Cable TV</h2>
+                    <p class="ms-3 fw-light fs-4">Online Management Portal</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-2 mt-2">
+                    <a
+                        href="./AdminView/Login.html"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
                     >
-                </li>
-                <li>
-                    <a href="./CashierView/Login.html">Login.html</a>
-                </li>
-                <li>
-                    <a href="./CashierView/UserInfo.html">UserInfo.html</a>
-                </li>
-            </ul>
-
-            <li>/CustomerView</li>
-            <ul>
-                <li>/ExistingCustomer</li>
-                <ul>
-                    <li>
-                        <a
-                            href="./CustomerView/ExistingCustomer/CustomerDashboard.html"
-                            >CustomerDashboard.html</a
-                        >
-                    </li>
-                    <li>
-                        <a href="./CustomerView/ExistingCustomer/Login.html"
-                            >Login.html</a
-                        >
-                    </li>
-                    <li>
-                        <a href="./CustomerView/ExistingCustomer/Payment.html"
-                            >Payment.html</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="./CustomerView/ExistingCustomer/ServiceChange.html"
-                            >ServiceChange.html</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="./CustomerView/ExistingCustomer/ServiceTermination.html"
-                            >ServiceTermination.html</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="./CustomerView/ExistingCustomer/ViewAccount.html"
-                            >ViewAccount.html</a
-                        >
-                    </li>
-                </ul>
-                <li>/NewCustomer</li>
-                <ul>
-                    <li>
-                        <a href="./CustomerView/NewCustomer/Application.html"
-                            >Application.html</a
-                        >
-                    </li>
-                    <li>
-                        <a href="./CustomerView/NewCustomer/CheckAppStatus.html"
-                            >CheckAppStatus.html</a
-                        >
-                    </li>
-                </ul>
-                <li><a href="./CustomerView/AboutUs.html">AboutUs.html</a></li>
-                <li>
-                    <a href="./CustomerView/ContactUs.html">ContactUs.html</a>
-                </li>
-                <li>
-                    <a href="./CustomerView/LandingPage.html"
-                        >LandingPage.html</a
+                        <span class="fs-6"> LCCTV </span>
+                        <img
+                            src="./Icons/exe.svg"
+                            class="mt-auto h-50"
+                            alt="Admin"
+                        />
+                        <span class="mt-5 text-center fw-bold me-4">
+                            Admin Portal
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-2 mt-2">
+                    <a
+                        href="./CashierView/Login.html"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
+                        ><span class="fs-6"> LCCTV </span>
+                        <img
+                            src="./Icons/xls.svg"
+                            class="mt-auto h-50"
+                            alt="Admin"
+                        />
+                        <span class="mt-5 text-center fw-bold me-4">
+                            Cashier Portal
+                        </span></a
                     >
-                </li>
-                <li>
-                    <a href="./CustomerView/ServiceCatalog.html"
-                        >ServiceCatalog.html</a
+                </div>
+                <div class="col-lg-2 mt-2">
+                    <a
+                        href="./HeadView/Login.html"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
+                        ><span class="fs-6"> LCCTV </span>
+                        <img
+                            src="./Icons/ppt.svg"
+                            class="mt-auto h-50"
+                            alt="Admin"
+                        />
+                        <span class="mt-5 text-center fw-bold me-4">
+                            CEO Portal
+                        </span></a
                     >
-                </li>
-            </ul>
-
-            <li>/HeadView</li>
-            <ul>
-                <li><a href="./HeadView/Employees.html">Employees.html</a></li>
-                <li>
-                    <a href="./HeadView/LandingPage.html">LandingPage.html</a>
-                </li>
-                <li>
-                    <a href="./HeadView/Login.html">Login.html</a>
-                </li>
-            </ul>
-
-            <li>/SupportView</li>
-            <ul>
-                <li>
-                    <a href="./SupportView/LandingPage.html"
-                        >LandingPage.html</a
+                </div>
+                <div class="col-lg-2 mt-2">
+                    <a
+                        href="./FrontDeskView/Login.html"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
+                        ><span class="fs-6"> LCCTV </span>
+                        <img
+                            src="./Icons/gif.svg"
+                            class="mt-auto h-50"
+                            alt="Admin"
+                        />
+                        <span class="mt-5 text-center fw-bold me-4">
+                            Front Desk Portal
+                        </span></a
                     >
-                </li>
-                <li><a href="./SupportView/Login.html">Login.html</a></li>
-            </ul>
-
-            <li>/TechnicianView</li>
-            <ul>
-                <li>
-                    <a href="./TechnicianView/Area.html">Area.html</a>
-                </li>
-                <li>
-                    <a href="./TechnicianView/Dispatch.html">Dispatch.html</a>
-                </li>
-                <li>
-                    <a href="./TechnicianView/LandingPage.html"
-                        >LandingPage.html</a
+                </div>
+                <div class="col-lg-2 mt-2">
+                    <a
+                        href="./JOView/Login.html"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
+                        ><span class="fs-6"> LCCTV </span>
+                        <img
+                            src="./Icons/doc.svg"
+                            class="mt-auto h-50"
+                            alt="Admin"
+                        />
+                        <span class="mt-5 text-center fw-bold me-4">
+                            JO Personnel Portal
+                        </span></a
                     >
-                </li>
-                <li>
-                    <a href="./TechnicianView/Login.html">Login.html</a>
-                </li>
-            </ul>
-        </ul>
-
-        <p>Last Updated 21/03/31@00:07</p>
+                </div>
+                <div class="col-lg-2 mt-2">
+                    <a
+                        href="./TechnicianView/Login.html"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
+                        ><span class="fs-6"> LCCTV </span>
+                        <img
+                            src="./Icons/bat.svg"
+                            class="mt-auto h-50"
+                            alt="Admin"
+                        />
+                        <span class="mt-5 text-center fw-bold me-4">
+                            Technician Portal
+                        </span></a
+                    >
+                </div>
+            </div>
+        </div>
     </body>
 </html>
