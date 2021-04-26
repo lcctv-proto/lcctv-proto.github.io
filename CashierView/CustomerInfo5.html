@@ -90,7 +90,6 @@
             color: #d00a39 !important;
             border-color: #0077c0 !important;
         }
-
     </style>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
@@ -151,16 +150,19 @@
                         </button>
                     </div>
                     <div class="col-6">
-                        <small>Account Status:</small>
-                        <h3 class="ms-2 text-danger">
-                            PERMANENTLY INACTIVE
-                        </h3>
+                        <label for="acc-number" class="form-label d-block">Account Name:</label>
+                        <input type="number" name="acc-name" id="acc-name" class="form-control form-control-lg w-50 d-inline" value="ACC-1230123" />
+                        <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e">
+                            <i class="bi bi-search" data-bs-toggle="modal" data-bs-target="#exampleModal5"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="row pt-3 px-4">
                     <div class="col-6">
-                        <small>Account Name:</small>
-                        <h3 class="ms-2">Laville V. Laborte</h3>
+                        <small>Account Status:</small>
+                        <h3 class="ms-2 text-danger">
+                            PERMANENTLY INACTIVE
+                        </h3>
                     </div>
                     <div class="col-6">
                         <small>Account Address:</small>
@@ -904,7 +906,6 @@
         },
         false
     );
-
 </script>
 
 </html>
