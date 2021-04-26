@@ -1,803 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <style>
-            table,
-            thead,
-            th,
-            td {
-                padding: 9px;
-            }
 
-            table {
-                width: 100%;
-            }
-        </style>
-        <link rel="stylesheet" href="./Styles/frontdesk.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-            crossorigin="anonymous"
-        />
-    </head>
-    <body>
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-2 p-0 text-light d-none d-lg-block">
-                    <nav class="navbar mt-5">
-                        <ul class="navbar-nav fs-5">
-                            <a
-                                class="navbar-brand text-light fs-2 text-wrap text-center"
-                                href="./Login.html"
-                                ><img
-                                    height="100px"
-                                    class="d-block mx-auto mb-2"
-                                    src="../icon_10.png"
-                                    alt=""
-                                />
-                                <p class="ms-3 ff-logo pb-3 border-bottom">
-                                    Lake Community Cable TV
-                                </p>
-                            </a>
-                            <li class="nav-item mt-5">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./LandingPage.html"
-                                    ><i class="bi bi-speedometer2 pl-3"></i
-                                    ><span class="px-3">Dashboard</span></a
-                                >
-                            </li>
-                            <li class="nav-item active">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Applications.html"
-                                    ><i class="bi bi-archive"></i
-                                    ><span class="px-3">Applications</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Support.html"
-                                    ><i class="bi bi-tools"></i
-                                    ><span class="px-3"
-                                        >Support<span
-                                            class="mx-3 badge bg-danger"
-                                        >
-                                            3</span
-                                        ></span
-                                    ></a
-                                >
-                            </li>
-                            <li class="nav-item mt-5 bg-dark-navy">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Login.html"
-                                    ><i class="bi bi-box-arrow-left"></i
-                                    ><span class="px-3">Logout</span></a
-                                >
-                            </li>
-                        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        table,
+        thead,
+        th,
+        td {
+            padding: 9px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+    </style>
+    <link rel="stylesheet" href="./Styles/frontdesk.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-2 p-0 text-light d-none d-lg-block">
+                <nav class="navbar mt-5">
+                    <ul class="navbar-nav fs-5">
+                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
+                            <p class="ms-3 ff-logo pb-3 border-bottom">
+                                Lake Community Cable TV
+                            </p>
+                        </a>
+                        <li class="nav-item mt-5">
+                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">Dashboard</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light px-3" href="./Applications.html"><i class="bi bi-archive"></i><span class="px-3">Applications</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Support.html"><i class="bi bi-tools"></i><span class="px-3">Support<span class="mx-3 badge bg-danger">
+                                        3</span></span></a>
+                        </li>
+                        <li class="nav-item mt-5 bg-dark-navy">
+                            <a class="nav-link text-light px-3" href="./Login.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">Logout</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
+                <div class="row d-block d-lg-none d-xl-none">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-dark" style="background-color: #14274e">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
                     </nav>
                 </div>
-                <div
-                    class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid"
-                    style="background-color: #f6f8fb"
-                >
-                    <div class="row d-block d-lg-none d-xl-none">
-                        <div class="collapse" id="navbarToggleExternalContent">
-                            <div class="bg-dark p-4">
-                                <h5 class="text-white h4">Collapsed content</h5>
-                                <span class="text-muted"
-                                    >Toggleable via the navbar brand.</span
-                                >
-                            </div>
-                        </div>
-                        <nav
-                            class="navbar navbar-dark"
-                            style="background-color: #14274e"
-                        >
-                            <div class="container-fluid">
-                                <button
-                                    class="navbar-toggler"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbarToggleExternalContent"
-                                >
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                            </div>
-                        </nav>
+
+                <div class="row py-3 border-bottom">
+                    <div class="col">
+                        <h3>Application Details</h3>
                     </div>
-
-                    <div class="row py-3 border-bottom">
-                        <div class="col">
-                            <h3>Application Details</h3>
-                        </div>
-                        <div class="col text-end">
-                            FrontDesk123 |
-                            <a
-                                href="./Login.html"
-                                class="text-muted text-decoration-none"
-                            >
-                                Logout</a
-                            >
-                        </div>
+                    <div class="col text-end">
+                        FrontDesk123 |
+                        <a href="./Login.html" class="text-muted text-decoration-none">
+                            Logout</a>
                     </div>
+                </div>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <table class="mx-auto my-5">
-                                <tr>
-                                    <th>
-                                        <h2 class="text-center">
-                                            Lake Community Cable TV
-                                            Multi-purpose Cooperative
-                                        </h2>
-                                    </th>
-                                </tr>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="mx-auto my-5">
+                            <tr>
+                                <th>
+                                    <h2 class="text-center">
+                                        Lake Community Cable TV
+                                        Multi-purpose Cooperative
+                                    </h2>
+                                </th>
+                            </tr>
 
-                                <tr>
-                                    <th>
-                                        <h3 class="text-center">
-                                            Application Form of SS-091569897
-                                        </h3>
-                                    </th>
-                                </tr>
+                            <tr>
+                                <th>
+                                    <h3 class="text-center">
+                                        Application Form of SS-091569897
+                                    </h3>
+                                </th>
+                            </tr>
 
-                                <tr>
-                                    <td class="p-0" colspan="6">
-                                        <table
-                                            class="border blueBorder"
-                                            style="border-color: #14274e"
-                                        >
-                                            <thead
-                                                class="text-white"
-                                                style="
+                            <tr>
+                                <td class="p-0" colspan="6">
+                                    <table class="border blueBorder" style="border-color: #14274e">
+                                        <thead class="text-white" style="
                                                     background-color: #14274e;
-                                                "
-                                            >
+                                                ">
+                                            <th colspan="6">
+                                                Personal Information
+                                            </th>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label for="Surname" class="form-label">Family Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Surname" value="UMALI" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="FirstName" class="form-label">First Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="FirstName" value="CHARLES EDWARD" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="MiddleName" class="form-label">Middle Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="MiddleName" value="ALALAN" disabled />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="Nationality" class="form-label">Nationality:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Nationality" value="FILIPINO" disabled />
+                                                </td>
+
+                                                <td>
+                                                    <label for="BirthDate" class="form-label">Birth Date:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="date" class="form-control" id="BirthDate" value="1999-12-29" disabled />
+                                                </td>
+
+                                                <td>
+                                                    <label for="Gender" class="form-label">Gender:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" id="Gender" value="MALE" disabled />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="CivilStatus: " class="form-label">Civil Status:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <select class="form-select" aria-label="Default select example" disabled>
+                                                        <option hidden>
+                                                            Civil Status
+                                                        </option>
+                                                        <option value="1">
+                                                            Single
+                                                        </option>
+                                                        <option value="2" selected>
+                                                            Married
+                                                        </option>
+                                                        <option value="3">
+                                                            Widowed
+                                                        </option>
+                                                        <option value="4">
+                                                            Separated
+                                                        </option>
+                                                        <option value="5">
+                                                            Divorced
+                                                        </option>
+                                                    </select>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr style="height: 40px">
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td class="p-0 my-3" colspan="6">
+                                    <table class="border blueBorder" style="border-color: #14274e">
+                                        <thead class="text-white" style="
+                                                    background-color: #14274e;
+                                                ">
+                                            <th colspan="6">
+                                                Service Address
+                                            </th>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
                                                 <th colspan="6">
-                                                    Personal Information
+                                                    Home/Installation
+                                                    Address
                                                 </th>
-                                            </thead>
+                                            </tr>
 
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <label
-                                                            for="Surname"
-                                                            class="form-label"
-                                                            >Family Name:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="Surname"
-                                                            value="UMALI"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="FirstName"
-                                                            class="form-label"
-                                                            >First Name:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="FirstName"
-                                                            value="CHARLES EDWARD"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="MiddleName"
-                                                            class="form-label"
-                                                            >Middle Name:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="MiddleName"
-                                                            value="ALALAN"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label
-                                                            for="Nationality"
-                                                            class="form-label"
-                                                            >Nationality:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="Nationality"
-                                                            value="FILIPINO"
-                                                            disabled
-                                                        />
-                                                    </td>
+                                            <tr>
+                                                <td>
+                                                    <label for="Unit/HouseNo." class="form-label">Unit/House Number:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Unit/HouseNo." value="#160" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="Street" class="form-label">Street:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Street" value="SAN SALVADOR ST." disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="Barangay" class="form-label">Barangay:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Barangay" value="MANGGAHAN" disabled />
+                                                </td>
+                                            </tr>
 
-                                                    <td>
-                                                        <label
-                                                            for="BirthDate"
-                                                            class="form-label"
-                                                            >Birth Date:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="date"
-                                                            class="form-control"
-                                                            id="BirthDate"
-                                                            value="1999-12-29"
-                                                            disabled
-                                                        />
-                                                    </td>
+                                            <tr>
+                                                <td>
+                                                    <label for="Municipality" class="form-label">Municipality:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Municipality" value="PASIG" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="HomeOwnerShip" class="form-label">Home Owner Ship:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="HomeOwnerShip" value="OWNED" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="ResidencyYear" class="form-label">Residency Year:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="ResidencyYear" value="21" disabled />
+                                                </td>
+                                            </tr>
 
-                                                    <td>
-                                                        <label
-                                                            for="Gender"
-                                                            class="form-label"
-                                                            >Gender:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="Gender"
-                                                            value="MALE"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label
-                                                            for="CivilStatus: "
-                                                            class="form-label"
-                                                            >Civil Status:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <select
-                                                            class="form-select"
-                                                            aria-label="Default select example"
-                                                            disabled
-                                                        >
-                                                            <option hidden>
-                                                                Civil Status
-                                                            </option>
-                                                            <option value="1">
-                                                                Single
-                                                            </option>
-                                                            <option
-                                                                value="2"
-                                                                selected
-                                                            >
-                                                                Married
-                                                            </option>
-                                                            <option value="3">
-                                                                Widowed
-                                                            </option>
-                                                            <option value="4">
-                                                                Separated
-                                                            </option>
-                                                            <option value="5">
-                                                                Divorced
-                                                            </option>
-                                                        </select>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="Province" class="form-label">Province:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Province" value="NCR" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="ZipCode" class="form-label">Zip Code:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="ZipCode" value="1612" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="NearestLandmark" class="form-label">Nearest Landmark:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="NearestLandmark" value="Near Sta. Lucia Mall" disabled />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
 
-                                <tr style="height: 40px">
-                                    <td></td>
-                                </tr>
+                            <tr style="height: 40px">
+                                <td></td>
+                            </tr>
 
-                                <tr>
-                                    <td class="p-0 my-3" colspan="6">
-                                        <table
-                                            class="border blueBorder"
-                                            style="border-color: #14274e"
-                                        >
-                                            <thead
-                                                class="text-white"
-                                                style="
+                            <tr>
+                                <td class="p-0 my-3" colspan="3">
+                                    <table class="border blueBorder" style="border-color: #14274e">
+                                        <thead class="text-white" style="
                                                     background-color: #14274e;
-                                                "
-                                            >
-                                                <th colspan="6">
-                                                    Service Address
-                                                </th>
-                                            </thead>
+                                                ">
+                                            <th colspan="3">
+                                                Government issued ID
+                                            </th>
+                                        </thead>
 
-                                            <tbody>
-                                                <tr>
-                                                    <th colspan="6">
-                                                        Home/Installation
-                                                        Address
-                                                    </th>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <label
-                                                            for="Unit/HouseNo."
-                                                            class="form-label"
-                                                            >Unit/House Number:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="Unit/HouseNo."
-                                                            value="#160"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="Street"
-                                                            class="form-label"
-                                                            >Street:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="Street"
-                                                            value="SAN SALVADOR ST."
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="Barangay"
-                                                            class="form-label"
-                                                            >Barangay:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="Barangay"
-                                                            value="MANGGAHAN"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <label
-                                                            for="Municipality"
-                                                            class="form-label"
-                                                            >Municipality:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="Municipality"
-                                                            value="PASIG"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="HomeOwnerShip"
-                                                            class="form-label"
-                                                            >Home Owner Ship:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="HomeOwnerShip"
-                                                            value="OWNED"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="ResidencyYear"
-                                                            class="form-label"
-                                                            >Residency Year:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="ResidencyYear"
-                                                            value="21"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <label
-                                                            for="Province"
-                                                            class="form-label"
-                                                            >Province:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="Province"
-                                                            value="NCR"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="ZipCode"
-                                                            class="form-label"
-                                                            >Zip Code:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="ZipCode"
-                                                            value="1612"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="NearestLandmark"
-                                                            class="form-label"
-                                                            >Nearest Landmark:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="NearestLandmark"
-                                                            value="Near Sta. Lucia Mall"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-
-                                <tr style="height: 40px">
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="p-0 my-3" colspan="3">
-                                        <table
-                                            class="border blueBorder"
-                                            style="border-color: #14274e"
-                                        >
-                                            <thead
-                                                class="text-white"
-                                                style="
-                                                    background-color: #14274e;
-                                                "
-                                            >
-                                                <th colspan="3">
-                                                    Government issued ID
-                                                </th>
-                                            </thead>
-
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <a
-                                                            href="./Images/id.png"
-                                                            target="_blank"
-                                                        >
-                                                            <img
-                                                                src="./Images/id.png"
-                                                                alt="ID PICTURE"
-                                                                class="d-block my-3 mx-auto"
-                                                                style="
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="./Images/id.png" target="_blank">
+                                                        <img src="./Images/id.png" alt="ID PICTURE" class="d-block my-3 mx-auto" style="
                                                                     height: 360px;
-                                                                "
-                                                            />
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
+                                                                " />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
 
-                                <tr style="height: 40px">
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="p-0 my-3" colspan="3">
-                                        <table
-                                            class="border blueBorder"
-                                            style="border-color: #14274e"
-                                        >
-                                            <thead
-                                                class="text-white"
-                                                style="
+                            <tr style="height: 40px">
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="p-0 my-3" colspan="3">
+                                    <table class="border blueBorder" style="border-color: #14274e">
+                                        <thead class="text-white" style="
                                                     background-color: #14274e;
-                                                "
-                                            >
-                                                <th colspan="3">
-                                                    Proof of Billing
-                                                </th>
-                                            </thead>
+                                                ">
+                                            <th colspan="3">
+                                                Proof of Billing
+                                            </th>
+                                        </thead>
 
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <a
-                                                            href="./Images/pob.png"
-                                                            target="_blank"
-                                                        >
-                                                            <img
-                                                                src="./Images/pob.png"
-                                                                alt="Proof of Billing"
-                                                                class="d-block my-3 mx-auto shadow"
-                                                            />
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="./Images/pob.png" target="_blank">
+                                                        <img src="./Images/pob.png" alt="Proof of Billing" class="d-block my-3 mx-auto shadow" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
 
-                                <tr style="height: 40px">
-                                    <td></td>
-                                </tr>
+                            <tr style="height: 40px">
+                                <td></td>
+                            </tr>
 
-                                <tr>
-                                    <td class="p-0 my-3" colspan="6">
-                                        <table
-                                            class="border blueBorder"
-                                            style="border-color: #14274e"
-                                        >
-                                            <thead
-                                                class="text-white"
-                                                style="
+                            <tr>
+                                <td class="p-0 my-3" colspan="6">
+                                    <table class="border blueBorder" style="border-color: #14274e">
+                                        <thead class="text-white" style="
                                                     background-color: #14274e;
-                                                "
-                                            >
+                                                ">
+                                            <th colspan="6">
+                                                Contact Information
+                                            </th>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label for="CellphoneNumber" class="form-label">Cellphone Number:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="CellphoneNumber" value="09153355864" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="TelephoneNumber" class="form-label">Telephone Number:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="TelephoneNumber" value="N/A" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="Email" class="form-label">Email:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="email" class="form-control" id="Email" value="UMALI.CHARLESEDWARD@UE.EDU.PH" disabled />
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <th colspan="6">
-                                                    Contact Information
+                                                    Mother's Maiden Name
                                                 </th>
-                                            </thead>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="Surname" class="form-label">Family Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Surname" value="ALALAN" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="FirstName" class="form-label">First Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="FirstName" value="GRACE" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="MiddleName" class="form-label">Middle Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="MiddleName" value="FAJARDO" disabled />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="6">
+                                                    Spouse Name
+                                                </th>
+                                            </tr>
 
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <label
-                                                            for="CellphoneNumber"
-                                                            class="form-label"
-                                                            >Cellphone Number:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="CellphoneNumber"
-                                                            value="09153355864"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="TelephoneNumber"
-                                                            class="form-label"
-                                                            >Telephone Number:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="TelephoneNumber"
-                                                            value="N/A"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="Email"
-                                                            class="form-label"
-                                                            >Email:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="email"
-                                                            class="form-control"
-                                                            id="Email"
-                                                            value="UMALI.CHARLESEDWARD@UE.EDU.PH"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="6">
-                                                        Mother's Maiden Name
-                                                    </th>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label
-                                                            for="Surname"
-                                                            class="form-label"
-                                                            >Family Name:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="Surname"
-                                                            value="ALALAN"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="FirstName"
-                                                            class="form-label"
-                                                            >First Name:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="FirstName"
-                                                            value="GRACE"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="MiddleName"
-                                                            class="form-label"
-                                                            >Middle Name:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="MiddleName"
-                                                            value="FAJARDO"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="6">
-                                                        Spouse Name
-                                                    </th>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <label
-                                                            for="Surname"
-                                                            class="form-label"
-                                                            >Family Name:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="Surname"
-                                                            value="CUMPA"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="FirstName"
-                                                            class="form-label"
-                                                            >First Name:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="FirstName"
-                                                            value="ANDREA"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                    <td>
-                                                        <label
-                                                            for="MiddleName"
-                                                            class="form-label"
-                                                            >Middle Name:
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="textbox"
-                                                            class="form-control"
-                                                            id="MiddleName"
-                                                            value="GONZALES"
-                                                            disabled
-                                                        />
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="6"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <a
-                                            href="./LandingPage.html"
-                                            class="btn btn-outline-success float-start mt-3 w-25"
-                                        >
-                                            DENY APPLICATION
-                                        </a>
-                                        <a
-                                            href="./LandingPage.html"
-                                            class="btn btn-outline-success float-end mt-3 w-25"
-                                        >
-                                            ACCEPT APPLICATION
-                                        </a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
+                                            <tr>
+                                                <td>
+                                                    <label for="Surname" class="form-label">Family Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="Surname" value="CUMPA" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="FirstName" class="form-label">First Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="FirstName" value="ANDREA" disabled />
+                                                </td>
+                                                <td>
+                                                    <label for="MiddleName" class="form-label">Middle Name:
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input type="textbox" class="form-control" id="MiddleName" value="GONZALES" disabled />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <a href="./LandingPage.html" class="btn btn-outline-success float-start mt-3 w-25">
+                                        DENY APPLICATION
+                                    </a>
+                                    <a href="./LandingPage.html" class="btn btn-outline-success float-end mt-3 w-25">
+                                        ACCEPT APPLICATION
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
