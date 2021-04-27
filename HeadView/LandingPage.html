@@ -1,194 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <style>
-            body,
-            html {
-                height: 100%;
-                background-color: #14274e !important;
-            }
-            h1 {
-                font-size: 3.75em !important;
-            }
 
-            .active > .nav-link {
-                color: #14274e !important;
-                background-color: #fff !important;
-                border-right: #14274e solid 1px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
-                    <nav class="navbar mt-5">
-                        <ul class="navbar-nav fs-5">
-                            <a
-                                class="navbar-brand text-light fs-2 fw-bold text-wrap text-center mb-5"
-                                href="./Login.html"
-                                >Lake Community Cable TV</a
-                            >
-                            <li class="nav-item active">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./LandingPage.html"
-                                    ><i class="bi bi-speedometer2 pl-3"></i
-                                    ><span class="px-3">Dashboard</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Employees.html"
-                                    ><i class="bi bi-people"></i
-                                    ><span class="px-3">Employees</span></a
-                                >
-                            </li>
-                        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            background-color: #14274e !important;
+        }
+
+        h1 {
+            font-size: 3.75em !important;
+        }
+
+        .active>.nav-link {
+            color: #14274e !important;
+            background-color: #fff !important;
+            border-right: #14274e solid 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
+                <nav class="navbar mt-5">
+                    <ul class="navbar-nav fs-5">
+                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
+                            <p class="ms-3 ff-logo pb-3 border-bottom border-warning">
+                                Lake Community Cable TV
+                            </p>
+                        </a>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">Dashboard</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Employees.html"><i class="bi bi-people"></i><span class="px-3">Employees</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
+                <div class="row d-block d-lg-none d-xl-none">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-dark" style="background-color: #14274e">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
                     </nav>
                 </div>
-                <div
-                    class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid"
-                    style="background-color: #f6f8fb"
-                >
-                    <div class="row d-block d-lg-none d-xl-none">
-                        <div class="collapse" id="navbarToggleExternalContent">
-                            <div class="bg-dark p-4">
-                                <h5 class="text-white h4">Collapsed content</h5>
-                                <span class="text-muted"
-                                    >Toggleable via the navbar brand.</span
-                                >
-                            </div>
-                        </div>
-                        <nav
-                            class="navbar navbar-dark"
-                            style="background-color: #14274e"
-                        >
-                            <div class="container-fluid">
-                                <button
-                                    class="navbar-toggler"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbarToggleExternalContent"
-                                >
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                            </div>
-                        </nav>
+
+                <div class="row py-3 border-bottom border-warning">
+                    <div class="col">
+                        <h3>Dashboard</h3>
                     </div>
+                    <div class="col text-end">Head123</div>
+                </div>
 
-                    <div class="row py-3 border-bottom">
-                        <div class="col">
-                            <h3>Dashboard</h3>
-                        </div>
-                        <div class="col text-end">Head123</div>
-                    </div>
+                <div class="row py-3">
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body border border-info">
+                                <h5 class="card-title fw-normal">
+                                    <i class="bi bi-people"></i>Customers
+                                </h5>
 
-                    <div class="row py-3">
-                        <div class="col-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-normal">
-                                        Customers
-                                    </h5>
+                                <p class="card-text h1 fw-normal">2,751</p>
 
-                                    <p class="card-text h1 fw-normal">2,751</p>
-
-                                    <span class="badge rounded-pill bg-warning"
-                                        >+1.2%</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-normal">
-                                        Applications
-                                    </h5>
-
-                                    <p class="card-text h1 fw-normal">251</p>
-
-                                    <span class="badge rounded-pill bg-danger"
-                                        >-100</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-normal">
-                                        Market Share
-                                    </h5>
-
-                                    <p class="card-text h1 fw-normal">25.3%</p>
-
-                                    <span class="badge rounded-pill bg-success"
-                                        >+1.2%</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-normal">
-                                        Revenue
-                                    </h5>
-
-                                    <p class="card-text h1 fw-normal">
-                                        Php 25,000.00
-                                    </p>
-
-                                    <span class="badge rounded-pill bg-success"
-                                        >+3.5%</span
-                                    >
-                                </div>
+                                <span class="badge rounded-pill bg-warning">+1.2%</span>
                             </div>
                         </div>
                     </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body border border-danger">
+                                <h5 class="card-title fw-normal">
+                                    <i class="bi bi-journal-bookmark"></i>Installation Summary Report
+                                </h5>
 
-                    <div class="row py-3">
-                        <div class="col-12 bg-white">
-                            <canvas class="my-4" id="myChart"></canvas>
+                                <p class="card-text h1 fw-normal">251</p>
+
+                                <span class="badge rounded-pill bg-danger">-100</span>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body border border-success">
+                                <h5 class="card-title fw-normal">
+                                    <i class="bi bi-building"></i>Market Share
+                                </h5>
+
+                                <p class="card-text h1 fw-normal">25.3%</p>
+
+                                <span class="badge rounded-pill bg-success">+1.2%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body border border-success">
+                                <h5 class="card-title fw-normal">
+                                    <i class="bi bi-cash-stack"></i>Total Sales
+                                </h5>
+
+                                <p class="card-text h1 fw-normal">
+                                    Php 25,000.00
+                                </p>
+
+                                <span class="badge rounded-pill bg-success">+3.5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row py-3">
+                    <div class="col-12 bg-white">
+                        <canvas class="my-4" id="myChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
-    <script
-        src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"
-    ></script>
+    </div>
+</body>
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-        crossorigin="anonymous"
-    ></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-        crossorigin="anonymous"
-    ></script>
-    <script src="./Scripts/dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+<script src="./Scripts/dashboard.js"></script>
 
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
-    />
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-        crossorigin="anonymous"
-    />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
 </html>
