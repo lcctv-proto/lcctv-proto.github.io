@@ -23,6 +23,50 @@
                 color: #14274e !important;
                 font-family: "Nunito Sans";
             }
+
+            .btn-admin:hover {
+                background-color: #14274e !important;
+                color: #c1a1d3 !important;
+                border-color: #c1a1d3 !important;
+            }
+            .btn-cashier:hover {
+                background-color: #14274e !important;
+                color: #91c788 !important;
+                border-color: #91c788 !important;
+            }
+            .btn-ceo:hover {
+                background-color: #14274e !important;
+                color: #fed049 !important;
+                border-color: #fed049 !important;
+            }
+            .btn-front:hover {
+                background-color: #14274e !important;
+                color: #ffba93 !important;
+                border-color: #ffba93 !important;
+            }
+            .btn-jo:hover {
+                background-color: #14274e !important;
+                color: #8ab6d6 !important;
+                border-color: #8ab6d6 !important;
+            }
+            .btn-tech:hover {
+                background-color: #14274e !important;
+                color: #adb36e !important;
+                border-color: #adb36e !important;
+            }
+
+            .btn-jumbo:hover img {
+                border-bottom: none !important;
+                padding-bottom: 0px !important;
+                transform: scale(1.5);
+                transition: 1s;
+            }
+            .btn-jumbo:hover .title {
+                border-bottom: none !important;
+                padding-bottom: 0px !important;
+                transform: scale(1.15);
+                transition: 1s;
+            }
         </style>
         <link
             rel="stylesheet"
@@ -49,7 +93,7 @@
                 <div class="col-lg-2 mt-2">
                     <a
                         href="./AdminView/Login.html"
-                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start btn-admin"
                     >
                         <span class="fs-6"> LCCTV </span>
                         <img
@@ -58,7 +102,7 @@
                             style="border-color: #c1a1d3 !important"
                             alt="Admin"
                         />
-                        <span class="mt-5 text-center fw-bold">
+                        <span class="mt-5 text-center fw-bold title">
                             ADMIN PORTAL
                         </span>
                     </a>
@@ -66,7 +110,7 @@
                 <div class="col-lg-2 mt-2">
                     <a
                         href="./CashierView/Login.html"
-                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start btn-cashier"
                         ><span class="fs-6"> LCCTV </span>
                         <img
                             src="./Icons/xls.svg"
@@ -74,7 +118,7 @@
                             style="border-color: #91c788 !important"
                             alt="Cashier"
                         />
-                        <span class="mt-5 text-center fw-bold">
+                        <span class="mt-5 text-center fw-bold title">
                             CASHIER PORTAL
                         </span></a
                     >
@@ -82,7 +126,7 @@
                 <div class="col-lg-2 mt-2">
                     <a
                         href="./HeadView/Login.html"
-                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start btn-ceo"
                         ><span class="fs-6"> LCCTV </span>
                         <img
                             src="./Icons/ppt.svg"
@@ -90,7 +134,7 @@
                             style="border-color: #fed049 !important"
                             alt="CEO"
                         />
-                        <span class="mt-5 text-center fw-bold">
+                        <span class="mt-5 text-center fw-bold title">
                             CEO PORTAL
                         </span></a
                     >
@@ -98,7 +142,7 @@
                 <div class="col-lg-2 mt-2">
                     <a
                         href="./FrontDeskView/Login.html"
-                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start btn-front"
                         ><span class="fs-6"> LCCTV </span>
                         <img
                             src="./Icons/gif.svg"
@@ -106,7 +150,7 @@
                             style="border-color: #ffba93 !important"
                             alt="Front"
                         />
-                        <span class="mt-5 text-center fw-bold">
+                        <span class="mt-5 text-center fw-bold title">
                             FRONT DESK PORTAL
                         </span></a
                     >
@@ -114,7 +158,7 @@
                 <div class="col-lg-2 mt-2">
                     <a
                         href="./JOView/Login.html"
-                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start btn-jo"
                         ><span class="fs-6"> LCCTV </span>
                         <img
                             src="./Icons/doc.svg"
@@ -122,7 +166,7 @@
                             style="border-color: #8ab6d6 !important"
                             alt="JO"
                         />
-                        <span class="mt-5 text-center fw-bold">
+                        <span class="mt-5 text-center fw-bold title">
                             JO PERSONNEL PORTAL
                         </span></a
                     >
@@ -130,7 +174,7 @@
                 <div class="col-lg-2 mt-2">
                     <a
                         href="./TechnicianView/Login.html"
-                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start"
+                        class="btn btn-lg btn-jumbo w-100 d-flex flex-column text-start btn-tech"
                         ><span class="fs-6"> LCCTV </span>
                         <img
                             src="./Icons/bat.svg"
@@ -138,7 +182,7 @@
                             style="border-color: #adb36e !important"
                             alt="Technician"
                         />
-                        <span class="mt-5 text-center fw-bold">
+                        <span class="mt-5 text-center fw-bold title">
                             TECHNICIAN PORTAL
                         </span></a
                     >
