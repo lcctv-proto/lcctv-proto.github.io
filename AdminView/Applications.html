@@ -1,306 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <style>
-            body,
-            html {
-                height: 100%;
-                background-color: #14274e !important;
-            }
-            h1 {
-                font-size: 3.75em !important;
-            }
 
-            .active > .nav-link {
-                color: #14274e !important;
-                background-color: #fff !important;
-                border-right: #14274e solid 1px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
-                    <nav class="navbar mt-5">
-                        <ul class="navbar-nav fs-5">
-                            <a
-                                class="navbar-brand text-light fs-2 fw-bold text-wrap text-center mb-5"
-                                href="./Login.html"
-                                >Lake Community Cable TV</a
-                            >
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./LandingPage.html"
-                                    ><i class="bi bi-speedometer2 pl-3"></i
-                                    ><span class="px-3">Dashboard</span></a
-                                >
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            background-color: #14274e !important;
+        }
+
+        h1 {
+            font-size: 3.75em !important;
+        }
+
+        .active>.nav-link {
+            color: #14274e !important;
+            background-color: #fff !important;
+            border-right: #14274e solid 1px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
+                <nav class="navbar mt-5">
+                    <ul class="navbar-nav fs-5">
+                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
+                            <p class="ms-3 ff-logo pb-3 border-bottom">
+                                Lake Community Cable TV
+                            </p>
+                        </a>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">Dashboard</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Teams.html"><i class="bi bi-people"></i><span class="px-3">Teams</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Employees.html"><i class="bi bi-person"></i><span class="px-3">Employees</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light px-3" href="./Applications.html"><i class="bi bi-receipt"></i><span class="px-3">Applications</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./MyNotes.html"><i class="bi bi-journals"></i><span class="px-3">My Notes</span></a>
+                        </li>
+                        <li class="nav-item mt-5">
+                            <a class="nav-link text-light px-3" href="./Login.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">Logout</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-12 col-lg-10 h-100 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
+                <div class="row d-block d-lg-none d-xl-none">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-dark" style="background-color: #14274e">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="row py-3 border-bottom">
+                    <div class="col">
+                        <h3>Applications</h3>
+                    </div>
+                    <div class="col">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" />
+                            <button class="btn btn-outline-success" type="submit">
+                                Search
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col text-end">Admin123</div>
+                </div>
+
+                <div class="row p-3">
+                    <table class="table">
+                        <thead>
+                            <tr class="text-light" style="background-color: #14274e">
+                                <th>Application Date</th>
+                                <th>Application Number</th>
+                                <th>Customer Name</th>
+                                <th>Package</th>
+                                <th>Area</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2020</td>
+                                <td>A-001</td>
+                                <td>Charles Edward A. Umali</td>
+                                <td>AIRNET 1250</td>
+                                <td>SAN JOSE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span>&laquo;</span>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Teams.html"
-                                    ><i class="bi bi-people"></i
-                                    ><span class="px-3">Teams</span></a
-                                >
+                            <li class="page-item">
+                                <a class="page-link" href="#">1</a>
                             </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Employees.html"
-                                    ><i class="bi bi-person"></i
-                                    ><span class="px-3">Employees</span></a
-                                >
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
                             </li>
-                            <li class="nav-item active">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Applications.html"
-                                    ><i class="bi bi-receipt"></i
-                                    ><span class="px-3">Applications</span></a
-                                >
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
                             </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./MyNotes.html"
-                                    ><i class="bi bi-journals"></i
-                                    ><span class="px-3">My Notes</span></a
-                                >
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span>&raquo;</span>
+                                </a>
                             </li>
                         </ul>
                     </nav>
                 </div>
-                <div
-                    class="col-md-12 col-lg-10 h-100 bg-light p-lg-3 container-fluid"
-                    style="background-color: #f6f8fb"
-                >
-                    <div class="row d-block d-lg-none d-xl-none">
-                        <div class="collapse" id="navbarToggleExternalContent">
-                            <div class="bg-dark p-4">
-                                <h5 class="text-white h4">Collapsed content</h5>
-                                <span class="text-muted"
-                                    >Toggleable via the navbar brand.</span
-                                >
-                            </div>
-                        </div>
-                        <nav
-                            class="navbar navbar-dark"
-                            style="background-color: #14274e"
-                        >
-                            <div class="container-fluid">
-                                <button
-                                    class="navbar-toggler"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbarToggleExternalContent"
-                                >
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                            </div>
-                        </nav>
-                    </div>
-
-                    <div class="row py-3 border-bottom">
-                        <div class="col">
-                            <h3>Applications</h3>
-                        </div>
-                        <div class="col">
-                            <form class="d-flex">
-                                <input
-                                    class="form-control me-2"
-                                    type="search"
-                                />
-                                <button
-                                    class="btn btn-outline-success"
-                                    type="submit"
-                                >
-                                    Search
-                                </button>
-                            </form>
-                        </div>
-                        <div class="col text-end">Admin123</div>
-                    </div>
-
-                    <div class="row p-3">
-                        <table class="table">
-                            <thead>
-                                <tr
-                                    class="text-light"
-                                    style="background-color: #14274e"
-                                >
-                                    <th>Application Date</th>
-                                    <th>Application Number</th>
-                                    <th>Customer Name</th>
-                                    <th>Package</th>
-                                    <th>Area</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                                <tr>
-                                    <td>10/10/2020</td>
-                                    <td>A-001</td>
-                                    <td>Charles Edward A. Umali</td>
-                                    <td>AIRNET 1250</td>
-                                    <td>SAN JOSE</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a
-                                        class="page-link"
-                                        href="#"
-                                        aria-label="Previous"
-                                    >
-                                        <span>&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a
-                                        class="page-link"
-                                        href="#"
-                                        aria-label="Next"
-                                    >
-                                        <span>&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
             </div>
         </div>
-    </body>
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
-    />
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-        crossorigin="anonymous"
-    />
+    </div>
+</body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
 </html>
