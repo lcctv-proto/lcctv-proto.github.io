@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Account</title>
+    <title>Application</title>
     <style>
         body,
         html {
@@ -40,7 +40,7 @@
                                 Lake Community Cable TV
                             </p>
                         </a>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">Dashboard</span></a>
                         </li>
                         <li class="nav-item">
@@ -52,7 +52,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-light px-3" href="./Applications.html"><i class="bi bi-receipt"></i><span class="px-3">Applications</span></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link text-light px-3" href="./Channels.html"><i class="bi bi-tv"></i><span class="px-3">Channels</span></a>
                         </li>
                         <li class="nav-item">
@@ -80,101 +80,62 @@
                         </div>
                     </nav>
                 </div>
-
                 <div class="row py-3 border-bottom">
                     <div class="col">
-                        <h3>Dashboard</h3>
+                        <h3>Channels</h3>
                     </div>
                     <div class="col text-end">Admin123</div>
                 </div>
-
                 <div class="row mt-5">
                     <div class="col">
-                        <select class="float-end form-select form-select-md mb-3" style="width: 250px;">
-                            <option value="1" selected>ADMIN</option>
-                            <option value="2">CASHIER</option>
-                            <option value="3">FRONT DESK</option>
-                            <option value="4">HEAD</option>
-                            <option value="5">JOB ORDER</option>
-                            <option value="5">TECHNICIAN</option>
-                        </select>
-
-                        <table class="table table-borderless" border="1px">
-                            <thead>
-                                <tr class="text-light" style="background-color: #14274e">
-                                    <th colspan="6">Account Information</th>
+                        <table class="table table-borderless" border="1px;">
+                            <thead style="background-color: #14274e;">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td><label for="channel_id">Channel ID:</label></td>
+                                    <td><input type="text" class="form-control" id="channel_id" value="CH-023" disabled></td>
+                                    <td><label for="channel_name">Channel Name:</label></td>
+                                    <td><input type="text" class="form-control" id="channel_name" value="History Channel"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="channel_number">Channel Assigned Number:</label></td>
+                                    <td><input type="number" class="form-control" id="channel_number" value="23"></td>
+                                    <td><label for="channel_link">Channel Video Link:</label></td>
+                                    <td><input type="text" class="form-control" id="channel_link" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="channel_bnr_img">Channel Banner Image:</label></td>
+                                    <td><input type="text" class="form-control" id="channel_bnr_img" value=""></td>
+                                    <td><label for="plans">Plans:</label></td>
                                     <td>
-                                        <label for="FirstName" class="form-label">First Name:
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <input type="textbox" class="form-control" id="FirstName" value="" disabled />
-                                    </td>
-                                    <td>
-                                        <label for="MiddleName" class="form-label">Middle Name:
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <input type="textbox" class="form-control" id="MiddleName" value="" disabled />
-                                    </td>
-                                    <td>
-                                        <label for="FamilyName" class="form-label">Family Name:
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <input type="textbox" class="form-control" id="FamilyName" value="" disabled />
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="basic" value="basic" checked>
+                                            <label class="form-check-label" for="basic">BASIC PLAN</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="premium" value="premium" checked>
+                                            <label class="form-check-label" for="premium">PREMIUM PLAN</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="international" value="international">
+                                            <label class="form-check-label" for="international">INTERNATIONAL PLAN</label>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="ContactNumber" class="form-label">Contact Number:
-                                        </label>
+                                        <label for="channel_description">Channel Description:</label>
                                     </td>
-                                    <td>
-                                        <input type="" class="form-control" id="ContactNumber" value="" disabled />
-                                    </td>
-                                    <td>
-                                        <label for="trans-date" class="form-label">BirthDate:
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <input type="date" class="form-control" id="trans-date" value="" disabled />
-                                    </td>
-                                    <td>
-                                        <label for="trans-date" class="form-label">Date of Registration:
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <input type="date" class="form-control" id="trans-date" value="" disabled />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label for="Email" class="form-label">Email:
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <input type="email" class="form-control" id="Email" value="" disabled />
-                                    </td>
-                                    <td>
-                                        <label for="UserName" class="form-label">Username:
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <input type="" class="form-control" id="UserName" value="" disabled />
-                                    </td>
-
-                                    <td>
-                                        <label for="Password" class="form-label">Password:
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <input type="text" class="form-control" id="Password" value="" disabled />
-                                    </td>
+                                    <td><textarea class="form-control" id="channel_description" rows="10" cols="15" style="width: 500px;" placeholder="Channel Description..."></textarea></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -182,11 +143,9 @@
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><button class="btn btn-navy btn-lg float-end">
-                                            <i class="bi bi-check-circle me-2"></i> CREATE ACCOUNT
-                                        </button>
+                                    <td><button type="button" class="btn btn-navy text-light fs-5 float-end me-2" style="background-color: #14274e;"><i class="bi bi-trash me-2"></i>Delete</button>
+                                        <button type="button" class="btn btn-navy text-light fs-5 float-end me-2" style="background-color: #14274e;"><i class="bi bi-pencil me-2"></i>Edit</button>
+                                        <button type="button" class="btn btn-navy text-light fs-5 float-end me-2" style="background-color: #14274e;"><i class="bi bi-plus me-2"></i>Add</button>
                                     </td>
                                 </tr>
                             </tfoot>
@@ -197,6 +156,5 @@
         </div>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 </html>
