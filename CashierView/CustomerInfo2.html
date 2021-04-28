@@ -915,12 +915,12 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-6">
-                                <label for="trans-date" class="form-label"
+                                <label for="trans-date2" class="form-label"
                                     >Date of Transaction:</label
                                 >
                                 <input
                                     type="date"
-                                    name="trans-date"
+                                    name="trans-date2"
                                     id="trans-date"
                                     class="form-control"
                                 />
@@ -981,20 +981,28 @@
                                 >
                                     <thead>
                                         <tr class="bg-dark text-light">
-                                            <td>FEE CODE</td>
-                                            <td>FEE DESCRIPTION</td>
-                                            <td>FEE AMOUNT</td>
+                                            <th>FEE CODE</th>
+                                            <th>FEE DESCRIPTION</th>
+                                            <th>FEE</th>
+                                            <th style="width: 50px"></th>
                                         </tr>
                                     </thead>
                                     <tbody id="fee_table"></tbody>
                                     <tfoot>
                                         <tr>
-                                            <td colspan="2" class="text-end">
-                                                TOTAL:
+                                            <td
+                                                colspan="2"
+                                                class="fw-bold text-end"
+                                            >
+                                                TOTAL AMOUNT DUE:
                                             </td>
-                                            <td id="total" class="text-end">
+                                            <td
+                                                id="total"
+                                                class="fw-bold text-end"
+                                            >
                                                 0.00
                                             </td>
+                                            <td></td>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -1516,10 +1524,8 @@
             "click",
             () => {
                 let radios = document.getElementsByName("fee");
-                console.log(radios);
                 for (let i = 0; i < radios.length; i++) {
                     if (radios[i].checked) {
-                        console.log(radios[i]);
                         switch (radios[i].value) {
                             case "1":
                                 add_row(
@@ -1575,16 +1581,36 @@
 
         function add_row(x = "FEE-001", y = "BASIC 640 PAYMENT", z = "640.00") {
             let a = document.getElementById("fee_table");
+            let r = document.getElementById("total");
+
             let newRow = a.insertRow();
 
             let code = newRow.insertCell(0);
             let desc = newRow.insertCell(1);
             let price = newRow.insertCell(2);
+            let del = newRow.insertCell(3);
 
             code.innerHTML = x;
             desc.innerHTML = y;
             price.classList.add("text-end");
             price.innerHTML = z;
+            del.style.width = "20px";
+            del.innerHTML =
+                "<button class='btn btn-close btn-delete' onclick='del_row(this)'></button>";
+            let temp = r.innerHTML;
+            r.innerHTML = parseFloat(temp) + parseFloat(z);
+            buttons = document.querySelectorAll(".btn-delete");
+        }
+
+        function del_row(e) {
+            let a = document.getElementById("fee_table");
+            let r = document.getElementById("total");
+            let p = e.parentElement.parentElement.children[2].innerHTML;
+            let t = r.innerHTML;
+            r.innerHTML = parseFloat(t) - parseFloat(p);
+
+            let i = e.parentElement.parentElement.rowIndex - 1;
+            a.deleteRow(i);
         }
     </script>
 </html>
