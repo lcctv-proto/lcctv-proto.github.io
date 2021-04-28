@@ -15,7 +15,27 @@ h1 {
     border-right: #14274e solid 1px;
 }
 .bg-dark-navy {
-    background-color: rgb(11, 22, 42);
+    background-color: rgb(11, 22, 42) !important;
+}
+
+.btn-navy {
+    background-color: #14274e !important;
+}
+
+.btn-green {
+    background-color: #3a6351 !important;
+}
+
+.btn-navy:hover {
+    background-color: #fff !important;
+    border-color: #14274e !important;
+    color: #14274e !important;
+}
+
+.btn-green:hover {
+    background-color: #fff !important;
+    border-color: #3a6351 !important;
+    color: #3a6351 !important;
 }
 
 .ff-logo {
