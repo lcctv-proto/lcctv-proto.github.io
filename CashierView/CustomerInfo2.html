@@ -900,7 +900,7 @@
         </div>
 
         <div class="modal fade" id="exampleModal8" tabindex="-8">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">
@@ -942,14 +942,14 @@
                         </div>
                         <div class="row mt-2">
                             <div class="col">
-                                <label for="amount-paid" class="form-label"
+                                <label for="ref-code" class="form-label"
                                     >Code:</label
                                 >
                                 <div class="d-flex">
                                     <input
                                         type="text"
-                                        name="amount-paid"
-                                        id="amount-paid"
+                                        name="ref-code"
+                                        id="ref-code"
                                         class="form-control me-2"
                                     />
                                     <div class="btn-group">
@@ -987,6 +987,16 @@
                                         </tr>
                                     </thead>
                                     <tbody id="fee_table"></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2" class="text-end">
+                                                TOTAL:
+                                            </td>
+                                            <td id="total" class="text-end">
+                                                0.00
+                                            </td>
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                         </div>
@@ -1470,7 +1480,34 @@
         document.getElementById("add").addEventListener(
             "click",
             () => {
-                add_row();
+                let x = document.getElementById("ref-code");
+                switch (x.value) {
+                    case "FEE-001":
+                        add_row("FEE-001", "BASIC 640 PAYMENT", "640.00");
+                        break;
+                    case "FEE-002":
+                        add_row("FEE-002", "PREMIUM 790 PAYMENT", "790.00");
+                        break;
+                    case "FEE-003":
+                        add_row(
+                            "FEE-003",
+                            "INTERNATIONAL 1099 PAYMENT",
+                            "1099.00"
+                        );
+                        break;
+                    case "FEE-004":
+                        add_row("FEE-004", "INSTALLATION FEE", "1000.00");
+                        break;
+                    case "FEE-005":
+                        add_row("FEE-005", "DAMAGED REMOTE", "400.00");
+                        break;
+                    case "FEE-006":
+                        add_row("FEE-006", "DAMAGED SMART CARD", "1000.00");
+                        break;
+                    case "FEE-007":
+                        add_row("FEE-007", "DAMAGED DIGIBOX", "1000.00");
+                        break;
+                }
             },
             false
         );
@@ -1509,7 +1546,7 @@
                                 add_row(
                                     "FEE-004",
                                     "INSTALLATION FEE",
-                                    "640.00"
+                                    "1000.00"
                                 );
                                 break;
                             case "5":
@@ -1546,6 +1583,7 @@
 
             code.innerHTML = x;
             desc.innerHTML = y;
+            price.classList.add("text-end");
             price.innerHTML = z;
         }
     </script>
