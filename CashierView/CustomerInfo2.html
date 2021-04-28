@@ -942,14 +942,14 @@
                         </div>
                         <div class="row mt-2">
                             <div class="col">
-                                <label for="ref-code" class="form-label"
+                                <label for="reference-code" class="form-label"
                                     >Code:</label
                                 >
                                 <div class="d-flex">
                                     <input
                                         type="text"
-                                        name="ref-code"
-                                        id="ref-code"
+                                        name="reference-code"
+                                        id="reference-code"
                                         class="form-control me-2"
                                     />
                                     <div class="btn-group">
@@ -1480,7 +1480,7 @@
         document.getElementById("add").addEventListener(
             "click",
             () => {
-                let x = document.getElementById("ref-code");
+                let x = document.getElementById("reference-code");
                 switch (x.value) {
                     case "FEE-001":
                         add_row("FEE-001", "BASIC 640 PAYMENT", "640.00");
