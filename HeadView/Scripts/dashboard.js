@@ -22,9 +22,9 @@
                     data: [8, 5, 3, 6, 2, 10],
                     lineTension: 0,
                     backgroundColor: "transparent",
-                    borderColor: "#007bff",
+                    borderColor: "#161d6f",
                     borderWidth: 4,
-                    pointBackgroundColor: "#007bff",
+                    pointBackgroundColor: "#161d6f",
                 },
             ],
         },
@@ -53,20 +53,15 @@
     var myChart = new Chart(ctx, {
         type: "line",
         data: {
-            labels: [
-                "Week 1",
-                "Week 2",
-                "Week 3",
-                "Week 4",
-            ],
+            labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
             datasets: [
                 {
-                    data: [34, 20, 30, 15,],
+                    data: [34, 20, 30, 15],
                     lineTension: 0,
                     backgroundColor: "transparent",
-                    borderColor: "#007bff",
+                    borderColor: "#161d6f",
                     borderWidth: 4,
-                    pointBackgroundColor: "#007bff",
+                    pointBackgroundColor: "#161d6f",
                 },
             ],
         },
@@ -111,12 +106,12 @@
             ],
             datasets: [
                 {
-                    data: [99, 50, 30, 20, 35, 15, 10, 4, 2, 11, 17, 29 ],
+                    data: [99, 50, 30, 20, 35, 15, 10, 4, 2, 11, 17, 29],
                     lineTension: 0,
                     backgroundColor: "transparent",
-                    borderColor: "#007bff",
+                    borderColor: "#161d6f",
                     borderWidth: 4,
-                    pointBackgroundColor: "#007bff",
+                    pointBackgroundColor: "#161d6f",
                 },
             ],
         },
@@ -166,7 +161,6 @@
             ],
         },
         options: {
-
             scales: {
                 yAxes: [
                     {
@@ -191,15 +185,10 @@
     var myChart = new Chart(ctx, {
         type: "line",
         data: {
-            labels: [
-                "Week 1",
-                "Week 2",
-                "Week 3",
-                "Week 4",
-            ],
+            labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
             datasets: [
                 {
-                    data: [72, 100, 60, 30,],
+                    data: [72, 100, 60, 30],
                     lineTension: 0,
                     backgroundColor: "transparent",
                     borderColor: "#810000",
@@ -249,7 +238,7 @@
             ],
             datasets: [
                 {
-                    data: [262, 100, 150, 60, 35, 50, 48, 20, 35, 80, 120, 140 ],
+                    data: [262, 100, 150, 60, 35, 50, 48, 20, 35, 80, 120, 140],
                     lineTension: 0,
                     backgroundColor: "transparent",
                     borderColor: "#810000",
@@ -304,7 +293,6 @@
             ],
         },
         options: {
-
             scales: {
                 yAxes: [
                     {
@@ -329,15 +317,10 @@
     var myChart = new Chart(ctx, {
         type: "line",
         data: {
-            labels: [
-                "Week 1",
-                "Week 2",
-                "Week 3",
-                "Week 4",
-            ],
+            labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
             datasets: [
                 {
-                    data: [19500, 15000, 10000, 12000,],
+                    data: [19500, 15000, 10000, 12000],
                     lineTension: 0,
                     backgroundColor: "transparent",
                     borderColor: "#289672",
@@ -387,7 +370,20 @@
             ],
             datasets: [
                 {
-                    data: [56500, 30000, 20500, 15000, 46000, 60000, 51000, 31000, 27000, 42000, 33000, 28000 ],
+                    data: [
+                        56500,
+                        30000,
+                        20500,
+                        15000,
+                        46000,
+                        60000,
+                        51000,
+                        31000,
+                        27000,
+                        42000,
+                        33000,
+                        28000,
+                    ],
                     lineTension: 0,
                     backgroundColor: "transparent",
                     borderColor: "#289672",

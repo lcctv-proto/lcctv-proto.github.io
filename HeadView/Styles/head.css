@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+
+.border-subscriber {
+    border-color: #161d6f !important;
+}
+
+.btn-outline-subscriber {
+    border-color: #161d6f !important;
+    color: #161d6f !important;
+}
+.btn-outline-subscriber:checked,
+.btn-outline-subscriber:active,
+.btn-outline-subscriber:enabled {
+    background-color: #161d6f !important;
+    color: white !important;
+}
+
+.border-installation {
+    border-color: #810000 !important;
+}
+
+.btn-outline-installation {
+    border-color: #810000 !important;
+    color: #810000 !important;
+}
+.btn-outline-installation:checked,
+.btn-outline-installation:active,
+.btn-outline-installation:enabled {
+    background-color: #810000 !important;
+    color: white !important;
+}
+
+.border-sales {
+    border-color: #1f441e !important;
+}
+
+.btn-outline-sales {
+    border-color: #1f441e !important;
+    color: #1f441e !important;
+}
+.btn-outline-sales:checked,
+.btn-outline-sales:active,
+.btn-outline-sales:enabled {
+    background-color: #1f441e !important;
+    color: white !important;
+}
+
+.ff-logo {
+    font-family: "Mate SC";
+}
