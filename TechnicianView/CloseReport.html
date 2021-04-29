@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Close Job Order</title>
+    <style></style>
+    <link rel="stylesheet" href="./Styles/jo.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
+            <div class="row d-block d-lg-none d-xl-none">
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="bg-dark p-4">
+                        <h5 class="text-white h4">Collapsed content</h5>
+                        <span class="text-muted">Toggleable via the navbar brand.</span>
+                    </div>
+                </div>
+                <nav class="navbar navbar-dark" style="background-color: #14274e">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="row py-3 border-bottom">
+                <div class="col">
+                    <h3>Your Report</h3>
+                </div>
+                <div class="col text-end">TC123</div>
+            </div>
+            <div class="row pt-3 px-4">
+                <div class="col-4">
+                    <label for="jo-num" class="form-label">JO Type:</label>
+                    <input type="text" name="jo-num" id="jo-num" class="form-control form-control-lg" value="RELOCATION" disabled />
+                </div>
+                <div class="col-4">
+                    <label for="jo-num" class="form-label d-block">JO Number:</label>
+                    <input type="text" name="jo-num" id="jo-num" class="form-control form-control-lg w-75 d-inline" value="JO-000001" />
+                    <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <label for="assigned-team" class="form-label">Assigned Team:</label>
+                    <input type="text" name="assigned-team" id="assigned-team" class="form-control form-control-lg" value="TEAM A" disabled />
+                </div>
+            </div>
+
+            <div class="row pt-3 px-4">
+                <div class="col-4">
+                    <label for="branch" class="form-label">Branch:</label>
+                    <select name="branch" id="branch" class="form-select form-select-lg" disabled>
+                        <option value="1">
+                            PLEASE SELECT A BRANCH
+                        </option>
+                        <option value="2" selected>BRANCH 1</option>
+                        <option value="3">BRANCH 2</option>
+                        <option value="4">BRANCH 3</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="trans-date" class="form-label">Date of Transaction:</label>
+                    <input type="date" name="trans-date" id="trans-date" class="form-control form-control-lg" value="2021-04-27" disabled />
+                </div>
+                <div class="col-4">
+                    <label for="trans-date2" class="form-label">Date Resolved:</label>
+                    <input type="date" name="trans-date2" id="trans-date2" class="form-control form-control-lg" value="2021-05-05" disabled />
+                </div>
+            </div>
+            <div class="row border-top mt-5">
+                <div class="col-12 d-flex justify-content-end py-2">
+                    <button class="btn btn-navy me-auto btn-lg text-light">
+                        <i class="bi bi-box-arrow-in-left me-2"></i>
+                        BACK
+                    </button>
+
+                    <button class="btn btn-green btn-lg text-light me-2">
+                        <i class="bi bi-x-circle me-2"></i> CLOSE JOB
+                        ORDER
+                    </button>
+                    <button class="btn btn-navy btn-lg text-light">
+                        <i class="bi bi-printer me-2"></i> PRINT
+                    </button>
+                </div>
+            </div>
+
+            <div class="row pt-3 px-4 border-top">
+                <div class="col-5">
+                    <small>Account Name:</small>
+                    <h3 class="ms-2">CHARLES EDWARD A. UMALI</h3>
+                </div>
+                <div class="col-2">
+                    <small>Account Number:</small>
+                    <h3 class="ms-2">RA027801</h3>
+                </div>
+                <div class="col-5">
+                    <small>Account Status:</small>
+                    <h3 class="ms-2 text-success">ACTIVE</h3>
+                </div>
+            </div>
+
+            <div class="row pt-3 px-4">
+                <div class="col-5">
+                    <small>Email Address:</small>
+                    <h3 class="ms-2">UMALI.CHARLESEDWARD@UE.EDU.PH</h3>
+                </div>
+                <div class="col-2">
+                    <small>Contact Number:</small>
+                    <h3 class="ms-2">09153355864</h3>
+                </div>
+                <div class="col-5">
+                    <small>Service Address:</small>
+                    <h3 class="ms-2">
+                        #1626 J. Fajardo St., Sampaloc, Manila
+                    </h3>
+                </div>
+            </div>
+
+            <div class="row pt-3 px-4">
+                <div class="col-5">
+                    <small>Package:</small>
+                    <h3 class="ms-2">BASIC 640</h3>
+                </div>
+                <div class="col-3">
+                    <small>Monthly Recurring Cost:</small>
+                    <h3 class="ms-2">Php 640.00</h3>
+                </div>
+                <div class="col-4">
+                    <small></small>
+                    <h3 class="ms-2"></h3>
+                </div>
+            </div>
+
+            <div class="row border-top">
+                <div class="col-12 py-3 px-3 mt-3">
+                    <h3>MATERIALS USED:</h3>
+                    <table class="table table-bordered mt-3">
+                        <thead>
+                            <tr class="text-light" style="background-color: #14274e">
+                                <th>ITEM NAME</th>
+                                <th>QTY</th>
+                                <th>PRICE</th>
+                                <th>BILLABLE AMOUNT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    PPC PERFECT FLEX 6-SERIES,
+                                    QUAD-SHIELD CABLE, PVC JACKET,
+                                    MESSENGERED, IN REELS, METER
+                                    MARKINGS
+                                </td>
+                                <td></td>
+                                <td>08.80</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    PPC, EX6XLWSPLUS, RG6 UNIVERSAL
+                                    COMPRESSION CONNECTOR, 60% THRU QUAD
+                                    SHIELD
+                                </td>
+                                <td></td>
+                                <td>30.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    PPC, EX6XLWSPLUS, RG6 UNIVERSAL
+                                    COMPRESSION CONNECTOR, 60% THRU QUAD
+                                    SHIELD, CONTINUITY CONNECTOR
+                                </td>
+                                <td></td>
+                                <td>30.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    POWER ADAPTOR FOR MOTOROLA DIGITAL
+                                    BOX, INPUT:100V-240V, 50/60HZ 0/5A,
+                                    OUTPUT:5V 2A
+                                </td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CONCRETE TOKS SIZE 8</td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CABLE TIE 6", 150MM BLACK CHINA</td>
+                                <td></td>
+                                <td>0.40</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>DIGITAL REMOTE CONTROL</td>
+                                <td></td>
+                                <td>400.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>AAA EVEREADY BATTERY BLUE</td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>SPLITTER 2 WAY (INDOOR)</td>
+                                <td></td>
+                                <td>71.50</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>SPLITTER 3 WAY (INDOOR)</td>
+                                <td></td>
+                                <td>99.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3DB ATTENUATOR</td>
+                                <td></td>
+                                <td>35.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>SPLIITER 4 WAY (INDOOR)</td>
+                                <td></td>
+                                <td>143.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CONNECTOR F-81 SPLICE TYPE</td>
+                                <td></td>
+                                <td>09.35</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-HOOK</td>
+                                <td></td>
+                                <td>07.20</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>RCA CORD</td>
+                                <td></td>
+                                <td>40.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CABLE WIRE RG-6</td>
+                                <td></td>
+                                <td>08.80</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>SA-25 BOOSTER AMPLIFIER</td>
+                                <td></td>
+                                <td>880.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>U-NAIL CABLE CLIP</td>
+                                <td></td>
+                                <td>0.92</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CONNECTOR COMPRESSION OUTDOOR (EX6XLWS) AQUATIGTH</td>
+                                <td></td>
+                                <td>30.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CONNECTOR COMPRESSION INDOOR (EX6XL)</td>
+                                <td></td>
+                                <td>30.00</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row pt-3 px-4 mt-5 border-top">
+                <div class="col-4">
+                    <small>Inquiry Number:</small>
+                    <h3 class="ms-2">20160134736</h3>
+                </div>
+                <div class="col-4">
+                    <small>Concern Type:</small>
+                    <h3 class="ms-2">Site Transfer</h3>
+                </div>
+                <div class="col-4">
+                    <small>Inquiry Date:</small>
+                    <h3 class="ms-2">Apr 27, 2021</h3>
+                </div>
+            </div>
+
+            <div class="row pt-3 px-4 pb-4">
+                <div class="col-12">
+                    <label for="concern-details" class="form-label">Concern Details:</label>
+                    <textarea class="form-control" name="concern-details" id="concern-details" rows="6" style="resize: none" disabled>
+New house for my cable</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+
+</html>
