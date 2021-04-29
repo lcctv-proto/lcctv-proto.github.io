@@ -9,9 +9,7 @@
     border-color: #161d6f !important;
     color: #161d6f !important;
 }
-.btn-outline-subscriber:checked,
-.btn-outline-subscriber:active,
-.btn-outline-subscriber:enabled {
+.btn-outline-subscriber .active {
     background-color: #161d6f !important;
     color: white !important;
 }
@@ -24,9 +22,7 @@
     border-color: #810000 !important;
     color: #810000 !important;
 }
-.btn-outline-installation:checked,
-.btn-outline-installation:active,
-.btn-outline-installation:enabled {
+.btn-outline-installation .active {
     background-color: #810000 !important;
     color: white !important;
 }
@@ -39,9 +35,7 @@
     border-color: #1f441e !important;
     color: #1f441e !important;
 }
-.btn-outline-sales:checked,
-.btn-outline-sales:active,
-.btn-outline-sales:enabled {
+.btn-outline-sales .active {
     background-color: #1f441e !important;
     color: white !important;
 }
