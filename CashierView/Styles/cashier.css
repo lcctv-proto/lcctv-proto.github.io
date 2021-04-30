@@ -3,106 +3,110 @@
 
 body,
 html {
-    height: 100%;
-    background-color: #14274e !important;
+  height: 100%;
+  background-color: #14274e !important;
 }
 
 h1 {
-    font-size: 3.75em !important;
+  font-size: 3.75em !important;
 }
 
-.active > .nav-link {
-    color: #14274e !important;
-    background-color: #fff !important;
-    border-right: #14274e solid 1px;
+.active>.nav-link {
+  color: #14274e !important;
+  background-color: #fff !important;
+  border-right: #14274e solid 1px;
 }
 
 a.list-group-item {
-    padding: 20px 20px !important;
+  padding: 20px 20px !important;
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
+}
+
+.bg-dark-navy {
+  background-color: rgb(11, 22, 42);
 }
 
 .btn-gcash {
-    background-color: #002cb8 !important;
-    color: #fff !important;
+  background-color: #002cb8 !important;
+  color: #fff !important;
 }
 
 .btn-gcash:hover {
-    background-color: #fff !important;
-    color: #002cb8 !important;
-    border-color: #002cb8 !important;
+  background-color: #fff !important;
+  color: #002cb8 !important;
+  border-color: #002cb8 !important;
 }
 
 .btn-paymaya {
-    background-color: #177fff !important;
-    color: #fff !important;
+  background-color: #177fff !important;
+  color: #fff !important;
 }
 
 .btn-paymaya:hover {
-    background-color: #fff !important;
-    color: #8dc640 !important;
-    border-color: #8dc640 !important;
+  background-color: #fff !important;
+  color: #8dc640 !important;
+  border-color: #8dc640 !important;
 }
 
 .btn-shopee {
-    background-color: #e74c2b !important;
-    color: #fff !important;
+  background-color: #e74c2b !important;
+  color: #fff !important;
 }
 
 .btn-shopee:hover {
-    background-color: #fff !important;
-    color: #e74c2b !important;
-    border-color: #e74c2b !important;
+  background-color: #fff !important;
+  color: #e74c2b !important;
+  border-color: #e74c2b !important;
 }
 
 .btn-dragonpay {
-    background-color: #92181c !important;
-    color: #fdc611 !important;
+  background-color: #92181c !important;
+  color: #fdc611 !important;
 }
 
 .btn-dragonpay:hover {
-    background-color: #fdc611 !important;
-    color: #92181c !important;
-    border-color: #92181c !important;
+  background-color: #fdc611 !important;
+  color: #92181c !important;
+  border-color: #92181c !important;
 }
 
 .btn-bayadcenter {
-    background-color: #d00a39 !important;
-    color: #fff !important;
+  background-color: #d00a39 !important;
+  color: #fff !important;
 }
 
 .btn-bayadcenter:hover {
-    background-color: #fff !important;
-    color: #d00a39 !important;
-    border-color: #0077c0 !important;
+  background-color: #fff !important;
+  color: #d00a39 !important;
+  border-color: #0077c0 !important;
 }
 
 .btn-jumbo {
-    background-color: #14274e !important;
+  background-color: #14274e !important;
 }
 
 .btn-jumbo:hover {
-    background-color: white !important;
-    color: #14274e !important;
-    border-color: #14274e !important;
+  background-color: white !important;
+  color: #14274e !important;
+  border-color: #14274e !important;
 }
 
 .btn-jumbo:hover p {
-    border-color: #14274e !important;
+  border-color: #14274e !important;
 }
 
 .ff-logo {
-    font-family: "Mate SC";
+  font-family: "Mate SC";
 }
 
 .ff-jumbo {
-    font-family: "Nunito Sans";
+  font-family: "Nunito Sans";
 }
