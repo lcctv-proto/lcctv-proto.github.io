@@ -1,953 +1,503 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Activation</title>
-        <style>
-            table,
-            thead,
-            th,
-            td {
-                padding: 9px;
-            }
 
-            table {
-                width: 100%;
-            }
-        </style>
-        <link rel="stylesheet" href="./Styles/jo.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-            crossorigin="anonymous"
-        />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activation</title>
+    <style>
+        table,
+        thead,
+        th,
+        td {
+            padding: 9px;
+        }
 
-    <body>
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
-                    <nav class="navbar mt-5">
-                        <ul class="navbar-nav fs-5">
-                            <a
-                                class="navbar-brand text-light fs-2 text-wrap text-center"
-                                href="./Login.html"
-                                ><img
-                                    height="100px"
-                                    class="d-block mx-auto mb-2"
-                                    src="../Images/logo.png"
-                                    alt=""
-                                />
-                                <p class="ms-3 ff-logo pb-3 border-bottom">
-                                    Lake Community Cable TV
-                                </p>
-                            </a>
-                            <li class="nav-item mt-3">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./LandingPage.html"
-                                    ><i class="bi bi-speedometer2 pl-3"></i
-                                    ><span class="px-3">Dashboard</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./CreateJO.html"
-                                    ><i class="bi bi-pen"></i
-                                    ><span class="px-3">Create JOs</span></a
-                                >
-                            </li>
-                            <li class="nav-item active">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Activation.html"
-                                    ><i class="bi bi-lightning-charge"></i
-                                    ><span class="px-3">Activation</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Maintenance.html"
-                                    ><i class="bi bi-tools"></i
-                                    ><span class="px-3">Maintenance</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./CloseJO.html"
-                                    ><i class="bi bi-check2-circle"></i
-                                    ><span class="px-3">Close JOs</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Calendar.html"
-                                    ><i class="bi bi-calendar-week"></i
-                                    ><span class="px-3">Calendar</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./ViewJO.html"
-                                    ><i class="bi bi-journal-album"></i>
-                                    <span class="px-3">View JOs</span></a
-                                >
-                            </li>
-                            <li class="nav-item mt-5 bg-dark-navy">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Login.html"
-                                    ><i class="bi bi-box-arrow-left"></i
-                                    ><span class="px-3">Logout</span></a
-                                >
-                            </li>
-                        </ul>
+        table {
+            width: 100%;
+        }
+
+    </style>
+    <link rel="stylesheet" href="./Styles/jo.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
+                <nav class="navbar mt-5">
+                    <ul class="navbar-nav fs-5">
+                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
+                            <p class="ms-3 ff-logo pb-3 border-bottom" style="border-bottom: 3px #8ab6d6 solid !important;">
+                                Lake Community Cable TV
+                            </p>
+                        </a>
+                        <li class="nav-item mt-3">
+                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">Dashboard</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./CreateJO.html"><i class="bi bi-pen"></i><span class="px-3">Create JOs</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light px-3" href="./Activation.html"><i class="bi bi-lightning-charge"></i><span class="px-3">Activation</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Maintenance.html"><i class="bi bi-tools"></i><span class="px-3">Maintenance</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./CloseJO.html"><i class="bi bi-check2-circle"></i><span class="px-3">Close JOs</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Calendar.html"><i class="bi bi-calendar-week"></i><span class="px-3">Calendar</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./ViewJO.html"><i class="bi bi-journal-album"></i>
+                                <span class="px-3">View JOs</span></a>
+                        </li>
+                        <li class="nav-item mt-5 bg-dark-navy">
+                            <a class="nav-link text-light px-3" href="./Login.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">Logout</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
+                <div class="row d-block d-lg-none d-xl-none">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-dark" style="background-color: #14274e">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
                     </nav>
                 </div>
-                <div
-                    class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid"
-                    style="background-color: #f6f8fb"
-                >
-                    <div class="row d-block d-lg-none d-xl-none">
-                        <div class="collapse" id="navbarToggleExternalContent">
-                            <div class="bg-dark p-4">
-                                <h5 class="text-white h4">Collapsed content</h5>
-                                <span class="text-muted"
-                                    >Toggleable via the navbar brand.</span
-                                >
-                            </div>
-                        </div>
-                        <nav
-                            class="navbar navbar-dark"
-                            style="background-color: #14274e"
-                        >
-                            <div class="container-fluid">
-                                <button
-                                    class="navbar-toggler"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbarToggleExternalContent"
-                                >
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                            </div>
-                        </nav>
+
+                <div class="row py-3 border-bottom" style="border-bottom: 3px #8ab6d6 solid !important;">
+                    <div class="col">
+                        <h3>Activation</h3>
                     </div>
+                    <div class="col text-end">JO123</div>
+                </div>
 
-                    <div class="row py-3 border-bottom">
-                        <div class="col">
-                            <h3>Activation</h3>
-                        </div>
-                        <div class="col text-end">JO123</div>
+                <div class="row pt-3 px-4">
+                    <div class="col-4">
+                        <label for="acc-number" class="form-label d-block">Account Number:</label>
+                        <input type="text" name="acc-number" id="acc-number" class="form-control form-control-lg w-75 d-inline" />
+                        <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e">
+                            <i class="bi bi-search"></i>
+                        </button>
                     </div>
-
-                    <div class="row pt-3 px-4">
-                        <div class="col-4">
-                            <label for="acc-number" class="form-label d-block"
-                                >Account Number:</label
-                            >
-                            <input
-                                type="text"
-                                name="acc-number"
-                                id="acc-number"
-                                class="form-control form-control-lg w-75 d-inline"
-                            />
-                            <button
-                                class="btn btn-lg text-light align-top ms-2 d-inline"
-                                style="background-color: #14274e"
-                            >
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </div>
-                        <div class="col-4">
-                            <label for="jo-num" class="form-label"
-                                >JO Number:</label
-                            >
-                            <input
-                                type="text"
-                                name="jo-num"
-                                id="jo-num"
-                                class="form-control form-control-lg w-75"
-                                value="JO-000001"
-                                disabled
-                            />
-                        </div>
-                        <div class="col-4">
-                            <label for="assigned-team" class="form-label"
-                                >Assigned Team:</label
-                            >
-                            <input
-                                type="text"
-                                name="assigned-team"
-                                id="assigned-team"
-                                class="form-control form-control-lg w-75"
-                                value="TEAM KAKASHI (TEAM 7)"
-                                disabled
-                            />
-                        </div>
+                    <div class="col-4">
+                        <label for="jo-num" class="form-label">JO Number:</label>
+                        <input type="text" name="jo-num" id="jo-num" class="form-control form-control-lg w-75" value="JO-000001" disabled />
                     </div>
-
-                    <div class="row pt-3 px-4">
-                        <div class="col-4">
-                            <label for="branch" class="form-label"
-                                >Branch:</label
-                            >
-                            <select
-                                name="branch"
-                                id="branch"
-                                class="form-select form-select-lg w-75"
-                                disabled
-                            >
-                                <option value="1">BRANCH 1</option>
-                                <option value="2">BRANCH 2</option>
-                                <option value="3">BRANCH 3</option>
-                            </select>
-                        </div>
-                        <div class="col-4">
-                            <label for="trans-date" class="form-label"
-                                >Application Date:</label
-                            >
-                            <input
-                                type="date"
-                                name="trans-date"
-                                id="trans-date"
-                                class="form-control form-control-lg w-75"
-                                value="2021-02-25"
-                                disabled
-                            />
-                        </div>
-                        <div class="col-4">
-                            <label for="trans-date2" class="form-label"
-                                >Installation Date:</label
-                            >
-                            <input
-                                type="date"
-                                name="trans-date2"
-                                id="trans-date2"
-                                class="form-control form-control-lg w-75"
-                                value="2021-03-25"
-                                disabled
-                            />
-                        </div>
+                    <div class="col-4">
+                        <label for="assigned-team" class="form-label">Assigned Team:</label>
+                        <input type="text" name="assigned-team" id="assigned-team" class="form-control form-control-lg w-75" value="TEAM KAKASHI (TEAM 7)" disabled />
                     </div>
+                </div>
 
-                    <div class="row border-top mt-5">
-                        <div class="col-12 d-flex justify-content-end py-2">
-                            <button
-                                class="btn btn-navy me-auto btn-lg text-light"
-                                style="background-color: #14274e"
-                            >
-                                <i class="bi bi-box-arrow-in-left me-2"></i>
-                                BACK
-                            </button>
-
-                            <button
-                                class="btn btn-green btn-lg text-light me-2"
-                            >
-                                <i class="bi bi-check-circle me-2"></i> ACTIVATE
-                                ACCOUNT
-                            </button>
-                            <button class="btn btn-navy btn-lg text-light">
-                                <i class="bi bi-printer me-2"></i> PRINT
-                            </button>
-                        </div>
+                <div class="row pt-3 px-4">
+                    <div class="col-4">
+                        <label for="branch" class="form-label">Branch:</label>
+                        <select name="branch" id="branch" class="form-select form-select-lg w-75" disabled>
+                            <option value="1">BRANCH 1</option>
+                            <option value="2">BRANCH 2</option>
+                            <option value="3">BRANCH 3</option>
+                        </select>
                     </div>
-
-                    <div class="row border-top">
-                        <div class="col-12 py-3 px-3 mt-3">
-                            <h3>MATERIALS USED:</h3>
-                            <table class="table table-bordered mt-3">
-                                <thead>
-                                    <tr
-                                        class="text-light"
-                                        style="background-color: #14274e"
-                                    >
-                                        <th>ITEM NAME</th>
-                                        <th>QTY</th>
-                                        <th>PRICE</th>
-                                        <th>BILLABLE AMOUNT</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            PPC PERFECT FLEX 6-SERIES,
-                                            QUAD-SHIELD CABLE, PVC JACKET,
-                                            MESSENGERED, IN REELS, METER
-                                            MARKINGS
-                                        </td>
-                                        <td></td>
-                                        <td>08.80</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            PPC, EX6XLWSPLUS, RG6 UNIVERSAL
-                                            COMPRESSION CONNECTOR, 60% THRU QUAD
-                                            SHIELD
-                                        </td>
-                                        <td></td>
-                                        <td>30.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            PPC, EX6XLWSPLUS, RG6 UNIVERSAL
-                                            COMPRESSION CONNECTOR, 60% THRU QUAD
-                                            SHIELD, CONTINUITY CONNECTOR
-                                        </td>
-                                        <td></td>
-                                        <td>30.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            POWER ADAPTOR FOR MOTOROLA DIGITAL
-                                            BOX, INPUT:100V-240V, 50/60HZ 0/5A,
-                                            OUTPUT:5V 2A
-                                        </td>
-                                        <td></td>
-                                        <td>0.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>CONCRETE TOKS SIZE 8</td>
-                                        <td></td>
-                                        <td>0.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>CABLE TIE 6", 150MM BLACK CHINA</td>
-                                        <td></td>
-                                        <td>0.40</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>DIGITAL REMOTE CONTROL</td>
-                                        <td></td>
-                                        <td>400.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>AAA EVEREADY BATTERY BLUE</td>
-                                        <td></td>
-                                        <td>0.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>SPLITTER 2 WAY (INDOOR)</td>
-                                        <td></td>
-                                        <td>71.50</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>SPLITTER 3 WAY (INDOOR)</td>
-                                        <td></td>
-                                        <td>99.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3DB ATTENUATOR</td>
-                                        <td></td>
-                                        <td>35.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>SPLIITER 4 WAY (INDOOR)</td>
-                                        <td></td>
-                                        <td>143.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>CONNECTOR F-81 SPLICE TYPE</td>
-                                        <td></td>
-                                        <td>09.35</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>P-HOOK</td>
-                                        <td></td>
-                                        <td>07.20</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>RCA CORD</td>
-                                        <td></td>
-                                        <td>40.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>CABLE WIRE RG-6</td>
-                                        <td></td>
-                                        <td>08.80</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>SA-25 BOOSTER AMPLIFIER</td>
-                                        <td></td>
-                                        <td>880.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>U-NAIL CABLE CLIP</td>
-                                        <td></td>
-                                        <td>0.92</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            CONNECTOR COMPRESSION OUTDOOR
-                                            (EX6XLWS) AQUATIGTH
-                                        </td>
-                                        <td></td>
-                                        <td>30.00</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            CONNECTOR COMPRESSION INDOOR (EX6XL)
-                                        </td>
-                                        <td></td>
-                                        <td>30.00</td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div class="col-4">
+                        <label for="trans-date" class="form-label">Application Date:</label>
+                        <input type="date" name="trans-date" id="trans-date" class="form-control form-control-lg w-75" value="2021-02-25" disabled />
                     </div>
+                    <div class="col-4">
+                        <label for="trans-date2" class="form-label">Installation Date:</label>
+                        <input type="date" name="trans-date2" id="trans-date2" class="form-control form-control-lg w-75" value="2021-03-25" disabled />
+                    </div>
+                </div>
 
-                    <div class="row border-top">
-                        <div class="col-12 py-3 mt-3">
-                            <h3>APPLICATION INFORMATION</h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="accordion" id="application_form">
-                                    <div class="accordion-item">
-                                        <h2
-                                            class="accordion-header"
-                                            id="personalInfo"
-                                        >
-                                            <button
-                                                class="accordion-button"
-                                                type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#personal_info"
-                                            >
-                                                Personal Information
-                                            </button>
-                                        </h2>
-                                        <div
-                                            id="personal_info"
-                                            class="accordion-collapse collapse show"
-                                            data-bs-parent="#application-form"
-                                        >
-                                            <div class="accordion-body">
-                                                <div class="row mb-3">
-                                                    <label
-                                                        for="surname"
-                                                        class="col-sm-1 col-form-label"
-                                                        >Family Name:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="surname"
-                                                            value="UMALI"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="firstname"
-                                                        class="col-sm-1 col-form-label"
-                                                        >First Name:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="firstname"
-                                                            value="CHARLES EDWARD"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="middlename"
-                                                        class="col-sm-1 col-form-label"
-                                                        >Middle Name:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="middlename"
-                                                            value="ALALAN"
-                                                            disabled
-                                                        />
-                                                    </div>
+                <div class="row border-top mt-5" style="border-top: 3px #8ab6d6 solid !important;">
+                    <div class="col-12 d-flex justify-content-end py-2">
+                        <button class="btn btn-navy me-auto btn-lg text-light" style="background-color: #14274e">
+                            <i class="bi bi-box-arrow-in-left me-2"></i>
+                            BACK
+                        </button>
+
+                        <button class="btn btn-green btn-lg text-light me-2">
+                            <i class="bi bi-check-circle me-2"></i> ACTIVATE
+                            ACCOUNT
+                        </button>
+                        <button class="btn btn-navy btn-lg text-light">
+                            <i class="bi bi-printer me-2"></i> PRINT
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row border-top" style="border-top: 3px #8ab6d6 solid !important;">
+                    <div class="col-12 py-3 px-3 mt-3">
+                        <h3>MATERIALS USED:</h3>
+                        <table class="table table-bordered mt-3">
+                            <thead>
+                                <tr class="text-light" style="background-color: #14274e">
+                                    <th>ITEM NAME</th>
+                                    <th>QTY</th>
+                                    <th>PRICE</th>
+                                    <th>BILLABLE AMOUNT</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        PPC PERFECT FLEX 6-SERIES,
+                                        QUAD-SHIELD CABLE, PVC JACKET,
+                                        MESSENGERED, IN REELS, METER
+                                        MARKINGS
+                                    </td>
+                                    <td></td>
+                                    <td class="text-end">08.80</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        PPC, EX6XLWSPLUS, RG6 UNIVERSAL
+                                        COMPRESSION CONNECTOR, 60% THRU QUAD
+                                        SHIELD
+                                    </td>
+                                    <td></td>
+                                    <td class="text-end">30.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        PPC, EX6XLWSPLUS, RG6 UNIVERSAL
+                                        COMPRESSION CONNECTOR, 60% THRU QUAD
+                                        SHIELD, CONTINUITY CONNECTOR
+                                    </td>
+                                    <td></td>
+                                    <td class="text-end">30.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        POWER ADAPTOR FOR MOTOROLA DIGITAL
+                                        BOX, INPUT:100V-240V, 50/60HZ 0/5A,
+                                        OUTPUT:5V 2A
+                                    </td>
+                                    <td></td>
+                                    <td class="text-end">0.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>CONCRETE TOKS SIZE 8</td>
+                                    <td></td>
+                                    <td class="text-end">0.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>CABLE TIE 6", 150MM BLACK CHINA</td>
+                                    <td></td>
+                                    <td class="text-end">0.40</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>DIGITAL REMOTE CONTROL</td>
+                                    <td></td>
+                                    <td class="text-end">400.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>AAA EVEREADY BATTERY BLUE</td>
+                                    <td></td>
+                                    <td class="text-end">0.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>SPLITTER 2 WAY (INDOOR)</td>
+                                    <td></td>
+                                    <td class="text-end">71.50</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>SPLITTER 3 WAY (INDOOR)</td>
+                                    <td></td>
+                                    <td class="text-end">99.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>3DB ATTENUATOR</td>
+                                    <td></td>
+                                    <td class="text-end">35.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>SPLIITER 4 WAY (INDOOR)</td>
+                                    <td></td>
+                                    <td class="text-end">143.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>CONNECTOR F-81 SPLICE TYPE</td>
+                                    <td></td>
+                                    <td class="text-end">09.35</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>P-HOOK</td>
+                                    <td></td>
+                                    <td class="text-end">07.20</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>RCA CORD</td>
+                                    <td></td>
+                                    <td class="text-end">40.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>CABLE WIRE RG-6</td>
+                                    <td></td>
+                                    <td class="text-end">08.80</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>SA-25 BOOSTER AMPLIFIER</td>
+                                    <td></td>
+                                    <td class="text-end">880.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>U-NAIL CABLE CLIP</td>
+                                    <td></td>
+                                    <td class="text-end">0.92</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        CONNECTOR COMPRESSION OUTDOOR
+                                        (EX6XLWS) AQUATIGTH
+                                    </td>
+                                    <td></td>
+                                    <td class="text-end">30.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        CONNECTOR COMPRESSION INDOOR (EX6XL)
+                                    </td>
+                                    <td></td>
+                                    <td class="text-end">30.00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row border-top">
+                    <div class="col-12 py-3 mt-3">
+                        <h3>APPLICATION INFORMATION</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="accordion" id="application_form">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="personalInfo">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#personal_info">
+                                            Personal Information
+                                        </button>
+                                    </h2>
+                                    <div id="personal_info" class="accordion-collapse collapse show" data-bs-parent="#application-form">
+                                        <div class="accordion-body">
+                                            <div class="row mb-3">
+                                                <label for="surname" class="col-sm-1 col-form-label">Family Name:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="surname" value="UMALI" disabled />
                                                 </div>
-                                                <div class="row mb-3">
-                                                    <label
-                                                        for="nationality"
-                                                        class="col-sm-1 col-form-label"
-                                                        >Nationality:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="nationality"
-                                                            value="FILIPINO"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="birthdate"
-                                                        class="col-sm-1 col-form-label"
-                                                        >Birth Date:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="date"
-                                                            class="form-control"
-                                                            id="birthdate"
-                                                            value="1999-12-29"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="gender"
-                                                        class="col-sm-1 col-form-label"
-                                                        >Gender:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="gender"
-                                                            value="MALE"
-                                                            disabled
-                                                        />
-                                                    </div>
+                                                <label for="firstname" class="col-sm-1 col-form-label">First Name:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="firstname" value="CHARLES EDWARD" disabled />
                                                 </div>
-                                                <div class="row mb-3">
-                                                    <label
-                                                        for="surname"
-                                                        class="col-sm-1 col-form-label"
-                                                        >Civil Status:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="surname"
-                                                            value="MARRIED"
-                                                            disabled
-                                                        />
-                                                    </div>
+                                                <label for="middlename" class="col-sm-1 col-form-label">Middle Name:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="middlename" value="ALALAN" disabled />
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="nationality" class="col-sm-1 col-form-label">Nationality:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="nationality" value="FILIPINO" disabled />
+                                                </div>
+                                                <label for="birthdate" class="col-sm-1 col-form-label">Birth Date:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="date" class="form-control" id="birthdate" value="1999-12-29" disabled />
+                                                </div>
+                                                <label for="gender" class="col-sm-1 col-form-label">Gender:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="gender" value="MALE" disabled />
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="surname" class="col-sm-1 col-form-label">Civil Status:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="surname" value="MARRIED" disabled />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="accordion-item">
-                                        <h2
-                                            class="accordion-header"
-                                            id="serviceAdd"
-                                        >
-                                            <button
-                                                class="accordion-button"
-                                                type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#service_add"
-                                            >
-                                                Service Address
-                                            </button>
-                                        </h2>
-                                        <div
-                                            id="service_add"
-                                            class="accordion-collapse collapse show"
-                                            data-bs-parent="#application-form"
-                                        >
-                                            <div class="accordion-body">
-                                                <h6 class="mb-3">
-                                                    Home/Installation Address
-                                                </h6>
-                                                <div class="row mb-3">
-                                                    <label
-                                                        for="house_num"
-                                                        class="col-sm-2 col-form-label"
-                                                        >Unit/ House
-                                                        Number:</label
-                                                    >
-                                                    <div class="col-sm-2">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="house_num"
-                                                            value="#160"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="street"
-                                                        class="col-sm-2 col-form-label"
-                                                        >Street:</label
-                                                    >
-                                                    <div class="col-sm-2">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="street"
-                                                            value="SAN SALVADOR ST."
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="barangay"
-                                                        class="col-sm-2 col-form-label"
-                                                        >Barangay:</label
-                                                    >
-                                                    <div class="col-sm-2">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="barangay"
-                                                            value="MANGGAHAN"
-                                                            disabled
-                                                        />
-                                                    </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="serviceAdd">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#service_add">
+                                            Service Address
+                                        </button>
+                                    </h2>
+                                    <div id="service_add" class="accordion-collapse collapse show" data-bs-parent="#application-form">
+                                        <div class="accordion-body">
+                                            <h6 class="mb-3">
+                                                Home/Installation Address
+                                            </h6>
+                                            <div class="row mb-3">
+                                                <label for="house_num" class="col-sm-2 col-form-label">Unit/ House
+                                                    Number:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" id="house_num" value="#160" disabled />
                                                 </div>
-                                                <div class="row mb-3">
-                                                    <label
-                                                        for="municipality"
-                                                        class="col-sm-2 col-form-label"
-                                                        >Municipality:</label
-                                                    >
-                                                    <div class="col-sm-2">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="municipality"
-                                                            value="PASIG"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="home_owner"
-                                                        class="col-sm-2 col-form-label"
-                                                        >Home Ownership:</label
-                                                    >
-                                                    <div class="col-sm-2">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="home_owner"
-                                                            value="OWNED"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="yrs_resid"
-                                                        class="col-sm-2 col-form-label"
-                                                        >Years of
-                                                        Residency:</label
-                                                    >
-                                                    <div class="col-sm-2">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="yrs_resid"
-                                                            value="21"
-                                                            disabled
-                                                        />
-                                                    </div>
+                                                <label for="street" class="col-sm-2 col-form-label">Street:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" id="street" value="SAN SALVADOR ST." disabled />
                                                 </div>
-                                                <div class="row mb-3">
-                                                    <label
-                                                        for="province"
-                                                        class="col-sm-2 col-form-label"
-                                                        >Province:</label
-                                                    >
-                                                    <div class="col-sm-2">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="province"
-                                                            value="NCR"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="zip"
-                                                        class="col-sm-2 col-form-label"
-                                                        >Zip Code:</label
-                                                    >
-                                                    <div class="col-sm-2">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="zip"
-                                                            value="1612"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="landmark"
-                                                        class="col-sm-2 col-form-label"
-                                                        >Nearest
-                                                        Landmark:</label
-                                                    >
-                                                    <div class="col-sm-2">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="landmark"
-                                                            value="Near Sta. Lucia Mall"
-                                                            disabled
-                                                        />
-                                                    </div>
+                                                <label for="barangay" class="col-sm-2 col-form-label">Barangay:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" id="barangay" value="MANGGAHAN" disabled />
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="municipality" class="col-sm-2 col-form-label">Municipality:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" id="municipality" value="PASIG" disabled />
+                                                </div>
+                                                <label for="home_owner" class="col-sm-2 col-form-label">Home Ownership:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" id="home_owner" value="OWNED" disabled />
+                                                </div>
+                                                <label for="yrs_resid" class="col-sm-2 col-form-label">Years of
+                                                    Residency:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" id="yrs_resid" value="21" disabled />
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="province" class="col-sm-2 col-form-label">Province:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" id="province" value="NCR" disabled />
+                                                </div>
+                                                <label for="zip" class="col-sm-2 col-form-label">Zip Code:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" id="zip" value="1612" disabled />
+                                                </div>
+                                                <label for="landmark" class="col-sm-2 col-form-label">Nearest
+                                                    Landmark:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" id="landmark" value="Near Sta. Lucia Mall" disabled />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="accordion-item">
-                                        <h2
-                                            class="accordion-header"
-                                            id="GovtID"
-                                        >
-                                            <button
-                                                class="accordion-button collapsed"
-                                                type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#govt_id"
-                                            >
-                                                Government Issued ID
-                                            </button>
-                                        </h2>
-                                        <div
-                                            id="govt_id"
-                                            class="accordion-collapse collapse"
-                                            data-bs-parent="#application-form"
-                                        >
-                                            <div class="accordion-body">
-                                                <a
-                                                    href="./Images/id.png"
-                                                    target="_blank"
-                                                >
-                                                    <img
-                                                        src="./Images/id.png"
-                                                        alt="ID PICTURE"
-                                                        class="d-block my-3 mx-auto shadow"
-                                                        style="height: 360px"
-                                                    />
-                                                </a>
-                                            </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="GovtID">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#govt_id">
+                                            Government Issued ID
+                                        </button>
+                                    </h2>
+                                    <div id="govt_id" class="accordion-collapse collapse" data-bs-parent="#application-form">
+                                        <div class="accordion-body">
+                                            <a href="./Images/id.png" target="_blank">
+                                                <img src="./Images/id.png" alt="ID PICTURE" class="d-block my-3 mx-auto shadow" style="height: 360px" />
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="POB">
-                                            <button
-                                                class="accordion-button collapsed"
-                                                type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#proof_of_billing"
-                                            >
-                                                Proof of Billing
-                                            </button>
-                                        </h2>
-                                        <div
-                                            id="proof_of_billing"
-                                            class="accordion-collapse collapse"
-                                            data-bs-parent="#application-form"
-                                        >
-                                            <div class="accordion-body">
-                                                <a
-                                                    href="./Images/pob.png"
-                                                    target="_blank"
-                                                >
-                                                    <img
-                                                        src="./Images/pob.png"
-                                                        alt="Proof of Billing"
-                                                        class="d-block my-3 mx-auto shadow"
-                                                    />
-                                                </a>
-                                            </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="POB">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proof_of_billing">
+                                            Proof of Billing
+                                        </button>
+                                    </h2>
+                                    <div id="proof_of_billing" class="accordion-collapse collapse" data-bs-parent="#application-form">
+                                        <div class="accordion-body">
+                                            <a href="./Images/pob.png" target="_blank">
+                                                <img src="./Images/pob.png" alt="Proof of Billing" class="d-block my-3 mx-auto shadow" />
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <h2
-                                            class="accordion-header"
-                                            id="contact"
-                                        >
-                                            <button
-                                                class="accordion-button collapsed"
-                                                type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#contact_info"
-                                            >
-                                                Contact Information
-                                            </button>
-                                        </h2>
-                                        <div
-                                            id="contact_info"
-                                            class="accordion-collapse collapse"
-                                            data-bs-parent="#application-form"
-                                        >
-                                            <div class="accordion-body">
-                                                <div class="row mb-3">
-                                                    <label
-                                                        for="number"
-                                                        class="col-sm-2 col-form-label"
-                                                        >Cellphone
-                                                        Number:</label
-                                                    >
-                                                    <div class="col-sm-2">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="number"
-                                                            value="09153355864"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="tele"
-                                                        class="col-sm-2 col-form-label"
-                                                        >Telephone
-                                                        Number:</label
-                                                    >
-                                                    <div class="col-sm-2">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="tele"
-                                                            value="N/A"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="email"
-                                                        class="col-sm-1 col-form-label"
-                                                        >Email Address:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="email"
-                                                            class="form-control"
-                                                            id="email"
-                                                            value="UMALI.CHARLESEDWARD@UE.EDU.PH"
-                                                            disabled
-                                                        />
-                                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="contact">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contact_info">
+                                            Contact Information
+                                        </button>
+                                    </h2>
+                                    <div id="contact_info" class="accordion-collapse collapse" data-bs-parent="#application-form">
+                                        <div class="accordion-body">
+                                            <div class="row mb-3">
+                                                <label for="number" class="col-sm-2 col-form-label">Cellphone
+                                                    Number:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" id="number" value="09153355864" disabled />
                                                 </div>
-                                                <h6 class="mb-3">
-                                                    Mother's Maiden Name
-                                                </h6>
-                                                <div class="row mb-3">
-                                                    <label
-                                                        for="surname"
-                                                        class="col-sm-1 col-form-label"
-                                                        >Family Name:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="surname"
-                                                            value="ALALAN"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="firstname"
-                                                        class="col-sm-1 col-form-label"
-                                                        >First Name:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="firstname"
-                                                            value="GRACE"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="middlename"
-                                                        class="col-sm-1 col-form-label"
-                                                        >Middle Name:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="middlename"
-                                                            value="FAJARDO"
-                                                            disabled
-                                                        />
-                                                    </div>
+                                                <label for="tele" class="col-sm-2 col-form-label">Telephone
+                                                    Number:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" id="tele" value="N/A" disabled />
                                                 </div>
-                                                <h6 class="mb-3">
-                                                    Spouse's Name
-                                                </h6>
-                                                <div class="row mb-3">
-                                                    <label
-                                                        for="surname"
-                                                        class="col-sm-1 col-form-label"
-                                                        >Family Name:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="surname"
-                                                            value="CUMPA"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="firstname"
-                                                        class="col-sm-1 col-form-label"
-                                                        >First Name:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="firstname"
-                                                            value="ANDREA"
-                                                            disabled
-                                                        />
-                                                    </div>
-                                                    <label
-                                                        for="middlename"
-                                                        class="col-sm-1 col-form-label"
-                                                        >Middle Name:</label
-                                                    >
-                                                    <div class="col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="middlename"
-                                                            value="GONZALES"
-                                                            disabled
-                                                        />
-                                                    </div>
+                                                <label for="email" class="col-sm-1 col-form-label">Email Address:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="email" class="form-control" id="email" value="UMALI.CHARLESEDWARD@UE.EDU.PH" disabled />
+                                                </div>
+                                            </div>
+                                            <h6 class="mb-3">
+                                                Mother's Maiden Name
+                                            </h6>
+                                            <div class="row mb-3">
+                                                <label for="surname" class="col-sm-1 col-form-label">Family Name:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="surname" value="ALALAN" disabled />
+                                                </div>
+                                                <label for="firstname" class="col-sm-1 col-form-label">First Name:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="firstname" value="GRACE" disabled />
+                                                </div>
+                                                <label for="middlename" class="col-sm-1 col-form-label">Middle Name:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="middlename" value="FAJARDO" disabled />
+                                                </div>
+                                            </div>
+                                            <h6 class="mb-3">
+                                                Spouse's Name
+                                            </h6>
+                                            <div class="row mb-3">
+                                                <label for="surname" class="col-sm-1 col-form-label">Family Name:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="surname" value="CUMPA" disabled />
+                                                </div>
+                                                <label for="firstname" class="col-sm-1 col-form-label">First Name:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="firstname" value="ANDREA" disabled />
+                                                </div>
+                                                <label for="middlename" class="col-sm-1 col-form-label">Middle Name:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="middlename" value="GONZALES" disabled />
                                                 </div>
                                             </div>
                                         </div>
@@ -956,22 +506,18 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="row mt-5">
-                        <div class="col-12 d-flex justify-content-end">
-                            <a class="btn btn-dark btn-lg" href="#"
-                                >BACK TO TOP <i class="bi bi-chevron-up"></i
-                            ></a>
-                        </div>
+                <div class="row mt-5">
+                    <div class="col-12 d-flex justify-content-end">
+                        <a class="btn btn-dark btn-lg" href="#">BACK TO TOP <i class="bi bi-chevron-up"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"
-    ></script>
-    <script></script>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script></script>
+
 </html>

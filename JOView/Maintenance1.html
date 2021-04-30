@@ -1,640 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Maintenance</title>
-        <style></style>
-        <link rel="stylesheet" href="./Styles/jo.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-            crossorigin="anonymous"
-        />
-    </head>
 
-    <body>
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
-                    <nav class="navbar mt-5">
-                        <ul class="navbar-nav fs-5">
-                            <a
-                                class="navbar-brand text-light fs-2 text-wrap text-center"
-                                href="./Login.html"
-                                ><img
-                                    height="100px"
-                                    class="d-block mx-auto mb-2"
-                                    src="../Images/logo.png"
-                                    alt=""
-                                />
-                                <p class="ms-3 ff-logo pb-3 border-bottom">
-                                    Lake Community Cable TV
-                                </p>
-                            </a>
-                            <li class="nav-item mt-3">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./LandingPage.html"
-                                    ><i class="bi bi-speedometer2 pl-3"></i
-                                    ><span class="px-3">Dashboard</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./CreateJO.html"
-                                    ><i class="bi bi-pen"></i
-                                    ><span class="px-3">Create JOs</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Activation.html"
-                                    ><i class="bi bi-lightning-charge"></i
-                                    ><span class="px-3">Activation</span></a
-                                >
-                            </li>
-                            <li class="nav-item active">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Maintenance.html"
-                                    ><i class="bi bi-tools"></i
-                                    ><span class="px-3">Maintenance</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./CloseJO.html"
-                                    ><i class="bi bi-check2-circle"></i
-                                    ><span class="px-3">Close JOs</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Calendar.html"
-                                    ><i class="bi bi-calendar-week"></i
-                                    ><span class="px-3">Calendar</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./ViewJO.html"
-                                    ><i class="bi bi-journal-album"></i>
-                                    <span class="px-3">View JOs</span></a
-                                >
-                            </li>
-                            <li class="nav-item mt-5 bg-dark-navy">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Login.html"
-                                    ><i class="bi bi-box-arrow-left"></i
-                                    ><span class="px-3">Logout</span></a
-                                >
-                            </li>
-                        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maintenance</title>
+    <style></style>
+    <link rel="stylesheet" href="./Styles/jo.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
+                <nav class="navbar mt-5">
+                    <ul class="navbar-nav fs-5">
+                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
+                            <p class="ms-3 ff-logo pb-3 border-bottom" style="border-bottom: 3px #8ab6d6 solid !important;">
+                                Lake Community Cable TV
+                            </p>
+                        </a>
+                        <li class="nav-item mt-3">
+                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">Dashboard</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./CreateJO.html"><i class="bi bi-pen"></i><span class="px-3">Create JOs</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Activation.html"><i class="bi bi-lightning-charge"></i><span class="px-3">Activation</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light px-3" href="./Maintenance.html"><i class="bi bi-tools"></i><span class="px-3">Maintenance</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./CloseJO.html"><i class="bi bi-check2-circle"></i><span class="px-3">Close JOs</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Calendar.html"><i class="bi bi-calendar-week"></i><span class="px-3">Calendar</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./ViewJO.html"><i class="bi bi-journal-album"></i>
+                                <span class="px-3">View JOs</span></a>
+                        </li>
+                        <li class="nav-item mt-5 bg-dark-navy">
+                            <a class="nav-link text-light px-3" href="./Login.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">Logout</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
+                <div class="row d-block d-lg-none d-xl-none">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-dark" style="background-color: #14274e">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
                     </nav>
                 </div>
-                <div
-                    class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid"
-                    style="background-color: #f6f8fb"
-                >
-                    <div class="row d-block d-lg-none d-xl-none">
-                        <div class="collapse" id="navbarToggleExternalContent">
-                            <div class="bg-dark p-4">
-                                <h5 class="text-white h4">Collapsed content</h5>
-                                <span class="text-muted"
-                                    >Toggleable via the navbar brand.</span
-                                >
-                            </div>
-                        </div>
-                        <nav
-                            class="navbar navbar-dark"
-                            style="background-color: #14274e"
-                        >
-                            <div class="container-fluid">
-                                <button
-                                    class="navbar-toggler"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbarToggleExternalContent"
-                                >
-                                    <span class="navbar-toggler-icon"></span>
+
+                <div class="row py-3 border-bottom" style="border-bottom: 3px #8ab6d6 solid !important;">
+                    <div class="col">
+                        <h3>Maintenance</h3>
+                    </div>
+                    <div class="col text-end">JO123</div>
+                </div>
+
+                <div class="row pt-3 px-4">
+                    <div class="col-4">
+                        <label for="jo-num" class="form-label">JO Type:</label>
+                        <input type="text" name="jo-num" id="jo-num" class="form-control form-control-lg w-75" value="RELOCATION" disabled />
+                    </div>
+                    <div class="col-4">
+                        <label for="jo-num" class="form-label d-block">JO Number:</label>
+                        <input type="text" name="jo-num" id="jo-num" value="JO-000001" class="form-control form-control-lg w-75 d-inline" />
+                        <button class="btn btn-lg text-light align-top ms-2 d-inline btn-navy" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <label for="team-assigned" class="form-label d-block">Assign Team:</label>
+                        <input type="text" name="team-assigned" id="team-assigned" class="form-control form-control-lg w-75 d-inline" />
+                        <button class="btn btn-lg text-light align-top ms-2 d-inline btn-navy" data-bs-toggle="modal" data-bs-target="#team">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row pt-3 px-4">
+                    <div class="col-4">
+                        <label for="branch" class="form-label">Branch:</label>
+                        <select name="branch" id="branch" class="form-select form-select-lg w-75">
+                            <option value="1">
+                                PLEASE SELECT A BRANCH
+                            </option>
+                            <option value="2" selected>BRANCH 1</option>
+                            <option value="3">BRANCH 2</option>
+                            <option value="4">BRANCH 3</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <label for="trans-date" class="form-label">Date of Transaction:</label>
+                        <input type="date" name="trans-date" id="trans-date" class="form-control form-control-lg w-75" />
+                    </div>
+                    <div class="col-4">
+                        <label for="trans-date2" class="form-label">Projected Date:</label>
+                        <input type="date" name="trans-date2" id="trans-date2" class="form-control form-control-lg w-75" />
+                    </div>
+                </div>
+                <div class="row border-top mt-5" style="border-top: 3px #8ab6d6 solid !important;">
+                    <div class="col-12 d-flex justify-content-end py-2">
+                        <button class="btn btn-navy me-auto btn-lg text-light">
+                            <i class="bi bi-box-arrow-in-left me-2"></i>
+                            BACK
+                        </button>
+                        <button class="btn btn-green me-2 btn-lg text-light">
+                            <i class="bi bi-save2 me-2"></i> SAVE
+                        </button>
+                        <button class="btn btn-navy btn-lg text-light">
+                            <i class="bi bi-printer me-2"></i> PRINT
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row pt-3 px-4 border-top" style="border-top: 3px #8ab6d6 solid !important;">
+                    <div class="col-5">
+                        <small>Account Name:</small>
+                        <h3 class="ms-2">CHARLES EDWARD A. UMALI</h3>
+                    </div>
+                    <div class="col-2">
+                        <small>Account Number:</small>
+                        <h3 class="ms-2">RA027801</h3>
+                    </div>
+                    <div class="col-5">
+                        <small>Account Status:</small>
+                        <h3 class="ms-2 text-success">ACTIVE</h3>
+                    </div>
+                </div>
+
+                <div class="row pt-3 px-4">
+                    <div class="col-5">
+                        <small>Email Address:</small>
+                        <h3 class="ms-2">UMALI.CHARLESEDWARD@UE.EDU.PH</h3>
+                    </div>
+                    <div class="col-2">
+                        <small>Contact Number:</small>
+                        <h3 class="ms-2">09153355864</h3>
+                    </div>
+                    <div class="col-5">
+                        <small>Service Address:</small>
+                        <h3 class="ms-2">
+                            #1626 J. Fajardo St., Sampaloc, Manila
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="row pt-3 px-4">
+                    <div class="col-5">
+                        <small>Package:</small>
+                        <h3 class="ms-2">BASIC 640</h3>
+                    </div>
+                    <div class="col-3">
+                        <small>Monthly Recurring Cost:</small>
+                        <h3 class="ms-2">Php 640.00</h3>
+                    </div>
+                    <div class="col-4">
+                        <small></small>
+                        <h3 class="ms-2"></h3>
+                    </div>
+                </div>
+
+                <div class="row pt-3 px-4 mt-5 border-top" style="border-top: 3px #8ab6d6 solid !important;">
+                    <div class="col-4">
+                        <small>Inquiry Number:</small>
+                        <h3 class="ms-2">20160134736</h3>
+                    </div>
+                    <div class="col-4">
+                        <small>Concern Type:</small>
+                        <h3 class="ms-2">Site Transfer</h3>
+                    </div>
+                    <div class="col-4">
+                        <small>Inquiry Date:</small>
+                        <h3 class="ms-2">Apr 27, 2021</h3>
+                    </div>
+                </div>
+
+                <div class="row pt-3 px-4">
+                    <div class="col-12">
+                        <label for="concern-details" class="form-label">Concern Details:</label>
+                        <textarea class="form-control" name="concern-details" id="concern-details" rows="6" style="resize: none" disabled>
+I have already paid my bill. Will you please reconnect my cable connection. I need to watch my movies ASAP!</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal5" tabindex="-5">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Search JO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col d-flex">
+                                <input class="form-control me-2" type="search" value="RA027" />
+                                <button class="btn btn-outline-success" type="submit">
+                                    Search
                                 </button>
                             </div>
-                        </nav>
-                    </div>
-
-                    <div class="row py-3 border-bottom">
-                        <div class="col">
-                            <h3>Maintenance</h3>
                         </div>
-                        <div class="col text-end">JO123</div>
-                    </div>
-
-                    <div class="row pt-3 px-4">
-                        <div class="col-4">
-                            <label for="jo-num" class="form-label"
-                                >JO Type:</label
-                            >
-                            <input
-                                type="text"
-                                name="jo-num"
-                                id="jo-num"
-                                class="form-control form-control-lg w-75"
-                                value="RELOCATION"
-                                disabled
-                            />
-                        </div>
-                        <div class="col-4">
-                            <label for="jo-num" class="form-label d-block"
-                                >JO Number:</label
-                            >
-                            <input
-                                type="text"
-                                name="jo-num"
-                                id="jo-num"
-                                value="JO-000001"
-                                class="form-control form-control-lg w-75 d-inline"
-                            />
-                            <button
-                                class="btn btn-lg text-light align-top ms-2 d-inline btn-navy"
-                                data-bs-toggle="modal"
-                                data-bs-target="#exampleModal5"
-                            >
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </div>
-                        <div class="col-4">
-                            <label
-                                for="team-assigned"
-                                class="form-label d-block"
-                                >Assign Team:</label
-                            >
-                            <input
-                                type="text"
-                                name="team-assigned"
-                                id="team-assigned"
-                                class="form-control form-control-lg w-75 d-inline"
-                            />
-                            <button
-                                class="btn btn-lg text-light align-top ms-2 d-inline btn-navy"
-                                data-bs-toggle="modal"
-                                data-bs-target="#team"
-                            >
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="row pt-3 px-4">
-                        <div class="col-4">
-                            <label for="branch" class="form-label"
-                                >Branch:</label
-                            >
-                            <select
-                                name="branch"
-                                id="branch"
-                                class="form-select form-select-lg w-75"
-                            >
-                                <option value="1">
-                                    PLEASE SELECT A BRANCH
-                                </option>
-                                <option value="2" selected>BRANCH 1</option>
-                                <option value="3">BRANCH 2</option>
-                                <option value="4">BRANCH 3</option>
-                            </select>
-                        </div>
-                        <div class="col-4">
-                            <label for="trans-date" class="form-label"
-                                >Date of Transaction:</label
-                            >
-                            <input
-                                type="date"
-                                name="trans-date"
-                                id="trans-date"
-                                class="form-control form-control-lg w-75"
-                            />
-                        </div>
-                        <div class="col-4">
-                            <label for="trans-date2" class="form-label"
-                                >Projected Date:</label
-                            >
-                            <input
-                                type="date"
-                                name="trans-date2"
-                                id="trans-date2"
-                                class="form-control form-control-lg w-75"
-                            />
-                        </div>
-                    </div>
-                    <div class="row border-top mt-5">
-                        <div class="col-12 d-flex justify-content-end py-2">
-                            <button
-                                class="btn btn-navy me-auto btn-lg text-light"
-                            >
-                                <i class="bi bi-box-arrow-in-left me-2"></i>
-                                BACK
-                            </button>
-                            <button
-                                class="btn btn-green me-2 btn-lg text-light"
-                            >
-                                <i class="bi bi-save2 me-2"></i> SAVE
-                            </button>
-                            <button class="btn btn-navy btn-lg text-light">
-                                <i class="bi bi-printer me-2"></i> PRINT
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="row pt-3 px-4 border-top">
-                        <div class="col-5">
-                            <small>Account Name:</small>
-                            <h3 class="ms-2">CHARLES EDWARD A. UMALI</h3>
-                        </div>
-                        <div class="col-2">
-                            <small>Account Number:</small>
-                            <h3 class="ms-2">RA027801</h3>
-                        </div>
-                        <div class="col-5">
-                            <small>Account Status:</small>
-                            <h3 class="ms-2 text-success">ACTIVE</h3>
-                        </div>
-                    </div>
-
-                    <div class="row pt-3 px-4">
-                        <div class="col-5">
-                            <small>Email Address:</small>
-                            <h3 class="ms-2">UMALI.CHARLESEDWARD@UE.EDU.PH</h3>
-                        </div>
-                        <div class="col-2">
-                            <small>Contact Number:</small>
-                            <h3 class="ms-2">09153355864</h3>
-                        </div>
-                        <div class="col-5">
-                            <small>Service Address:</small>
-                            <h3 class="ms-2">
-                                #1626 J. Fajardo St., Sampaloc, Manila
-                            </h3>
-                        </div>
-                    </div>
-
-                    <div class="row pt-3 px-4">
-                        <div class="col-5">
-                            <small>Package:</small>
-                            <h3 class="ms-2">BASIC 640</h3>
-                        </div>
-                        <div class="col-3">
-                            <small>Monthly Recurring Cost:</small>
-                            <h3 class="ms-2">Php 640.00</h3>
-                        </div>
-                        <div class="col-4">
-                            <small></small>
-                            <h3 class="ms-2"></h3>
-                        </div>
-                    </div>
-
-                    <div class="row pt-3 px-4 mt-5 border-top">
-                        <div class="col-4">
-                            <small>Inquiry Number:</small>
-                            <h3 class="ms-2">20160134736</h3>
-                        </div>
-                        <div class="col-4">
-                            <small>Concern Type:</small>
-                            <h3 class="ms-2">Site Transfer</h3>
-                        </div>
-                        <div class="col-4">
-                            <small>Inquiry Date:</small>
-                            <h3 class="ms-2">Apr 27, 2021</h3>
-                        </div>
-                    </div>
-
-                    <div class="row pt-3 px-4">
-                        <div class="col-12">
-                            <label for="concern-details" class="form-label"
-                                >Concern Details:</label
-                            >
-                            <textarea
-                                class="form-control"
-                                name="concern-details"
-                                id="concern-details"
-                                rows="6"
-                                style="resize: none"
-                                disabled
-                            >
-I have already paid my bill. Will you please reconnect my cable connection. I need to watch my movies ASAP!</textarea
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="exampleModal5" tabindex="-5">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Search JO</h5>
-                        <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                        ></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col d-flex">
-                                    <input
-                                        class="form-control me-2"
-                                        type="search"
-                                        value="RA027"
-                                    />
-                                    <button
-                                        class="btn btn-outline-success"
-                                        type="submit"
-                                    >
-                                        Search
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <table
-                                        class="table table-borderless table-striped border border-dark table-responsive"
-                                    >
-                                        <thead>
-                                            <tr
-                                                class="text-light"
-                                                style="
+                        <div class="row mt-3">
+                            <div class="col">
+                                <table class="table table-borderless table-striped border border-dark table-responsive">
+                                    <thead>
+                                        <tr class="text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                            >
-                                                <th></th>
-                                                <th>SUBS ID</th>
-                                                <th>FAMILYNAME</th>
-                                                <th>FIRSTNAME</th>
-                                                <th>INACTIVE</th>
-                                                <th>INET ID</th>
-                                                <th>CATV ID</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="radio"
-                                                        name="check"
-                                                        value="1"
-                                                    />
-                                                </td>
-                                                <td>RA027801</td>
-                                                <td>UMALI</td>
-                                                <td>CHARLES EDWARD</td>
-                                                <td>NO</td>
-                                                <td>NONE</td>
-                                                <td>0939302291711</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="radio"
-                                                        name="check"
-                                                        value="2"
-                                                    />
-                                                </td>
-                                                <td>RA027811</td>
-                                                <td>VIZCOCHO</td>
-                                                <td>GERARD DOMINIC</td>
-                                                <td>YES</td>
-                                                <td>NONE</td>
-                                                <td>NONE</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="radio"
-                                                        name="check"
-                                                        value="3"
-                                                    />
-                                                </td>
-                                                <td>RA027851</td>
-                                                <td>REGUYAL</td>
-                                                <td>JON JESTER</td>
-                                                <td>NO</td>
-                                                <td>0939302016121</td>
-                                                <td>NONE</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="radio"
-                                                        name="check"
-                                                        value="4"
-                                                    />
-                                                </td>
-                                                <td>RA027899</td>
-                                                <td>LABORTE</td>
-                                                <td>LAVILLE</td>
-                                                <td>YES</td>
-                                                <td>0939302017433</td>
-                                                <td>0949010042661</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                                ">
+                                            <th></th>
+                                            <th>SUBS ID</th>
+                                            <th>FAMILYNAME</th>
+                                            <th>FIRSTNAME</th>
+                                            <th>INACTIVE</th>
+                                            <th>INET ID</th>
+                                            <th>CATV ID</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input" type="radio" name="check" value="1" />
+                                            </td>
+                                            <td>RA027801</td>
+                                            <td>UMALI</td>
+                                            <td>CHARLES EDWARD</td>
+                                            <td>NO</td>
+                                            <td>NONE</td>
+                                            <td>0939302291711</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input" type="radio" name="check" value="2" />
+                                            </td>
+                                            <td>RA027811</td>
+                                            <td>VIZCOCHO</td>
+                                            <td>GERARD DOMINIC</td>
+                                            <td>YES</td>
+                                            <td>NONE</td>
+                                            <td>NONE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input" type="radio" name="check" value="3" />
+                                            </td>
+                                            <td>RA027851</td>
+                                            <td>REGUYAL</td>
+                                            <td>JON JESTER</td>
+                                            <td>NO</td>
+                                            <td>0939302016121</td>
+                                            <td>NONE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input" type="radio" name="check" value="4" />
+                                            </td>
+                                            <td>RA027899</td>
+                                            <td>LABORTE</td>
+                                            <td>LAVILLE</td>
+                                            <td>YES</td>
+                                            <td>0939302017433</td>
+                                            <td>0949010042661</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <a type="button" class="btn btn-primary" id="select">
-                            SELECT
-                        </a>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-primary" id="select">
+                        SELECT
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="team" tabindex="-1">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Search Teams</h5>
-                        <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                        ></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col d-flex">
-                                    <input
-                                        class="form-control me-2"
-                                        type="search"
-                                        value="RA027"
-                                    />
-                                    <button
-                                        class="btn btn-outline-success"
-                                        type="submit"
-                                    >
-                                        Search
-                                    </button>
-                                </div>
+    </div>
+    <div class="modal fade" id="team" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Search Teams</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col d-flex">
+                                <input class="form-control me-2" type="search" value="RA027" />
+                                <button class="btn btn-outline-success" type="submit">
+                                    Search
+                                </button>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <table
-                                        class="table table-borderless table-striped border border-dark table-responsive"
-                                    >
-                                        <thead>
-                                            <tr
-                                                class="text-light"
-                                                style="
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <table class="table table-borderless table-striped border border-dark table-responsive">
+                                    <thead>
+                                        <tr class="text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                            >
-                                                <th></th>
-                                                <th>TEAM ID</th>
-                                                <th>TEAM NAME</th>
-                                                <th>TEAM LEADER</th>
-                                                <th>AREA ASSIGNED</th>
-                                                <th>CURRENT # OF JOs</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="radio"
-                                                        name="check"
-                                                        value="1"
-                                                    />
-                                                </td>
-                                                <td>T-001</td>
-                                                <td>TEAM KAKASHI</td>
-                                                <td>HATAKE KAKASHI</td>
-                                                <td>VICTORIA</td>
-                                                <td>12</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="radio"
-                                                        name="check"
-                                                        value="2"
-                                                    />
-                                                </td>
-                                                <td>T-002</td>
-                                                <td>TEAM TOBIRAMA</td>
-                                                <td>SENJU TOBIRAMA</td>
-                                                <td>VICTORIA</td>
-                                                <td>10</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="radio"
-                                                        name="check"
-                                                        value="3"
-                                                    />
-                                                </td>
-                                                <td>T-003</td>
-                                                <td>TEAM MINATO</td>
-                                                <td>NAMIKAZE MINATO</td>
-                                                <td>KONOHA</td>
-                                                <td>10</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="radio"
-                                                        name="check"
-                                                        value="4"
-                                                    />
-                                                </td>
-                                                <td>T-004</td>
-                                                <td>TEAM HIRUZEN</td>
-                                                <td>SARUTOBI HIRUZEN</td>
-                                                <td>KUMO</td>
-                                                <td>12</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                                ">
+                                            <th></th>
+                                            <th>TEAM ID</th>
+                                            <th>TEAM NAME</th>
+                                            <th>TEAM LEADER</th>
+                                            <th>AREA ASSIGNED</th>
+                                            <th>CURRENT # OF JOs</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input" type="radio" name="check" value="1" />
+                                            </td>
+                                            <td>T-001</td>
+                                            <td>TEAM KAKASHI</td>
+                                            <td>HATAKE KAKASHI</td>
+                                            <td>VICTORIA</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input" type="radio" name="check" value="2" />
+                                            </td>
+                                            <td>T-002</td>
+                                            <td>TEAM TOBIRAMA</td>
+                                            <td>SENJU TOBIRAMA</td>
+                                            <td>VICTORIA</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input" type="radio" name="check" value="3" />
+                                            </td>
+                                            <td>T-003</td>
+                                            <td>TEAM MINATO</td>
+                                            <td>NAMIKAZE MINATO</td>
+                                            <td>KONOHA</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input" type="radio" name="check" value="4" />
+                                            </td>
+                                            <td>T-004</td>
+                                            <td>TEAM HIRUZEN</td>
+                                            <td>SARUTOBI HIRUZEN</td>
+                                            <td>KUMO</td>
+                                            <td>12</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <a
-                            type="button"
-                            class="btn btn-primary"
-                            id="team-select"
-                            data-bs-toggle="modal"
-                            data-bs-dismiss="modal"
-                        >
-                            SELECT
-                        </a>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-primary" id="team-select" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        SELECT
+                    </a>
                 </div>
             </div>
         </div>
-    </body>
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"
-    ></script>
-    <script>
-        Date.prototype.toDateInputValue = function (day) {
-            var local = new Date(this);
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script>
+    Date.prototype.toDateInputValue = function(day) {
+        var local = new Date(this);
 
-            local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
 
-            if (day != "today") local.setMinutes(+10080);
-            return local.toJSON().slice(0, 10);
-        };
+        if (day != "today") local.setMinutes(+10080);
+        return local.toJSON().slice(0, 10);
+    };
 
-        document.getElementById(
-            "trans-date"
-        ).value = new Date().toDateInputValue("today");
-        document.getElementById(
-            "trans-date2"
-        ).value = new Date().toDateInputValue("inst");
+    document.getElementById(
+        "trans-date"
+    ).value = new Date().toDateInputValue("today");
+    document.getElementById(
+        "trans-date2"
+    ).value = new Date().toDateInputValue("inst");
 
-        document.getElementById("team-select").addEventListener(
-            "click",
-            () => {
-                let t = document.getElementById("team-assigned");
-                let c = document.getElementsByName("check");
-                for (let i = 0; i < c.length; i++) {
-                    if (c[i].checked) {
-                        if (c[i].value == "1") t.value = "TEAM A";
-                        else if (c[i].value == "2") t.value = "TEAM B";
-                        else if (c[i].value == "3") t.value = "TEAM C";
-                        else if (c[i].value == "4") t.value = "TEAM D";
-                    }
+    document.getElementById("team-select").addEventListener(
+        "click",
+        () => {
+            let t = document.getElementById("team-assigned");
+            let c = document.getElementsByName("check");
+            for (let i = 0; i < c.length; i++) {
+                if (c[i].checked) {
+                    if (c[i].value == "1") t.value = "TEAM A";
+                    else if (c[i].value == "2") t.value = "TEAM B";
+                    else if (c[i].value == "3") t.value = "TEAM C";
+                    else if (c[i].value == "4") t.value = "TEAM D";
                 }
-            },
-            false
-        );
-    </script>
+            }
+        },
+        false
+    );
+
+</script>
+
 </html>
