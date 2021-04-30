@@ -2,44 +2,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
 
 .border-subscriber {
-    border-color: #161d6f !important;
+  border-color: #161d6f !important;
 }
 
 .btn-outline-subscriber {
-    border-color: #161d6f !important;
-    color: #161d6f !important;
+  border-color: #161d6f !important;
+  color: #161d6f !important;
 }
+
 .btn-outline-subscriber .active {
-    background-color: #161d6f !important;
-    color: white !important;
+  background-color: #161d6f !important;
+  color: white !important;
 }
 
 .border-installation {
-    border-color: #810000 !important;
+  border-color: #810000 !important;
 }
 
 .btn-outline-installation {
-    border-color: #810000 !important;
-    color: #810000 !important;
+  border-color: #810000 !important;
+  color: #810000 !important;
 }
+
 .btn-outline-installation .active {
-    background-color: #810000 !important;
-    color: white !important;
+  background-color: #810000 !important;
+  color: white !important;
 }
 
 .border-sales {
-    border-color: #1f441e !important;
+  border-color: #1f441e !important;
 }
 
 .btn-outline-sales {
-    border-color: #1f441e !important;
-    color: #1f441e !important;
+  border-color: #1f441e !important;
+  color: #1f441e !important;
 }
+
 .btn-outline-sales .active {
-    background-color: #1f441e !important;
-    color: white !important;
+  background-color: #1f441e !important;
+  color: white !important;
 }
 
 .ff-logo {
-    font-family: "Mate SC";
+  font-family: "Mate SC";
+}
+
+.bg-dark-navy {
+  background-color: rgb(11, 22, 42);
 }
