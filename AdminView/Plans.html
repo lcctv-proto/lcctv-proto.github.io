@@ -59,7 +59,7 @@
                                     Lake Community Cable TV
                                 </p>
                             </a>
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a
                                     class="nav-link text-light px-3"
                                     href="./LandingPage.html"
@@ -115,7 +115,7 @@
                                     ><span class="px-3">Equipments</span></a
                                 >
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a
                                     class="nav-link text-light px-3"
                                     href="./Plans.html"
@@ -177,80 +177,61 @@
                         style="border-bottom: 3px #c1a1d3 solid !important"
                     >
                         <div class="col">
-                            <h3>Dashboard</h3>
+                            <h3>Plans</h3>
                         </div>
                         <div class="col text-end">Admin123</div>
                     </div>
-
-                    <!-- repeating component-->
-                    <div class="row mt-4">
-                        <h4>TODAY</h4>
-                        <h6>Monday, March 8</h6>
-                        <hr />
-                        <p class="text-center">Nothing to do yet.</p>
-                    </div>
-                    <!-- end repeating component-->
-
-                    <div class="row">
-                        <h5>Tomorrow</h5>
-                        <h6>Tuesday, March 9</h6>
-                        <hr />
-                        <p class="text-center">Nothing to do yet.</p>
-                    </div>
-
-                    <div class="row">
-                        <h5>Wednesday</h5>
-                        <h6>March 10, 2021</h6>
-
-                        <div class="col p-0 border-success card m-4">
-                            <div class="row g-0">
-                                <div
-                                    class="col-2 d-flex justify-content-center align-items-center bg-success"
-                                >
-                                    <h4 class="text-center text-light">
-                                        REPORTS
-                                    </h4>
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Edit Plan</h5>
                                 </div>
-                                <div class="col-9 bg-light">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            Create mid-week report
-                                        </h5>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <label
+                                            for="channel_number"
+                                            class="col-sm-2 col-form-label"
+                                            >Plan ID:</label
+                                        >
+                                        <div class="col-sm-4">
+                                            <select
+                                                name="channel_number"
+                                                id="channel_number"
+                                                class="form-select"
+                                            >
+                                                <option value="CH-023" selected>
+                                                    PLAN-001 | BASIC 640
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <label
+                                            for="channel_number"
+                                            class="col-sm-2 col-form-label"
+                                            >Plan Name:</label
+                                        >
+                                        <div class="col-sm-4">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="channel_number"
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                                <div
-                                    class="col-1 card-footer d-flex justify-content-center align-items-center bg-light"
-                                >
-                                    <p class="h6 fw-normal">11:59 PM</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <h5>Thursday</h5>
-                        <h6>March 11, 2021</h6>
-
-                        <div class="col p-0 border-danger card m-4">
-                            <div class="row g-0">
-                                <div
-                                    class="col-2 d-flex justify-content-center align-items-center bg-danger"
-                                >
-                                    <h4 class="text-center text-light">
-                                        CHECK SALES
-                                    </h4>
-                                </div>
-                                <div class="col-9 bg-light">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            Meeting with owner
-                                        </h5>
+                                    <div class="row mt-2">
+                                        <label
+                                            for="channel_number"
+                                            class="col-sm-2 col-form-label"
+                                            >Plan Price:</label
+                                        >
+                                        <div class="col-sm-4">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="channel_number"
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                                <div
-                                    class="col-1 card-footer d-flex justify-content-center align-items-center bg-light"
-                                >
-                                    <p class="h6 fw-normal">2:00 PM</p>
                                 </div>
                             </div>
                         </div>

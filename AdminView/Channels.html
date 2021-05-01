@@ -102,6 +102,30 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link text-light px-3"
+                                    href="./Reports.html"
+                                    ><i class="bi bi-clipboard-check"></i
+                                    ><span class="px-3">Reports</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./EditEquipments.html"
+                                    ><i class="bi bi-nut"></i
+                                    ><span class="px-3">Equipments</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./Plans.html"
+                                    ><i class="bi bi-grid-3x3-gap"></i
+                                    ><span class="px-3">Plans</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
                                     href="./MyNotes.html"
                                     ><i class="bi bi-journals"></i
                                     ><span class="px-3">My Notes</span></a
@@ -119,7 +143,7 @@
                     </nav>
                 </div>
                 <div
-                    class="col-md-12 col-lg-10 h-100 bg-light p-lg-3 container-fluid"
+                    class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid"
                     style="background-color: #f6f8fb"
                 >
                     <div class="row d-block d-lg-none d-xl-none">
@@ -352,6 +376,227 @@
                                     </tr>
                                 </tfoot>
                             </table>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Edit Channel</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <label
+                                            for="channel_number"
+                                            class="col-sm-2 col-form-label"
+                                            >Channel ID:</label
+                                        >
+                                        <div class="col-sm-4">
+                                            <select
+                                                name="channel_number"
+                                                id="channel_number"
+                                                class="form-select"
+                                            >
+                                                <option value="CH-023" selected>
+                                                    CH-023 | Cartoon Network
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <label
+                                            for="channel_number"
+                                            class="col-sm-2 col-form-label"
+                                            >Channel Name:</label
+                                        >
+                                        <div class="col-sm-4">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="channel_number"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <label
+                                            for="channel_number"
+                                            class="col-sm-2 col-form-label"
+                                            >Banner Image Link:</label
+                                        >
+                                        <div class="col-sm-4">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="channel_number"
+                                            />
+                                        </div>
+                                        <label
+                                            for="channel_number"
+                                            class="col-sm-2 col-form-label"
+                                            >Channel Assigned Number:</label
+                                        >
+                                        <div class="col-sm-1">
+                                            <input
+                                                type="number"
+                                                class="form-control"
+                                                id="channel_number"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <label
+                                            for="channel_number"
+                                            class="col-sm-2 col-form-label"
+                                            >Channel Video Link:</label
+                                        >
+                                        <div class="col-sm-4">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="channel_number"
+                                            />
+                                        </div>
+                                        <label
+                                            for="channel_number"
+                                            class="col-sm-1 col-form-label"
+                                            >Channel Plans:</label
+                                        >
+                                        <div class="col-sm-5 pt-2">
+                                            <div
+                                                class="form-check form-check-inline"
+                                            >
+                                                <input
+                                                    class="form-check-input"
+                                                    type="checkbox"
+                                                    id="basic"
+                                                    value="basic"
+                                                    checked
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="basic"
+                                                    >BASIC 640</label
+                                                >
+                                            </div>
+                                            <div
+                                                class="form-check form-check-inline"
+                                            >
+                                                <input
+                                                    class="form-check-input"
+                                                    type="checkbox"
+                                                    id="premium"
+                                                    value="premium"
+                                                    checked
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="premium"
+                                                    >PREMIUM 790</label
+                                                >
+                                            </div>
+                                            <div
+                                                class="form-check form-check-inline"
+                                            >
+                                                <input
+                                                    class="form-check-input"
+                                                    type="checkbox"
+                                                    id="international"
+                                                    value="international"
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="international"
+                                                    >INTERNATIONAL 1099</label
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="row mt-2">
+                                                <label
+                                                    for="channel_number"
+                                                    class="col-sm-4 col-form-label"
+                                                    >Banner Image Link:</label
+                                                >
+                                                <div class="col-sm-8">
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        id="channel_number"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <label
+                                                    for="channel_number"
+                                                    class="col-sm-4 col-form-label"
+                                                    >Additional Image
+                                                    Link:</label
+                                                >
+                                                <div class="col-sm-8">
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        id="channel_number"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <label
+                                                    for="channel_number"
+                                                    class="col-sm-4 col-form-label"
+                                                    >Additional Image
+                                                    Link:</label
+                                                >
+                                                <div class="col-sm-8">
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        id="channel_number"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <label
+                                                    for="channel_number"
+                                                    class="col-sm-4 col-form-label"
+                                                >
+                                                    Additional Image
+                                                    Link:</label
+                                                >
+                                                <div class="col-sm-8">
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        id="channel_number"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="row mt-2">
+                                                <label
+                                                    for="channel_number"
+                                                    class="col-sm-4 col-form-label"
+                                                >
+                                                    Additional Image
+                                                    Link:</label
+                                                >
+                                                <div class="col-sm-8">
+                                                    <textarea
+                                                        name=""
+                                                        id=""
+                                                        rows="10"
+                                                        class="form-control"
+                                                        style="resize: none"
+                                                    ></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
