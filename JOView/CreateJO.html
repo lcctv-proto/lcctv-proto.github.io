@@ -17,6 +17,7 @@
         table {
             width: 100%;
         }
+
     </style>
     <link rel="stylesheet" href="./Styles/jo.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
@@ -33,31 +34,32 @@
                             <p class="ms-3 ff-logo pb-3 border-bottom" style="border-bottom: 3px #8ab6d6 solid !important;">
                                 Lake Community Cable TV
                             </p>
+                            <p class="ff-jumbo fs-5">JOB ORDER MODULE</p>
                         </a>
                         <li class="nav-item mt-3">
-                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">Dashboard</span></a>
+                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">DASHBOARD</span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-light px-3" href="./CreateJO.html"><i class="bi bi-pen"></i><span class="px-3">Create JOs</span></a>
+                            <a class="nav-link text-light px-3" href="./CreateJO.html"><i class="bi bi-pen"></i><span class="px-3">CREATE JOs</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./Activation.html"><i class="bi bi-lightning-charge"></i><span class="px-3">Activation</span></a>
+                            <a class="nav-link text-light px-3" href="./Activation.html"><i class="bi bi-lightning-charge"></i><span class="px-3">ACTIVATION</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./Maintenance.html"><i class="bi bi-tools"></i><span class="px-3">Maintenance</span></a>
+                            <a class="nav-link text-light px-3" href="./Maintenance.html"><i class="bi bi-tools"></i><span class="px-3">MAINTENANCE</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./CloseJO.html"><i class="bi bi-check2-circle"></i><span class="px-3">Close JOs</span></a>
+                            <a class="nav-link text-light px-3" href="./CloseJO.html"><i class="bi bi-check2-circle"></i><span class="px-3">CLOSE JOs</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./Calendar.html"><i class="bi bi-calendar-week"></i><span class="px-3">Calendar</span></a>
+                            <a class="nav-link text-light px-3" href="./Calendar.html"><i class="bi bi-calendar-week"></i><span class="px-3">CALENDAR</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light px-3" href="./ViewJO.html"><i class="bi bi-journal-album"></i>
-                                <span class="px-3">View JOs</span></a>
+                                <span class="px-3">VIEW JOs</span></a>
                         </li>
                         <li class="nav-item mt-5 bg-dark-navy">
-                            <a class="nav-link text-light px-3" href="./Login.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">Logout</span></a>
+                            <a class="nav-link text-light px-3" href="./Login.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">LOGOUT</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -88,18 +90,18 @@
 
                 <div class="row pt-3 px-4">
                     <div class="col-4">
-                        <label for="acc-number" class="form-label d-block">Account Number:</label>
+                        <label for="acc-number" class="form-label d-block fs-4">Account Number:</label>
                         <input type="text" name="acc-number" id="acc-number" class="form-control form-control-lg w-75 d-inline" />
                         <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e" data-bs-toggle="modal" data-bs-target="#accounts">
                             <i class="bi bi-search"></i>
                         </button>
                     </div>
                     <div class="col-4">
-                        <label for="jo-num" class="form-label">JO Number:</label>
+                        <label for="jo-num" class="form-label fs-4">JO Number:</label>
                         <input type="text" name="jo-num" id="jo-num" class="form-control form-control-lg w-75" value="JO-000001" disabled />
                     </div>
                     <div class="col-4">
-                        <label for="team-assigned" class="form-label d-block">Assign Team:</label>
+                        <label for="team-assigned" class="form-label d-block fs-4">Assign Team:</label>
                         <input type="text" name="team-assigned" id="team-assigned" class="form-control form-control-lg w-75 d-inline" />
                         <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e" data-bs-toggle="modal" data-bs-target="#team">
                             <i class="bi bi-search"></i>
@@ -108,7 +110,7 @@
                 </div>
                 <div class="row pt-3 px-4">
                     <div class="col-4">
-                        <label for="branch" class="form-label">Branch:</label>
+                        <label for="branch" class="form-label fs-4">Branch:</label>
                         <select name="branch" id="branch" class="form-select form-select-lg w-75">
                             <option value="1">
                                 PLEASE SELECT A BRANCH
@@ -119,11 +121,11 @@
                         </select>
                     </div>
                     <div class="col-4">
-                        <label for="trans-date" class="form-label">Date of Transaction:</label>
+                        <label for="trans-date" class="form-label fs-4">Date of Transaction:</label>
                         <input type="date" name="trans-date" id="trans-date" class="form-control form-control-lg w-75" />
                     </div>
                     <div class="col-4">
-                        <label for="trans-date2" class="form-label">Installation Date:</label>
+                        <label for="trans-date2" class="form-label fs-4">Installation Date:</label>
                         <input type="date" name="trans-date2" id="trans-date2" class="form-control form-control-lg w-75" />
                     </div>
                 </div>
@@ -461,6 +463,7 @@
     document.getElementById(
         "trans-date"
     ).value = new Date().toDateInputValue();
+
 </script>
 
 </html>
