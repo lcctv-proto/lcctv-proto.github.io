@@ -20,19 +20,20 @@
                     <ul class="navbar-nav fs-5">
                         <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
                             <p class="ms-3 ff-logo pb-3 border-bottom" style="
-                                        border-bottom: 3px #91c788 solid !important;
-                                    ">
+                                      border-bottom: 3px #91c788 solid !important;
+                                  ">
                                 Lake Community Cable TV
                             </p>
+                            <p class="ff-jumbo fs-5">CASHIER MODULE</p>
                         </a>
-                        <li class="nav-item">
+                        <li class="nav-item mt-3">
                             <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">DASHBOARD</span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-light px-3" href="./CustomerInfo.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">ACCOUNT PAYMENT</span></a>
+                            <a class="nav-link text-light px-3" href="./CustomerInfo.html"><i class="bi bi-wallet2"></i><span class="px-3">ACCOUNT PAYMENT</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./UserInfo.html"><i class="bi bi-people"></i><span class="px-3">PAYMENT LIST</span></a>
+                            <a class="nav-link text-light px-3" href="./UserInfo.html"><i class="bi bi-card-checklist"></i><span class="px-3">PAYMENT LIST</span></a>
                         </li>
                         <li class="nav-item mt-5 bg-dark-navy">
                             <a class="nav-link text-light px-3" href="./Login.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">Logout</span></a>
@@ -40,7 +41,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-md-12 col-lg-10 h-1000 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
+            <div class="col-md-12 col-lg-10 h-1,000 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
                 <div class="row d-block d-lg-none d-xl-none">
                     <div class="collapse" id="navbarToggleExternalContent">
                         <div class="bg-dark p-4">
@@ -64,82 +65,90 @@
                     <div class="col text-end">Cashier123</div>
                 </div>
 
-                <div class="row pt-3 px-4">
-                    <div class="col-6">
-                        <label for="acc-number" class="form-label d-block">Account Number:</label>
-                        <input type="text" name="acc-number" id="acc-number" class="form-control form-control-lg w-50 d-inline" value="RA027801" />
+                <div class="row pt-3 px-4 border-bottom" style="border-bottom: 1px #91c788 solid !important">
+                    <div class="col-8 mb-3">
+                        <input type="text" name="acc-num_name" id="acc-number_name" class="form-control form-control-lg w-75 d-inline" value="" placeholder="Account Number or Account Name" />
                         <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e">
                             <i class="bi bi-search" data-bs-toggle="modal" data-bs-target="#exampleModal5"></i>
+                            <span>Search</span>
                         </button>
-                    </div>
-                    <div class="col-6">
-                        <label for="acc-number" class="form-label d-block">Account Name:</label>
-                        <input type="text" name="acc-name" id="acc-name" class="form-control form-control-lg w-50 d-inline" value="CHARLES EDWARD A. UMALI" />
                         <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e">
-                            <i class="bi bi-search" data-bs-toggle="modal" data-bs-target="#exampleModal5"></i>
+                            <i class="bi bi-plus-circle" data-bs-toggle="modal" data-bs-target="#exampleModal5"></i>
+                            <span>Add</span>
                         </button>
                     </div>
                 </div>
                 <div class="row pt-3 px-4">
                     <div class="col-6">
-                        <small>Account Status:</small>
-                        <h2 class="ms-2 text-success">ACTIVE</h2>
+                        <p class="fs-4">Account Number:</p>
+                        <h3 class="ms-2">RA027801</h3>
                     </div>
+
                     <div class="col-6">
-                        <small>Account Address:</small>
-                        <h2 class="ms-2">
-                            #1626 J. Fajardo St., Sampaloc, Manila
-                        </h2>
+                        <p class="fs-4">Account Name:</p>
+                        <h3 class="ms-2">CHARLES EDWARD A. UMALI</h3>
+                    </div>
+
+                    <div class="mt-3 col-6">
+                        <p class="fs-4">Account Address:</p>
+                        <h3 class="ms-2">#1626 J. Fajardo St., Sampaloc, Manila</h3>
+                    </div>
+
+                    <div class="mt-3 col-6">
+                        <p class="fs-4">Account Status:</p>
+                        <h3 class="ms-2 text-success">ACTIVE</h3>
                     </div>
                 </div>
 
                 <div class="row pt-3 px-4">
                     <div class="col-6">
-                        <small>Package:</small>
-                        <h2 class="ms-2">BASIC 640</h2>
+                        <p class="fs-4">Package:</p>
+                        <h3 class="ms-2">BASIC 640</h3>
                     </div>
+
                     <div class="col-6">
-                        <small>Monthly Recurring Charges:</small>
-                        <h2 class="ms-2">Php 640.00</h2>
+                        <p class="fs-4">Monthly Recurrent Charges:</p>
+                        <h3 class="ms-2">Php 640.00</h3>
                     </div>
                 </div>
 
                 <div class="row pt-3 px-4 pb-4 mb-4 border-bottom" style="border-bottom: 3px #91c788 solid !important">
                     <div class="col-6">
-                        <small>Date of activation:</small>
-                        <h2 class="ms-2">May 02, 2020</h2>
+                        <p class="fs-4">Date of activation:</p>
+                        <h3 class="ms-2">May 02, 2020</h3>
                     </div>
-                    <div class="col-3">
-                        <small># of Main-line:</small>
-                        <h2 class="ms-2">1</h2>
+                    <div class="col-2">
+                        <p class="fs-4">Number of Main-line:</p>
+                        <h3 class="ms-2 text-end">1</h3>
                     </div>
-                    <div class="col-3">
-                        <small># of Extensions:</small>
-                        <h2 class="ms-2">0</h2>
+                    <div class="col"></div>
+                    <div class="col-2">
+                        <p class="fs-4">Number of Extension:</p>
+                        <h3 class="ms-2 text-end">0</h3>
                     </div>
                 </div>
 
-                <div class="row pt-3 px-4 mb-4">
+                <div class="row px-3">
                     <div class="col-lg-4 col-sm-12 mt-2">
                         <button class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4" data-bs-toggle="modal" data-bs-target="#exampleModal6">
-                            <i class="bi bi-file-ruled" style="font-size: 8rem"></i>
-                            <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="border-top-color: #91c788 !important">
+                            <i class="bi bi-file-ruled" style="font-size: 7rem"></i>
+                            <p class="fs-5 fw-light pt-1 border-top ff-jumbo" style="border-top-color: #91c788 !important">
                                 VIEW BALANCE
                             </p>
                         </button>
                     </div>
                     <div class="col-lg-4 col-sm-12 mt-2">
                         <button class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4" data-bs-toggle="modal" data-bs-target="#exampleModal7">
-                            <i class="bi bi-window-sidebar" style="font-size: 8rem"></i>
-                            <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="border-top-color: #91c788 !important">
+                            <i class="bi bi-window-sidebar" style="font-size: 7rem"></i>
+                            <p class="fs-5 fw-light pt-1 border-top ff-jumbo" style="border-top-color: #91c788 !important">
                                 PAYMENT PORTAL
                             </p>
                         </button>
                     </div>
                     <div class="col-lg-4 col-sm-12 mt-2">
                         <button class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4" data-bs-toggle="modal" data-bs-target="#exampleModal8">
-                            <i class="bi bi-door-open" style="font-size: 8rem"></i>
-                            <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="border-top-color: #91c788 !important">
+                            <i class="bi bi-door-open" style="font-size: 7rem"></i>
+                            <p class="fs-5 fw-light pt-1 border-top ff-jumbo" style="border-top-color: #91c788 !important">
                                 WALK IN
                             </p>
                         </button>
@@ -196,13 +205,13 @@
                                     <tr>
                                         <td>Digital Box</td>
                                         <td>0 pcs</td>
-                                        <td>₱1000.00/unit</td>
+                                        <td>₱1,000.00/unit</td>
                                         <td class="text-end">0.00</td>
                                     </tr>
                                     <tr>
                                         <td>Smart Card</td>
                                         <td>0 pcs</td>
-                                        <td>₱1000.00/unit</td>
+                                        <td>₱1,000.00/unit</td>
                                         <td class="text-end">0.00</td>
                                     </tr>
                                 </tbody>
@@ -318,13 +327,13 @@
                                     <tr>
                                         <td>Digital Box</td>
                                         <td>0 pcs</td>
-                                        <td>₱1000.00/unit</td>
+                                        <td>₱1,000.00/unit</td>
                                         <td class="text-end">0.00</td>
                                     </tr>
                                     <tr>
                                         <td>Smart Card</td>
                                         <td>0 pcs</td>
-                                        <td>₱1000.00/unit</td>
+                                        <td>₱1,000.00/unit</td>
                                         <td class="text-end">0.00</td>
                                     </tr>
                                 </tbody>
@@ -388,14 +397,14 @@
                                     <tr>
                                         <td>Digital Box</td>
                                         <td>0 pcs</td>
-                                        <td>₱1000.00/unit</td>
+                                        <td>₱1,000.00/unit</td>
                                         <td class="text-end">0.00</td>
                                     </tr>
                                     <tr>
                                         <td>Smart Card</td>
                                         <td>1 pcs</td>
-                                        <td>₱1000.00/unit</td>
-                                        <td class="text-end">1000.00</td>
+                                        <td>₱1,000.00/unit</td>
+                                        <td class="text-end">1,000.00</td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
@@ -549,8 +558,8 @@
                                         <td>09/01/20</td>
                                         <td>MONTHLY BILLING</td>
                                         <td>M. LINE SUBS FEE</td>
-                                        <td class="text-end">1672.00</td>
-                                        <td class="text-end">1672.00</td>
+                                        <td class="text-end">1,672.00</td>
+                                        <td class="text-end">1,672.00</td>
                                         <td class="text-end">0.00</td>
                                         <td>SEP/01/2020 to SEP/31/2020</td>
                                     </tr>
@@ -591,9 +600,9 @@
                                         <td></td>
                                         <td></td>
                                         <th>TOTAL BALANCE:</th>
-                                        <th class="text-end">3500.00</th>
-                                        <th class="text-end">1380.00</th>
-                                        <th class="text-end">1920.00</th>
+                                        <th class="text-end">3,500.00</th>
+                                        <th class="text-end">1,380.00</th>
+                                        <th class="text-end">1,920.00</th>
                                         <td></td>
                                     </tr>
                                 </tfoot>
@@ -720,7 +729,7 @@
                     <div class="row">
                         <div class="col-6">
                             <label for="trans-date2" class="form-label">Date of Transaction:</label>
-                            <input type="date" name="trans-date2" id="trans-date" class="form-control" />
+                            <input type="date" name="trans-date2" id="trans-date2" class="form-control" />
                         </div>
                         <div class="col-6">
                             <label for="mop" class="form-label">Mode of Payment:</label>
@@ -815,94 +824,6 @@
         </div>
     </div>
 
-    <div class="modal fade" id="gcash" tabindex="-9">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <label for="trans-date" class="form-label">Date of Transaction:</label>
-                            <input type="date" name="trans-date" id="trans-date" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="ref-number" class="form-label">Reference Number:</label>
-                            <input type="text" name="ref-number" id="ref-number" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="amount-paid" class="form-label">Amount Paid:</label>
-                            <input type="text" name="amount-paid" id="amount-paid" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-start">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal7">
-                        BACK
-                    </button>
-
-                    <button type="button" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
-                        SAVE PAYMENT
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="cash" tabindex="-9">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Cash Payment
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <label for="trans-date2" class="form-label">Date of Transaction:</label>
-                            <input type="date" name="trans-date2" id="trans-date2" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="ref-number" class="form-label">Reference Number:</label>
-                            <input type="text" name="ref-number" id="ref-number" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="amount-paid" class="form-label">Amount Due:</label>
-                            <input type="text" name="amount-paid" id="amount-paid" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="amount-paid" class="form-label">Amount Paid:</label>
-                            <input type="text" name="amount-paid" id="amount-paid" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-start">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal7">
-                        BACK
-                    </button>
-
-                    <button type="button" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
-                        SAVE PAYMENT
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="modal fade" id="ref-code" tabindex="-9">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -955,7 +876,7 @@
                                         </td>
                                         <td>FEE-003</td>
                                         <td>INTERNATIONAL 1099 PAYMENT</td>
-                                        <td>1099.00</td>
+                                        <td>1,099.00</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -963,7 +884,7 @@
                                         </td>
                                         <td>FEE-004</td>
                                         <td>INSTALLATION FEE</td>
-                                        <td>1000.00</td>
+                                        <td>1,000.00</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -979,7 +900,7 @@
                                         </td>
                                         <td>FEE-006</td>
                                         <td>DAMAGED SMART CARD</td>
-                                        <td>1000.00</td>
+                                        <td>1,000.00</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -987,7 +908,7 @@
                                         </td>
                                         <td>FEE-007</td>
                                         <td>DAMAGED DIGIBOX</td>
-                                        <td>1000.00</td>
+                                        <td>1,000.00</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1062,7 +983,7 @@
                                         </td>
                                         <td>FEE-003</td>
                                         <td>INTERNATIONAL 1099 PAYMENT</td>
-                                        <td>1099.00</td>
+                                        <td>1,099.00</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -1070,7 +991,7 @@
                                         </td>
                                         <td>FEE-004</td>
                                         <td>INSTALLATION FEE</td>
-                                        <td>1000.00</td>
+                                        <td>1,000.00</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -1086,7 +1007,7 @@
                                         </td>
                                         <td>FEE-006</td>
                                         <td>DAMAGED SMART CARD</td>
-                                        <td>1000.00</td>
+                                        <td>1,000.00</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -1094,7 +1015,7 @@
                                         </td>
                                         <td>FEE-007</td>
                                         <td>DAMAGED DIGIBOX</td>
-                                        <td>1000.00</td>
+                                        <td>1,000.00</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1132,9 +1053,6 @@
         local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
         return local.toJSON().slice(0, 10);
     };
-    document.getElementById(
-        "trans-date"
-    ).value = new Date().toDateInputValue();
     document.getElementById(
         "trans-date2"
     ).value = new Date().toDateInputValue();
@@ -1215,20 +1133,20 @@
                     add_row(
                         "FEE-003",
                         "INTERNATIONAL 1099 PAYMENT",
-                        "1099.00"
+                        "1,099.00"
                     );
                     break;
                 case "FEE-004":
-                    add_row("FEE-004", "INSTALLATION FEE", "1000.00");
+                    add_row("FEE-004", "INSTALLATION FEE", "1,000.00");
                     break;
                 case "FEE-005":
                     add_row("FEE-005", "DAMAGED REMOTE", "400.00");
                     break;
                 case "FEE-006":
-                    add_row("FEE-006", "DAMAGED SMART CARD", "1000.00");
+                    add_row("FEE-006", "DAMAGED SMART CARD", "1,000.00");
                     break;
                 case "FEE-007":
-                    add_row("FEE-007", "DAMAGED DIGIBOX", "1000.00");
+                    add_row("FEE-007", "DAMAGED DIGIBOX", "1,000.00");
                     break;
             }
         },
@@ -1250,20 +1168,20 @@
                     add_row2(
                         "FEE-003",
                         "INTERNATIONAL 1099 PAYMENT",
-                        "1099.00"
+                        "1,099.00"
                     );
                     break;
                 case "FEE-004":
-                    add_row2("FEE-004", "INSTALLATION FEE", "1000.00");
+                    add_row2("FEE-004", "INSTALLATION FEE", "1,000.00");
                     break;
                 case "FEE-005":
                     add_row2("FEE-005", "DAMAGED REMOTE", "400.00");
                     break;
                 case "FEE-006":
-                    add_row2("FEE-006", "DAMAGED SMART CARD", "1000.00");
+                    add_row2("FEE-006", "DAMAGED SMART CARD", "1,000.00");
                     break;
                 case "FEE-007":
-                    add_row2("FEE-007", "DAMAGED DIGIBOX", "1000.00");
+                    add_row2("FEE-007", "DAMAGED DIGIBOX", "1,000.00");
                     break;
             }
         },
@@ -1295,14 +1213,14 @@
                             add_row(
                                 "FEE-003",
                                 "INTERNATIONAL 1099 PAYMENT",
-                                "1099.00"
+                                "1,099.00"
                             );
                             break;
                         case "4":
                             add_row(
                                 "FEE-004",
                                 "INSTALLATION FEE",
-                                "1000.00"
+                                "1,000.00"
                             );
                             break;
                         case "5":
@@ -1312,14 +1230,14 @@
                             add_row(
                                 "FEE-006",
                                 "DAMAGED SMART CARD",
-                                "1000.00"
+                                "1,000.00"
                             );
                             break;
                         case "7":
                             add_row(
                                 "FEE-007",
                                 "DAMAGED DIGIBOX",
-                                "1000.00"
+                                "1,000.00"
                             );
                             break;
                     }
@@ -1354,14 +1272,14 @@
                             add_row2(
                                 "FEE-003",
                                 "INTERNATIONAL 1099 PAYMENT",
-                                "1099.00"
+                                "1,099.00"
                             );
                             break;
                         case "4":
                             add_row2(
                                 "FEE-004",
                                 "INSTALLATION FEE",
-                                "1000.00"
+                                "1,000.00"
                             );
                             break;
                         case "5":
@@ -1371,14 +1289,14 @@
                             add_row2(
                                 "FEE-006",
                                 "DAMAGED SMART CARD",
-                                "1000.00"
+                                "1,000.00"
                             );
                             break;
                         case "7":
                             add_row2(
                                 "FEE-007",
                                 "DAMAGED DIGIBOX",
-                                "1000.00"
+                                "1,000.00"
                             );
                             break;
                     }
@@ -1459,6 +1377,7 @@
         let i = e.parentElement.parentElement.rowIndex - 1;
         a.deleteRow(i);
     }
+
 </script>
 
 </html>
