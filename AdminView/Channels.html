@@ -180,210 +180,20 @@
                         </div>
                         <div class="col text-end">Admin123</div>
                     </div>
-                    <div class="row mt-5">
-                        <div class="col">
-                            <table class="table table-borderless">
-                                <thead style="background-color: #14274e">
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </thead>
-                                <tbody class="">
-                                    <tr class="">
-                                        <td>
-                                            <label for="channel_id"
-                                                >Channel ID:</label
-                                            >
-                                        </td>
-                                        <td>
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="channel_id"
-                                                value="CH-023"
-                                                disabled
-                                            />
-                                        </td>
-                                        <td>
-                                            <label for="channel_name"
-                                                >Channel Name:</label
-                                            >
-                                        </td>
-                                        <td>
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="channel_name"
-                                                value="History Channel"
-                                            />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label for="channel_number"
-                                                >Channel Assigned Number:</label
-                                            >
-                                        </td>
-                                        <td>
-                                            <input
-                                                type="number"
-                                                class="form-control"
-                                                id="channel_number"
-                                                value="23"
-                                            />
-                                        </td>
-                                        <td>
-                                            <label for="channel_link"
-                                                >Channel Video Link:</label
-                                            >
-                                        </td>
-                                        <td>
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="channel_link"
-                                                value=""
-                                            />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label for="channel_bnr_img"
-                                                >Channel Banner Image:</label
-                                            >
-                                        </td>
-                                        <td>
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="channel_bnr_img"
-                                                value=""
-                                            />
-                                        </td>
-                                        <td>
-                                            <label for="plans">Plans:</label>
-                                        </td>
-                                        <td>
-                                            <div
-                                                class="form-check form-check-inline"
-                                            >
-                                                <input
-                                                    class="form-check-input"
-                                                    type="checkbox"
-                                                    id="basic"
-                                                    value="basic"
-                                                    checked
-                                                />
-                                                <label
-                                                    class="form-check-label"
-                                                    for="basic"
-                                                    >BASIC PLAN</label
-                                                >
-                                            </div>
-                                            <div
-                                                class="form-check form-check-inline"
-                                            >
-                                                <input
-                                                    class="form-check-input"
-                                                    type="checkbox"
-                                                    id="premium"
-                                                    value="premium"
-                                                    checked
-                                                />
-                                                <label
-                                                    class="form-check-label"
-                                                    for="premium"
-                                                    >PREMIUM PLAN</label
-                                                >
-                                            </div>
-                                            <div
-                                                class="form-check form-check-inline"
-                                            >
-                                                <input
-                                                    class="form-check-input"
-                                                    type="checkbox"
-                                                    id="international"
-                                                    value="international"
-                                                />
-                                                <label
-                                                    class="form-check-label"
-                                                    for="international"
-                                                    >INTERNATIONAL PLAN</label
-                                                >
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label for="channel_description"
-                                                >Channel Description:</label
-                                            >
-                                        </td>
-                                        <td>
-                                            <textarea
-                                                class="form-control"
-                                                id="channel_description"
-                                                rows="10"
-                                                cols="15"
-                                                style="width: 500px"
-                                                placeholder="Channel Description..."
-                                            ></textarea>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <button
-                                                type="button"
-                                                class="btn btn-navy text-light fs-5 float-end me-2"
-                                                style="
-                                                    background-color: #14274e;
-                                                "
-                                            >
-                                                <i class="bi bi-trash me-2"></i
-                                                >Delete
-                                            </button>
-                                            <button
-                                                type="button"
-                                                class="btn btn-navy text-light fs-5 float-end me-2"
-                                                style="
-                                                    background-color: #14274e;
-                                                "
-                                            >
-                                                <i class="bi bi-pencil me-2"></i
-                                                >Edit
-                                            </button>
-                                            <button
-                                                type="button"
-                                                class="btn btn-navy text-light fs-5 float-end me-2"
-                                                style="
-                                                    background-color: #14274e;
-                                                "
-                                            >
-                                                <i class="bi bi-plus me-2"></i
-                                                >Add
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
 
                     <div class="row mt-5">
                         <div class="col">
                             <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title">Edit Channel</h5>
+                                <div
+                                    class="card-header text-light"
+                                    style="
+                                        background-color: #14274e;
+                                        border-bottom: 3px #c1a1d3 solid;
+                                    "
+                                >
+                                    <span class="card-title fs-5 fw-bold"
+                                        >Edit Channel</span
+                                    >
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
@@ -595,6 +405,29 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button
+                                        type="button"
+                                        class="btn btn-navy text-light fs-5 float-end me-2"
+                                        style="background-color: #14274e"
+                                    >
+                                        <i class="bi bi-trash me-2"></i>Delete
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-navy text-light fs-5 float-end me-2"
+                                        style="background-color: #14274e"
+                                    >
+                                        <i class="bi bi-pencil me-2"></i>Edit
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-navy text-light fs-5 float-end me-2"
+                                        style="background-color: #14274e"
+                                    >
+                                        <i class="bi bi-plus me-2"></i>Add
+                                    </button>
                                 </div>
                             </div>
                         </div>
