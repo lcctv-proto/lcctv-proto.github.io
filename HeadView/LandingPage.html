@@ -1,102 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Head Dashboard</title>
+        <style>
+            body,
+            html {
+                height: 100%;
+                background-color: #14274e !important;
+            }
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Head Dashboard</title>
-    <style>
-        body,
-        html {
-            height: 100%;
-            background-color: #14274e !important;
-        }
+            body {
+                animation: fadeInAnimation ease 0.75s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
 
-        html {
-            overflow-y: scroll;
-        }
+            @keyframes fadeInAnimation {
+                0% {
+                    opacity: 0;
+                }
 
-        h1 {
-            font-size: 3.75em !important;
-        }
+                100% {
+                    opacity: 1;
+                }
+            }
 
-        .active>.nav-link {
-            color: #14274e !important;
-            background-color: #fff !important;
-            border-right: #14274e solid 1px;
-        }
+            html {
+                overflow-y: scroll;
+            }
 
-    </style>
-    <link rel="stylesheet" href="./Styles/head.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-</head>
+            h1 {
+                font-size: 3.75em !important;
+            }
 
-<body>
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <div class="col-md-12 col-lg-12 bg-light container-fluid" style="background-color: #f6f8fb">
-                <div class="row d-block d-lg-none d-xl-none">
-                    <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="bg-dark p-4">
-                            <h5 class="text-white h4">Collapsed content</h5>
-                            <span class="text-muted">Toggleable via the navbar brand.</span>
+            .active > .nav-link {
+                color: #14274e !important;
+                background-color: #fff !important;
+                border-right: #14274e solid 1px;
+            }
+        </style>
+        <link rel="stylesheet" href="./Styles/head.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div
+                    class="col-md-12 col-lg-12 bg-light container-fluid"
+                    style="background-color: #f6f8fb"
+                >
+                    <div class="row d-block d-lg-none d-xl-none">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="bg-dark p-4">
+                                <h5 class="text-white h4">Collapsed content</h5>
+                                <span class="text-muted"
+                                    >Toggleable via the navbar brand.</span
+                                >
+                            </div>
+                        </div>
+                        <nav
+                            class="navbar navbar-dark"
+                            style="background-color: #14274e"
+                        >
+                            <div class="container-fluid">
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbarToggleExternalContent"
+                                >
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div
+                        class="row pt-3 text-light border-bottom align-items-center"
+                        style="
+                            background-color: #14274e;
+                            border-bottom: 3px #fed049 solid !important;
+                        "
+                    >
+                        <div class="col-2 me-0 pe-0">
+                            <img
+                                height="75px"
+                                class="d-block mx-auto mb-2"
+                                src="../Images/logo.png"
+                                alt=""
+                            />
+                            <p class="ms-3 pe-4 h6 text-center ff-logo">
+                                Lake Community Cable TV
+                            </p>
+                        </div>
+                        <div class="col ff-jumbo">
+                            <span class="fs-3">CEO</span>
+                            <span class="ms-3 border-start ps-3 fs-5"
+                                >Home</span
+                            >
+                        </div>
+                        <div class="col-1 text-end ms-auto">
+                            CEO123 |
+                            <a
+                                href="../index.html"
+                                class="text-muted text-decoration-none"
+                            >
+                                Logout</a
+                            >
                         </div>
                     </div>
-                    <nav class="navbar navbar-dark" style="background-color: #14274e">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
-                    </nav>
-                </div>
 
-                <div class="row pt-3 text-light border-bottom align-items-center" style="
-                              background-color: #14274e;
-                              border-bottom: 3px #fed049 solid !important;
-                          ">
-                    <div class="col-2 me-0 pe-0">
-                        <img height="75px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
-                        <p class="ms-3 pe-4 h6 text-center ff-logo">
-                            Lake Community Cable TV
-                        </p>
-                    </div>
-                    <div class="col ff-jumbo">
-                        <span class="fs-3">CEO</span>
-                        <span class="ms-3 border-start ps-3 fs-5">Home</span>
-                    </div>
-                    <div class="col-1 text-end ms-auto">
-                        CEO123 |
-                        <a href="../index.html" class="text-muted text-decoration-none">
-                            Logout</a>
-                    </div>
-                </div>
-
-                <div class="row mt-3">
-                    <div class="col">
-                        <div class="row mt-4 pt-4 px-4 mb-4">
-                            <div class="row mt-2 justify-content-center">
-                                <div class="col-lg-3 col-sm-12 mt-2">
-                                    <a href="./Employees.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
-                                        <i class="bi bi-people" style="font-size: 8rem"></i>
-                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
-                                                      border-top-color: #fed049 !important;
-                                                  ">
-                                            EMPLOYEES
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-sm-12 mt-2">
-                                    <a href="./Reports.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
-                                        <i class="bi bi-clipboard" style="font-size: 8rem"></i>
-                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
-                                                      border-top-color: #fed049 !important;
-                                                  ">
-                                            REPORTS
-                                        </p>
-                                    </a>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="row mt-4 pt-4 px-4 mb-4">
+                                <div class="row mt-2 justify-content-center">
+                                    <div class="col-lg-3 col-sm-12 mt-2">
+                                        <a
+                                            href="./Employees.html"
+                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                        >
+                                            <i
+                                                class="bi bi-people"
+                                                style="font-size: 8rem"
+                                            ></i>
+                                            <p
+                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
+                                                style="
+                                                    border-top-color: #fed049 !important;
+                                                "
+                                            >
+                                                EMPLOYEES
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-12 mt-2">
+                                        <a
+                                            href="./Reports.html"
+                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                        >
+                                            <i
+                                                class="bi bi-clipboard"
+                                                style="font-size: 8rem"
+                                            ></i>
+                                            <p
+                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
+                                                style="
+                                                    border-top-color: #fed049 !important;
+                                                "
+                                            >
+                                                REPORTS
+                                            </p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -104,102 +172,111 @@
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-<script src="./Scripts/dashboard.js"></script>
-<script>
-    let buttons = document.getElementsByName("btn-subs");
-    let collapses = document.querySelectorAll(".row.collapse");
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+        crossorigin="anonymous"
+    ></script>
+    <script src="./Scripts/dashboard.js"></script>
+    <script>
+        let buttons = document.getElementsByName("btn-subs");
+        let collapses = document.querySelectorAll(".row.collapse");
 
-    let bscollapse = [
-        new bootstrap.Collapse(collapses[0], {
-            toggle: false,
-        }),
-        new bootstrap.Collapse(collapses[1], {
-            toggle: false,
-        }),
-        new bootstrap.Collapse(collapses[2], {
-            toggle: false,
-        }),
-        new bootstrap.Collapse(collapses[3], {
-            toggle: false,
-        }),
-        new bootstrap.Collapse(collapses[4], {
-            toggle: false,
-        }),
-        new bootstrap.Collapse(collapses[5], {
-            toggle: false,
-        }),
-        new bootstrap.Collapse(collapses[6], {
-            toggle: false,
-        }),
-        new bootstrap.Collapse(collapses[7], {
-            toggle: false,
-        }),
-        new bootstrap.Collapse(collapses[8], {
-            toggle: false,
-        }),
-    ];
+        let bscollapse = [
+            new bootstrap.Collapse(collapses[0], {
+                toggle: false,
+            }),
+            new bootstrap.Collapse(collapses[1], {
+                toggle: false,
+            }),
+            new bootstrap.Collapse(collapses[2], {
+                toggle: false,
+            }),
+            new bootstrap.Collapse(collapses[3], {
+                toggle: false,
+            }),
+            new bootstrap.Collapse(collapses[4], {
+                toggle: false,
+            }),
+            new bootstrap.Collapse(collapses[5], {
+                toggle: false,
+            }),
+            new bootstrap.Collapse(collapses[6], {
+                toggle: false,
+            }),
+            new bootstrap.Collapse(collapses[7], {
+                toggle: false,
+            }),
+            new bootstrap.Collapse(collapses[8], {
+                toggle: false,
+            }),
+        ];
 
-    for (let i = 0; i < collapses.length; i++) {
-        collapses[i].addEventListener("show.bs.collapse", () => {
-            for (let j = 0; j < bscollapse.length; j++) {
-                if (j != i) bscollapse[j].hide();
-            }
-        });
-    }
+        for (let i = 0; i < collapses.length; i++) {
+            collapses[i].addEventListener("show.bs.collapse", () => {
+                for (let j = 0; j < bscollapse.length; j++) {
+                    if (j != i) bscollapse[j].hide();
+                }
+            });
+        }
 
-    let sales = document.getElementById("sales_collapse");
-    let subs = document.getElementById("subscribers_collapse");
-    let installations = document.getElementById("installation_collapse");
-    bscollapse[0].show();
-
-    bsSubs = new bootstrap.Collapse(subs, {
-        toggle: false,
-        show: true,
-    });
-    bsInstallations = new bootstrap.Collapse(installations, {
-        toggle: false,
-    });
-    bsSales = new bootstrap.Collapse(sales, {
-        toggle: false,
-    });
-
-    subs.addEventListener("show.bs.collapse", () => {
-        bsSales.hide();
-        bsInstallations.hide();
+        let sales = document.getElementById("sales_collapse");
+        let subs = document.getElementById("subscribers_collapse");
+        let installations = document.getElementById("installation_collapse");
         bscollapse[0].show();
-    });
-    installations.addEventListener("show.bs.collapse", () => {
-        bsSales.hide();
-        bsSubs.hide();
-        bscollapse[3].show();
-    });
-    sales.addEventListener("show.bs.collapse", () => {
-        bsSubs.hide();
-        bsInstallations.hide();
-        bscollapse[6].show();
-    });
-    subs.addEventListener("hide.bs.collapse", () => {
-        bscollapse[0].hide();
-        bscollapse[1].hide();
-        bscollapse[2].hide();
-    });
-    installations.addEventListener("hide.bs.collapse", () => {
-        bscollapse[3].hide();
-        bscollapse[4].hide();
-        bscollapse[5].hide();
-    });
-    sales.addEventListener("hide.bs.collapse", () => {
-        bscollapse[6].hide();
-        bscollapse[7].hide();
-        bscollapse[8].hide();
-    });
 
-</script>
+        bsSubs = new bootstrap.Collapse(subs, {
+            toggle: false,
+            show: true,
+        });
+        bsInstallations = new bootstrap.Collapse(installations, {
+            toggle: false,
+        });
+        bsSales = new bootstrap.Collapse(sales, {
+            toggle: false,
+        });
 
+        subs.addEventListener("show.bs.collapse", () => {
+            bsSales.hide();
+            bsInstallations.hide();
+            bscollapse[0].show();
+        });
+        installations.addEventListener("show.bs.collapse", () => {
+            bsSales.hide();
+            bsSubs.hide();
+            bscollapse[3].show();
+        });
+        sales.addEventListener("show.bs.collapse", () => {
+            bsSubs.hide();
+            bsInstallations.hide();
+            bscollapse[6].show();
+        });
+        subs.addEventListener("hide.bs.collapse", () => {
+            bscollapse[0].hide();
+            bscollapse[1].hide();
+            bscollapse[2].hide();
+        });
+        installations.addEventListener("hide.bs.collapse", () => {
+            bscollapse[3].hide();
+            bscollapse[4].hide();
+            bscollapse[5].hide();
+        });
+        sales.addEventListener("hide.bs.collapse", () => {
+            bscollapse[6].hide();
+            bscollapse[7].hide();
+            bscollapse[8].hide();
+        });
+    </script>
 </html>
