@@ -1,70 +1,89 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
 
+.col-md-12.col-lg-10 {
+    animation: fadeInAnimation ease 0.75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    background-color: #fed049 !important;
+}
+
 .border-subscriber {
-  border-color: #161d6f !important;
+    border-color: #161d6f !important;
 }
 
 .btn-outline-subscriber {
-  border-color: #161d6f !important;
-  color: #161d6f !important;
+    border-color: #161d6f !important;
+    color: #161d6f !important;
 }
 
 .btn-outline-subscriber .active {
-  background-color: #161d6f !important;
-  color: white !important;
+    background-color: #161d6f !important;
+    color: white !important;
 }
 
 .border-installation {
-  border-color: #810000 !important;
+    border-color: #810000 !important;
 }
 
 .btn-outline-installation {
-  border-color: #810000 !important;
-  color: #810000 !important;
+    border-color: #810000 !important;
+    color: #810000 !important;
 }
 
 .btn-outline-installation .active {
-  background-color: #810000 !important;
-  color: white !important;
+    background-color: #810000 !important;
+    color: white !important;
 }
 
 .border-sales {
-  border-color: #1f441e !important;
+    border-color: #1f441e !important;
 }
 
 .btn-outline-sales {
-  border-color: #1f441e !important;
-  color: #1f441e !important;
+    border-color: #1f441e !important;
+    color: #1f441e !important;
 }
 
 .btn-outline-sales .active {
-  background-color: #1f441e !important;
-  color: white !important;
+    background-color: #1f441e !important;
+    color: white !important;
 }
 
 .ff-logo {
-  font-family: "Mate SC";
+    font-family: "Mate SC";
 }
 
 .ff-jumbo {
-  font-family: "Nunito Sans";
+    font-family: "Nunito Sans";
 }
 
 .bg-dark-navy {
-  background-color: rgb(11, 22, 42);
+    background-color: rgb(11, 22, 42);
 }
 
 .btn-jumbo {
-  background-color: #14274e !important;
+    background-color: #14274e !important;
 }
 
 .btn-jumbo:hover {
-  background-color: white !important;
-  color: #14274e !important;
-  border-color: #14274e !important;
+    background-color: white !important;
+    color: #14274e !important;
+    border-color: #14274e !important;
 }
 
 .btn-jumbo:hover p {
-  border-color: #14274e !important;
+    border-color: #14274e !important;
 }
