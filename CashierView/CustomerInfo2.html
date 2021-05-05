@@ -430,15 +430,19 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Search Customer</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #1e6f5c">
+                        <i class="bi bi-search" data-bs-toggle="modal" data-bs-target="#exampleModal5"></i>
+                        <span>Search</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
                         <div class="row">
                             <div class="col d-flex">
                                 <input class="form-control me-2" type="search" value="RA027" />
-                                <button class="btn btn-outline-success" type="submit">
-                                    Search
+                                <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #1e6f5c">
+                                    <i class="bi bi-search" data-bs-toggle="modal" data-bs-target="#exampleModal5"></i>
+                                    <span>Search</span>
                                 </button>
                             </div>
                         </div>
@@ -658,11 +662,11 @@
                             <div class="d-flex">
                                 <input type="text" name="reference-code2" id="reference-code2" class="form-control me-2" />
                                 <div class="btn-group">
-                                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#ref-code2">
-                                        SEARCH
+                                    <button class="btn text-light" style="background-color:#1e6f5c" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#ref-code2">
+                                        <i class="bi bi-search"></i>SEARCH
                                     </button>
                                     <button class="btn btn-primary" id="add3">
-                                        ADD
+                                        <i class="bi bi-plus-circle"></i> ADD
                                     </button>
                                 </div>
                             </div>
@@ -752,11 +756,11 @@
                             <div class="d-flex">
                                 <input type="text" name="reference-code" id="reference-code" class="form-control me-2" />
                                 <div class="btn-group">
-                                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#ref-code">
-                                        SEARCH
+                                    <button class="btn text-light" style="background-color:#1e6f5c" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#ref-code2">
+                                        <i class="bi bi-search"></i>SEARCH
                                     </button>
                                     <button class="btn btn-primary" id="add">
-                                        ADD
+                                        <i class="bi bi-plus-circle"></i> ADD
                                     </button>
                                 </div>
                             </div>
@@ -1378,7 +1382,6 @@
         let i = e.parentElement.parentElement.rowIndex - 1;
         a.deleteRow(i);
     }
-
 </script>
 
 </html>
