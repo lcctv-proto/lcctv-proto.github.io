@@ -80,3 +80,13 @@ input::-webkit-inner-spin-button {
 .ff-jumbo {
   font-family: "Nunito Sans";
 }
+
+.btn-gray {
+  background-color: #8c8c8c !important;
+}
+
+.btn-gray:hover {
+  background-color: white !important;
+  color: #8c8c8c !important;
+  border-color: #8c8c8c !important;
+}
