@@ -60,17 +60,17 @@
 
 ## JOView
 
--   [Activation.html](https://lcctv-proto.github.io/FrontDeskView/Activation.html)
--   [Activation1.html](https://lcctv-proto.github.io/FrontDeskView/Activation1.html)
--   [Calendar.html](https://lcctv-proto.github.io/FrontDeskView/LandingPage.html)
--   [CloseJO.html](https://lcctv-proto.github.io/FrontDeskView/CloseJO.html)
--   [CloseJO1.html](https://lcctv-proto.github.io/FrontDeskView/CloseJO1.html)
--   [CreateJO.html](https://lcctv-proto.github.io/FrontDeskView/CreateJO.html)
--   [CreateJO1.html](https://lcctv-proto.github.io/FrontDeskView/CreateJO1.html)
--   [Login.html](https://lcctv-proto.github.io/FrontDeskView/Login.html)
--   [Maintenance.html](https://lcctv-proto.github.io/FrontDeskView/Maintenance.html)
--   [Maintenance1.html](https://lcctv-proto.github.io/FrontDeskView/Maintenance1.html)
--   [ViewJO.html](https://lcctv-proto.github.io/FrontDeskView/ViewJO.html)
+-   [Activation.html](https://lcctv-proto.github.io/JOView/Activation.html)
+-   [Activation1.html](https://lcctv-proto.github.io/JOView/Activation1.html)
+-   [Calendar.html](https://lcctv-proto.github.io/JOView/LandingPage.html)
+-   [CloseJO.html](https://lcctv-proto.github.io/JOView/CloseJO.html)
+-   [CloseJO1.html](https://lcctv-proto.github.io/JOView/CloseJO1.html)
+-   [CreateJO.html](https://lcctv-proto.github.io/JOView/CreateJO.html)
+-   [CreateJO1.html](https://lcctv-proto.github.io/JOView/CreateJO1.html)
+-   [Login.html](https://lcctv-proto.github.io/JOView/Login.html)
+-   [Maintenance.html](https://lcctv-proto.github.io/JOView/Maintenance.html)
+-   [Maintenance1.html](https://lcctv-proto.github.io/JOView/Maintenance1.html)
+-   [ViewJO.html](https://lcctv-proto.github.io/JOView/ViewJO.html)
 
 ## TechnicianView
 
