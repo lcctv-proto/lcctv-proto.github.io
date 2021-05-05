@@ -3,90 +3,104 @@
 
 body,
 html {
-  height: 100%;
-  background-color: #14274e !important;
+    height: 100%;
+    background-color: #14274e !important;
 }
 
 h1 {
-  font-size: 3.75em !important;
+    font-size: 3.75em !important;
 }
 
-.active>.nav-link {
-  color: #14274e !important;
-  background-color: #fff !important;
-  border-right: #14274e solid 1px;
+.col-md-12.col-lg-10.bg-light.p-lg-3.container-fluid {
+    animation: fadeInAnimation ease 0.75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.active > .nav-link {
+    color: #14274e !important;
+    background-color: #fff !important;
+    border-right: #14274e solid 1px;
 }
 
 a.list-group-item {
-  padding: 20px 20px !important;
+    padding: 20px 20px !important;
 }
 
 input[type="number"] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
 .nav-link:hover {
-  color: #fff !important;
-  background-color: #8ab6d6 !important;
+    color: #fff !important;
+    background-color: #8ab6d6 !important;
 }
 
 .bg-dark-navy {
-  background-color: rgb(11, 22, 42);
+    background-color: rgb(11, 22, 42);
 }
 
 .btn-navy {
-  background-color: #14274e !important;
+    background-color: #14274e !important;
 }
 
 .btn-green {
-  background-color: #3a6351 !important;
+    background-color: #3a6351 !important;
 }
 
 .btn-navy:hover {
-  background-color: #fff !important;
-  border-color: #14274e !important;
-  color: #14274e !important;
+    background-color: #fff !important;
+    border-color: #14274e !important;
+    color: #14274e !important;
 }
 
 .btn-green:hover {
-  background-color: #fff !important;
-  border-color: #3a6351 !important;
-  color: #3a6351 !important;
+    background-color: #fff !important;
+    border-color: #3a6351 !important;
+    color: #3a6351 !important;
 }
 
 .btn-jumbo {
-  background-color: #14274e !important;
+    background-color: #14274e !important;
 }
 
 .btn-jumbo:hover {
-  background-color: white !important;
-  color: #14274e !important;
-  border-color: #14274e !important;
+    background-color: white !important;
+    color: #14274e !important;
+    border-color: #14274e !important;
 }
 
 .btn-jumbo:hover p {
-  border-color: #14274e !important;
+    border-color: #14274e !important;
 }
 
 .ff-logo {
-  font-family: "Mate SC";
+    font-family: "Mate SC";
 }
 
 .ff-jumbo {
-  font-family: "Nunito Sans";
+    font-family: "Nunito Sans";
 }
 
 .btn-gray {
-  background-color: #8c8c8c !important;
+    background-color: #8c8c8c !important;
 }
 
 .btn-gray:hover {
-  background-color: white !important;
-  color: #8c8c8c !important;
-  border-color: #8c8c8c !important;
+    background-color: white !important;
+    color: #8c8c8c !important;
+    border-color: #8c8c8c !important;
 }

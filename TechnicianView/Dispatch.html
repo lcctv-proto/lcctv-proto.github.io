@@ -1,546 +1,928 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dispatch</title>
+        <style>
+            body,
+            html {
+                height: 100%;
+                background-color: #14274e !important;
+            }
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dispatch</title>
-    <style>
-        body,
-        html {
-            height: 100%;
-            background-color: #14274e !important;
-        }
+            h1 {
+                font-size: 3.75em !important;
+            }
 
-        h1 {
-            font-size: 3.75em !important;
-        }
+            .active > .nav-link {
+                color: #14274e !important;
+                background-color: #fff !important;
+                border-right: #14274e solid 1px;
+            }
+            .pagination > li > a {
+                background-color: transparent;
+                color: #14274e;
+                border-color: #14274e !important;
+            }
 
-        .active>.nav-link {
-            color: #14274e !important;
-            background-color: #fff !important;
-            border-right: #14274e solid 1px;
-        }
+            .pagination > li > a:focus,
+            .pagination > li > a:hover,
+            .pagination > li > span:focus,
+            .pagination > li > span:hover {
+                color: white;
+                background-color: #14274e;
+                border-color: white;
+            }
 
-        tr>td {
-            padding-top: 20px !important;
-            padding-bottom: 20px !important;
-        }
-    </style>
-    <link rel="stylesheet" href="./Styles/tv.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-</head>
+            .pagination > .active > a {
+                color: white;
+                background-color: #14274e !important;
+                border: solid 1px #14274e !important;
+            }
 
-<body>
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
-                <nav class="navbar mt-5">
-                    <ul class="navbar-nav fs-5">
-                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
-                            <p class="ms-3 ff-logo pb-3 border-bottom" style=" border-bottom: 3px #adb36e solid !important">
-                                Lake Community Cable TV
-                            </p>
-                        </a>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">Dashboard</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-light px-3" href="./Dispatch.html"><i class="bi bi-people"></i><span class="px-3">Dispatch</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./Calendar.html"><i class="bi bi-calendar-week"></i><span class="px-3">Calendar</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./Area.html"><i class="bi bi-geo"></i><span class="px-3">Area Assigned</span></a>
-                        </li>
-                        <li class="nav-item mt-5">
-                            <a class="nav-link text-light bg-dark-navy px-3" href="./Login.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">Logout</span></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
-                <div class="row d-block d-lg-none d-xl-none">
-                    <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="bg-dark p-4">
-                            <h5 class="text-white h4">Collapsed content</h5>
-                            <span class="text-muted">Toggleable via the navbar brand.</span>
-                        </div>
-                    </div>
-                    <nav class="navbar navbar-dark" style="background-color: #14274e">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
-                    </nav>
-                </div>
+            .pagination > .active > a:hover {
+                background-color: #14274e !important;
+                border: solid 1px #14274e;
+            }
+        </style>
+        <link rel="stylesheet" href="./Styles/tv.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"
+        />
+    </head>
 
-                <div class="row py-3 border-bottom" style=" border-bottom: 3px #adb36e solid !important">
-                    <div class="col-3">
-                        <h3>List View</h3>
-                    </div>
-                    <div class="col-6">
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" />
-                            <button class="btn btn-outline-success" type="submit">
-                                SEARCH
-                            </button>
-                        </form>
-                    </div>
-                    <div class="col-3 text-end">Technician123</div>
-                </div>
-
-                <div class="row p-5">
-                    <table class="table fs-5">
-                        <thead>
-                            <tr class="text-light" style="background-color: #14274e">
-                                <th>JO Number</th>
-                                <th>JO Type</th>
-                                <th>Account Name</th>
-                                <th>Account Number</th>
-                                <th>Service Address</th>
-                                <th>Package</th>
-                                <th>Date Assigned</th>
-                                <th>Remarks</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody class="align-middle">
-                            <tr>
-                                <td>JO-000001</td>
-                                <td>NO SIGNAL</td>
-                                <td>CHARLES EDWARD A. UMALI</td>
-                                <td>RA027801</td>
-                                <td>
-                                    #160 SAN SALVADOR ST., MANGGAHAN, PASIG
-                                    CITY
-                                </td>
-                                <td>BASIC 640</td>
-                                <td>APRIL 5, 2021</td>
-                                <td></td>
-                                <td>
-                                    <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-primary"><i class="me-2 bi bi-pencil"></i>VIEW</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>JO-000003</td>
-                                <td>INSTALLATION</td>
-                                <td>CHARLES EDWARD A. UMALI</td>
-                                <td>RA027801</td>
-                                <td>
-                                    #160 SAN SALVADOR ST., MANGGAHAN, PASIG
-                                    CITY
-                                </td>
-                                <td>BASIC 640</td>
-                                <td>APRIL 5, 2021</td>
-                                <td></td>
-                                <td>
-                                    <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-primary"><i class="me-2 bi bi-pencil"></i>VIEW</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>JO-000004</td>
-                                <td>RELOCATION</td>
-                                <td>CHARLES EDWARD A. UMALI</td>
-                                <td>RA027801</td>
-                                <td>
-                                    #160 SAN SALVADOR ST., MANGGAHAN, PASIG
-                                    CITY
-                                </td>
-                                <td>BASIC 640</td>
-                                <td>APRIL 5, 2021</td>
-                                <td></td>
-                                <td>
-                                    <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-primary"><i class="me-2 bi bi-pencil"></i>VIEW</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>JO-000009</td>
-                                <td>NO SIGNAL</td>
-                                <td>CHARLES EDWARD A. UMALI</td>
-                                <td>RA027801</td>
-                                <td>
-                                    #160 SAN SALVADOR ST., MANGGAHAN, PASIG
-                                    CITY
-                                </td>
-                                <td>BASIC 640</td>
-                                <td>APRIL 6, 2021</td>
-                                <td></td>
-                                <td>
-                                    <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-primary"><i class="me-2 bi bi-pencil"></i>VIEW</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>JO-000011</td>
-                                <td>DAMAGED REMOTE</td>
-                                <td>CHARLES EDWARD A. UMALI</td>
-                                <td>RA027801</td>
-                                <td>
-                                    #160 SAN SALVADOR ST., MANGGAHAN, PASIG
-                                    CITY
-                                </td>
-                                <td>BASIC 640</td>
-                                <td>APRIL 6, 2021</td>
-                                <td></td>
-                                <td>
-                                    <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-primary"><i class="me-2 bi bi-pencil"></i>VIEW</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>JO-000019</td>
-                                <td>INSTALLATION</td>
-                                <td>CHARLES EDWARD A. UMALI</td>
-                                <td>RA027801</td>
-                                <td>
-                                    #160 SAN SALVADOR ST., MANGGAHAN, PASIG
-                                    CITY
-                                </td>
-                                <td>BASIC 640</td>
-                                <td>APRIL 6, 2021</td>
-                                <td></td>
-                                <td>
-                                    <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-primary"><i class="me-2 bi bi-pencil"></i>VIEW</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>JO-000022</td>
-                                <td>RELOCATION</td>
-                                <td>CHARLES EDWARD A. UMALI</td>
-                                <td>RA027801</td>
-                                <td>
-                                    #160 SAN SALVADOR ST., MANGGAHAN, PASIG
-                                    CITY
-                                </td>
-                                <td>BASIC 640</td>
-                                <td>APRIL 6, 2021</td>
-                                <td></td>
-                                <td>
-                                    <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-primary"><i class="me-2 bi bi-pencil"></i>VIEW</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>JO-000031</td>
-                                <td>NO SIGNAL</td>
-                                <td>CHARLES EDWARD A. UMALI</td>
-                                <td>RA027801</td>
-                                <td>
-                                    #160 SAN SALVADOR ST., MANGGAHAN, PASIG
-                                    CITY
-                                </td>
-                                <td>BASIC 640</td>
-                                <td>APRIL 7, 2021</td>
-                                <td></td>
-                                <td>
-                                    <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-primary"><i class="me-2 bi bi-pencil"></i>VIEW</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>JO-000032</td>
-                                <td>DAMAGED REMOTE</td>
-                                <td>CHARLES EDWARD A. UMALI</td>
-                                <td>RA027801</td>
-                                <td>
-                                    #160 SAN SALVADOR ST., MANGGAHAN, PASIG
-                                    CITY
-                                </td>
-                                <td>BASIC 640</td>
-                                <td>APRIL 7, 2021</td>
-                                <td></td>
-                                <td>
-                                    <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-primary"><i class="me-2 bi bi-pencil"></i>VIEW</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>JO-000039</td>
-                                <td>DAMAGED REMOTE</td>
-                                <td>CHARLES EDWARD A. UMALI</td>
-                                <td>RA027801</td>
-                                <td>
-                                    #160 SAN SALVADOR ST., MANGGAHAN, PASIG
-                                    CITY
-                                </td>
-                                <td>BASIC 640</td>
-                                <td>APRIL 7, 2021</td>
-                                <td></td>
-                                <td>
-                                    <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-primary"><i class="me-2 bi bi-pencil"></i>VIEW</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <nav>
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" aria-label="Previous">
-                                    <span>&laquo;</span>
-                                </a>
+    <body>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
+                    <nav class="navbar mt-5">
+                        <ul class="navbar-nav fs-5">
+                            <a
+                                class="navbar-brand text-light fs-2 text-wrap text-center"
+                                href="./Login.html"
+                                ><img
+                                    height="100px"
+                                    class="d-block mx-auto mb-2"
+                                    src="../Images/logo.png"
+                                    alt=""
+                                />
+                                <p
+                                    class="ms-3 ff-logo pb-3 border-bottom"
+                                    style="
+                                        border-bottom: 3px #adb36e solid !important;
+                                    "
+                                >
+                                    Lake Community Cable TV
+                                </p>
+                            </a>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./LandingPage.html"
+                                    ><i class="bi bi-speedometer2 pl-3"></i
+                                    ><span class="px-3">Dashboard</span></a
+                                >
                             </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">1</a>
+                            <li class="nav-item active">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./Dispatch.html"
+                                    ><i class="bi bi-people"></i
+                                    ><span class="px-3">Dispatch</span></a
+                                >
                             </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">2</a>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./Calendar.html"
+                                    ><i class="bi bi-calendar-week"></i
+                                    ><span class="px-3">Calendar</span></a
+                                >
                             </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">3</a>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./Area.html"
+                                    ><i class="bi bi-geo"></i
+                                    ><span class="px-3">Area Assigned</span></a
+                                >
                             </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span>&raquo;</span>
-                                </a>
+                            <li class="nav-item mt-5">
+                                <a
+                                    class="nav-link text-light bg-dark-navy px-3"
+                                    href="./Login.html"
+                                    ><i class="bi bi-box-arrow-left"></i
+                                    ><span class="px-3">Logout</span></a
+                                >
                             </li>
                         </ul>
                     </nav>
                 </div>
+                <div
+                    class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid"
+                    style="background-color: #f6f8fb"
+                >
+                    <div class="row d-block d-lg-none d-xl-none">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="bg-dark p-4">
+                                <h5 class="text-white h4">Collapsed content</h5>
+                                <span class="text-muted"
+                                    >Toggleable via the navbar brand.</span
+                                >
+                            </div>
+                        </div>
+                        <nav
+                            class="navbar navbar-dark"
+                            style="background-color: #14274e"
+                        >
+                            <div class="container-fluid">
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbarToggleExternalContent"
+                                >
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div
+                        class="row py-3 border-bottom"
+                        style="border-bottom: 3px #adb36e solid !important"
+                    >
+                        <div class="col-3">
+                            <h3>List View</h3>
+                        </div>
+
+                        <div class="col-3 ms-auto text-end">Technician123</div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-3">
+                            <span>Show</span>
+                            <select
+                                name="entries"
+                                id="entries"
+                                class="form-select d-inline w-25"
+                            >
+                                <option value="10" selected>10</option>
+                                <option value="10">20</option>
+                                <option value="10">30</option>
+                            </select>
+                            <span>entries</span>
+                        </div>
+                        <div class="col-3 ms-auto">
+                            <input
+                                type="text"
+                                name=""
+                                id=""
+                                class="form-control"
+                            />
+                        </div>
+                        <div class="col-auto">
+                            <button
+                                class="align-middle btn btn-outline-success"
+                            >
+                                <i class="bi bi-search"></i>
+                                SEARCH
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col">
+                            <table class="table table-striped shadow">
+                                <thead>
+                                    <tr
+                                        class="text-light"
+                                        style="background-color: #14274e"
+                                    >
+                                        <th>JO Number</th>
+                                        <th>JO Type</th>
+                                        <th>Account Name</th>
+                                        <th>Account Number</th>
+                                        <th>Service Address</th>
+                                        <th>Package</th>
+                                        <th>Date Assigned</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="align-middle">
+                                    <tr>
+                                        <td>JO-000001</td>
+                                        <td>NO SIGNAL</td>
+                                        <td>CHARLES EDWARD A. UMALI</td>
+                                        <td>RA027801</td>
+                                        <td>
+                                            #160 SAN SALVADOR ST., MANGGAHAN,
+                                            PASIG CITY
+                                        </td>
+                                        <td>BASIC 640</td>
+                                        <td>APRIL 5, 2021</td>
+                                        <td>
+                                            <a
+                                                href="#joborder"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#joborder"
+                                                class="btn btn-outline-primary"
+                                                ><i class="bi bi-eye me-2"></i
+                                                >VIEW</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>JO-000003</td>
+                                        <td>INSTALLATION</td>
+                                        <td>CHARLES EDWARD A. UMALI</td>
+                                        <td>RA027801</td>
+                                        <td>
+                                            #160 SAN SALVADOR ST., MANGGAHAN,
+                                            PASIG CITY
+                                        </td>
+                                        <td>BASIC 640</td>
+                                        <td>APRIL 5, 2021</td>
+                                        <td>
+                                            <a
+                                                href="#joborder"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#joborder"
+                                                class="btn btn-outline-primary"
+                                                ><i class="bi bi-eye me-2"></i
+                                                >VIEW</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>JO-000004</td>
+                                        <td>RELOCATION</td>
+                                        <td>CHARLES EDWARD A. UMALI</td>
+                                        <td>RA027801</td>
+                                        <td>
+                                            #160 SAN SALVADOR ST., MANGGAHAN,
+                                            PASIG CITY
+                                        </td>
+                                        <td>BASIC 640</td>
+                                        <td>APRIL 5, 2021</td>
+                                        <td>
+                                            <a
+                                                href="#joborder"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#joborder"
+                                                class="btn btn-outline-primary"
+                                                ><i class="bi bi-eye me-2"></i
+                                                >VIEW</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>JO-000009</td>
+                                        <td>NO SIGNAL</td>
+                                        <td>CHARLES EDWARD A. UMALI</td>
+                                        <td>RA027801</td>
+                                        <td>
+                                            #160 SAN SALVADOR ST., MANGGAHAN,
+                                            PASIG CITY
+                                        </td>
+                                        <td>BASIC 640</td>
+                                        <td>APRIL 6, 2021</td>
+                                        <td>
+                                            <a
+                                                href="#joborder"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#joborder"
+                                                class="btn btn-outline-primary"
+                                                ><i class="bi bi-eye me-2"></i
+                                                >VIEW</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>JO-000011</td>
+                                        <td>DAMAGED REMOTE</td>
+                                        <td>CHARLES EDWARD A. UMALI</td>
+                                        <td>RA027801</td>
+                                        <td>
+                                            #160 SAN SALVADOR ST., MANGGAHAN,
+                                            PASIG CITY
+                                        </td>
+                                        <td>BASIC 640</td>
+                                        <td>APRIL 6, 2021</td>
+                                        <td>
+                                            <a
+                                                href="#joborder"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#joborder"
+                                                class="btn btn-outline-primary"
+                                                ><i class="bi bi-eye me-2"></i
+                                                >VIEW</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>JO-000019</td>
+                                        <td>INSTALLATION</td>
+                                        <td>CHARLES EDWARD A. UMALI</td>
+                                        <td>RA027801</td>
+                                        <td>
+                                            #160 SAN SALVADOR ST., MANGGAHAN,
+                                            PASIG CITY
+                                        </td>
+                                        <td>BASIC 640</td>
+                                        <td>APRIL 6, 2021</td>
+                                        <td>
+                                            <a
+                                                href="#joborder"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#joborder"
+                                                class="btn btn-outline-primary"
+                                                ><i class="bi bi-eye me-2"></i
+                                                >VIEW</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>JO-000022</td>
+                                        <td>RELOCATION</td>
+                                        <td>CHARLES EDWARD A. UMALI</td>
+                                        <td>RA027801</td>
+                                        <td>
+                                            #160 SAN SALVADOR ST., MANGGAHAN,
+                                            PASIG CITY
+                                        </td>
+                                        <td>BASIC 640</td>
+                                        <td>APRIL 6, 2021</td>
+                                        <td>
+                                            <a
+                                                href="#joborder"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#joborder"
+                                                class="btn btn-outline-primary"
+                                                ><i class="bi bi-eye me-2"></i
+                                                >VIEW</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>JO-000031</td>
+                                        <td>NO SIGNAL</td>
+                                        <td>CHARLES EDWARD A. UMALI</td>
+                                        <td>RA027801</td>
+                                        <td>
+                                            #160 SAN SALVADOR ST., MANGGAHAN,
+                                            PASIG CITY
+                                        </td>
+                                        <td>BASIC 640</td>
+                                        <td>APRIL 7, 2021</td>
+                                        <td>
+                                            <a
+                                                href="#joborder"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#joborder"
+                                                class="btn btn-outline-primary"
+                                                ><i class="bi bi-eye me-2"></i
+                                                >VIEW</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>JO-000032</td>
+                                        <td>DAMAGED REMOTE</td>
+                                        <td>CHARLES EDWARD A. UMALI</td>
+                                        <td>RA027801</td>
+                                        <td>
+                                            #160 SAN SALVADOR ST., MANGGAHAN,
+                                            PASIG CITY
+                                        </td>
+                                        <td>BASIC 640</td>
+                                        <td>APRIL 7, 2021</td>
+                                        <td>
+                                            <a
+                                                href="#joborder"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#joborder"
+                                                class="btn btn-outline-primary"
+                                                ><i class="bi bi-eye me-2"></i
+                                                >VIEW</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>JO-000039</td>
+                                        <td>DAMAGED REMOTE</td>
+                                        <td>CHARLES EDWARD A. UMALI</td>
+                                        <td>RA027801</td>
+                                        <td>
+                                            #160 SAN SALVADOR ST., MANGGAHAN,
+                                            PASIG CITY
+                                        </td>
+                                        <td>BASIC 640</td>
+                                        <td>APRIL 7, 2021</td>
+                                        <td>
+                                            <a
+                                                href="#joborder"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#joborder"
+                                                class="btn btn-outline-primary"
+                                                ><i class="bi bi-eye me-2"></i
+                                                >VIEW</a
+                                            >
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col pt-3">
+                            Showing 1 to 10 of 200 entries
+                        </div>
+                        <div class="col-auto ms-auto">
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Previous"
+                                        >
+                                            <span>&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Next"
+                                        >
+                                            <span>&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="modal fade" id="joborder" tabindex="-1">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        JO INFORMATION
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col">
-                                <label for="subscriber_name" class="form-label">JO Number:</label>
-                                <input type="text" class="form-control" id="subscriber_name" value="JO-000001" disabled />
+        <div class="modal fade" id="joborder" tabindex="-1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            JO INFORMATION
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <label
+                                        for="subscriber_name"
+                                        class="form-label"
+                                        >JO Number:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="subscriber_name"
+                                        value="JO-000001"
+                                        disabled
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="subscriber_name" class="form-label">Subscriber Name:</label>
-                                <input type="text" class="form-control" id="subscriber_name" value="CHARLES EDWARD ALALAN UMALI" disabled />
+                            <div class="row">
+                                <div class="col">
+                                    <label
+                                        for="subscriber_name"
+                                        class="form-label"
+                                        >Subscriber Name:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="subscriber_name"
+                                        value="CHARLES EDWARD ALALAN UMALI"
+                                        disabled
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="account_number" class="form-label">Account Number:</label>
-                                <input type="text" class="form-control" id="account_number" value="0939302011369" disabled />
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label
+                                        for="account_number"
+                                        class="form-label"
+                                        >Account Number:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="account_number"
+                                        value="0939302011369"
+                                        disabled
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="address" class="form-label">Address:</label>
-                                <input type="text" class="form-control" id="address" value="#160 San Salvador St., Brgy. Maharlika, Pasig City" disabled />
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="address" class="form-label"
+                                        >Address:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="address"
+                                        value="#160 San Salvador St., Brgy. Maharlika, Pasig City"
+                                        disabled
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="subscription_plan" class="form-label">Subscription Plan:</label>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label
+                                        for="subscription_plan"
+                                        class="form-label"
+                                        >Subscription Plan:</label
+                                    >
 
-                                <select class="form-select" disabled>
-                                    <option hidden>
-                                        SELECT SUBSCRIPTION PLAN
-                                    </option>
-                                    <option value="b640">
-                                        Basic 640 (59 SD PLUS 23 HD
-                                        Channels)
-                                    </option>
-                                    <option value="b640">
-                                        Premium 790 (91 SD PLUS 35 HD
-                                        Channels)
-                                    </option>
-                                    <option selected value="b640">
-                                        International 1099 (118 SD PLUS 54
-                                        HD Channel)
-                                    </option>
-                                </select>
+                                    <select class="form-select" disabled>
+                                        <option hidden>
+                                            SELECT SUBSCRIPTION PLAN
+                                        </option>
+                                        <option value="b640">
+                                            Basic 640 (59 SD PLUS 23 HD
+                                            Channels)
+                                        </option>
+                                        <option value="b640">
+                                            Premium 790 (91 SD PLUS 35 HD
+                                            Channels)
+                                        </option>
+                                        <option selected value="b640">
+                                            International 1099 (118 SD PLUS 54
+                                            HD Channel)
+                                        </option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="concern_type" class="form-label">Concern Type:</label>
-                                <select class="form-select" disabled>
-                                    <option hidden>
-                                        SELECT CONCERN TYPE
-                                    </option>
-                                    <option>Billing Related</option>
-                                    <option>
-                                        Follow Up New Installation
-                                    </option>
-                                    <option>New Application</option>
-                                    <option>Payment Related</option>
-                                    <option>Upgrade Subsription</option>
-                                    <option>Site Transfer</option>
-                                    <option selected>Reconnection</option>
-                                    <option>
-                                        Others (Please specify in the Text
-                                        Field Below.)
-                                    </option>
-                                </select>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="concern_type" class="form-label"
+                                        >Concern Type:</label
+                                    >
+                                    <select class="form-select" disabled>
+                                        <option hidden>
+                                            SELECT CONCERN TYPE
+                                        </option>
+                                        <option>Billing Related</option>
+                                        <option>
+                                            Follow Up New Installation
+                                        </option>
+                                        <option>New Application</option>
+                                        <option>Payment Related</option>
+                                        <option>Upgrade Subsription</option>
+                                        <option>Site Transfer</option>
+                                        <option selected>Reconnection</option>
+                                        <option>
+                                            Others (Please specify in the Text
+                                            Field Below.)
+                                        </option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="add-info">Additional Information:</label>
-                                <textarea class="form-control" id="add-info" rows="5" disabled style="resize: none">
-I have already paid my bill. Will you please reconnect my cable connection. I need to watch my movies ASAP!</textarea>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="add-info"
+                                        >Additional Information:</label
+                                    >
+                                    <textarea
+                                        class="form-control"
+                                        id="add-info"
+                                        rows="5"
+                                        disabled
+                                        style="resize: none"
+                                    >
+I have already paid my bill. Will you please reconnect my cable connection. I need to watch my movies ASAP!</textarea
+                                    >
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Close
-                    </button>
-                    <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#createReport" class="btn btn-primary">
-                        Create Report
-                    </button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                        <button
+                            type="button"
+                            data-bs-dismiss="modal"
+                            data-bs-toggle="modal"
+                            data-bs-target="#createReport"
+                            class="btn btn-primary"
+                        >
+                            Create Report
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal fade" id="createReport" tabindex="-2">
-        <div class="modal-dialog modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Create Status Report
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col">
-                                <label for="subscriber_name" class="form-label">Subscriber Name:</label>
-                                <input type="text" class="form-control" id="subscriber_name" value="CHARLES EDWARD ALALAN UMALI" disabled />
+        <div class="modal fade" id="createReport" tabindex="-2">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Create Status Report
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <label
+                                        for="subscriber_name"
+                                        class="form-label"
+                                        >Subscriber Name:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="subscriber_name"
+                                        value="CHARLES EDWARD ALALAN UMALI"
+                                        disabled
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="account_number" class="form-label">Account Number:</label>
-                                <input type="text" class="form-control" id="account_number" value="0939302011369" disabled />
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label
+                                        for="account_number"
+                                        class="form-label"
+                                        >Account Number:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="account_number"
+                                        value="0939302011369"
+                                        disabled
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="subscription_plan" class="form-label">Subscription Plan:</label>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label
+                                        for="subscription_plan"
+                                        class="form-label"
+                                        >Subscription Plan:</label
+                                    >
 
-                                <select class="form-select" disabled>
-                                    <option hidden>
-                                        SELECT SUBSCRIPTION PLAN
-                                    </option>
-                                    <option value="b640">
-                                        Basic 640 (59 SD PLUS 23 HD
-                                        Channels)
-                                    </option>
-                                    <option value="b640">
-                                        Premium 790 (91 SD PLUS 35 HD
-                                        Channels)
-                                    </option>
-                                    <option selected value="b640">
-                                        International 1099 (118 SD PLUS 54
-                                        HD Channel)
-                                    </option>
-                                </select>
+                                    <select class="form-select" disabled>
+                                        <option hidden>
+                                            SELECT SUBSCRIPTION PLAN
+                                        </option>
+                                        <option value="b640">
+                                            Basic 640 (59 SD PLUS 23 HD
+                                            Channels)
+                                        </option>
+                                        <option value="b640">
+                                            Premium 790 (91 SD PLUS 35 HD
+                                            Channels)
+                                        </option>
+                                        <option selected value="b640">
+                                            International 1099 (118 SD PLUS 54
+                                            HD Channel)
+                                        </option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="concern_type" class="form-label">Concern Type:</label>
-                                <select class="form-select" disabled>
-                                    <option hidden>
-                                        SELECT CONCERN TYPE
-                                    </option>
-                                    <option>Billing Related</option>
-                                    <option>
-                                        Follow Up New Installation
-                                    </option>
-                                    <option>New Application</option>
-                                    <option>Payment Related</option>
-                                    <option>Upgrade Subsription</option>
-                                    <option>Site Transfer</option>
-                                    <option selected>Reconnection</option>
-                                    <option>
-                                        Others (Please specify in the Text
-                                        Field Below.)
-                                    </option>
-                                </select>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="concern_type" class="form-label"
+                                        >Concern Type:</label
+                                    >
+                                    <select class="form-select" disabled>
+                                        <option hidden>
+                                            SELECT CONCERN TYPE
+                                        </option>
+                                        <option>Billing Related</option>
+                                        <option>
+                                            Follow Up New Installation
+                                        </option>
+                                        <option>New Application</option>
+                                        <option>Payment Related</option>
+                                        <option>Upgrade Subsription</option>
+                                        <option>Site Transfer</option>
+                                        <option selected>Reconnection</option>
+                                        <option>
+                                            Others (Please specify in the Text
+                                            Field Below.)
+                                        </option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="secret_key" class="form-label">Enter Secret Key:</label>
-                                <input type="text" class="form-control" id="secret_key" />
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="secret_key" class="form-label"
+                                        >Enter Secret Key:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="secret_key"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">Materials Used:</div>
-                        </div>
-                        <div class="row">
-                            <label for="number" class="col-sm-10 col-form-label">P61QVMRM, PPC PERFECTFLEX, 6-SERIES,
-                                QUAD-SHIELD CABLE, METER MARKINGS:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
+                            <div class="row mt-3">
+                                <div class="col">Materials Used:</div>
                             </div>
-                        </div>
-                        <div class="row mt-1">
-                            <label for="number" class="col-sm-10 col-form-label">PPC, EX6XLWSPLUS, RG6 UNIVERSAL COMPRESSION
-                                CONNECTOR, 60% THRU:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
+                            <div class="row">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >P61QVMRM, PPC PERFECTFLEX, 6-SERIES,
+                                    QUAD-SHIELD CABLE, METER MARKINGS:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-1">
-                            <label for="number" class="col-sm-10 col-form-label">PPC, EX6XLPLUS, COMPRESSION CONNECTOR,
-                                CONTINUITY CONNECTOR, 60% THRU:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
+                            <div class="row mt-1">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >PPC, EX6XLWSPLUS, RG6 UNIVERSAL COMPRESSION
+                                    CONNECTOR, 60% THRU:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-1">
-                            <label for="number" class="col-sm-10 col-form-label">CONCRETE TOKS SIZE 8:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
+                            <div class="row mt-1">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >PPC, EX6XLPLUS, COMPRESSION CONNECTOR,
+                                    CONTINUITY CONNECTOR, 60% THRU:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-1">
-                            <label for="number" class="col-sm-10 col-form-label">CABLE TIE 6", 150 MM BLACK:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
+                            <div class="row mt-1">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >CONCRETE TOKS SIZE 8:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-1">
-                            <label for="number" class="col-sm-10 col-form-label">DIGITAL REMOTE CONTROL:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
+                            <div class="row mt-1">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >CABLE TIE 6", 150 MM BLACK:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="remarks">Remarks</label>
-                                <textarea class="form-control" id="remarks" rows="3" style="resize: none"></textarea>
+                            <div class="row mt-1">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >DIGITAL REMOTE CONTROL:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#joborder">
-                        Back
-                    </button>
-                    <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#createReport" class="btn btn-primary">
-                        Create Report
-                    </button>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="remarks">Remarks</label>
+                                    <textarea
+                                        class="form-control"
+                                        id="remarks"
+                                        rows="3"
+                                        style="resize: none"
+                                    ></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                            data-bs-toggle="modal"
+                            data-bs-target="#joborder"
+                        >
+                            Back
+                        </button>
+                        <button
+                            type="button"
+                            data-bs-dismiss="modal"
+                            data-bs-toggle="modal"
+                            data-bs-target="#createReport"
+                            class="btn btn-primary"
+                        >
+                            Create Report
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-
+    </body>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+        crossorigin="anonymous"
+    ></script>
 </html>

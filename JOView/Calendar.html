@@ -1,534 +1,1078 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calendar</title>
+        <style>
+            .calendar th {
+                width: 200px !important;
+                padding: 10px 0 30px;
+            }
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calendar</title>
-    <style>
-        .calendar th {
-            width: 200px !important;
-            padding: 10px 0 30px;
-        }
+            .calendar td {
+                height: 200px;
+                border: 1px rgb(221, 221, 221) solid !important;
+                padding: 5px;
+            }
 
-        .calendar td {
-            height: 200px;
-            border: 1px rgb(221, 221, 221) solid !important;
-            padding: 5px;
-        }
+            .calendar th {
+                border: 1px rgb(221, 221, 221) solid !important;
+            }
 
-        .not-this-month {
-            background-color: rgb(114, 114, 114);
-            color: white;
-        }
+            .not-this-month {
+                background-color: rgb(114, 114, 114);
+                color: white;
+            }
 
-    </style>
-    <link rel="stylesheet" href="./Styles/jo.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-</head>
+            td a:hover {
+                color: white;
+            }
+        </style>
+        <link rel="stylesheet" href="./Styles/jo.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"
+        />
+    </head>
 
-<body>
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
-                <nav class="navbar mt-5">
-                    <ul class="navbar-nav fs-5">
-                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
-                            <p class="ms-3 ff-logo pb-3 border-bottom" style="
-                                      border-bottom: 3px #8ab6d6 solid !important;
-                                  ">
-                                Lake Community Cable TV
-                            </p>
-                            <p class="ff-jumbo fs-5">JOB ORDER MODULE</p>
-                        </a>
-                        <li class="nav-item mt-3">
-                            <a class="nav-link text-light px-3 d-flex" href="./LandingPage.html">
-                                <i class="bi bi-speedometer2 pl-3"></i><span class="px-3">DASHBOARD</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3 d-flex" href="./CreateJO.html"><i class="bi bi-pen"></i><span class="px-3">CREATE JOs</span>
-                                <span class="badge bg-danger ms-auto">9</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3 d-flex" href="./Activation.html"><i class="bi bi-lightning-charge"></i><span class="px-3">ACTIVATION</span><span class="badge bg-danger ms-auto">15</span>
+    <body>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
+                    <nav class="navbar mt-5">
+                        <ul class="navbar-nav fs-5">
+                            <a
+                                class="navbar-brand text-light fs-2 text-wrap text-center"
+                                href="./Login.html"
+                                ><img
+                                    height="100px"
+                                    class="d-block mx-auto mb-2"
+                                    src="../Images/logo.png"
+                                    alt=""
+                                />
+                                <p
+                                    class="ms-3 ff-logo pb-3 border-bottom"
+                                    style="
+                                        border-bottom: 3px #8ab6d6 solid !important;
+                                    "
+                                >
+                                    Lake Community Cable TV
+                                </p>
+                                <p class="ff-jumbo fs-5">JOB ORDER MODULE</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3 d-flex" href="./Maintenance.html"><i class="bi bi-tools"></i><span class="px-3">MAINTENANCE</span><span class="ms-auto badge bg-danger">23</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3 d-flex" href="./CloseJO.html"><i class="bi bi-check2-circle"></i><span class="px-3">CLOSE JOs</span><span class="ms-auto badge bg-danger">5</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-light px-3 d-flex" href="./Calendar.html"><i class="bi bi-calendar-week"></i><span class="px-3">CALENDAR</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3 d-flex" href="./ViewJO.html"><i class="bi bi-journal-album"></i>
-                                <span class="px-3">VIEW JOs</span></a>
-                        </li>
-                        <li class="nav-item mt-5 bg-dark-navy">
-                            <a class="nav-link text-light px-3 d-flex" href="./Login.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">LOGOUT</span></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
-                <div class="row d-block d-lg-none d-xl-none">
-                    <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="bg-dark p-4">
-                            <h5 class="text-white h4">Collapsed content</h5>
-                            <span class="text-muted">Toggleable via the navbar brand.</span>
-                        </div>
-                    </div>
-                    <nav class="navbar navbar-dark" style="background-color: #14274e">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
+                            <li class="nav-item mt-3">
+                                <a
+                                    class="nav-link text-light px-3 d-flex"
+                                    href="./LandingPage.html"
+                                >
+                                    <i class="bi bi-speedometer2 pl-3"></i
+                                    ><span class="px-3">DASHBOARD</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3 d-flex"
+                                    href="./CreateJO.html"
+                                    ><i class="bi bi-pen"></i
+                                    ><span class="px-3">CREATE JOs</span>
+                                    <span class="badge bg-danger ms-auto"
+                                        >9</span
+                                    ></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3 d-flex"
+                                    href="./Activation.html"
+                                    ><i class="bi bi-lightning-charge"></i
+                                    ><span class="px-3">ACTIVATION</span
+                                    ><span class="badge bg-danger ms-auto"
+                                        >15</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3 d-flex"
+                                    href="./Maintenance.html"
+                                    ><i class="bi bi-tools"></i
+                                    ><span class="px-3">MAINTENANCE</span
+                                    ><span class="ms-auto badge bg-danger"
+                                        >23</span
+                                    ></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3 d-flex"
+                                    href="./CloseJO.html"
+                                    ><i class="bi bi-check2-circle"></i
+                                    ><span class="px-3">CLOSE JOs</span
+                                    ><span class="ms-auto badge bg-danger"
+                                        >5</span
+                                    ></a
+                                >
+                            </li>
+                            <li class="nav-item active">
+                                <a
+                                    class="nav-link text-light px-3 d-flex"
+                                    href="./Calendar.html"
+                                    ><i class="bi bi-calendar-week"></i
+                                    ><span class="px-3">CALENDAR</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3 d-flex"
+                                    href="./ViewJO.html"
+                                    ><i class="bi bi-journal-album"></i>
+                                    <span class="px-3">VIEW JOs</span></a
+                                >
+                            </li>
+                            <li class="nav-item mt-5 bg-dark-navy">
+                                <a
+                                    class="nav-link text-light px-3 d-flex"
+                                    href="./Login.html"
+                                    ><i class="bi bi-box-arrow-left"></i
+                                    ><span class="px-3">LOGOUT</span></a
+                                >
+                            </li>
+                        </ul>
                     </nav>
                 </div>
-
-                <div class="row py-3 border-bottom" style="border-bottom: 3px #8ab6d6 solid !important;">
-                    <div class="col">
-                        <h3>Calendar View</h3>
-                    </div>
-                    <div class="col text-end">JO123 | <a href="./Login.html" class="text-muted text-decoration-none">
-                            Logout</a></div>
-                </div>
-                <div class="row py-3 border-bottom" style="border-bottom: 3px #8ab6d6 solid !important;">
-                    <div class="col">
-                        <div class="card shadow mx-auto" style="width: 700px;">
-                            <div class="card-header p-0 text-light text-center" style="background-color: #14274e;">
-                                <p class="fs-4 fw-bold mt-2 mb-2">Legend</p>
+                <div
+                    class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid"
+                    style="background-color: #f6f8fb"
+                >
+                    <div class="row d-block d-lg-none d-xl-none">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="bg-dark p-4">
+                                <h5 class="text-white h4">Collapsed content</h5>
+                                <span class="text-muted"
+                                    >Toggleable via the navbar brand.</span
+                                >
                             </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <p class="badge bg-success fs-5">UPGRADE</p>
-                                        <p class="badge bg-info fs-5 mt-2">SITE TRANSFER</p>
-                                        <p class="badge bg-warning fs-5 mt-2">INSTALLATION</p>
-                                        <p class="badge bg-danger fs-5 mt-2">RELOCATION</p>
-                                    </div>
+                        </div>
+                        <nav
+                            class="navbar navbar-dark"
+                            style="background-color: #14274e"
+                        >
+                            <div class="container-fluid">
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbarToggleExternalContent"
+                                >
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div
+                        class="row py-3 border-bottom"
+                        style="border-bottom: 3px #8ab6d6 solid !important"
+                    >
+                        <div class="col">
+                            <h3>Calendar View</h3>
+                        </div>
+                        <div class="col text-end">
+                            JO123 |
+                            <a
+                                href="./Login.html"
+                                class="text-muted text-decoration-none"
+                            >
+                                Logout</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="row py-3">
+                        <div class="col-12">
+                            <div class="row align-items-baseline">
+                                <div
+                                    class="col-2 border-end"
+                                    style="
+                                        border-right-color: #8ab6d6 !important;
+                                    "
+                                >
+                                    <span class="fs-4 mx-5">April 2021</span>
+                                </div>
+                                <div class="col-auto text-center">
+                                    <span class="ms-3 fw-bold fs-5"
+                                        >LEGEND:
+                                    </span>
+                                    <span class="mx-2"
+                                        >UPGRADE:
+                                        <i
+                                            class="bi bi-circle-fill text-success"
+                                        ></i
+                                    ></span>
+                                    <span class="mx-2"
+                                        >SITE TRANSFER:
+                                        <i
+                                            class="bi bi-circle-fill text-info"
+                                        ></i></span
+                                    ><span class="mx-2"
+                                        >INSTALLATION:
+                                        <i
+                                            class="bi bi-circle-fill text-warning"
+                                        ></i></span
+                                    ><span class="mx-2"
+                                        >RELOCATION:
+                                        <i
+                                            class="bi bi-circle-fill text-danger"
+                                        ></i
+                                    ></span>
                                 </div>
                             </div>
+                            <div class="row mt-3 px-5">
+                                <table class="border calendar mx-auto fs-5">
+                                    <thead>
+                                        <tr
+                                            class="text-center text-light"
+                                            style="background-color: #14274e"
+                                        >
+                                            <th
+                                                class=""
+                                                style="background-color: maroon"
+                                            >
+                                                SUN
+                                            </th>
+                                            <th class="">MON</th>
+                                            <th class="">TUE</th>
+                                            <th class="">WED</th>
+                                            <th class="">THU</th>
+                                            <th class="">FRI</th>
+                                            <th
+                                                class=""
+                                                style="
+                                                    background-color: goldenrod;
+                                                "
+                                            >
+                                                SAT
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="align-top">
+                                        <tr>
+                                            <td class="not-this-month">28</td>
+                                            <td class="not-this-month">29</td>
+                                            <td class="not-this-month">30</td>
+                                            <td class="not-this-month">31</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>
+                                                5
+                                                <a
+                                                    class="d-block badge bg-success mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM A</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >UPGRADE</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-warning mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM B</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >INSTALLATION</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-danger mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM C</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >RELOCATION</span
+                                                    >
+                                                </a>
+                                            </td>
+                                            <td>
+                                                6
+                                                <a
+                                                    class="d-block badge bg-success mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM A</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >UPGRADE</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-info mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM B</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >SITE TRANSFER</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-warning mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM D</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >INSTALLATION</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-danger mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM D</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >RELOCATION</span
+                                                    >
+                                                </a>
+                                            </td>
+                                            <td>
+                                                7
+                                                <a
+                                                    class="d-block badge bg-success mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM A</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >UPGRADE</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-info mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM B</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >SITE TRANSFER</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-info mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM C</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >SITE TRANSFER</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-danger mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM C</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >RELOCATION</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-danger mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM D</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >RELOCATION</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-warning mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM B</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >INSTALLATION</span
+                                                    >
+                                                </a>
+                                            </td>
+                                            <td>
+                                                8
+                                                <a
+                                                    class="d-block badge bg-info mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM A</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >SITE TRANSFER</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-warning mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM A</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >INSTALLATION</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-warning mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM D</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >INSTALLATION</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-success mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM B</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >UPGRADE</span
+                                                    >
+                                                </a>
+                                                <a
+                                                    class="d-block badge bg-danger mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM C</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >RELOCATION</span
+                                                    >
+                                                </a>
+                                            </td>
+                                            <td>
+                                                9
+                                                <a
+                                                    class="d-block badge bg-success mb-3"
+                                                    href="#joborder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#joborder"
+                                                >
+                                                    <span class="d-block pb-1"
+                                                        >TEAM B</span
+                                                    >
+                                                    <span
+                                                        class="d-block border-top pt-1"
+                                                        >UPGRADE</span
+                                                    >
+                                                </a>
+                                            </td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td class="not-this-month">1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row py-3">
-                    <div class="col-12">
-                        <h5 class="mx-5">April 2021</h5>
-                        <table class="calendar mx-auto fs-5">
-                            <thead>
-                                <tr>
-                                    <th class="text-center" style="color: #ff0000;">SUN</th>
-                                    <th class="text-center">MON</th>
-                                    <th class="text-center">TUE</th>
-                                    <th class="text-center">WED</th>
-                                    <th class="text-center">THU</th>
-                                    <th class="text-center">FRI</th>
-                                    <th class="text-center" style="color: #e1ad01;">SAT</th>
-                                </tr>
-                            </thead>
-                            <tbody class="align-top">
-                                <tr>
-                                    <td class="not-this-month">28</td>
-                                    <td class="not-this-month">29</td>
-                                    <td class="not-this-month">30</td>
-                                    <td class="not-this-month">31</td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>
-                                        5
-                                        <a class="d-block badge bg-success mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM A</span>
-                                            <span class="d-block border-top pt-1">UPGRADE</span>
-                                        </a>
-                                        <a class="d-block badge bg-warning mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM B</span>
-                                            <span class="d-block border-top pt-1">INSTALLATION</span>
-                                        </a>
-                                        <a class="d-block badge bg-danger mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM C</span>
-                                            <span class="d-block border-top pt-1">RELOCATION</span>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        6
-                                        <a class="d-block badge bg-success mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM A</span>
-                                            <span class="d-block border-top pt-1">UPGRADE</span>
-                                        </a>
-                                        <a class="d-block badge bg-info mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM B</span>
-                                            <span class="d-block border-top pt-1">SITE TRANSFER</span>
-                                        </a>
-                                        <a class="d-block badge bg-warning mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM D</span>
-                                            <span class="d-block border-top pt-1">INSTALLATION</span>
-                                        </a>
-                                        <a class="d-block badge bg-danger mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM D</span>
-                                            <span class="d-block border-top pt-1">RELOCATION</span>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        7
-                                        <a class="d-block badge bg-success mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM A</span>
-                                            <span class="d-block border-top pt-1">UPGRADE</span>
-                                        </a>
-                                        <a class="d-block badge bg-info mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM B</span>
-                                            <span class="d-block border-top pt-1">SITE TRANSFER</span>
-                                        </a>
-                                        <a class="d-block badge bg-info mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM C</span>
-                                            <span class="d-block border-top pt-1">SITE TRANSFER</span>
-                                        </a>
-                                        <a class="d-block badge bg-danger mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM C</span>
-                                            <span class="d-block border-top pt-1">RELOCATION</span>
-                                        </a>
-                                        <a class="d-block badge bg-danger mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM D</span>
-                                            <span class="d-block border-top pt-1">RELOCATION</span>
-                                        </a>
-                                        <a class="d-block badge bg-warning mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM B</span>
-                                            <span class="d-block border-top pt-1">INSTALLATION</span>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        8
-                                        <a class="d-block badge bg-info mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM A</span>
-                                            <span class="d-block border-top pt-1">SITE TRANSFER</span>
-                                        </a>
-                                        <a class="d-block badge bg-warning mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM A</span>
-                                            <span class="d-block border-top pt-1">INSTALLATION</span>
-                                        </a>
-                                        <a class="d-block badge bg-warning mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM D</span>
-                                            <span class="d-block border-top pt-1">INSTALLATION</span>
-                                        </a>
-                                        <a class="d-block badge bg-success mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM B</span>
-                                            <span class="d-block border-top pt-1">UPGRADE</span>
-                                        </a>
-                                        <a class="d-block badge bg-danger mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM C</span>
-                                            <span class="d-block border-top pt-1">RELOCATION</span>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        9
-                                        <a class="d-block badge bg-success mb-3" href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder">
-                                            <span class="d-block pb-1">TEAM B</span>
-                                            <span class="d-block border-top pt-1">UPGRADE</span>
-                                        </a>
-                                    </td>
-                                    <td>10</td>
-                                </tr>
-                                <tr>
-                                    <td>11</td>
-                                    <td>12</td>
-                                    <td>13</td>
-                                    <td>14</td>
-                                    <td>15</td>
-                                    <td>16</td>
-                                    <td>17</td>
-                                </tr>
-                                <tr>
-                                    <td>18</td>
-                                    <td>19</td>
-                                    <td>20</td>
-                                    <td>21</td>
-                                    <td>22</td>
-                                    <td>23</td>
-                                    <td>24</td>
-                                </tr>
-                                <tr>
-                                    <td>25</td>
-                                    <td>26</td>
-                                    <td>27</td>
-                                    <td>28</td>
-                                    <td>29</td>
-                                    <td>30</td>
-                                    <td class="not-this-month">1</td>
-                                </tr>
-                            </tbody>
-                        </table>
+            </div>
+        </div>
+        <div class="modal fade" id="joborder" tabindex="-1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            JOB ORDER INFORMATION
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="jo_type" class="form-label"
+                                        >JO Type:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="jo_type"
+                                        value="Relocation"
+                                        disabled
+                                    />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="jo_number" class="form-label"
+                                        >JO Number:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="jo_number"
+                                        value="JO-000001"
+                                        disabled
+                                    />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label
+                                        for="assigned_team"
+                                        class="form-label"
+                                        >Assigned Team:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="assigned_team"
+                                        value="TEAM REGUYAL (TEAM D)"
+                                        disabled
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="branch" class="form-label"
+                                        >Branch:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="branch"
+                                        value="Branch 3"
+                                        disabled
+                                    />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label
+                                        for="subscriber_name"
+                                        class="form-label"
+                                        >Subscriber Name:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="subscriber_name"
+                                        value="UMALI, CHARLES EDWARD ALALAN"
+                                        disabled
+                                    />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label
+                                        for="account_number"
+                                        class="form-label"
+                                        >Account Number:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="account_number"
+                                        value="0939302291711"
+                                        disabled
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="address" class="form-label"
+                                        >Address:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="address"
+                                        value="#160 San Salvador St., Brgy. Maharlika, Pasig City"
+                                        disabled
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label
+                                        for="subscription_plan"
+                                        class="form-label"
+                                        >Subscription Plan:</label
+                                    >
+
+                                    <select class="form-select" disabled>
+                                        <option hidden>
+                                            SELECT SUBSCRIPTION PLAN
+                                        </option>
+                                        <option value="b640">
+                                            Basic 640 (59 SD PLUS 23 HD
+                                            Channels)
+                                        </option>
+                                        <option value="b640">
+                                            Premium 790 (91 SD PLUS 35 HD
+                                            Channels)
+                                        </option>
+                                        <option selected value="b640">
+                                            International 1099 (118 SD PLUS 54
+                                            HD Channel)
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="concern_type" class="form-label"
+                                        >Concern Type:</label
+                                    >
+                                    <select class="form-select" disabled>
+                                        <option hidden>
+                                            SELECT CONCERN TYPE
+                                        </option>
+                                        <option>Billing Related</option>
+                                        <option>
+                                            Follow Up New Installation
+                                        </option>
+                                        <option>New Application</option>
+                                        <option>Payment Related</option>
+                                        <option>Upgrade Subsription</option>
+                                        <option selected>Site Transfer</option>
+                                        <option>Reconnection</option>
+                                        <option>
+                                            Others (Please specify in the Text
+                                            Field Below.)
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="add-info"
+                                        >Additional Information:</label
+                                    >
+                                    <textarea
+                                        class="form-control"
+                                        id="add-info"
+                                        rows="5"
+                                        disabled
+                                        style="resize: none"
+                                    >
+I have already paid my bill. Will you please reconnect my cable connection. I need to watch my movies ASAP!</textarea
+                                    >
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                        <button
+                            type="button"
+                            data-bs-dismiss="modal"
+                            data-bs-toggle="modal"
+                            data-bs-target="#createReport"
+                            class="btn btn-primary"
+                        >
+                            Create Report
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal fade" id="joborder" tabindex="-1">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        JOB ORDER INFORMATION
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col">
-                                <label for="jo_type" class="form-label">JO Type:</label>
-                                <input type="text" class="form-control" id="jo_type" value="Relocation" disabled />
+        <div class="modal fade" id="createReport" tabindex="-2">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Create Status Report
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <label
+                                        for="subscriber_name"
+                                        class="form-label"
+                                        >Subscriber Name:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="subscriber_name"
+                                        value="CHARLES EDWARD ALALAN UMALI"
+                                        disabled
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="jo_number" class="form-label">JO Number:</label>
-                                <input type="text" class="form-control" id="jo_number" value="JO-000001" disabled />
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label
+                                        for="account_number"
+                                        class="form-label"
+                                        >Account Number:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="account_number"
+                                        value="0939302011369"
+                                        disabled
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="assigned_team" class="form-label">Assigned Team:</label>
-                                <input type="text" class="form-control" id="assigned_team" value="TEAM REGUYAL (TEAM D)" disabled />
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="branch" class="form-label">Branch:</label>
-                                <input type="text" class="form-control" id="branch" value="Branch 3" disabled />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="subscriber_name" class="form-label">Subscriber Name:</label>
-                                <input type="text" class="form-control" id="subscriber_name" value="UMALI, CHARLES EDWARD ALALAN" disabled />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="account_number" class="form-label">Account Number:</label>
-                                <input type="text" class="form-control" id="account_number" value="0939302291711" disabled />
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="address" class="form-label">Address:</label>
-                                <input type="text" class="form-control" id="address" value="#160 San Salvador St., Brgy. Maharlika, Pasig City" disabled />
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="subscription_plan" class="form-label">Subscription Plan:</label>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label
+                                        for="subscription_plan"
+                                        class="form-label"
+                                        >Subscription Plan:</label
+                                    >
 
-                                <select class="form-select" disabled>
-                                    <option hidden>
-                                        SELECT SUBSCRIPTION PLAN
-                                    </option>
-                                    <option value="b640">
-                                        Basic 640 (59 SD PLUS 23 HD
-                                        Channels)
-                                    </option>
-                                    <option value="b640">
-                                        Premium 790 (91 SD PLUS 35 HD
-                                        Channels)
-                                    </option>
-                                    <option selected value="b640">
-                                        International 1099 (118 SD PLUS 54
-                                        HD Channel)
-                                    </option>
-                                </select>
+                                    <select class="form-select" disabled>
+                                        <option hidden>
+                                            SELECT SUBSCRIPTION PLAN
+                                        </option>
+                                        <option value="b640">
+                                            Basic 640 (59 SD PLUS 23 HD
+                                            Channels)
+                                        </option>
+                                        <option value="b640">
+                                            Premium 790 (91 SD PLUS 35 HD
+                                            Channels)
+                                        </option>
+                                        <option selected value="b640">
+                                            International 1099 (118 SD PLUS 54
+                                            HD Channel)
+                                        </option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="concern_type" class="form-label">Concern Type:</label>
-                                <select class="form-select" disabled>
-                                    <option hidden>
-                                        SELECT CONCERN TYPE
-                                    </option>
-                                    <option>Billing Related</option>
-                                    <option>
-                                        Follow Up New Installation
-                                    </option>
-                                    <option>New Application</option>
-                                    <option>Payment Related</option>
-                                    <option>Upgrade Subsription</option>
-                                    <option selected>Site Transfer</option>
-                                    <option>Reconnection</option>
-                                    <option>
-                                        Others (Please specify in the Text
-                                        Field Below.)
-                                    </option>
-                                </select>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="concern_type" class="form-label"
+                                        >Concern Type:</label
+                                    >
+                                    <select class="form-select" disabled>
+                                        <option hidden>
+                                            SELECT CONCERN TYPE
+                                        </option>
+                                        <option>Billing Related</option>
+                                        <option>
+                                            Follow Up New Installation
+                                        </option>
+                                        <option>New Application</option>
+                                        <option>Payment Related</option>
+                                        <option>Upgrade Subsription</option>
+                                        <option>Site Transfer</option>
+                                        <option selected>Reconnection</option>
+                                        <option>
+                                            Others (Please specify in the Text
+                                            Field Below.)
+                                        </option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="add-info">Additional Information:</label>
-                                <textarea class="form-control" id="add-info" rows="5" disabled style="resize: none">I have already paid my bill. Will you please reconnect my cable connection. I need to watch my movies ASAP!</textarea>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="secret_key" class="form-label"
+                                        >Enter Secret Key:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="secret_key"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Close
-                    </button>
-                    <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#createReport" class="btn btn-primary">
-                        Create Report
-                    </button>
+                            <div class="row mt-3">
+                                <div class="col">Materials Used:</div>
+                            </div>
+                            <div class="row">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >P61QVMRM, PPC PERFECTFLEX, 6-SERIES,
+                                    QUAD-SHIELD CABLE, METER MARKINGS:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >PPC, EX6XLWSPLUS, RG6 UNIVERSAL COMPRESSION
+                                    CONNECTOR, 60% THRU:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >PPC, EX6XLPLUS, COMPRESSION CONNECTOR,
+                                    CONTINUITY CONNECTOR, 60% THRU:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >CONCRETE TOKS SIZE 8:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >CABLE TIE 6", 150 MM BLACK:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <label
+                                    for="number"
+                                    class="col-sm-10 col-form-label"
+                                    >DIGITAL REMOTE CONTROL:</label
+                                >
+                                <div
+                                    class="col-sm-2 justify-content-center align-items-center"
+                                >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="surname"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="remarks">Remarks</label>
+                                    <textarea
+                                        class="form-control"
+                                        id="remarks"
+                                        rows="3"
+                                        style="resize: none"
+                                    ></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                            data-bs-toggle="modal"
+                            data-bs-target="#joborder"
+                        >
+                            Back
+                        </button>
+                        <button
+                            type="button"
+                            data-bs-dismiss="modal"
+                            data-bs-toggle="modal"
+                            data-bs-target="#createReport"
+                            class="btn btn-primary"
+                        >
+                            Create Report
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal fade" id="createReport" tabindex="-2">
-        <div class="modal-dialog modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Create Status Report
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col">
-                                <label for="subscriber_name" class="form-label">Subscriber Name:</label>
-                                <input type="text" class="form-control" id="subscriber_name" value="CHARLES EDWARD ALALAN UMALI" disabled />
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="account_number" class="form-label">Account Number:</label>
-                                <input type="text" class="form-control" id="account_number" value="0939302011369" disabled />
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="subscription_plan" class="form-label">Subscription Plan:</label>
-
-                                <select class="form-select" disabled>
-                                    <option hidden>
-                                        SELECT SUBSCRIPTION PLAN
-                                    </option>
-                                    <option value="b640">
-                                        Basic 640 (59 SD PLUS 23 HD
-                                        Channels)
-                                    </option>
-                                    <option value="b640">
-                                        Premium 790 (91 SD PLUS 35 HD
-                                        Channels)
-                                    </option>
-                                    <option selected value="b640">
-                                        International 1099 (118 SD PLUS 54
-                                        HD Channel)
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="concern_type" class="form-label">Concern Type:</label>
-                                <select class="form-select" disabled>
-                                    <option hidden>
-                                        SELECT CONCERN TYPE
-                                    </option>
-                                    <option>Billing Related</option>
-                                    <option>
-                                        Follow Up New Installation
-                                    </option>
-                                    <option>New Application</option>
-                                    <option>Payment Related</option>
-                                    <option>Upgrade Subsription</option>
-                                    <option>Site Transfer</option>
-                                    <option selected>Reconnection</option>
-                                    <option>
-                                        Others (Please specify in the Text
-                                        Field Below.)
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="secret_key" class="form-label">Enter Secret Key:</label>
-                                <input type="text" class="form-control" id="secret_key" />
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">Materials Used:</div>
-                        </div>
-                        <div class="row">
-                            <label for="number" class="col-sm-10 col-form-label">P61QVMRM, PPC PERFECTFLEX, 6-SERIES,
-                                QUAD-SHIELD CABLE, METER MARKINGS:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
-                            </div>
-                        </div>
-                        <div class="row mt-1">
-                            <label for="number" class="col-sm-10 col-form-label">PPC, EX6XLWSPLUS, RG6 UNIVERSAL COMPRESSION
-                                CONNECTOR, 60% THRU:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
-                            </div>
-                        </div>
-                        <div class="row mt-1">
-                            <label for="number" class="col-sm-10 col-form-label">PPC, EX6XLPLUS, COMPRESSION CONNECTOR,
-                                CONTINUITY CONNECTOR, 60% THRU:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
-                            </div>
-                        </div>
-                        <div class="row mt-1">
-                            <label for="number" class="col-sm-10 col-form-label">CONCRETE TOKS SIZE 8:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
-                            </div>
-                        </div>
-                        <div class="row mt-1">
-                            <label for="number" class="col-sm-10 col-form-label">CABLE TIE 6", 150 MM BLACK:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
-                            </div>
-                        </div>
-                        <div class="row mt-1">
-                            <label for="number" class="col-sm-10 col-form-label">DIGITAL REMOTE CONTROL:</label>
-                            <div class="col-sm-2 justify-content-center align-items-center">
-                                <input type="number" class="form-control" id="surname" />
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <label for="remarks">Remarks</label>
-                                <textarea class="form-control" id="remarks" rows="3" style="resize: none"></textarea>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#joborder">
-                        Back
-                    </button>
-                    <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#createReport" class="btn btn-primary">
-                        Create Report
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-
+    </body>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+        crossorigin="anonymous"
+    ></script>
 </html>

@@ -1,124 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Job Order Dashboard</title>
+        <style>
+            body {
+                animation: fadeInAnimation ease 0.75s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
+            @keyframes fadeInAnimation {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="./Styles/jo.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Job Order Dashboard</title>
-    <style></style>
-    <link rel="stylesheet" href="./Styles/jo.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-</head>
-
-<body>
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <div class="col-md-12 col-lg-12 bg-light container-fluid" style="background-color: #f6f8fb">
-                <div class="row d-block d-lg-none d-xl-none">
-                    <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="bg-dark p-4">
-                            <h5 class="text-white h4">Collapsed content</h5>
-                            <span class="text-muted">Toggleable via the navbar brand.</span>
+    <body>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div
+                    class="col-md-12 col-lg-12 bg-light container-fluid"
+                    style="background-color: #f6f8fb"
+                >
+                    <div class="row d-block d-lg-none d-xl-none">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="bg-dark p-4">
+                                <h5 class="text-white h4">Collapsed content</h5>
+                                <span class="text-muted"
+                                    >Toggleable via the navbar brand.</span
+                                >
+                            </div>
                         </div>
+                        <nav
+                            class="navbar navbar-dark"
+                            style="background-color: #14274e"
+                        >
+                            <div class="container-fluid">
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbarToggleExternalContent"
+                                >
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </nav>
                     </div>
-                    <nav class="navbar navbar-dark" style="background-color: #14274e">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
-                    </nav>
-                </div>
 
-                <div class="row pt-3 text-light border-bottom align-items-center" style="
+                    <div
+                        class="row pt-3 text-light border-bottom align-items-center"
+                        style="
                             background-color: #14274e;
                             border-bottom: 3px #8ab6d6 solid !important;
-                        ">
-                    <div class="col-2 me-0 pe-0">
-                        <img height="75px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
-                        <p class="ms-3 pe-4 h6 text-center ff-logo">
-                            Lake Community Cable TV
-                        </p>
+                        "
+                    >
+                        <div class="col-2 me-0 pe-0">
+                            <img
+                                height="75px"
+                                class="d-block mx-auto mb-2"
+                                src="../Images/logo.png"
+                                alt=""
+                            />
+                            <p class="ms-3 pe-4 h6 text-center ff-logo">
+                                Lake Community Cable TV
+                            </p>
+                        </div>
+                        <div class="col ff-jumbo">
+                            <span class="fs-3">JO Personnel</span>
+                            <span class="ms-3 border-start ps-3 fs-5"
+                                >Home</span
+                            >
+                        </div>
+                        <div class="col-1 text-end ms-auto">
+                            JO123 |
+                            <a
+                                href="./Login.html"
+                                class="text-muted text-decoration-none"
+                            >
+                                Logout</a
+                            >
+                        </div>
                     </div>
-                    <div class="col ff-jumbo">
-                        <span class="fs-3">JO Personnel</span>
-                        <span class="ms-3 border-start ps-3 fs-5">Home</span>
-                    </div>
-                    <div class="col-1 text-end ms-auto">
-                        JO123 |
-                        <a href="./Login.html" class="text-muted text-decoration-none">
-                            Logout</a>
-                    </div>
-                </div>
 
-                <div class="row mt-3">
-                    <div class="col">
-                        <div class="row mt-4 pt-4 px-4 mb-4">
-                            <div class="row mt-2 justify-content-center">
-                                <div class="col-lg-3 col-sm-12 mt-2">
-                                    <a href="./CreateJO.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
-                                        <i class="bi bi-pen" style="font-size: 8rem"></i>
-                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="row mt-4 pt-4 px-4 mb-4">
+                                <div class="row mt-2 justify-content-center">
+                                    <div class="col-lg-3 col-sm-12 mt-2">
+                                        <a
+                                            href="./CreateJO.html"
+                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                        >
+                                            <i
+                                                class="bi bi-pen"
+                                                style="font-size: 8rem"
+                                            ></i>
+                                            <p
+                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
+                                                style="
                                                     border-top-color: #8ab6d6 !important;
-                                                ">
-                                            NEW ACCOUNTS<span class="mx-3 badge bg-danger">9</span>
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-sm-12 mt-2">
-                                    <a href="./Activation.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
-                                        <i class="bi bi-lightning-charge" style="font-size: 8rem"></i>
-                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                                                "
+                                            >
+                                                NEW ACCOUNTS<span
+                                                    class="mx-3 badge bg-danger"
+                                                    >9</span
+                                                >
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-12 mt-2">
+                                        <a
+                                            href="./Activation.html"
+                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                        >
+                                            <i
+                                                class="bi bi-lightning-charge"
+                                                style="font-size: 8rem"
+                                            ></i>
+                                            <p
+                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
+                                                style="
                                                     border-top-color: #8ab6d6 !important;
-                                                ">
-                                            ACTIVATION<span class="mx-3 badge bg-danger">15</span>
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-sm-12 mt-2">
-                                    <a href="./Maintenance.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
-                                        <i class="bi bi-tools" style="font-size: 8rem"></i>
-                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                                                "
+                                            >
+                                                ACTIVATION<span
+                                                    class="mx-3 badge bg-danger"
+                                                    >15</span
+                                                >
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-12 mt-2">
+                                        <a
+                                            href="./Maintenance.html"
+                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                        >
+                                            <i
+                                                class="bi bi-tools"
+                                                style="font-size: 8rem"
+                                            ></i>
+                                            <p
+                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
+                                                style="
                                                     border-top-color: #8ab6d6 !important;
-                                                ">
-                                            MAINTENANCE<span class="mx-3 badge bg-danger">23</span>
-                                        </p>
-                                    </a>
+                                                "
+                                            >
+                                                MAINTENANCE<span
+                                                    class="mx-3 badge bg-danger"
+                                                    >23</span
+                                                >
+                                            </p>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row mt-2 justify-content-center">
-                                <div class="col-lg-3 col-sm-12 mt-2">
-                                    <a href="./CloseJO.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
-                                        <i class="bi bi-check2-circle" style="font-size: 8rem"></i>
-                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                                <div class="row mt-2 justify-content-center">
+                                    <div class="col-lg-3 col-sm-12 mt-2">
+                                        <a
+                                            href="./CloseJO.html"
+                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                        >
+                                            <i
+                                                class="bi bi-check2-circle"
+                                                style="font-size: 8rem"
+                                            ></i>
+                                            <p
+                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
+                                                style="
                                                     border-top-color: #8ab6d6 !important;
-                                                ">
-                                            CLOSING<span class="mx-3 badge bg-danger">5</span>
-                                        </p>
-                                    </a>
-                                </div>
+                                                "
+                                            >
+                                                CLOSING<span
+                                                    class="mx-3 badge bg-danger"
+                                                    >5</span
+                                                >
+                                            </p>
+                                        </a>
+                                    </div>
 
-                                <div class="col-lg-3 col-sm-12 mt-2">
-                                    <a href="./Calendar.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
-                                        <i class="bi bi-calendar-week" style="font-size: 8rem"></i>
-                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                                    <div class="col-lg-3 col-sm-12 mt-2">
+                                        <a
+                                            href="./Calendar.html"
+                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                        >
+                                            <i
+                                                class="bi bi-calendar-week"
+                                                style="font-size: 8rem"
+                                            ></i>
+                                            <p
+                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
+                                                style="
                                                     border-top-color: #8ab6d6 !important;
-                                                ">
-                                            CALENDAR
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-sm-12 mt-2">
-                                    <a href="./ViewJO.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
-                                        <i class="bi bi-journal-album" style="font-size: 8rem"></i>
-                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                                                "
+                                            >
+                                                CALENDAR
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-12 mt-2">
+                                        <a
+                                            href="./ViewJO.html"
+                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                        >
+                                            <i
+                                                class="bi bi-journal-album"
+                                                style="font-size: 8rem"
+                                            ></i>
+                                            <p
+                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
+                                                style="
                                                     border-top-color: #8ab6d6 !important;
-                                                ">
-                                            VIEW JOs
-                                        </p>
-                                    </a>
+                                                "
+                                            >
+                                                VIEW JOs
+                                            </p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -126,9 +241,11 @@
                 </div>
             </div>
         </div>
-    </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<script></script>
-
+    </body>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"
+    ></script>
+    <script></script>
 </html>
