@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Front Desk Dashboard</title>
-    <style></style>
+    <style>
+    </style>
     <link rel="stylesheet" href="./Styles/frontdesk.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
@@ -15,38 +16,7 @@
 <body>
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
-                <nav class="navbar mt-5">
-                    <ul class="navbar-nav fs-5">
-                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
-                            <p class="ms-3 ff-logo pb-3 border-bottom" style="border-bottom: 3px #ffba93 solid !important;">
-                                Lake Community Cable TV
-                            </p>
-                            <p class="ff-jumbo fs-5">FRONT DESK MODULE</p>
-                        </a>
-
-                        <li class="nav-item active mt-5">
-                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">DASHBOARD</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./Applications.html"><i class="bi bi-archive"></i><span class="px-3">APPLICATIONS<span class="mx-3 badge bg-danger">
-                                        3</span></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./Support.html"><i class="bi bi-tools"></i><span class="px-3">SUPPORT<span class="mx-3 badge bg-danger">
-                                        3</span></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./EditAccount.html"><i class="bi bi-pen"></i><span class="px-3">ACCOUNTS<span class="mx-3 badge bg-danger">
-                                        1</span></span></a>
-                        </li>
-                        <li class="nav-item mt-5 bg-dark-navy">
-                            <a class="nav-link text-light px-3" href="./Login.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">LOGOUT</span></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-12 col-lg-10 h-100 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
+            <div class="col-md-12 col-lg-12 bg-light container-fluid" style="background-color: #f6f8fb">
                 <div class="row d-block d-lg-none d-xl-none">
                     <div class="collapse" id="navbarToggleExternalContent">
                         <div class="bg-dark p-4">
@@ -63,36 +33,62 @@
                     </nav>
                 </div>
 
-                <div class="row py-3 border-bottom" style="border-bottom: 3px #ffba93 solid !important;">
-                    <div class="col">
-                        <h3>Dashboard</h3>
+                <div class="row pt-3 text-light border-bottom align-items-center" style="
+                          background-color: #14274e;
+                          border-bottom: 3px #ffba93 solid !important;
+                      ">
+                    <div class="col-2 me-0 pe-0">
+                        <img height="75px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
+                        <p class="ms-3 pe-4 h6 text-center ff-logo">
+                            Lake Community Cable TV
+                        </p>
                     </div>
-                    <div class="col text-end">
+                    <div class="col ff-jumbo">
+                        <span class="fs-3">Front Desk</span>
+                        <span class="ms-3 border-start ps-3 fs-5">Home</span>
+                    </div>
+                    <div class="col-2 text-end ms-auto">
                         FrontDesk123 |
-                        <a href="./Login.html" class="text-muted text-decoration-none">
+                        <a href="../index.html" class="text-muted text-decoration-none">
                             Logout</a>
                     </div>
                 </div>
 
                 <div class="row mt-3">
                     <div class="col">
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            There are three (<span class="fw-bold fst-italic">3</span>) pending applications. Click
-                            <a href="./Applications.html" class="alert-link">here</a>
-                            to check them.
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            There are three (<span class="fw-bold fst-italic">3</span>) pending inquiries. Click
-                            <a href="#" class="alert-link">here</a> to check
-                            them.
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            There are one (<span class="fw-bold fst-italic">1</span>) pending update subscriber accounts. Click
-                            <a href="#" class="alert-link">here</a> to check
-                            them.
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <div class="row mt-4 pt-4 px-4 mb-4">
+                            <div class="row mt-2 justify-content-center">
+                                <div class="col-lg-3 col-sm-12 mt-2">
+                                    <a href="./Applications.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
+                                        <i class="bi bi-archive" style="font-size: 8rem"></i>
+                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                                                  border-top-color: #ffba93 !important;
+                                              ">
+                                            APPLICATIONS<span class="mx-3 badge bg-danger">3</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-12 mt-2">
+                                    <a href="./Support.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
+                                        <i class="bi bi-tools" style="font-size: 8rem"></i>
+                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                                                  border-top-color: #ffba93 !important;
+                                              ">
+                                            SUPPORT<span class="mx-3 badge bg-danger">3</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-12 mt-2">
+                                    <a href="./EditAccount.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
+                                        <i class="bi bi-pen" style="font-size: 8rem"></i>
+                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                                                  border-top-color: #ffba93 !important;
+                                              ">
+                                            ACCOUNTS<span class="mx-3 badge bg-danger">1</span>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
