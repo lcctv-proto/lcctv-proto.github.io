@@ -1,586 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>View job Order</title>
-        <style>
-            .pagination > li > a {
-                background-color: transparent;
-                color: #14274e;
-                border-color: #14274e !important;
-            }
 
-            .pagination > li > a:focus,
-            .pagination > li > a:hover,
-            .pagination > li > span:focus,
-            .pagination > li > span:hover {
-                color: white;
-                background-color: #14274e;
-                border-color: white;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View job Order</title>
+    <style>
+        .pagination>li>a {
+            background-color: transparent;
+            color: #14274e;
+            border-color: #14274e !important;
+        }
 
-            .pagination > .active > a {
-                color: white;
-                background-color: #14274e !important;
-                border: solid 1px #14274e !important;
-            }
+        .pagination>li>a:focus,
+        .pagination>li>a:hover,
+        .pagination>li>span:focus,
+        .pagination>li>span:hover {
+            color: white;
+            background-color: #14274e;
+            border-color: white;
+        }
 
-            .pagination > .active > a:hover {
-                background-color: #14274e !important;
-                border: solid 1px #14274e;
-            }
-        </style>
-        <link rel="stylesheet" href="./Styles/jo.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-            crossorigin="anonymous"
-        />
-    </head>
+        .pagination>.active>a {
+            color: white;
+            background-color: #14274e !important;
+            border: solid 1px #14274e !important;
+        }
 
-    <body>
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
-                    <nav class="navbar mt-5">
-                        <ul class="navbar-nav fs-5">
-                            <a
-                                class="navbar-brand text-light fs-2 text-wrap text-center"
-                                href="./Login.html"
-                                ><img
-                                    height="100px"
-                                    class="d-block mx-auto mb-2"
-                                    src="../Images/logo.png"
-                                    alt=""
-                                />
-                                <p
-                                    class="ms-3 ff-logo pb-3 border-bottom"
-                                    style="
+        .pagination>.active>a:hover {
+            background-color: #14274e !important;
+            border: solid 1px #14274e;
+        }
+
+    </style>
+    <link rel="stylesheet" href="./Styles/jo.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
+                <nav class="navbar mt-5">
+                    <ul class="navbar-nav fs-5">
+                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
+                            <p class="ms-3 ff-logo pb-3 border-bottom" style="
                                         border-bottom: 3px #8ab6d6 solid !important;
-                                    "
-                                >
-                                    Lake Community Cable TV
-                                </p>
-                                <p class="ff-jumbo fs-5">JOB ORDER MODULE</p>
+                                    ">
+                                Lake Community Cable TV
+                            </p>
+                            <p class="ff-jumbo fs-5">JOB ORDER MODULE</p>
+                        </a>
+                        <li class="nav-item mt-3">
+                            <a class="nav-link text-light px-3 d-flex" href="./LandingPage.html">
+                                <i class="bi bi-speedometer2 pl-3"></i><span class="px-3">DASHBOARD</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3 d-flex" href="./CreateJO.html"><i class="bi bi-pen"></i><span class="px-3">CREATE JOs</span>
+                                <span class="badge bg-danger ms-auto">9</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3 d-flex" href="./Activation.html"><i class="bi bi-lightning-charge"></i><span class="px-3">ACTIVATION</span><span class="badge bg-danger ms-auto">15</span>
                             </a>
-                            <li class="nav-item mt-3">
-                                <a
-                                    class="nav-link text-light px-3 d-flex"
-                                    href="./LandingPage.html"
-                                >
-                                    <i class="bi bi-speedometer2 pl-3"></i
-                                    ><span class="px-3">DASHBOARD</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3 d-flex"
-                                    href="./CreateJO.html"
-                                    ><i class="bi bi-pen"></i
-                                    ><span class="px-3">CREATE JOs</span>
-                                    <span class="badge bg-danger ms-auto"
-                                        >9</span
-                                    ></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3 d-flex"
-                                    href="./Activation.html"
-                                    ><i class="bi bi-lightning-charge"></i
-                                    ><span class="px-3">ACTIVATION</span
-                                    ><span class="badge bg-danger ms-auto"
-                                        >15</span
-                                    >
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3 d-flex"
-                                    href="./Maintenance.html"
-                                    ><i class="bi bi-tools"></i
-                                    ><span class="px-3">MAINTENANCE</span
-                                    ><span class="ms-auto badge bg-danger"
-                                        >23</span
-                                    ></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3 d-flex"
-                                    href="./CloseJO.html"
-                                    ><i class="bi bi-check2-circle"></i
-                                    ><span class="px-3">CLOSE JOs</span
-                                    ><span class="ms-auto badge bg-danger"
-                                        >5</span
-                                    ></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3 d-flex"
-                                    href="./Calendar.html"
-                                    ><i class="bi bi-calendar-week"></i
-                                    ><span class="px-3">CALENDAR</span></a
-                                >
-                            </li>
-                            <li class="nav-item active">
-                                <a
-                                    class="nav-link text-light px-3 d-flex"
-                                    href="./ViewJO.html"
-                                    ><i class="bi bi-journal-album"></i
-                                    ><span class="px-3">VIEW JOs</span></a
-                                >
-                            </li>
-                            <li class="nav-item mt-5 bg-dark-navy">
-                                <a
-                                    class="nav-link text-light px-3 d-flex"
-                                    href="./Login.html"
-                                    ><i class="bi bi-box-arrow-left"></i
-                                    ><span class="px-3">LOGOUT</span></a
-                                >
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div
-                    class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid"
-                    style="background-color: #f6f8fb"
-                >
-                    <div class="row d-block d-lg-none d-xl-none">
-                        <div class="collapse" id="navbarToggleExternalContent">
-                            <div class="bg-dark p-4">
-                                <h5 class="text-white h4">Collapsed content</h5>
-                                <span class="text-muted"
-                                    >Toggleable via the navbar brand.</span
-                                >
-                            </div>
-                        </div>
-                        <nav
-                            class="navbar navbar-dark"
-                            style="background-color: #14274e"
-                        >
-                            <div class="container-fluid">
-                                <button
-                                    class="navbar-toggler"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbarToggleExternalContent"
-                                >
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                            </div>
-                        </nav>
-                    </div>
-
-                    <div
-                        class="row py-3 border-bottom"
-                        style="border-bottom: 3px #8ab6d6 solid !important"
-                    >
-                        <div class="col">
-                            <h3>View Job Orders</h3>
-                        </div>
-                        <div class="col text-end">
-                            JO123 |
-                            <a
-                                href="./Login.html"
-                                class="text-muted text-decoration-none"
-                            >
-                                Logout</a
-                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3 d-flex" href="./Maintenance.html"><i class="bi bi-tools"></i><span class="px-3">MAINTENANCE</span><span class="ms-auto badge bg-danger">23</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3 d-flex" href="./CloseJO.html"><i class="bi bi-check2-circle"></i><span class="px-3">CLOSE JOs</span><span class="ms-auto badge bg-danger">5</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3 d-flex" href="./Calendar.html"><i class="bi bi-calendar-week"></i><span class="px-3">CALENDAR</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light px-3 d-flex" href="./ViewJO.html"><i class="bi bi-journal-album"></i><span class="px-3">VIEW JOs</span></a>
+                        </li>
+                        <li class="nav-item mt-5 bg-dark-navy">
+                            <a class="nav-link text-light px-3 d-flex" href="../index.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">LOGOUT</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
+                <div class="row d-block d-lg-none d-xl-none">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
                         </div>
                     </div>
-
-                    <div class="row mt-3">
-                        <div class="col-3">
-                            <span>Show</span>
-                            <select
-                                name="entries"
-                                id="entries"
-                                class="form-select d-inline w-25"
-                            >
-                                <option value="10" selected>10</option>
-                                <option value="10">20</option>
-                                <option value="10">30</option>
-                            </select>
-                            <span>entries</span>
-                        </div>
-                        <div class="col-3 ms-auto">
-                            <input
-                                type="text"
-                                name=""
-                                id=""
-                                class="form-control"
-                            />
-                        </div>
-                        <div class="col-auto">
-                            <button
-                                class="align-middle btn btn-outline-success"
-                            >
-                                <i class="bi bi-search"></i>
-                                SEARCH
+                    <nav class="navbar navbar-dark" style="background-color: #14274e">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+                                <span class="navbar-toggler-icon"></span>
                             </button>
                         </div>
-                    </div>
+                    </nav>
+                </div>
 
-                    <div class="row mt-3">
-                        <div class="col">
-                            <table class="table table-striped shadow">
-                                <thead>
-                                    <tr
-                                        class="text-light"
-                                        style="
+                <div class="row py-3 border-bottom" style="border-bottom: 3px #8ab6d6 solid !important">
+                    <div class="col">
+                        <h3>View Job Orders</h3>
+                    </div>
+                    <div class="col text-end">
+                        JO123 |
+                        <a href="../index.html" class="text-muted text-decoration-none">
+                            Logout</a>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-3">
+                        <span>Show</span>
+                        <select name="entries" id="entries" class="form-select d-inline w-25">
+                            <option value="10" selected>10</option>
+                            <option value="10">20</option>
+                            <option value="10">30</option>
+                        </select>
+                        <span>entries</span>
+                    </div>
+                    <div class="col-3 ms-auto">
+                        <input type="text" name="" id="" class="form-control" />
+                    </div>
+                    <div class="col-auto">
+                        <button class="align-middle btn btn-outline-success">
+                            <i class="bi bi-search"></i>
+                            SEARCH
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <table class="table table-striped shadow">
+                            <thead>
+                                <tr class="text-light" style="
                                             background-color: #14274e;
                                             border-bottom: 5px #8ab6d6 solid;
-                                        "
-                                    >
-                                        <th>JO NUMBER</th>
-                                        <th>JO TYPE</th>
-                                        <th>ACCOUNT NAME</th>
-                                        <th>ACCOUNT NUMBER</th>
-                                        <th>SERVICE ADDRESS</th>
-                                        <th>PACKAGE</th>
-                                        <th>DATE ASSIGNED</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody class="align-middle">
-                                    <tr>
-                                        <td>JO-000001</td>
-                                        <td>NO SIGNAL</td>
-                                        <td>CHARLES EDWARD A. UMALI</td>
-                                        <td>RA027801</td>
-                                        <td>
-                                            #160 SAN SALVADOR ST., MANGGAHAN,
-                                            PASIG CITY
-                                        </td>
-                                        <td>BASIC 640</td>
-                                        <td>APRIL 5, 2021</td>
-                                        <td>
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="btn btn-navy text-light"
-                                                style="
+                                        ">
+                                    <th>JO NUMBER</th>
+                                    <th>JO TYPE</th>
+                                    <th>ACCOUNT NAME</th>
+                                    <th>ACCOUNT NUMBER</th>
+                                    <th>SERVICE ADDRESS</th>
+                                    <th>PACKAGE</th>
+                                    <th>DATE ASSIGNED</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle">
+                                <tr>
+                                    <td>JO-000001</td>
+                                    <td>NO SIGNAL</td>
+                                    <td>CHARLES EDWARD A. UMALI</td>
+                                    <td>RA027801</td>
+                                    <td>
+                                        #160 SAN SALVADOR ST., MANGGAHAN,
+                                        PASIG CITY
+                                    </td>
+                                    <td>BASIC 640</td>
+                                    <td>APRIL 5, 2021</td>
+                                    <td>
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-navy text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                                ><i
-                                                    class="bi bi-printer me-2"
-                                                ></i
-                                                >PRINT</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>JO-000003</td>
-                                        <td>INSTALLATION</td>
-                                        <td>CHARLES EDWARD A. UMALI</td>
-                                        <td>RA027801</td>
-                                        <td>
-                                            #160 SAN SALVADOR ST., MANGGAHAN,
-                                            PASIG CITY
-                                        </td>
-                                        <td>BASIC 640</td>
-                                        <td>APRIL 5, 2021</td>
-                                        <td>
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="btn btn-navy text-light"
-                                                style="
+                                                "><i class="bi bi-printer me-2"></i>PRINT</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JO-000003</td>
+                                    <td>INSTALLATION</td>
+                                    <td>CHARLES EDWARD A. UMALI</td>
+                                    <td>RA027801</td>
+                                    <td>
+                                        #160 SAN SALVADOR ST., MANGGAHAN,
+                                        PASIG CITY
+                                    </td>
+                                    <td>BASIC 640</td>
+                                    <td>APRIL 5, 2021</td>
+                                    <td>
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-navy text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                                ><i
-                                                    class="bi bi-printer me-2"
-                                                ></i
-                                                >PRINT</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>JO-000004</td>
-                                        <td>RELOCATION</td>
-                                        <td>CHARLES EDWARD A. UMALI</td>
-                                        <td>RA027801</td>
-                                        <td>
-                                            #160 SAN SALVADOR ST., MANGGAHAN,
-                                            PASIG CITY
-                                        </td>
-                                        <td>BASIC 640</td>
-                                        <td>APRIL 5, 2021</td>
-                                        <td>
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="btn btn-navy text-light"
-                                                style="
+                                                "><i class="bi bi-printer me-2"></i>PRINT</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JO-000004</td>
+                                    <td>RELOCATION</td>
+                                    <td>CHARLES EDWARD A. UMALI</td>
+                                    <td>RA027801</td>
+                                    <td>
+                                        #160 SAN SALVADOR ST., MANGGAHAN,
+                                        PASIG CITY
+                                    </td>
+                                    <td>BASIC 640</td>
+                                    <td>APRIL 5, 2021</td>
+                                    <td>
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-navy text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                                ><i
-                                                    class="bi bi-printer me-2"
-                                                ></i
-                                                >PRINT</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>JO-000009</td>
-                                        <td>NO SIGNAL</td>
-                                        <td>CHARLES EDWARD A. UMALI</td>
-                                        <td>RA027801</td>
-                                        <td>
-                                            #160 SAN SALVADOR ST., MANGGAHAN,
-                                            PASIG CITY
-                                        </td>
-                                        <td>BASIC 640</td>
-                                        <td>APRIL 6, 2021</td>
-                                        <td>
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="btn btn-navy text-light"
-                                                style="
+                                                "><i class="bi bi-printer me-2"></i>PRINT</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JO-000009</td>
+                                    <td>NO SIGNAL</td>
+                                    <td>CHARLES EDWARD A. UMALI</td>
+                                    <td>RA027801</td>
+                                    <td>
+                                        #160 SAN SALVADOR ST., MANGGAHAN,
+                                        PASIG CITY
+                                    </td>
+                                    <td>BASIC 640</td>
+                                    <td>APRIL 6, 2021</td>
+                                    <td>
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-navy text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                                ><i
-                                                    class="bi bi-printer me-2"
-                                                ></i
-                                                >PRINT</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>JO-000011</td>
-                                        <td>DAMAGED REMOTE</td>
-                                        <td>CHARLES EDWARD A. UMALI</td>
-                                        <td>RA027801</td>
-                                        <td>
-                                            #160 SAN SALVADOR ST., MANGGAHAN,
-                                            PASIG CITY
-                                        </td>
-                                        <td>BASIC 640</td>
-                                        <td>APRIL 6, 2021</td>
-                                        <td>
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="btn btn-navy text-light"
-                                                style="
+                                                "><i class="bi bi-printer me-2"></i>PRINT</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JO-000011</td>
+                                    <td>DAMAGED REMOTE</td>
+                                    <td>CHARLES EDWARD A. UMALI</td>
+                                    <td>RA027801</td>
+                                    <td>
+                                        #160 SAN SALVADOR ST., MANGGAHAN,
+                                        PASIG CITY
+                                    </td>
+                                    <td>BASIC 640</td>
+                                    <td>APRIL 6, 2021</td>
+                                    <td>
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-navy text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                                ><i
-                                                    class="bi bi-printer me-2"
-                                                ></i
-                                                >PRINT</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>JO-000019</td>
-                                        <td>INSTALLATION</td>
-                                        <td>CHARLES EDWARD A. UMALI</td>
-                                        <td>RA027801</td>
-                                        <td>
-                                            #160 SAN SALVADOR ST., MANGGAHAN,
-                                            PASIG CITY
-                                        </td>
-                                        <td>BASIC 640</td>
-                                        <td>APRIL 6, 2021</td>
-                                        <td>
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="btn btn-navy text-light"
-                                                style="
+                                                "><i class="bi bi-printer me-2"></i>PRINT</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JO-000019</td>
+                                    <td>INSTALLATION</td>
+                                    <td>CHARLES EDWARD A. UMALI</td>
+                                    <td>RA027801</td>
+                                    <td>
+                                        #160 SAN SALVADOR ST., MANGGAHAN,
+                                        PASIG CITY
+                                    </td>
+                                    <td>BASIC 640</td>
+                                    <td>APRIL 6, 2021</td>
+                                    <td>
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-navy text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                                ><i
-                                                    class="bi bi-printer me-2"
-                                                ></i
-                                                >PRINT</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>JO-000022</td>
-                                        <td>RELOCATION</td>
-                                        <td>CHARLES EDWARD A. UMALI</td>
-                                        <td>RA027801</td>
-                                        <td>
-                                            #160 SAN SALVADOR ST., MANGGAHAN,
-                                            PASIG CITY
-                                        </td>
-                                        <td>BASIC 640</td>
-                                        <td>APRIL 6, 2021</td>
-                                        <td>
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="btn btn-navy text-light"
-                                                style="
+                                                "><i class="bi bi-printer me-2"></i>PRINT</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JO-000022</td>
+                                    <td>RELOCATION</td>
+                                    <td>CHARLES EDWARD A. UMALI</td>
+                                    <td>RA027801</td>
+                                    <td>
+                                        #160 SAN SALVADOR ST., MANGGAHAN,
+                                        PASIG CITY
+                                    </td>
+                                    <td>BASIC 640</td>
+                                    <td>APRIL 6, 2021</td>
+                                    <td>
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-navy text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                                ><i
-                                                    class="bi bi-printer me-2"
-                                                ></i
-                                                >PRINT</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>JO-000031</td>
-                                        <td>NO SIGNAL</td>
-                                        <td>CHARLES EDWARD A. UMALI</td>
-                                        <td>RA027801</td>
-                                        <td>
-                                            #160 SAN SALVADOR ST., MANGGAHAN,
-                                            PASIG CITY
-                                        </td>
-                                        <td>BASIC 640</td>
-                                        <td>APRIL 7, 2021</td>
-                                        <td>
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="btn btn-navy text-light"
-                                                style="
+                                                "><i class="bi bi-printer me-2"></i>PRINT</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JO-000031</td>
+                                    <td>NO SIGNAL</td>
+                                    <td>CHARLES EDWARD A. UMALI</td>
+                                    <td>RA027801</td>
+                                    <td>
+                                        #160 SAN SALVADOR ST., MANGGAHAN,
+                                        PASIG CITY
+                                    </td>
+                                    <td>BASIC 640</td>
+                                    <td>APRIL 7, 2021</td>
+                                    <td>
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-navy text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                                ><i
-                                                    class="bi bi-printer me-2"
-                                                ></i
-                                                >PRINT
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>JO-000032</td>
-                                        <td>DAMAGED REMOTE</td>
-                                        <td>CHARLES EDWARD A. UMALI</td>
-                                        <td>RA027801</td>
-                                        <td>
-                                            #160 SAN SALVADOR ST., MANGGAHAN,
-                                            PASIG CITY
-                                        </td>
-                                        <td>BASIC 640</td>
-                                        <td>APRIL 7, 2021</td>
-                                        <td>
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="btn btn-navy text-light"
-                                                style="
+                                                "><i class="bi bi-printer me-2"></i>PRINT
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JO-000032</td>
+                                    <td>DAMAGED REMOTE</td>
+                                    <td>CHARLES EDWARD A. UMALI</td>
+                                    <td>RA027801</td>
+                                    <td>
+                                        #160 SAN SALVADOR ST., MANGGAHAN,
+                                        PASIG CITY
+                                    </td>
+                                    <td>BASIC 640</td>
+                                    <td>APRIL 7, 2021</td>
+                                    <td>
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-navy text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                                ><i
-                                                    class="bi bi-printer me-2"
-                                                ></i
-                                                >PRINT</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>JO-000039</td>
-                                        <td>DAMAGED REMOTE</td>
-                                        <td>CHARLES EDWARD A. UMALI</td>
-                                        <td>RA027801</td>
-                                        <td>
-                                            #160 SAN SALVADOR ST., MANGGAHAN,
-                                            PASIG CITY
-                                        </td>
-                                        <td>BASIC 640</td>
-                                        <td>APRIL 7, 2021</td>
-                                        <td>
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="btn btn-navy text-light"
-                                                style="
+                                                "><i class="bi bi-printer me-2"></i>PRINT</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JO-000039</td>
+                                    <td>DAMAGED REMOTE</td>
+                                    <td>CHARLES EDWARD A. UMALI</td>
+                                    <td>RA027801</td>
+                                    <td>
+                                        #160 SAN SALVADOR ST., MANGGAHAN,
+                                        PASIG CITY
+                                    </td>
+                                    <td>BASIC 640</td>
+                                    <td>APRIL 7, 2021</td>
+                                    <td>
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="btn btn-navy text-light" style="
                                                     background-color: #14274e;
-                                                "
-                                                ><i
-                                                    class="bi bi-printer me-2"
-                                                ></i
-                                                >PRINT</a
-                                            >
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                                "><i class="bi bi-printer me-2"></i>PRINT</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col pt-3">
-                            Showing 1 to 10 of 200 entries
-                        </div>
-                        <div class="col-auto ms-auto">
-                            <nav>
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a
-                                            class="page-link"
-                                            href="#"
-                                            aria-label="Previous"
-                                        >
-                                            <span>&laquo;</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item active">
-                                        <a class="page-link" href="#">1</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">3</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a
-                                            class="page-link"
-                                            href="#"
-                                            aria-label="Next"
-                                        >
-                                            <span>&raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col pt-3">
+                        Showing 1 to 10 of 200 entries
+                    </div>
+                    <div class="col-auto ms-auto">
+                        <nav>
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span>&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span>&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
-    <script
-        src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"
-    ></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-        crossorigin="anonymous"
-    ></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-        crossorigin="anonymous"
-    ></script>
+    </div>
+</body>
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+
 </html>
