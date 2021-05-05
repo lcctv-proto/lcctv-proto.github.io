@@ -91,3 +91,14 @@ h1 {
     background-color: #1f441e !important;
     color: white !important;
 }
+
+.btn-navy {
+    background-color: #14274e !important;
+    color: #fff !important;
+}
+
+.btn-navy:hover {
+    background-color: #fff !important;
+    color: #14274e !important;
+    border-color: #14274e !important;
+}
