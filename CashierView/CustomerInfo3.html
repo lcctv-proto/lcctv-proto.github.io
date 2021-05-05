@@ -1,1384 +1,1862 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Customer Information</title>
+        <style></style>
+        <link rel="stylesheet" href="./Styles/cashier.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Customer Information</title>
-    <style></style>
-    <link rel="stylesheet" href="./Styles/cashier.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-</head>
-
-<body>
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <div class="col-2 p-0 text-light d-none d-lg-block">
-                <nav class="navbar mt-5">
-                    <ul class="navbar-nav fs-5">
-                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
-                            <p class="ms-3 ff-logo pb-3 border-bottom" style="
-                                      border-bottom: 3px #91c788 solid !important;
-                                  ">
-                                Lake Community Cable TV
-                            </p>
-                            <p class="ff-jumbo fs-5">CASHIER MODULE</p>
-                        </a>
-                        <li class="nav-item mt-3">
-                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">DASHBOARD</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-light px-3" href="./CustomerInfo.html"><i class="bi bi-wallet2"></i><span class="px-3">ACCOUNT PAYMENT</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light px-3" href="./UserInfo.html"><i class="bi bi-card-checklist"></i><span class="px-3">PAYMENT LIST</span></a>
-                        </li>
-                        <li class="nav-item mt-5 bg-dark-navy">
-                            <a class="nav-link text-light px-3" href="../index.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">LOGOUT</span></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-12 col-lg-10 h-1,000 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
-                <div class="row d-block d-lg-none d-xl-none">
-                    <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="bg-dark p-4">
-                            <h5 class="text-white h4">Collapsed content</h5>
-                            <span class="text-muted">Toggleable via the navbar brand.</span>
-                        </div>
-                    </div>
-                    <nav class="navbar navbar-dark" style="background-color: #14274e">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
+    <body>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-2 p-0 text-light d-none d-lg-block">
+                    <nav class="navbar mt-5">
+                        <ul class="navbar-nav fs-5">
+                            <a
+                                class="navbar-brand text-light fs-2 text-wrap text-center"
+                                href="./Login.html"
+                                ><img
+                                    height="100px"
+                                    class="d-block mx-auto mb-2"
+                                    src="../Images/logo.png"
+                                    alt=""
+                                />
+                                <p
+                                    class="ms-3 ff-logo pb-3 border-bottom"
+                                    style="
+                                        border-bottom: 3px #91c788 solid !important;
+                                    "
+                                >
+                                    Lake Community Cable TV
+                                </p>
+                                <p class="ff-jumbo fs-5">CASHIER MODULE</p>
+                            </a>
+                            <li class="nav-item mt-3">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./LandingPage.html"
+                                    ><i class="bi bi-speedometer2 pl-3"></i
+                                    ><span class="px-3">DASHBOARD</span></a
+                                >
+                            </li>
+                            <li class="nav-item active">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./CustomerInfo.html"
+                                    ><i class="bi bi-wallet2"></i
+                                    ><span class="px-3"
+                                        >ACCOUNT PAYMENT</span
+                                    ></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="./UserInfo.html"
+                                    ><i class="bi bi-card-checklist"></i
+                                    ><span class="px-3">PAYMENT LIST</span></a
+                                >
+                            </li>
+                            <li class="nav-item mt-5 bg-dark-navy">
+                                <a
+                                    class="nav-link text-light px-3"
+                                    href="../index.html"
+                                    ><i class="bi bi-box-arrow-left"></i
+                                    ><span class="px-3">LOGOUT</span></a
+                                >
+                            </li>
+                        </ul>
                     </nav>
                 </div>
-
-                <div class="row py-3 border-bottom" style="border-bottom: 3px #91c788 solid !important">
-                    <div class="col">
-                        <h2>Customer Payment</h2>
-                    </div>
-                    <div class="col text-end">Cashier123 |<a href="../index.html" class="text-muted text-decoration-none">
-                            Logout</a></div>
-                </div>
-
-                <div class="row pt-3 px-4 border-bottom" style="border-bottom: 1px #91c788 solid !important">
-                    <div class="col-8 mb-3">
-                        <input type="text" name="acc-num_name" id="acc-number_name" class="form-control form-control-lg w-75 d-inline" value="" placeholder="Account Number or Account Name" />
-                        <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e">
-                            <i class="bi bi-search" data-bs-toggle="modal" data-bs-target="#exampleModal5"></i>
-                            <span>Search</span>
-                        </button>
-                        <button class="btn btn-lg text-light align-top ms-2 d-inline" style="background-color: #14274e">
-                            <i class="bi bi-plus-circle" data-bs-toggle="modal" data-bs-target="#exampleModal5"></i>
-                            <span>Add</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="row pt-3 px-4">
-                    <div class="col-6">
-                        <p class="fs-4">Account Number:</p>
-                        <h3 class="ms-2">RA027811</h3>
-                    </div>
-
-                    <div class="col-6">
-                        <p class="fs-4">Account Name:</p>
-                        <h3 class="ms-2">GERARD DOMINIC A. VIZCOCHO</h3>
-                    </div>
-
-                    <div class="mt-3 col-6">
-                        <p class="fs-4">Account Address:</p>
-                        <h3 class="ms-2">#1627 J. Fajardo St., Sampaloc, Manila</h3>
-                    </div>
-
-                    <div class="mt-3 col-6">
-                        <p class="fs-4">Account Status:</p>
-                        <h3 class="ms-2 text-warning">INACTIVE</h3>
-                    </div>
-                </div>
-
-                <div class="row pt-3 px-4">
-                    <div class="col-6">
-                        <p class="fs-4">Package:</p>
-                        <h3 class="ms-2">PREMIUM 790</h3>
-                    </div>
-
-                    <div class="col-6">
-                        <p class="fs-4">Monthly Recurrent Charges:</p>
-                        <h3 class="ms-2">Php 790.00</h3>
-                    </div>
-                </div>
-
-                <div class="row pt-3 px-4 pb-4 mb-4 border-bottom" style="border-bottom: 3px #91c788 solid !important">
-                    <div class="col-6">
-                        <p class="fs-4">Date of activation:</p>
-                        <h3 class="ms-2">March 03, 2020</h3>
-                    </div>
-                    <div class="col-2">
-                        <p class="fs-4">Number of Main-line:</p>
-                        <h3 class="ms-2 text-end">1</h3>
-                    </div>
-                    <div class="col"></div>
-                    <div class="col-2">
-                        <p class="fs-4">Number of Extension:</p>
-                        <h3 class="ms-2 text-end">0</h3>
-                    </div>
-                </div>
-
-                <div class="row px-3">
-                    <div class="col-lg-4 col-sm-12 mt-2">
-                        <button class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4" data-bs-toggle="modal" data-bs-target="#exampleModal6">
-                            <i class="bi bi-file-ruled" style="font-size: 7rem"></i>
-                            <p class="fs-5 fw-light pt-1 border-top ff-jumbo" style="border-top-color: #91c788 !important">
-                                VIEW BALANCE
-                            </p>
-                        </button>
-                    </div>
-                    <div class="col-lg-4 col-sm-12 mt-2">
-                        <button class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4" data-bs-toggle="modal" data-bs-target="#exampleModal7">
-                            <i class="bi bi-window-sidebar" style="font-size: 7rem"></i>
-                            <p class="fs-5 fw-light pt-1 border-top ff-jumbo" style="border-top-color: #91c788 !important">
-                                PAYMENT PORTAL
-                            </p>
-                        </button>
-                    </div>
-                    <div class="col-lg-4 col-sm-12 mt-2">
-                        <button class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4" data-bs-toggle="modal" data-bs-target="#exampleModal8">
-                            <i class="bi bi-door-open" style="font-size: 7rem"></i>
-                            <p class="fs-5 fw-light pt-1 border-top ff-jumbo" style="border-top-color: #91c788 !important">
-                                WALK IN
-                            </p>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        MONTHLY BILL
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col mx-auto">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th colspan="4">BREAKDOWN</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">PACKAGE</td>
-                                        <td colspan="2" class="text-end">
-                                            640.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">PENALTY</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">OVERDUE</td>
-                                        <td colspan="2" class="text-end">
-                                            0.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            REPAIRED/ DAMAGED MATERIALS
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Remote</td>
-                                        <td>0 pcs</td>
-                                        <td>₱500.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Digital Box</td>
-                                        <td>0 pcs</td>
-                                        <td>₱1,000.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Smart Card</td>
-                                        <td>0 pcs</td>
-                                        <td>₱1,000.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <th colspan="3">Total</th>
-                                    <th class="text-end">₱ 640.00</th>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal2">
-                        ADD PAYMENT DETAILS
-                    </button>
-                </div>
-                <div class="modal-footer">
-                    <p>AWIT SAYO CHO</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="exampleModal2" tabindex="-2">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        ADD PAYMENT DETAILS
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="amount-paid" class="form-label">PAYMENT AMOUNT</label>
-                                    <input type="text" class="form-control" id="amount-paid" />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="mop" class="form-label">MODE OF PAYMENT</label>
-                                    <select id="mop" class="form-select">
-                                        <option value="1">CASH</option>
-                                        <option value="2">GCASH</option>
-                                        <option value="3">
-                                            BAYAD CENTER
-                                        </option>
-                                        <option value="4">
-                                            DRAGON PAY
-                                        </option>
-                                    </select>
-                                </div>
+                <div
+                    class="col-md-12 col-lg-10 h-1,000 bg-light p-lg-3 container-fluid"
+                    style="background-color: #f6f8fb"
+                >
+                    <div class="row d-block d-lg-none d-xl-none">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="bg-dark p-4">
+                                <h5 class="text-white h4">Collapsed content</h5>
+                                <span class="text-muted"
+                                    >Toggleable via the navbar brand.</span
+                                >
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">
-                        SAVE
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="exampleModal3" tabindex="-3">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        MONTHLY BILL
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col mx-auto">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th colspan="4">BREAKDOWN</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">PACKAGE</td>
-                                        <td colspan="2" class="text-end">
-                                            640.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">PENALTY</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">OVERDUE</td>
-                                        <td colspan="2" class="text-end">
-                                            0.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            REPAIRED/ DAMAGED MATERIALS
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Remote</td>
-                                        <td>0 pcs</td>
-                                        <td>₱500.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Digital Box</td>
-                                        <td>0 pcs</td>
-                                        <td>₱1,000.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Smart Card</td>
-                                        <td>0 pcs</td>
-                                        <td>₱1,000.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <th colspan="3">Total</th>
-                                    <th class="text-end">₱ 640.00</th>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="exampleModal4" tabindex="-4">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        MONTHLY BILL
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col mx-auto">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th colspan="4">BREAKDOWN</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">PACKAGE</td>
-                                        <td colspan="2" class="text-end">
-                                            640.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">PENALTY</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">OVERDUE</td>
-                                        <td colspan="2" class="text-end">
-                                            32.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            REPAIRED/ DAMAGED MATERIALS
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Remote</td>
-                                        <td>0 pcs</td>
-                                        <td>₱500.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Digital Box</td>
-                                        <td>0 pcs</td>
-                                        <td>₱1,000.00/unit</td>
-                                        <td class="text-end">0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Smart Card</td>
-                                        <td>1 pcs</td>
-                                        <td>₱1,000.00/unit</td>
-                                        <td class="text-end">1,000.00</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <th colspan="3">Total</th>
-                                    <th class="text-end">₱ 1672.00</th>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal2" disabled>
-                        ADD PAYMENT DETAILS
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="exampleModal5" tabindex="-5">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Search Customer</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col d-flex">
-                                <input class="form-control me-2" type="search" value="RA027" />
-                                <button class="btn btn-outline-success" type="submit">
-                                    Search
+                        <nav
+                            class="navbar navbar-dark"
+                            style="background-color: #14274e"
+                        >
+                            <div class="container-fluid">
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbarToggleExternalContent"
+                                >
+                                    <span class="navbar-toggler-icon"></span>
                                 </button>
                             </div>
+                        </nav>
+                    </div>
+
+                    <div
+                        class="row py-3 border-bottom"
+                        style="border-bottom: 3px #91c788 solid !important"
+                    >
+                        <div class="col">
+                            <h2>Customer Payment</h2>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <table class="table table-borderless table-striped border border-dark table-responsive">
+                        <div class="col text-end">
+                            Cashier123 |<a
+                                href="../index.html"
+                                class="text-muted text-decoration-none"
+                            >
+                                Logout</a
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="row pt-3 px-4 border-bottom"
+                        style="border-bottom: 1px #91c788 solid !important"
+                    >
+                        <div class="col-8 mb-3">
+                            <input
+                                type="text"
+                                name="acc-num_name"
+                                id="acc-number_name"
+                                class="form-control form-control-lg w-75 d-inline"
+                                value=""
+                                placeholder="Account Number or Account Name"
+                            />
+                            <button
+                                class="btn btn-lg text-light align-top ms-2 d-inline"
+                                style="background-color: #14274e"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal5"
+                            >
+                                <i class="bi bi-search"></i>
+                                <span>Search</span>
+                            </button>
+                            <button
+                                class="btn btn-lg text-light align-top ms-2 d-inline"
+                                style="background-color: #14274e"
+                            >
+                                <i class="bi bi-plus-circle"></i>
+                                <span>Add</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row pt-3 px-4">
+                        <div class="col-6">
+                            <p class="fs-4">Account Number:</p>
+                            <h3 class="ms-2">RA027811</h3>
+                        </div>
+
+                        <div class="col-6">
+                            <p class="fs-4">Account Name:</p>
+                            <h3 class="ms-2">GERARD DOMINIC A. VIZCOCHO</h3>
+                        </div>
+
+                        <div class="mt-3 col-6">
+                            <p class="fs-4">Account Address:</p>
+                            <h3 class="ms-2">
+                                #1627 J. Fajardo St., Sampaloc, Manila
+                            </h3>
+                        </div>
+
+                        <div class="mt-3 col-6">
+                            <p class="fs-4">Account Status:</p>
+                            <h3 class="ms-2 text-warning">INACTIVE</h3>
+                        </div>
+                    </div>
+
+                    <div class="row pt-3 px-4">
+                        <div class="col-6">
+                            <p class="fs-4">Package:</p>
+                            <h3 class="ms-2">PREMIUM 790</h3>
+                        </div>
+
+                        <div class="col-6">
+                            <p class="fs-4">Monthly Recurrent Charges:</p>
+                            <h3 class="ms-2">Php 790.00</h3>
+                        </div>
+                    </div>
+
+                    <div
+                        class="row pt-3 px-4 pb-4 mb-4 border-bottom"
+                        style="border-bottom: 3px #91c788 solid !important"
+                    >
+                        <div class="col-6">
+                            <p class="fs-4">Date of activation:</p>
+                            <h3 class="ms-2">March 03, 2020</h3>
+                        </div>
+                        <div class="col-2">
+                            <p class="fs-4">Number of Main-line:</p>
+                            <h3 class="ms-2 text-end">1</h3>
+                        </div>
+                        <div class="col"></div>
+                        <div class="col-2">
+                            <p class="fs-4">Number of Extension:</p>
+                            <h3 class="ms-2 text-end">0</h3>
+                        </div>
+                    </div>
+
+                    <div class="row px-3">
+                        <div class="col-lg-4 col-sm-12 mt-2">
+                            <button
+                                class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal6"
+                            >
+                                <i
+                                    class="bi bi-file-ruled"
+                                    style="font-size: 7rem"
+                                ></i>
+                                <p
+                                    class="fs-5 fw-light pt-1 border-top ff-jumbo"
+                                    style="border-top-color: #91c788 !important"
+                                >
+                                    VIEW BALANCE
+                                </p>
+                            </button>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 mt-2">
+                            <button
+                                class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal7"
+                            >
+                                <i
+                                    class="bi bi-window-sidebar"
+                                    style="font-size: 7rem"
+                                ></i>
+                                <p
+                                    class="fs-5 fw-light pt-1 border-top ff-jumbo"
+                                    style="border-top-color: #91c788 !important"
+                                >
+                                    PAYMENT PORTAL
+                                </p>
+                            </button>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 mt-2">
+                            <button
+                                class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal8"
+                            >
+                                <i
+                                    class="bi bi-door-open"
+                                    style="font-size: 7rem"
+                                ></i>
+                                <p
+                                    class="fs-5 fw-light pt-1 border-top ff-jumbo"
+                                    style="border-top-color: #91c788 !important"
+                                >
+                                    WALK IN
+                                </p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            MONTHLY BILL
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col mx-auto">
+                                <table class="table table-bordered">
                                     <thead>
-                                        <tr class="text-light" style="
+                                        <tr>
+                                            <th colspan="4">BREAKDOWN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">PACKAGE</td>
+                                            <td colspan="2" class="text-end">
+                                                640.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">PENALTY</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">OVERDUE</td>
+                                            <td colspan="2" class="text-end">
+                                                0.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                REPAIRED/ DAMAGED MATERIALS
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Remote</td>
+                                            <td>0 pcs</td>
+                                            <td>₱500.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Digital Box</td>
+                                            <td>0 pcs</td>
+                                            <td>₱1,000.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Smart Card</td>
+                                            <td>0 pcs</td>
+                                            <td>₱1,000.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <th colspan="3">Total</th>
+                                        <th class="text-end">₱ 640.00</th>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#exampleModal2"
+                        >
+                            ADD PAYMENT DETAILS
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <p>AWIT SAYO CHO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-2">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            ADD PAYMENT DETAILS
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label
+                                            for="amount-paid"
+                                            class="form-label"
+                                            >PAYMENT AMOUNT</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="amount-paid"
+                                        />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="mop" class="form-label"
+                                            >MODE OF PAYMENT</label
+                                        >
+                                        <select id="mop" class="form-select">
+                                            <option value="1">CASH</option>
+                                            <option value="2">GCASH</option>
+                                            <option value="3">
+                                                BAYAD CENTER
+                                            </option>
+                                            <option value="4">
+                                                DRAGON PAY
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">
+                            SAVE
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal3" tabindex="-3">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            MONTHLY BILL
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col mx-auto">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">BREAKDOWN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">PACKAGE</td>
+                                            <td colspan="2" class="text-end">
+                                                640.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">PENALTY</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">OVERDUE</td>
+                                            <td colspan="2" class="text-end">
+                                                0.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                REPAIRED/ DAMAGED MATERIALS
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Remote</td>
+                                            <td>0 pcs</td>
+                                            <td>₱500.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Digital Box</td>
+                                            <td>0 pcs</td>
+                                            <td>₱1,000.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Smart Card</td>
+                                            <td>0 pcs</td>
+                                            <td>₱1,000.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <th colspan="3">Total</th>
+                                        <th class="text-end">₱ 640.00</th>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal4" tabindex="-4">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            MONTHLY BILL
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col mx-auto">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">BREAKDOWN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">PACKAGE</td>
+                                            <td colspan="2" class="text-end">
+                                                640.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">PENALTY</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">OVERDUE</td>
+                                            <td colspan="2" class="text-end">
+                                                32.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                REPAIRED/ DAMAGED MATERIALS
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Remote</td>
+                                            <td>0 pcs</td>
+                                            <td>₱500.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Digital Box</td>
+                                            <td>0 pcs</td>
+                                            <td>₱1,000.00/unit</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Smart Card</td>
+                                            <td>1 pcs</td>
+                                            <td>₱1,000.00/unit</td>
+                                            <td class="text-end">1,000.00</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <th colspan="3">Total</th>
+                                        <th class="text-end">₱ 1672.00</th>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#exampleModal2"
+                            disabled
+                        >
+                            ADD PAYMENT DETAILS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal5" tabindex="-5">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Search Customer</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <input
+                                        class="form-control me-2"
+                                        type="search"
+                                        value="RA027"
+                                    />
+                                    <button
+                                        class="btn btn-outline-success"
+                                        type="submit"
+                                    >
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <table
+                                        class="table table-borderless table-striped border border-dark table-responsive"
+                                    >
+                                        <thead>
+                                            <tr
+                                                class="text-light"
+                                                style="
                                                     background-color: #14274e;
-                                                ">
+                                                "
+                                            >
+                                                <th></th>
+                                                <th>SUBS ID</th>
+                                                <th>FAMILYNAME</th>
+                                                <th>FIRSTNAME</th>
+                                                <th>INACTIVE</th>
+                                                <th>INET ID</th>
+                                                <th>CATV ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="check"
+                                                        value="1"
+                                                    />
+                                                </td>
+                                                <td>RA027801</td>
+                                                <td>UMALI</td>
+                                                <td>CHARLES EDWARD</td>
+                                                <td>NO</td>
+                                                <td>NONE</td>
+                                                <td>0939302291711</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="check"
+                                                        value="2"
+                                                    />
+                                                </td>
+                                                <td>RA027811</td>
+                                                <td>VIZCOCHO</td>
+                                                <td>GERARD DOMINIC</td>
+                                                <td>YES</td>
+                                                <td>NONE</td>
+                                                <td>NONE</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="check"
+                                                        value="3"
+                                                    />
+                                                </td>
+                                                <td>RA027851</td>
+                                                <td>REGUYAL</td>
+                                                <td>JON JESTER</td>
+                                                <td>NO</td>
+                                                <td>0939302016121</td>
+                                                <td>NONE</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="check"
+                                                        value="4"
+                                                    />
+                                                </td>
+                                                <td>RA027899</td>
+                                                <td>LABORTE</td>
+                                                <td>LAVILLE</td>
+                                                <td>YES</td>
+                                                <td>0939302017433</td>
+                                                <td>0949010042661</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-primary" id="select">
+                            SELECT
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal6" tabindex="-6">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            A/R BALANCE
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col mx-auto">
+                                <table
+                                    class="table table-borderless table-striped mt-3 border border-dark"
+                                >
+                                    <thead
+                                        class="text-light"
+                                        style="background-color: #14274e"
+                                    >
+                                        <tr>
+                                            <td>TRANSACTION NUMBER</td>
+                                            <td>TRANSACTION DATE</td>
+                                            <td>TRANSACTION TYPE</td>
+                                            <td>A/R TYPE</td>
+                                            <td>AMOUNT</td>
+                                            <td>PAID AMOUNT</td>
+                                            <td>BALANCE</td>
+                                            <td>REMARKS</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2021112435</td>
+                                            <td>10/01/20</td>
+                                            <td>MONTHLY BILLING</td>
+                                            <td>M. LINE SUBS FEE</td>
+                                            <td class="text-end">640.00</td>
+                                            <td class="text-end">640.00</td>
+                                            <td class="text-end">0.00</td>
+                                            <td>OCT/01/2020 to OCT/31/2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021112436</td>
+                                            <td>09/01/20</td>
+                                            <td>MONTHLY BILLING</td>
+                                            <td>M. LINE SUBS FEE</td>
+                                            <td class="text-end">1,672.00</td>
+                                            <td class="text-end">1,672.00</td>
+                                            <td class="text-end">0.00</td>
+                                            <td>SEP/01/2020 to SEP/31/2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021112437</td>
+                                            <td>08/01/20</td>
+                                            <td>MONTHLY BILLING</td>
+                                            <td>M. LINE SUBS FEE</td>
+                                            <td class="text-end">640.00</td>
+                                            <td class="text-end">0.00</td>
+                                            <td class="text-end">640.00</td>
+                                            <td>AUG/01/2020 to AUG/31/2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021112438</td>
+                                            <td>07/01/20</td>
+                                            <td>MONTHLY BILLING</td>
+                                            <td>M. LINE SUBS FEE</td>
+                                            <td class="text-end">640.00</td>
+                                            <td class="text-end">0.00</td>
+                                            <td class="text-end">640.00</td>
+                                            <td>JUL/01/2020 to JUL/31/2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021112439</td>
+                                            <td>06/01/20</td>
+                                            <td>MONTHLY BILLING</td>
+                                            <td>M. LINE SUBS FEE</td>
+                                            <td class="text-end">640.00</td>
+                                            <td class="text-end">0.00</td>
+                                            <td class="text-end">640.00</td>
+                                            <td>JUN/01/2020 to JUN/31/2020</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot style="border-top: 3px black double">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <th>TOTAL BALANCE:</th>
+                                            <th class="text-end">3,500.00</th>
+                                            <th class="text-end">1,380.00</th>
+                                            <th class="text-end">1,920.00</th>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal7" tabindex="-7">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            PAYMENT PORTALS
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="trans-date" class="form-label"
+                                    >Date of Transaction:</label
+                                >
+                                <input
+                                    type="date"
+                                    name="trans-date"
+                                    id="trans-date"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label for="mop" class="form-label"
+                                    >Mode of Payment:</label
+                                >
+                                <select name="mop" id="mop" class="form-select">
+                                    <option selected value="1">GCash</option>
+                                    <option value="2">PayMaya</option>
+                                    <option value="3">Shopee</option>
+                                    <option value="4">dragonpay</option>
+                                    <option value="5">BayadCenter</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="ref-number2" class="form-label"
+                                    >Reference Number:</label
+                                >
+                                <input
+                                    type="text"
+                                    name="ref-number2"
+                                    id="ref-number2"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="reference-code2" class="form-label"
+                                    >Code:</label
+                                >
+                                <div class="d-flex">
+                                    <input
+                                        type="text"
+                                        name="reference-code2"
+                                        id="reference-code2"
+                                        class="form-control me-2 w-75"
+                                    />
+                                    <div class="btn-group">
+                                        <button
+                                            class="btn text-light"
+                                            style="background-color: #1e6f5c"
+                                            data-bs-toggle="modal"
+                                            data-bs-dismiss="modal"
+                                            data-bs-target="#ref-code2"
+                                        >
+                                            <i class="bi bi-search"></i> SEARCH
+                                        </button>
+                                        <button
+                                            class="btn btn-primary"
+                                            id="add3"
+                                        >
+                                            <i class="bi bi-plus-circle"></i>
+                                            ADD
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="amount-paid" class="form-label"
+                                    >Items:</label
+                                >
+                                <table
+                                    class="table table-responsive table-bordered"
+                                >
+                                    <thead>
+                                        <tr class="bg-dark text-light">
+                                            <th>FEE CODE</th>
+                                            <th>FEE DESCRIPTION</th>
+                                            <th>FEE</th>
+                                            <th style="width: 50px"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="fee_table2"></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td
+                                                colspan="2"
+                                                class="fw-bold text-end"
+                                            >
+                                                TOTAL AMOUNT DUE:
+                                            </td>
+                                            <td
+                                                id="total2"
+                                                class="fw-bold text-end"
+                                            >
+                                                0.00
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="amount-paid" class="form-label"
+                                    >Amount Paid:</label
+                                >
+                                <input
+                                    type="text"
+                                    name="amount-paid"
+                                    id="amount-paid"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="remarks" class="form-label"
+                                    >Remarks:</label
+                                >
+                                <textarea
+                                    name="remarks"
+                                    id="remarks"
+                                    rows="5"
+                                    class="form-control"
+                                    style="resize: none"
+                                ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-end">
+                        <a href="Receipt.html" class="btn btn-primary">
+                            SAVE PAYMENT
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal8" tabindex="-8">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            WALK IN PAYMENT
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="trans-date2" class="form-label"
+                                    >Date of Transaction:</label
+                                >
+                                <input
+                                    type="date"
+                                    name="trans-date2"
+                                    id="trans-date2"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label for="mop" class="form-label"
+                                    >Mode of Payment:</label
+                                >
+                                <select
+                                    name="mop2"
+                                    id="mop2"
+                                    class="form-select"
+                                >
+                                    <option selected value="1">Cash</option>
+                                    <option value="2">Check</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="receipt-num" class="form-label"
+                                    >Receipt Number:</label
+                                >
+                                <input
+                                    type="text"
+                                    name="receipt-num"
+                                    id="receipt-num"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="reference-code" class="form-label"
+                                    >Code:</label
+                                >
+                                <div class="d-flex">
+                                    <input
+                                        type="text"
+                                        name="reference-code"
+                                        id="reference-code"
+                                        class="form-control me-2 w-75"
+                                    />
+                                    <div class="btn-group">
+                                        <button
+                                            class="btn text-light"
+                                            style="background-color: #1e6f5c"
+                                            data-bs-toggle="modal"
+                                            data-bs-dismiss="modal"
+                                            data-bs-target="#ref-code"
+                                        >
+                                            <i class="bi bi-search"></i> SEARCH
+                                        </button>
+                                        <button
+                                            class="btn btn-primary"
+                                            id="add"
+                                        >
+                                            <i class="bi bi-plus-circle"></i>
+                                            ADD
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="amount-paid" class="form-label"
+                                    >Items:</label
+                                >
+                                <table
+                                    class="table table-responsive table-bordered"
+                                >
+                                    <thead>
+                                        <tr class="bg-dark text-light">
+                                            <th>FEE CODE</th>
+                                            <th>FEE DESCRIPTION</th>
+                                            <th>FEE</th>
+                                            <th style="width: 50px"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="fee_table"></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td
+                                                colspan="2"
+                                                class="fw-bold text-end"
+                                            >
+                                                TOTAL AMOUNT DUE:
+                                            </td>
+                                            <td
+                                                id="total"
+                                                class="fw-bold text-end"
+                                            >
+                                                0.00
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label
+                                    for="amount-paid"
+                                    class="form-label"
+                                    id="amount-paid-check"
+                                    >Amount Paid:</label
+                                >
+                                <input
+                                    type="text"
+                                    name="amount-paid"
+                                    id="amount-paid"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                        <div class="row mt-2 d-none" id="check">
+                            <div class="col">
+                                <label for="amount-paid" class="form-label"
+                                    >Check Number:</label
+                                >
+                                <input
+                                    type="text"
+                                    name="amount-paid"
+                                    id="amount-paid"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col mt-2">
+                                <label for="amount-paid" class="form-label"
+                                    >Issuing Bank:</label
+                                >
+                                <input
+                                    type="text"
+                                    name="amount-paid"
+                                    id="amount-paid"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col mt-2">
+                                <label for="amount-paid" class="form-label"
+                                    >Date Issued:</label
+                                >
+                                <input
+                                    type="date"
+                                    name="amount-paid"
+                                    id="amount-paid"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="remarks" class="form-label"
+                                    >Remarks:</label
+                                >
+                                <textarea
+                                    name="remarks"
+                                    id="remarks"
+                                    rows="5"
+                                    class="form-control"
+                                    style="resize: none"
+                                ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a
+                            href="Receipt.html"
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-dismiss="modal"
+                        >
+                            SAVE PAYMENT
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="ref-code" tabindex="-9">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Cash Payment
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input
+                                        type="text"
+                                        name="ref-code"
+                                        id="ref-code"
+                                        class="form-control"
+                                        placeholder="asd"
+                                    />
+                                    <label for="ref-code">Fee Code:</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <table class="table table-bordered mt-3">
+                                    <thead>
+                                        <tr>
                                             <th></th>
-                                            <th>SUBS ID</th>
-                                            <th>FAMILYNAME</th>
-                                            <th>FIRSTNAME</th>
-                                            <th>INACTIVE</th>
-                                            <th>INET ID</th>
-                                            <th>CATV ID</th>
+                                            <th>FEE CODE</th>
+                                            <th>FEE DESCRIPTION</th>
+                                            <th>FEE PRICE</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <input class="form-check-input" type="radio" name="check" value="1" />
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee"
+                                                    value="1"
+                                                />
                                             </td>
-                                            <td>RA027801</td>
-                                            <td>UMALI</td>
-                                            <td>CHARLES EDWARD</td>
-                                            <td>NO</td>
-                                            <td>NONE</td>
-                                            <td>0939302291711</td>
+                                            <td>FEE-001</td>
+                                            <td>BASIC 640 PAYMENT</td>
+                                            <td>640.00</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input class="form-check-input" type="radio" name="check" value="2" />
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee"
+                                                    value="2"
+                                                />
                                             </td>
-                                            <td>RA027811</td>
-                                            <td>VIZCOCHO</td>
-                                            <td>GERARD DOMINIC</td>
-                                            <td>YES</td>
-                                            <td>NONE</td>
-                                            <td>NONE</td>
+                                            <td>FEE-002</td>
+                                            <td>PREMIUM 790 PAYMENT</td>
+                                            <td>790.00</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input class="form-check-input" type="radio" name="check" value="3" />
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee"
+                                                    value="3"
+                                                />
                                             </td>
-                                            <td>RA027851</td>
-                                            <td>REGUYAL</td>
-                                            <td>JON JESTER</td>
-                                            <td>NO</td>
-                                            <td>0939302016121</td>
-                                            <td>NONE</td>
+                                            <td>FEE-003</td>
+                                            <td>INTERNATIONAL 1099 PAYMENT</td>
+                                            <td>1,099.00</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input class="form-check-input" type="radio" name="check" value="4" />
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee"
+                                                    value="4"
+                                                />
                                             </td>
-                                            <td>RA027899</td>
-                                            <td>LABORTE</td>
-                                            <td>LAVILLE</td>
-                                            <td>YES</td>
-                                            <td>0939302017433</td>
-                                            <td>0949010042661</td>
+                                            <td>FEE-004</td>
+                                            <td>INSTALLATION FEE</td>
+                                            <td>1,000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee"
+                                                    value="5"
+                                                />
+                                            </td>
+                                            <td>FEE-005</td>
+                                            <td>DAMAGED REMOTE</td>
+                                            <td>400.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee"
+                                                    value="6"
+                                                />
+                                            </td>
+                                            <td>FEE-006</td>
+                                            <td>DAMAGED SMART CARD</td>
+                                            <td>1,000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee"
+                                                    value="7"
+                                                />
+                                            </td>
+                                            <td>FEE-007</td>
+                                            <td>DAMAGED DIGIBOX</td>
+                                            <td>1,000.00</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <a type="button" class="btn btn-primary" id="select">
-                        SELECT
-                    </a>
+                    <div class="modal-footer justify-content-start">
+                        <i class="bi bi-lightbulb-fill text-warning h3"></i> You
+                        can search by Fee Code, Fee Description, and Price.
+                    </div>
+                    <div class="modal-footer justify-content-start">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#exampleModal8"
+                        >
+                            BACK
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary ms-auto"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#exampleModal8"
+                            id="add2"
+                        >
+                            ADD FEE
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="exampleModal6" tabindex="-6">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        A/R BALANCE
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col mx-auto">
-                            <table class="table table-borderless table-striped mt-3 border border-dark">
-                                <thead class="text-light" style="background-color: #14274e">
-                                    <tr>
-                                        <td>TRANSACTION NUMBER</td>
-                                        <td>TRANSACTION DATE</td>
-                                        <td>TRANSACTION TYPE</td>
-                                        <td>A/R TYPE</td>
-                                        <td>AMOUNT</td>
-                                        <td>PAID AMOUNT</td>
-                                        <td>BALANCE</td>
-                                        <td>REMARKS</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>2021112435</td>
-                                        <td>10/01/20</td>
-                                        <td>MONTHLY BILLING</td>
-                                        <td>M. LINE SUBS FEE</td>
-                                        <td class="text-end">640.00</td>
-                                        <td class="text-end">640.00</td>
-                                        <td class="text-end">0.00</td>
-                                        <td>OCT/01/2020 to OCT/31/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2021112436</td>
-                                        <td>09/01/20</td>
-                                        <td>MONTHLY BILLING</td>
-                                        <td>M. LINE SUBS FEE</td>
-                                        <td class="text-end">1,672.00</td>
-                                        <td class="text-end">1,672.00</td>
-                                        <td class="text-end">0.00</td>
-                                        <td>SEP/01/2020 to SEP/31/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2021112437</td>
-                                        <td>08/01/20</td>
-                                        <td>MONTHLY BILLING</td>
-                                        <td>M. LINE SUBS FEE</td>
-                                        <td class="text-end">640.00</td>
-                                        <td class="text-end">0.00</td>
-                                        <td class="text-end">640.00</td>
-                                        <td>AUG/01/2020 to AUG/31/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2021112438</td>
-                                        <td>07/01/20</td>
-                                        <td>MONTHLY BILLING</td>
-                                        <td>M. LINE SUBS FEE</td>
-                                        <td class="text-end">640.00</td>
-                                        <td class="text-end">0.00</td>
-                                        <td class="text-end">640.00</td>
-                                        <td>JUL/01/2020 to JUL/31/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2021112439</td>
-                                        <td>06/01/20</td>
-                                        <td>MONTHLY BILLING</td>
-                                        <td>M. LINE SUBS FEE</td>
-                                        <td class="text-end">640.00</td>
-                                        <td class="text-end">0.00</td>
-                                        <td class="text-end">640.00</td>
-                                        <td>JUN/01/2020 to JUN/31/2020</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot style="border-top: 3px black double">
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <th>TOTAL BALANCE:</th>
-                                        <th class="text-end">3,500.00</th>
-                                        <th class="text-end">1,380.00</th>
-                                        <th class="text-end">1,920.00</th>
-                                        <td></td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
+        <div class="modal fade" id="ref-code2" tabindex="-10">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Payment Portal
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="exampleModal7" tabindex="-7">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        PAYMENT PORTALS
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-6">
-                            <label for="trans-date" class="form-label">Date of Transaction:</label>
-                            <input type="date" name="trans-date" id="trans-date" class="form-control" />
-                        </div>
-                        <div class="col-6">
-                            <label for="mop" class="form-label">Mode of Payment:</label>
-                            <select name="mop" id="mop" class="form-select">
-                                <option selected value="1">GCash</option>
-                                <option value="2">PayMaya</option>
-                                <option value="3">Shopee</option>
-                                <option value="4">dragonpay</option>
-                                <option value="5">BayadCenter</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="ref-number2" class="form-label">Reference Number:</label>
-                            <input type="text" name="ref-number2" id="ref-number2" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="reference-code2" class="form-label">Code:</label>
-                            <div class="d-flex">
-                                <input type="text" name="reference-code2" id="reference-code2" class="form-control me-2" />
-                                <div class="btn-group">
-                                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#ref-code2">
-                                        SEARCH
-                                    </button>
-                                    <button class="btn btn-primary" id="add3">
-                                        ADD
-                                    </button>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input
+                                        type="text"
+                                        name="ref-code2"
+                                        id="ref-code2"
+                                        class="form-control"
+                                        placeholder="asd"
+                                    />
+                                    <label for="ref-code2">Fee Code:</label>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="amount-paid" class="form-label">Items:</label>
-                            <table class="table table-responsive table-bordered">
-                                <thead>
-                                    <tr class="bg-dark text-light">
-                                        <th>FEE CODE</th>
-                                        <th>FEE DESCRIPTION</th>
-                                        <th>FEE</th>
-                                        <th style="width: 50px"></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="fee_table2"></tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="2" class="fw-bold text-end">
-                                            TOTAL AMOUNT DUE:
-                                        </td>
-                                        <td id="total2" class="fw-bold text-end">
-                                            0.00
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="amount-paid" class="form-label">Amount Paid:</label>
-                            <input type="text" name="amount-paid" id="amount-paid" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="remarks" class="form-label">Remarks:</label>
-                            <textarea name="remarks" id="remarks" rows="5" class="form-control" style="resize: none"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-end">
-                    <a href="Receipt.html" class="btn btn-primary">
-                        SAVE PAYMENT
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="exampleModal8" tabindex="-8">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        WALK IN PAYMENT
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-6">
-                            <label for="trans-date2" class="form-label">Date of Transaction:</label>
-                            <input type="date" name="trans-date2" id="trans-date2" class="form-control" />
-                        </div>
-                        <div class="col-6">
-                            <label for="mop" class="form-label">Mode of Payment:</label>
-                            <select name="mop2" id="mop2" class="form-select">
-                                <option selected value="1">Cash</option>
-                                <option value="2">Check</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="receipt-num" class="form-label">Receipt Number:</label>
-                            <input type="text" name="receipt-num" id="receipt-num" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="reference-code" class="form-label">Code:</label>
-                            <div class="d-flex">
-                                <input type="text" name="reference-code" id="reference-code" class="form-control me-2" />
-                                <div class="btn-group">
-                                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#ref-code">
-                                        SEARCH
-                                    </button>
-                                    <button class="btn btn-primary" id="add">
-                                        ADD
-                                    </button>
-                                </div>
+                        <div class="row">
+                            <div class="col">
+                                <table class="table table-bordered mt-3">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>FEE CODE</th>
+                                            <th>FEE DESCRIPTION</th>
+                                            <th>FEE PRICE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee2"
+                                                    value="1"
+                                                />
+                                            </td>
+                                            <td>FEE-001</td>
+                                            <td>BASIC 640 PAYMENT</td>
+                                            <td>640.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee2"
+                                                    value="2"
+                                                />
+                                            </td>
+                                            <td>FEE-002</td>
+                                            <td>PREMIUM 790 PAYMENT</td>
+                                            <td>790.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee2"
+                                                    value="3"
+                                                />
+                                            </td>
+                                            <td>FEE-003</td>
+                                            <td>INTERNATIONAL 1099 PAYMENT</td>
+                                            <td>1,099.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee2"
+                                                    value="4"
+                                                />
+                                            </td>
+                                            <td>FEE-004</td>
+                                            <td>INSTALLATION FEE</td>
+                                            <td>1,000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee2"
+                                                    value="5"
+                                                />
+                                            </td>
+                                            <td>FEE-005</td>
+                                            <td>DAMAGED REMOTE</td>
+                                            <td>400.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee2"
+                                                    value="6"
+                                                />
+                                            </td>
+                                            <td>FEE-006</td>
+                                            <td>DAMAGED SMART CARD</td>
+                                            <td>1,000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="fee2"
+                                                    value="7"
+                                                />
+                                            </td>
+                                            <td>FEE-007</td>
+                                            <td>DAMAGED DIGIBOX</td>
+                                            <td>1,000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="amount-paid" class="form-label">Items:</label>
-                            <table class="table table-responsive table-bordered">
-                                <thead>
-                                    <tr class="bg-dark text-light">
-                                        <th>FEE CODE</th>
-                                        <th>FEE DESCRIPTION</th>
-                                        <th>FEE</th>
-                                        <th style="width: 50px"></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="fee_table"></tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="2" class="fw-bold text-end">
-                                            TOTAL AMOUNT DUE:
-                                        </td>
-                                        <td id="total" class="fw-bold text-end">
-                                            0.00
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
+                    <div class="modal-footer justify-content-start">
+                        <i class="bi bi-lightbulb-fill text-warning h3"></i> You
+                        can search by Fee Code, Fee Description, and Price.
                     </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="amount-paid" class="form-label" id="amount-paid-check">Amount Paid:</label>
-                            <input type="text" name="amount-paid" id="amount-paid" class="form-control" />
-                        </div>
+                    <div class="modal-footer justify-content-start">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#exampleModal7"
+                        >
+                            BACK
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary ms-auto"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#exampleModal7"
+                            id="add4"
+                        >
+                            ADD FEE
+                        </button>
                     </div>
-                    <div class="row mt-2 d-none" id="check">
-                        <div class="col">
-                            <label for="amount-paid" class="form-label">Check Number:</label>
-                            <input type="text" name="amount-paid" id="amount-paid" class="form-control" />
-                        </div>
-                        <div class="col mt-2">
-                            <label for="amount-paid" class="form-label">Issuing Bank:</label>
-                            <input type="text" name="amount-paid" id="amount-paid" class="form-control" />
-                        </div>
-                        <div class="col mt-2">
-                            <label for="amount-paid" class="form-label">Date Issued:</label>
-                            <input type="date" name="amount-paid" id="amount-paid" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <label for="remarks" class="form-label">Remarks:</label>
-                            <textarea name="remarks" id="remarks" rows="5" class="form-control" style="resize: none"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <a href="Receipt.html" type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                        SAVE PAYMENT
-                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </body>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"
+    ></script>
+    <script>
+        var exampleModal = document.getElementById("gcash");
 
-    <div class="modal fade" id="ref-code" tabindex="-9">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Cash Payment
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-floating">
-                                <input type="text" name="ref-code" id="ref-code" class="form-control" placeholder="asd" />
-                                <label for="ref-code">Fee Code:</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <table class="table table-bordered mt-3">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>FEE CODE</th>
-                                        <th>FEE DESCRIPTION</th>
-                                        <th>FEE PRICE</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee" value="1" />
-                                        </td>
-                                        <td>FEE-001</td>
-                                        <td>BASIC 640 PAYMENT</td>
-                                        <td>640.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee" value="2" />
-                                        </td>
-                                        <td>FEE-002</td>
-                                        <td>PREMIUM 790 PAYMENT</td>
-                                        <td>790.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee" value="3" />
-                                        </td>
-                                        <td>FEE-003</td>
-                                        <td>INTERNATIONAL 1099 PAYMENT</td>
-                                        <td>1,099.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee" value="4" />
-                                        </td>
-                                        <td>FEE-004</td>
-                                        <td>INSTALLATION FEE</td>
-                                        <td>1,000.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee" value="5" />
-                                        </td>
-                                        <td>FEE-005</td>
-                                        <td>DAMAGED REMOTE</td>
-                                        <td>400.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee" value="6" />
-                                        </td>
-                                        <td>FEE-006</td>
-                                        <td>DAMAGED SMART CARD</td>
-                                        <td>1,000.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee" value="7" />
-                                        </td>
-                                        <td>FEE-007</td>
-                                        <td>DAMAGED DIGIBOX</td>
-                                        <td>1,000.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-start">
-                    <i class="bi bi-lightbulb-fill text-warning h3"></i> You can search by Fee Code, Fee Description, and Price.
-                </div>
-                <div class="modal-footer justify-content-start">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal8">
-                        BACK
-                    </button>
+        Date.prototype.toDateInputValue = function () {
+            var local = new Date(this);
+            local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+            return local.toJSON().slice(0, 10);
+        };
+        document.getElementById(
+            "trans-date2"
+        ).value = new Date().toDateInputValue();
 
-                    <button type="button" class="btn btn-primary ms-auto" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal8" id="add2">
-                        ADD FEE
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+        function validate() {
+            let x = document.getElementById("acc-number").value;
+            var myModal = new bootstrap.Modal(
+                document.getElementById("exampleModal5"),
+                {
+                    keyboard: false,
+                }
+            );
 
-    <div class="modal fade" id="ref-code2" tabindex="-10">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Payment Portal
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-floating">
-                                <input type="text" name="ref-code2" id="ref-code2" class="form-control" placeholder="asd" />
-                                <label for="ref-code2">Fee Code:</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <table class="table table-bordered mt-3">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>FEE CODE</th>
-                                        <th>FEE DESCRIPTION</th>
-                                        <th>FEE PRICE</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee2" value="1" />
-                                        </td>
-                                        <td>FEE-001</td>
-                                        <td>BASIC 640 PAYMENT</td>
-                                        <td>640.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee2" value="2" />
-                                        </td>
-                                        <td>FEE-002</td>
-                                        <td>PREMIUM 790 PAYMENT</td>
-                                        <td>790.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee2" value="3" />
-                                        </td>
-                                        <td>FEE-003</td>
-                                        <td>INTERNATIONAL 1099 PAYMENT</td>
-                                        <td>1,099.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee2" value="4" />
-                                        </td>
-                                        <td>FEE-004</td>
-                                        <td>INSTALLATION FEE</td>
-                                        <td>1,000.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee2" value="5" />
-                                        </td>
-                                        <td>FEE-005</td>
-                                        <td>DAMAGED REMOTE</td>
-                                        <td>400.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee2" value="6" />
-                                        </td>
-                                        <td>FEE-006</td>
-                                        <td>DAMAGED SMART CARD</td>
-                                        <td>1,000.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="radio" name="fee2" value="7" />
-                                        </td>
-                                        <td>FEE-007</td>
-                                        <td>DAMAGED DIGIBOX</td>
-                                        <td>1,000.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-start">
-                    <i class="bi bi-lightbulb-fill text-warning h3"></i> You can search by Fee Code, Fee Description, and Price.
-                </div>
-                <div class="modal-footer justify-content-start">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal7">
-                        BACK
-                    </button>
-
-                    <button type="button" class="btn btn-primary ms-auto" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal7" id="add4">
-                        ADD FEE
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<script>
-    var exampleModal = document.getElementById("gcash");
-    exampleModal.addEventListener("show.bs.modal", function(event) {
-        var button = event.relatedTarget;
-        var recipient = button.getAttribute("data-bs-title");
-        var modalTitle = exampleModal.querySelector(".modal-title");
-        modalTitle.textContent = recipient + " PAYMENT";
-    });
-
-    Date.prototype.toDateInputValue = function() {
-        var local = new Date(this);
-        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
-        return local.toJSON().slice(0, 10);
-    };
-    document.getElementById(
-        "trans-date2"
-    ).value = new Date().toDateInputValue();
-
-    function validate() {
-        let x = document.getElementById("acc-number").value;
-        var myModal = new bootstrap.Modal(
-            document.getElementById("exampleModal5"), {
-                keyboard: false,
+            if (x === "RA027801") {
+                window.location.replace("./CustomerInfo2.html");
+            } else if (x === "RA027811") {
+                window.location.replace("./CustomerInfo3.html");
+            } else if (x === "RA027851") {
+                window.location.replace("./CustomerInfo4.html");
+            } else if (x === "RA027899") {
+                window.location.replace("./CustomerInfo5.html");
+            } else {
+                myModal.show();
             }
+        }
+
+        document.getElementById("select").addEventListener(
+            "click",
+            () => {
+                let radios = document.getElementsByName("check");
+                for (let i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        if (radios[i].value == "1") {
+                            window.location.replace("./CustomerInfo2.html");
+                        } else if (radios[i].value == "2") {
+                            window.location.replace("./CustomerInfo3.html");
+                        } else if (radios[i].value == "3") {
+                            window.location.replace("./CustomerInfo4.html");
+                        } else if (radios[i].value == "4") {
+                            window.location.replace("./CustomerInfo5.html");
+                        }
+                    }
+                }
+            },
+            false
         );
 
-        if (x === "RA027801") {
-            window.location.replace("./CustomerInfo2.html");
-        } else if (x === "RA027811") {
-            window.location.replace("./CustomerInfo3.html");
-        } else if (x === "RA027851") {
-            window.location.replace("./CustomerInfo4.html");
-        } else if (x === "RA027899") {
-            window.location.replace("./CustomerInfo5.html");
-        } else {
-            myModal.show();
+        document.getElementById("mop2").addEventListener(
+            "change",
+            () => {
+                let x = document.getElementById("mop2").value;
+                let y = document.getElementById("check");
+                let z = document.getElementById("amount-paid-check");
+                if (x == "2") {
+                    y.classList.remove("d-none");
+                    y.classList.add("d-block");
+                    z.innerHTML = "Check Amount:";
+                } else {
+                    y.classList.remove("d-block");
+                    y.classList.add("d-none");
+                    z.innerHTML = "Amount Paid:";
+                }
+            },
+            false
+        );
+
+        document.getElementById("add").addEventListener(
+            "click",
+            () => {
+                let x = document.getElementById("reference-code");
+                switch (x.value) {
+                    case "FEE-001":
+                        add_row("FEE-001", "BASIC 640 PAYMENT", "640.00");
+                        break;
+                    case "FEE-002":
+                        add_row("FEE-002", "PREMIUM 790 PAYMENT", "790.00");
+                        break;
+                    case "FEE-003":
+                        add_row(
+                            "FEE-003",
+                            "INTERNATIONAL 1099 PAYMENT",
+                            "1,099.00"
+                        );
+                        break;
+                    case "FEE-004":
+                        add_row("FEE-004", "INSTALLATION FEE", "1,000.00");
+                        break;
+                    case "FEE-005":
+                        add_row("FEE-005", "DAMAGED REMOTE", "400.00");
+                        break;
+                    case "FEE-006":
+                        add_row("FEE-006", "DAMAGED SMART CARD", "1,000.00");
+                        break;
+                    case "FEE-007":
+                        add_row("FEE-007", "DAMAGED DIGIBOX", "1,000.00");
+                        break;
+                }
+            },
+            false
+        );
+
+        document.getElementById("add3").addEventListener(
+            "click",
+            () => {
+                let x = document.getElementById("reference-code2");
+                switch (x.value) {
+                    case "FEE-001":
+                        add_row2("FEE-001", "BASIC 640 PAYMENT", "640.00");
+                        break;
+                    case "FEE-002":
+                        add_row2("FEE-002", "PREMIUM 790 PAYMENT", "790.00");
+                        break;
+                    case "FEE-003":
+                        add_row2(
+                            "FEE-003",
+                            "INTERNATIONAL 1099 PAYMENT",
+                            "1,099.00"
+                        );
+                        break;
+                    case "FEE-004":
+                        add_row2("FEE-004", "INSTALLATION FEE", "1,000.00");
+                        break;
+                    case "FEE-005":
+                        add_row2("FEE-005", "DAMAGED REMOTE", "400.00");
+                        break;
+                    case "FEE-006":
+                        add_row2("FEE-006", "DAMAGED SMART CARD", "1,000.00");
+                        break;
+                    case "FEE-007":
+                        add_row2("FEE-007", "DAMAGED DIGIBOX", "1,000.00");
+                        break;
+                }
+            },
+            false
+        );
+
+        document.getElementById("add2").addEventListener(
+            "click",
+            () => {
+                let radios = document.getElementsByName("fee");
+                for (let i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        switch (radios[i].value) {
+                            case "1":
+                                add_row(
+                                    "FEE-001",
+                                    "BASIC 640 PAYMENT",
+                                    "640.00"
+                                );
+                                break;
+                            case "2":
+                                add_row(
+                                    "FEE-002",
+                                    "PREMIUM 790 PAYMENT",
+                                    "790.00"
+                                );
+                                break;
+                            case "3":
+                                add_row(
+                                    "FEE-003",
+                                    "INTERNATIONAL 1099 PAYMENT",
+                                    "1,099.00"
+                                );
+                                break;
+                            case "4":
+                                add_row(
+                                    "FEE-004",
+                                    "INSTALLATION FEE",
+                                    "1,000.00"
+                                );
+                                break;
+                            case "5":
+                                add_row("FEE-005", "DAMAGED REMOTE", "400.00");
+                                break;
+                            case "6":
+                                add_row(
+                                    "FEE-006",
+                                    "DAMAGED SMART CARD",
+                                    "1,000.00"
+                                );
+                                break;
+                            case "7":
+                                add_row(
+                                    "FEE-007",
+                                    "DAMAGED DIGIBOX",
+                                    "1,000.00"
+                                );
+                                break;
+                        }
+                    }
+                }
+            },
+            false
+        );
+
+        document.getElementById("add4").addEventListener(
+            "click",
+            () => {
+                let radios = document.getElementsByName("fee2");
+                for (let i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        switch (radios[i].value) {
+                            case "1":
+                                add_row2(
+                                    "FEE-001",
+                                    "BASIC 640 PAYMENT",
+                                    "640.00"
+                                );
+                                break;
+                            case "2":
+                                add_row2(
+                                    "FEE-002",
+                                    "PREMIUM 790 PAYMENT",
+                                    "790.00"
+                                );
+                                break;
+                            case "3":
+                                add_row2(
+                                    "FEE-003",
+                                    "INTERNATIONAL 1099 PAYMENT",
+                                    "1,099.00"
+                                );
+                                break;
+                            case "4":
+                                add_row2(
+                                    "FEE-004",
+                                    "INSTALLATION FEE",
+                                    "1,000.00"
+                                );
+                                break;
+                            case "5":
+                                add_row2("FEE-005", "DAMAGED REMOTE", "400.00");
+                                break;
+                            case "6":
+                                add_row2(
+                                    "FEE-006",
+                                    "DAMAGED SMART CARD",
+                                    "1,000.00"
+                                );
+                                break;
+                            case "7":
+                                add_row2(
+                                    "FEE-007",
+                                    "DAMAGED DIGIBOX",
+                                    "1,000.00"
+                                );
+                                break;
+                        }
+                    }
+                }
+            },
+            false
+        );
+
+        function add_row2(
+            x = "FEE-001",
+            y = "BASIC 640 PAYMENT",
+            z = "640.00"
+        ) {
+            let a = document.getElementById("fee_table2");
+            let r = document.getElementById("total2");
+
+            let newRow = a.insertRow();
+
+            let code = newRow.insertCell(0);
+            let desc = newRow.insertCell(1);
+            let price = newRow.insertCell(2);
+            let del = newRow.insertCell(3);
+
+            code.innerHTML = x;
+            desc.innerHTML = y;
+            price.classList.add("text-end");
+            price.innerHTML = z;
+            del.style.width = "20px";
+            del.innerHTML =
+                "<button class='btn btn-close btn-delete2' onclick='del_row2(this)'></button>";
+            let temp = r.innerHTML;
+            r.innerHTML = parseFloat(temp) + parseFloat(z);
+            buttons = document.querySelectorAll(".btn-delete2");
         }
-    }
 
-    document.getElementById("select").addEventListener(
-        "click",
-        () => {
-            let radios = document.getElementsByName("check");
-            for (let i = 0; i < radios.length; i++) {
-                if (radios[i].checked) {
-                    if (radios[i].value == "1") {
-                        window.location.replace("./CustomerInfo2.html");
-                    } else if (radios[i].value == "2") {
-                        window.location.replace("./CustomerInfo3.html");
-                    } else if (radios[i].value == "3") {
-                        window.location.replace("./CustomerInfo4.html");
-                    } else if (radios[i].value == "4") {
-                        window.location.replace("./CustomerInfo5.html");
-                    }
-                }
-            }
-        },
-        false
-    );
+        function add_row(x = "FEE-001", y = "BASIC 640 PAYMENT", z = "640.00") {
+            let a = document.getElementById("fee_table");
+            let r = document.getElementById("total");
 
-    document.getElementById("mop2").addEventListener(
-        "change",
-        () => {
-            let x = document.getElementById("mop2").value;
-            let y = document.getElementById("check");
-            let z = document.getElementById("amount-paid-check");
-            if (x == "2") {
-                y.classList.remove("d-none");
-                y.classList.add("d-block");
-                z.innerHTML = "Check Amount:";
-            } else {
-                y.classList.remove("d-block");
-                y.classList.add("d-none");
-                z.innerHTML = "Amount Paid:";
-            }
-        },
-        false
-    );
+            let newRow = a.insertRow();
 
-    document.getElementById("add").addEventListener(
-        "click",
-        () => {
-            let x = document.getElementById("reference-code");
-            switch (x.value) {
-                case "FEE-001":
-                    add_row("FEE-001", "BASIC 640 PAYMENT", "640.00");
-                    break;
-                case "FEE-002":
-                    add_row("FEE-002", "PREMIUM 790 PAYMENT", "790.00");
-                    break;
-                case "FEE-003":
-                    add_row(
-                        "FEE-003",
-                        "INTERNATIONAL 1099 PAYMENT",
-                        "1,099.00"
-                    );
-                    break;
-                case "FEE-004":
-                    add_row("FEE-004", "INSTALLATION FEE", "1,000.00");
-                    break;
-                case "FEE-005":
-                    add_row("FEE-005", "DAMAGED REMOTE", "400.00");
-                    break;
-                case "FEE-006":
-                    add_row("FEE-006", "DAMAGED SMART CARD", "1,000.00");
-                    break;
-                case "FEE-007":
-                    add_row("FEE-007", "DAMAGED DIGIBOX", "1,000.00");
-                    break;
-            }
-        },
-        false
-    );
+            let code = newRow.insertCell(0);
+            let desc = newRow.insertCell(1);
+            let price = newRow.insertCell(2);
+            let del = newRow.insertCell(3);
 
-    document.getElementById("add3").addEventListener(
-        "click",
-        () => {
-            let x = document.getElementById("reference-code2");
-            switch (x.value) {
-                case "FEE-001":
-                    add_row2("FEE-001", "BASIC 640 PAYMENT", "640.00");
-                    break;
-                case "FEE-002":
-                    add_row2("FEE-002", "PREMIUM 790 PAYMENT", "790.00");
-                    break;
-                case "FEE-003":
-                    add_row2(
-                        "FEE-003",
-                        "INTERNATIONAL 1099 PAYMENT",
-                        "1,099.00"
-                    );
-                    break;
-                case "FEE-004":
-                    add_row2("FEE-004", "INSTALLATION FEE", "1,000.00");
-                    break;
-                case "FEE-005":
-                    add_row2("FEE-005", "DAMAGED REMOTE", "400.00");
-                    break;
-                case "FEE-006":
-                    add_row2("FEE-006", "DAMAGED SMART CARD", "1,000.00");
-                    break;
-                case "FEE-007":
-                    add_row2("FEE-007", "DAMAGED DIGIBOX", "1,000.00");
-                    break;
-            }
-        },
-        false
-    );
+            code.innerHTML = x;
+            desc.innerHTML = y;
+            price.classList.add("text-end");
+            price.innerHTML = z;
+            del.style.width = "20px";
+            del.innerHTML =
+                "<button class='btn btn-close btn-delete' onclick='del_row(this)'></button>";
+            let temp = r.innerHTML;
+            r.innerHTML = parseFloat(temp) + parseFloat(z);
+            buttons = document.querySelectorAll(".btn-delete");
+        }
 
-    document.getElementById("add2").addEventListener(
-        "click",
-        () => {
-            let radios = document.getElementsByName("fee");
-            for (let i = 0; i < radios.length; i++) {
-                if (radios[i].checked) {
-                    switch (radios[i].value) {
-                        case "1":
-                            add_row(
-                                "FEE-001",
-                                "BASIC 640 PAYMENT",
-                                "640.00"
-                            );
-                            break;
-                        case "2":
-                            add_row(
-                                "FEE-002",
-                                "PREMIUM 790 PAYMENT",
-                                "790.00"
-                            );
-                            break;
-                        case "3":
-                            add_row(
-                                "FEE-003",
-                                "INTERNATIONAL 1099 PAYMENT",
-                                "1,099.00"
-                            );
-                            break;
-                        case "4":
-                            add_row(
-                                "FEE-004",
-                                "INSTALLATION FEE",
-                                "1,000.00"
-                            );
-                            break;
-                        case "5":
-                            add_row("FEE-005", "DAMAGED REMOTE", "400.00");
-                            break;
-                        case "6":
-                            add_row(
-                                "FEE-006",
-                                "DAMAGED SMART CARD",
-                                "1,000.00"
-                            );
-                            break;
-                        case "7":
-                            add_row(
-                                "FEE-007",
-                                "DAMAGED DIGIBOX",
-                                "1,000.00"
-                            );
-                            break;
-                    }
-                }
-            }
-        },
-        false
-    );
+        function del_row(e) {
+            let a = document.getElementById("fee_table");
+            let r = document.getElementById("total");
+            let p = e.parentElement.parentElement.children[2].innerHTML;
+            let t = r.innerHTML;
+            r.innerHTML = parseFloat(t) - parseFloat(p);
 
-    document.getElementById("add4").addEventListener(
-        "click",
-        () => {
-            let radios = document.getElementsByName("fee2");
-            for (let i = 0; i < radios.length; i++) {
-                if (radios[i].checked) {
-                    switch (radios[i].value) {
-                        case "1":
-                            add_row2(
-                                "FEE-001",
-                                "BASIC 640 PAYMENT",
-                                "640.00"
-                            );
-                            break;
-                        case "2":
-                            add_row2(
-                                "FEE-002",
-                                "PREMIUM 790 PAYMENT",
-                                "790.00"
-                            );
-                            break;
-                        case "3":
-                            add_row2(
-                                "FEE-003",
-                                "INTERNATIONAL 1099 PAYMENT",
-                                "1,099.00"
-                            );
-                            break;
-                        case "4":
-                            add_row2(
-                                "FEE-004",
-                                "INSTALLATION FEE",
-                                "1,000.00"
-                            );
-                            break;
-                        case "5":
-                            add_row2("FEE-005", "DAMAGED REMOTE", "400.00");
-                            break;
-                        case "6":
-                            add_row2(
-                                "FEE-006",
-                                "DAMAGED SMART CARD",
-                                "1,000.00"
-                            );
-                            break;
-                        case "7":
-                            add_row2(
-                                "FEE-007",
-                                "DAMAGED DIGIBOX",
-                                "1,000.00"
-                            );
-                            break;
-                    }
-                }
-            }
-        },
-        false
-    );
+            let i = e.parentElement.parentElement.rowIndex - 1;
+            a.deleteRow(i);
+        }
 
-    function add_row2(
-        x = "FEE-001",
-        y = "BASIC 640 PAYMENT",
-        z = "640.00"
-    ) {
-        let a = document.getElementById("fee_table2");
-        let r = document.getElementById("total2");
+        function del_row2(e) {
+            let a = document.getElementById("fee_table2");
+            let r = document.getElementById("total2");
+            let p = e.parentElement.parentElement.children[2].innerHTML;
+            let t = r.innerHTML;
+            r.innerHTML = parseFloat(t) - parseFloat(p);
 
-        let newRow = a.insertRow();
-
-        let code = newRow.insertCell(0);
-        let desc = newRow.insertCell(1);
-        let price = newRow.insertCell(2);
-        let del = newRow.insertCell(3);
-
-        code.innerHTML = x;
-        desc.innerHTML = y;
-        price.classList.add("text-end");
-        price.innerHTML = z;
-        del.style.width = "20px";
-        del.innerHTML =
-            "<button class='btn btn-close btn-delete2' onclick='del_row2(this)'></button>";
-        let temp = r.innerHTML;
-        r.innerHTML = parseFloat(temp) + parseFloat(z);
-        buttons = document.querySelectorAll(".btn-delete2");
-    }
-
-    function add_row(x = "FEE-001", y = "BASIC 640 PAYMENT", z = "640.00") {
-        let a = document.getElementById("fee_table");
-        let r = document.getElementById("total");
-
-        let newRow = a.insertRow();
-
-        let code = newRow.insertCell(0);
-        let desc = newRow.insertCell(1);
-        let price = newRow.insertCell(2);
-        let del = newRow.insertCell(3);
-
-        code.innerHTML = x;
-        desc.innerHTML = y;
-        price.classList.add("text-end");
-        price.innerHTML = z;
-        del.style.width = "20px";
-        del.innerHTML =
-            "<button class='btn btn-close btn-delete' onclick='del_row(this)'></button>";
-        let temp = r.innerHTML;
-        r.innerHTML = parseFloat(temp) + parseFloat(z);
-        buttons = document.querySelectorAll(".btn-delete");
-    }
-
-    function del_row(e) {
-        let a = document.getElementById("fee_table");
-        let r = document.getElementById("total");
-        let p = e.parentElement.parentElement.children[2].innerHTML;
-        let t = r.innerHTML;
-        r.innerHTML = parseFloat(t) - parseFloat(p);
-
-        let i = e.parentElement.parentElement.rowIndex - 1;
-        a.deleteRow(i);
-    }
-
-    function del_row2(e) {
-        let a = document.getElementById("fee_table2");
-        let r = document.getElementById("total2");
-        let p = e.parentElement.parentElement.children[2].innerHTML;
-        let t = r.innerHTML;
-        r.innerHTML = parseFloat(t) - parseFloat(p);
-
-        let i = e.parentElement.parentElement.rowIndex - 1;
-        a.deleteRow(i);
-    }
-
-</script>
-
+            let i = e.parentElement.parentElement.rowIndex - 1;
+            a.deleteRow(i);
+        }
+    </script>
 </html>
