@@ -47,6 +47,24 @@
   font-family: "Mate SC";
 }
 
+.ff-jumbo {
+  font-family: "Nunito Sans";
+}
+
 .bg-dark-navy {
   background-color: rgb(11, 22, 42);
+}
+
+.btn-jumbo {
+  background-color: #14274e !important;
+}
+
+.btn-jumbo:hover {
+  background-color: white !important;
+  color: #14274e !important;
+  border-color: #14274e !important;
+}
+
+.btn-jumbo:hover p {
+  border-color: #14274e !important;
 }

@@ -1,1153 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Head Dashboard</title>
-        <style>
-            body,
-            html {
-                height: 100%;
-                background-color: #14274e !important;
-            }
 
-            html {
-                overflow-y: scroll;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Head Dashboard</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            background-color: #14274e !important;
+        }
 
-            h1 {
-                font-size: 3.75em !important;
-            }
+        html {
+            overflow-y: scroll;
+        }
 
-            .active > .nav-link {
-                color: #14274e !important;
-                background-color: #fff !important;
-                border-right: #14274e solid 1px;
-            }
-        </style>
-        <link rel="stylesheet" href="./Styles/head.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-            crossorigin="anonymous"
-        />
-    </head>
+        h1 {
+            font-size: 3.75em !important;
+        }
 
-    <body>
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
-                    <nav class="navbar mt-5">
-                        <ul class="navbar-nav fs-5">
-                            <a
-                                class="navbar-brand text-light fs-2 text-wrap text-center"
-                                href="./Login.html"
-                                ><img
-                                    height="100px"
-                                    class="d-block mx-auto mb-2"
-                                    src="../Images/logo.png"
-                                    alt=""
-                                />
-                                <p
-                                    class="ms-3 ff-logo pb-3 border-bottom"
-                                    style="
-                                        border-bottom: 3px #fed049 solid !important;
-                                    "
-                                >
-                                    Lake Community Cable TV
-                                </p>
-                                <p class="ff-jumbo fs-5">CEO MODULE</p>
-                            </a>
-                            <li class="nav-item active">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./LandingPage.html"
-                                    ><i class="bi bi-speedometer2 pl-3"></i
-                                    ><span class="px-3">Dashboard</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Employees.html"
-                                    ><i class="bi bi-people"></i
-                                    ><span class="px-3">Employees</span></a
-                                >
-                            </li>
-                            <li class="nav-item mt-5 bg-dark-navy">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Login.html"
-                                    ><i class="bi bi-box-arrow-left"></i
-                                    ><span class="px-3">Logout</span></a
-                                >
-                            </li>
-                        </ul>
+        .active>.nav-link {
+            color: #14274e !important;
+            background-color: #fff !important;
+            border-right: #14274e solid 1px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="./Styles/head.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-md-12 col-lg-12 bg-light container-fluid" style="background-color: #f6f8fb">
+                <div class="row d-block d-lg-none d-xl-none">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-dark" style="background-color: #14274e">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
                     </nav>
                 </div>
-                <div
-                    class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid"
-                    style="background-color: #f6f8fb"
-                >
-                    <div class="row d-block d-lg-none d-xl-none">
-                        <div class="collapse" id="navbarToggleExternalContent">
-                            <div class="bg-dark p-4">
-                                <h5 class="text-white h4">Collapsed content</h5>
-                                <span class="text-muted"
-                                    >Toggleable via the navbar brand.</span
-                                >
-                            </div>
-                        </div>
-                        <nav
-                            class="navbar navbar-dark"
-                            style="background-color: #14274e"
-                        >
-                            <div class="container-fluid">
-                                <button
-                                    class="navbar-toggler"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbarToggleExternalContent"
-                                >
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                            </div>
-                        </nav>
+
+                <div class="row pt-3 text-light border-bottom align-items-center" style="
+                              background-color: #14274e;
+                              border-bottom: 3px #fed049 solid !important;
+                          ">
+                    <div class="col-2 me-0 pe-0">
+                        <img height="75px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
+                        <p class="ms-3 pe-4 h6 text-center ff-logo">
+                            Lake Community Cable TV
+                        </p>
                     </div>
-
-                    <div
-                        class="row py-3 border-bottom"
-                        style="border-bottom: 3px #fed049 solid !important"
-                    >
-                        <div class="col">
-                            <h3>Dashboard</h3>
-                        </div>
-                        <div class="col text-end">Head123</div>
+                    <div class="col ff-jumbo">
+                        <span class="fs-3">CEO</span>
+                        <span class="ms-3 border-start ps-3 fs-5">Home</span>
                     </div>
+                    <div class="col-1 text-end ms-auto">
+                        CEO123 |
+                        <a href="../index.html" class="text-muted text-decoration-none">
+                            Logout</a>
+                    </div>
+                </div>
 
-                    <div class="row py-3">
-                        <div class="col-4">
-                            <div class="card border-subscriber rounded-0">
-                                <a
-                                    class="text-decoration-none text-dark"
-                                    role="button"
-                                    data-bs-toggle="collapse"
-                                    href="#subscribers_collapse"
-                                >
-                                    <div class="card-body border-bottom-0 pb-0">
-                                        <h5 class="card-title fw-normal">
-                                            <i class="bi bi-people me-2"></i
-                                            >Subscribers
-                                        </h5>
-
-                                        <p
-                                            class="card-text text-end h1 fw-normal"
-                                        >
-                                            2,751
+                <div class="row mt-3">
+                    <div class="col">
+                        <div class="row mt-4 pt-4 px-4 mb-4">
+                            <div class="row mt-2 justify-content-center">
+                                <div class="col-lg-3 col-sm-12 mt-2">
+                                    <a href="./Employees.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
+                                        <i class="bi bi-people" style="font-size: 8rem"></i>
+                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                                                      border-top-color: #fed049 !important;
+                                                  ">
+                                            EMPLOYEES
                                         </p>
-
-                                        <p
-                                            class="badge rounded-pill float-end bg-warning"
-                                        >
-                                            +10
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-12 mt-2">
+                                    <a href="./Reports.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
+                                        <i class="bi bi-clipboard" style="font-size: 8rem"></i>
+                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                                                      border-top-color: #fed049 !important;
+                                                  ">
+                                            REPORTS
                                         </p>
-                                    </div>
-                                </a>
-
-                                <div
-                                    class="card-footer collapse show bg-white border-top-0 px-0 py-0"
-                                    id="subscribers_collapse"
-                                >
-                                    <div
-                                        class="btn-group btn-group-subscriber btn-group-lg w-100 rounded-0"
-                                        role="group"
-                                    >
-                                        <input
-                                            type="radio"
-                                            class="btn-check border-bottom-0 rounded-0"
-                                            role="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#subscribers_graph"
-                                            name="btn-subs"
-                                            id="btn-subs1"
-                                            autocomplete="on"
-                                            checked
-                                        />
-                                        <label
-                                            class="btn btn-outline-subscriber fs-3 border-bottom-0 rounded-0"
-                                            for="btn-subs1"
-                                            >Day</label
-                                        >
-
-                                        <input
-                                            type="radio"
-                                            class="btn-check"
-                                            role="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#subscribers_graph2"
-                                            name="btn-subs"
-                                            id="btn-subs2"
-                                            autocomplete="off"
-                                        />
-                                        <label
-                                            class="btn btn-outline-subscriber border-bottom-0 fs-3"
-                                            for="btn-subs2"
-                                            >Month</label
-                                        >
-
-                                        <input
-                                            type="radio"
-                                            class="btn-check rounded-0"
-                                            role="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#subscribers_graph3"
-                                            name="btn-subs"
-                                            id="btn-subs3"
-                                            autocomplete="off"
-                                        />
-                                        <label
-                                            class="btn btn-outline-subscriber rounded-0 border-bottom-0 border-end-0 fs-3"
-                                            for="btn-subs3"
-                                            >Year</label
-                                        >
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="card border-installation rounded-0">
-                                <a
-                                    class="text-decoration-none text-dark"
-                                    role="button"
-                                    href="#installation_collapse"
-                                    data-bs-toggle="collapse"
-                                >
-                                    <div class="card-body border-bottom-0 pb-0">
-                                        <h5 class="card-title fw-normal">
-                                            <i
-                                                class="bi bi-journal-bookmark me-2"
-                                            ></i
-                                            >Installation Summary Report
-                                        </h5>
-
-                                        <p
-                                            class="card-text text-end h1 fw-normal"
-                                        >
-                                            251
-                                        </p>
-
-                                        <p
-                                            class="badge rounded-pill float-end bg-danger"
-                                        >
-                                            +20
-                                        </p>
-                                    </div>
-                                </a>
-                                <div
-                                    class="card-footer collapse bg-white border-top-0 px-0 py-0"
-                                    id="installation_collapse"
-                                >
-                                    <div
-                                        class="btn-group btn-group-installation btn-group-lg w-100 rounded-0"
-                                        role="group"
-                                    >
-                                        <input
-                                            type="radio"
-                                            class="btn-check border-bottom-0 rounded-0"
-                                            role="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#installation_graph"
-                                            name="btn-subs"
-                                            id="btn-subs4"
-                                            autocomplete="on"
-                                            checked
-                                        />
-                                        <label
-                                            class="btn btn-outline-installation fs-3 border-bottom-0 rounded-0"
-                                            for="btn-subs4"
-                                            >Day</label
-                                        >
-
-                                        <input
-                                            type="radio"
-                                            class="btn-check"
-                                            role="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#installation_graph2"
-                                            name="btn-subs"
-                                            id="btn-subs5"
-                                            autocomplete="off"
-                                        />
-                                        <label
-                                            class="btn btn-outline-installation border-bottom-0 fs-3"
-                                            for="btn-subs5"
-                                            >Month</label
-                                        >
-
-                                        <input
-                                            type="radio"
-                                            class="btn-check rounded-0"
-                                            role="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#installation_graph3"
-                                            name="btn-subs"
-                                            id="btn-subs6"
-                                            autocomplete="off"
-                                        />
-                                        <label
-                                            class="btn btn-outline-installation rounded-0 border-bottom-0 border-end-0 fs-3"
-                                            for="btn-subs6"
-                                            >Year</label
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="card border-sales rounded-0">
-                                <a
-                                    class="text-decoration-none text-dark"
-                                    role="button"
-                                    href="#sales_collapse"
-                                    data-bs-toggle="collapse"
-                                >
-                                    <div class="card-body border-bottom-0 pb-0">
-                                        <h5 class="card-title fw-normal">
-                                            <i class="bi bi-cash-stack me-2"></i
-                                            >Total Sales
-                                        </h5>
-
-                                        <p
-                                            class="card-text h1 text-end fw-normal"
-                                        >
-                                            Php 25,000.00
-                                        </p>
-
-                                        <p
-                                            class="float-end badge rounded-pill float-end bg-success"
-                                        >
-                                            +3.5%
-                                        </p>
-                                    </div>
-                                </a>
-                                <div
-                                    class="card-footer collapse bg-white border-top-0 px-0 py-0"
-                                    id="sales_collapse"
-                                >
-                                    <div
-                                        class="btn-group btn-group-sales btn-group-lg w-100 rounded-0"
-                                        role="group"
-                                    >
-                                        <input
-                                            type="radio"
-                                            class="btn-check border-bottom-0 rounded-0"
-                                            role="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#sales_graph"
-                                            name="btn-subs"
-                                            id="btn-subs7"
-                                            autocomplete="on"
-                                            checked
-                                        />
-                                        <label
-                                            class="btn btn-outline-sales fs-3 border-bottom-0 border-right-0 rounded-0"
-                                            for="btn-subs7"
-                                            >Day</label
-                                        >
-
-                                        <input
-                                            type="radio"
-                                            class="btn-check"
-                                            role="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#sales_graph2"
-                                            name="btn-subs"
-                                            id="btn-subs8"
-                                            autocomplete="off"
-                                        />
-                                        <label
-                                            class="btn btn-outline-sales border-bottom-0 fs-3"
-                                            for="btn-subs8"
-                                            >Month</label
-                                        >
-
-                                        <input
-                                            type="radio"
-                                            class="btn-check rounded-0"
-                                            role="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#sales_graph3"
-                                            name="btn-subs"
-                                            id="btn-subs9"
-                                            autocomplete="off"
-                                        />
-                                        <label
-                                            class="btn btn-outline-sales rounded-0 border-bottom-0 border-end-0 fs-3"
-                                            for="btn-subs9"
-                                            >Year</label
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="row py-3 align-items-center collapse"
-                        id="subscribers_graph"
-                    >
-                        <div class="col-9">
-                            <canvas
-                                class="my-4 bg-white p-3 shadow"
-                                id="myChart"
-                            ></canvas>
-                        </div>
-                        <div class="col-3 mx-auto fs-6">
-                            <table
-                                class="table table-bordered border-1 border shadow p-5"
-                            >
-                                <thead>
-                                    <tr style="background-color: #161d6f">
-                                        <th colspan="2" class="h4 text-light">
-                                            Subscribers Per Day
-                                            <span class="d-block fs-5 fw-light"
-                                                >(04/25/21 - 04/30/21)</span
-                                            >
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="fw-normal">Sunday</th>
-                                        <td class="text-end">8</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Monday</th>
-                                        <td class="text-end">5</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Tuesday</th>
-                                        <td class="text-end">3</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Wednesday</th>
-                                        <td class="text-end">6</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th class="fw-normal">Thursday</th>
-                                        <td class="text-end">2</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Friday</th>
-                                        <td class="text-end">10</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Total Subscribers This Week</th>
-                                        <th class="text-end">34</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                            <button
-                                class="mb-2 btn btn-navy float-end btn-lg text-light"
-                                style="background-color: #3a6351"
-                            >
-                                <i class="bi bi-printer me-2"></i> PRINT
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="row py-3 align-items-center collapse"
-                        id="subscribers_graph2"
-                    >
-                        <div class="col-9">
-                            <canvas
-                                class="my-4 bg-white p-3 shadow"
-                                id="SubscribersMonth"
-                            ></canvas>
-                        </div>
-                        <div class="col-3 mx-auto fs-6">
-                            <table
-                                class="table table-bordered border-1 border shadow p-5"
-                            >
-                                <thead>
-                                    <tr style="background-color: #161d6f">
-                                        <th colspan="2" class="h4 text-light">
-                                            Subscribers Per Month
-                                            <span class="d-block fs-5 fw-light"
-                                                >(04/01/21 - 04/31/21)</span
-                                            >
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="fw-normal">Week 1</th>
-                                        <td class="text-end">34</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Week 2</th>
-                                        <td class="text-end">20</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Week 3</th>
-                                        <td class="text-end">30</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Week 4</th>
-                                        <td class="text-end">15</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Total Subscribers This Month</th>
-                                        <th class="text-end">99</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                            <button
-                                class="mb-2 btn btn-navy float-end btn-lg text-light"
-                                style="background-color: #3a6351"
-                            >
-                                <i class="bi bi-printer me-2"></i> PRINT
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="row py-3 align-items-center collapse"
-                        id="subscribers_graph3"
-                    >
-                        <div class="col-9">
-                            <canvas
-                                class="my-4 bg-white p-3 shadow"
-                                id="SubscribersYear"
-                            ></canvas>
-                        </div>
-
-                        <div class="col-3 mx-auto fs-6">
-                            <table
-                                class="table table-bordered border-1 border shadow p-5"
-                            >
-                                <thead>
-                                    <tr style="background-color: #161d6f">
-                                        <th colspan="2" class="h4 text-light">
-                                            Subscribers Per Year
-                                            <span class="d-block fs-5 fw-light"
-                                                >(01/01/20 - 01/01/21)</span
-                                            >
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="fw-normal">January</th>
-                                        <td class="text-end">99</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">February</th>
-                                        <td class="text-end">50</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">March</th>
-                                        <td class="text-end">30</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">April</th>
-                                        <td class="text-end">20</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">May</th>
-                                        <td class="text-end">35</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">June</th>
-                                        <td class="text-end">5</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">July</th>
-                                        <td class="text-end">10</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">August</th>
-                                        <td class="text-end">4</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">September</th>
-                                        <td class="text-end">2</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">October</th>
-                                        <td class="text-end">11</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">November</th>
-                                        <td class="text-end">17</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">December</th>
-                                        <td class="text-end">29</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Total Subscribers This Year</th>
-                                        <th class="text-end">312</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                            <button
-                                class="mb-2 btn btn-navy float-end btn-lg text-light"
-                                style="background-color: #3a6351"
-                            >
-                                <i class="bi bi-printer me-2"></i> PRINT
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="row py-3 align-items-center collapse"
-                        id="installation_graph"
-                    >
-                        <div class="col-9">
-                            <canvas
-                                class="my-4 bg-white p-3 shadow"
-                                id="SummaryInstallation"
-                            ></canvas>
-                        </div>
-                        <div class="col-3 mx-auto fs-6">
-                            <table
-                                class="table table-bordered border-1 border shadow p-5"
-                            >
-                                <thead>
-                                    <tr style="background-color: #810000">
-                                        <th colspan="2" class="h4 text-light">
-                                            Installations Per Day
-                                            <span class="d-block fs-5 fw-light"
-                                                >(04/25/21 - 04/30/21)</span
-                                            >
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="fw-normal">Sunday</th>
-                                        <td class="text-end">13</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Monday</th>
-                                        <td class="text-end">6</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Tuesday</th>
-                                        <td class="text-end">18</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Wednesday</th>
-                                        <td class="text-end">10</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th class="fw-normal">Thursday</th>
-                                        <td class="text-end">8</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Friday</th>
-                                        <td class="text-end">17</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Total Installations This Week</th>
-                                        <th class="text-end">72</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                            <button
-                                class="mb-2 btn btn-navy float-end btn-lg text-light"
-                                style="background-color: #3a6351"
-                            >
-                                <i class="bi bi-printer me-2"></i> PRINT
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="row py-3 align-items-center collapse"
-                        id="installation_graph2"
-                    >
-                        <div class="col-9">
-                            <canvas
-                                class="my-4 bg-white p-3 shadow"
-                                id="SummaryInstallationMonth"
-                            ></canvas>
-                        </div>
-
-                        <div class="col-3 mx-auto fs-6">
-                            <table
-                                class="table table-bordered border-1 border shadow p-5"
-                            >
-                                <thead>
-                                    <tr style="background-color: #810000">
-                                        <th colspan="2" class="h4 text-light">
-                                            Installations Per Month
-                                            <span class="d-block fs-5 fw-light"
-                                                >(04/01/21 - 04/31/21)</span
-                                            >
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="fw-normal">Week 1</th>
-                                        <td class="text-end">72</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Week 2</th>
-                                        <td class="text-end">100</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Week 3</th>
-                                        <td class="text-end">60</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Week 4</th>
-                                        <td class="text-end">30</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Total Intallations This Month</th>
-                                        <th class="text-end">262</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                            <button
-                                class="mb-2 btn btn-navy float-end btn-lg text-light"
-                                style="background-color: #3a6351"
-                            >
-                                <i class="bi bi-printer me-2"></i> PRINT
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="row py-3 align-items-center collapse"
-                        id="installation_graph3"
-                    >
-                        <div class="col-9">
-                            <canvas
-                                class="my-4 bg-white p-3 shadow"
-                                id="SummaryInstallationYear"
-                            ></canvas>
-                        </div>
-                        <div class="col-3 mx-auto fs-6">
-                            <table
-                                class="table table-bordered border-1 border shadow p-5"
-                            >
-                                <thead>
-                                    <tr style="background-color: #810000">
-                                        <th colspan="2" class="h4 text-light">
-                                            Installations Per Year
-                                            <span class="d-block fs-5 fw-light"
-                                                >(01/01/20 - 01/01/21)</span
-                                            >
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="fw-normal">January</th>
-                                        <td class="text-end">262</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">February</th>
-                                        <td class="text-end">100</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">March</th>
-                                        <td class="text-end">150</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">April</th>
-                                        <td class="text-end">60</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">May</th>
-                                        <td class="text-end">35</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">June</th>
-                                        <td class="text-end">50</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">July</th>
-                                        <td class="text-end">48</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">August</th>
-                                        <td class="text-end">20</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">September</th>
-                                        <td class="text-end">35</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">October</th>
-                                        <td class="text-end">80</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">November</th>
-                                        <td class="text-end">120</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">December</th>
-                                        <td class="text-end">140</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Total Installations This Year</th>
-                                        <th class="text-end">1100</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                            <button
-                                class="mb-2 btn btn-navy float-end btn-lg text-light"
-                                style="background-color: #3a6351"
-                            >
-                                <i class="bi bi-printer me-2"></i> PRINT
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="row py-3 align-items-center collapse"
-                        id="sales_graph"
-                    >
-                        <div class="col-9">
-                            <canvas
-                                class="my-4 bg-white p-3 shadow"
-                                id="Sales"
-                            ></canvas>
-                        </div>
-                        <div class="col-3 mx-auto fs-6">
-                            <table
-                                class="table table-bordered border-1 border shadow p-5"
-                            >
-                                <thead>
-                                    <tr
-                                        class="text-dark"
-                                        style="background-color: #1f441e"
-                                    >
-                                        <th colspan="2" class="h4 text-light">
-                                            Sales Per Day
-                                            <span class="d-block fs-5 fw-light"
-                                                >(04/25/21 - 04/30/21)</span
-                                            >
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="fw-normal">Sunday</th>
-                                        <td class="text-end">2000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Monday</th>
-                                        <td class="text-end">6000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Tuesday</th>
-                                        <td class="text-end">1000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Wednesday</th>
-                                        <td class="text-end">3500</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th class="fw-normal">Thursday</th>
-                                        <td class="text-end">5500</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Friday</th>
-                                        <td class="text-end">1500</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Total Sales This Week</th>
-                                        <th class="text-end">19500</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                            <button
-                                class="mb-2 btn btn-navy float-end btn-lg text-light"
-                                style="background-color: #3a6351"
-                            >
-                                <i class="bi bi-printer me-2"></i> PRINT
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="row py-3 align-items-center collapse"
-                        id="sales_graph2"
-                    >
-                        <div class="col-9">
-                            <canvas
-                                class="my-4 bg-white p-3 shadow"
-                                id="SalesMonth"
-                            ></canvas>
-                        </div>
-                        <div class="col-3 mx-auto fs-6">
-                            <table
-                                class="table table-bordered border-1 border shadow p-5"
-                            >
-                                <thead>
-                                    <tr style="background-color: #1f441e">
-                                        <th colspan="2" class="h4 text-light">
-                                            Sales Per Month
-                                            <span class="d-block fs-5 fw-light"
-                                                >(04/01/21 - 04/31/21)</span
-                                            >
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="fw-normal">Week 1</th>
-                                        <td class="text-end">19500</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Week 2</th>
-                                        <td class="text-end">15000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Week 3</th>
-                                        <td class="text-end">10000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">Week 4</th>
-                                        <td class="text-end">12000</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Total Sales This Month</th>
-                                        <th class="text-end">56500</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                            <button
-                                class="mb-2 btn btn-navy float-end btn-lg text-light"
-                                style="background-color: #3a6351"
-                            >
-                                <i class="bi bi-printer me-2"></i> PRINT
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="row py-3 align-items-center collapse"
-                        id="sales_graph3"
-                    >
-                        <div class="col-9">
-                            <canvas
-                                class="my-4 bg-white p-3 shadow"
-                                id="SalesYear"
-                            ></canvas>
-                        </div>
-                        <div class="col-3 mx-auto fs-6">
-                            <table
-                                class="table table-bordered border-1 border shadow p-5"
-                            >
-                                <thead>
-                                    <tr style="background-color: #1f441e">
-                                        <th colspan="2" class="h4 text-light">
-                                            Sales Per Year
-                                            <span class="d-block fs-5 fw-light"
-                                                >(01/01/20 - 01/01/21)</span
-                                            >
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="fw-normal">January</th>
-                                        <td class="text-end">56500</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">February</th>
-                                        <td class="text-end">30000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">March</th>
-                                        <td class="text-end">20500</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">April</th>
-                                        <td class="text-end">15000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">May</th>
-                                        <td class="text-end">46000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">June</th>
-                                        <td class="text-end">60000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">July</th>
-                                        <td class="text-end">51000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">August</th>
-                                        <td class="text-end">31000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">September</th>
-                                        <td class="text-end">27000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">October</th>
-                                        <td class="text-end">42000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">November</th>
-                                        <td class="text-end">33000</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="fw-normal">December</th>
-                                        <td class="text-end">28000</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Total Sales This Year</th>
-                                        <th class="text-end">440000</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                            <button
-                                class="mb-2 btn btn-navy float-end btn-lg text-light"
-                                style="background-color: #3a6351"
-                            >
-                                <i class="bi bi-printer me-2"></i> PRINT
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"
-    ></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-        crossorigin="anonymous"
-    ></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-        crossorigin="anonymous"
-    ></script>
-    <script src="./Scripts/dashboard.js"></script>
-    <script>
-        let buttons = document.getElementsByName("btn-subs");
-        let collapses = document.querySelectorAll(".row.collapse");
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+<script src="./Scripts/dashboard.js"></script>
+<script>
+    let buttons = document.getElementsByName("btn-subs");
+    let collapses = document.querySelectorAll(".row.collapse");
 
-        let bscollapse = [
-            new bootstrap.Collapse(collapses[0], {
-                toggle: false,
-            }),
-            new bootstrap.Collapse(collapses[1], {
-                toggle: false,
-            }),
-            new bootstrap.Collapse(collapses[2], {
-                toggle: false,
-            }),
-            new bootstrap.Collapse(collapses[3], {
-                toggle: false,
-            }),
-            new bootstrap.Collapse(collapses[4], {
-                toggle: false,
-            }),
-            new bootstrap.Collapse(collapses[5], {
-                toggle: false,
-            }),
-            new bootstrap.Collapse(collapses[6], {
-                toggle: false,
-            }),
-            new bootstrap.Collapse(collapses[7], {
-                toggle: false,
-            }),
-            new bootstrap.Collapse(collapses[8], {
-                toggle: false,
-            }),
-        ];
+    let bscollapse = [
+        new bootstrap.Collapse(collapses[0], {
+            toggle: false,
+        }),
+        new bootstrap.Collapse(collapses[1], {
+            toggle: false,
+        }),
+        new bootstrap.Collapse(collapses[2], {
+            toggle: false,
+        }),
+        new bootstrap.Collapse(collapses[3], {
+            toggle: false,
+        }),
+        new bootstrap.Collapse(collapses[4], {
+            toggle: false,
+        }),
+        new bootstrap.Collapse(collapses[5], {
+            toggle: false,
+        }),
+        new bootstrap.Collapse(collapses[6], {
+            toggle: false,
+        }),
+        new bootstrap.Collapse(collapses[7], {
+            toggle: false,
+        }),
+        new bootstrap.Collapse(collapses[8], {
+            toggle: false,
+        }),
+    ];
 
-        for (let i = 0; i < collapses.length; i++) {
-            collapses[i].addEventListener("show.bs.collapse", () => {
-                for (let j = 0; j < bscollapse.length; j++) {
-                    if (j != i) bscollapse[j].hide();
-                }
-            });
-        }
+    for (let i = 0; i < collapses.length; i++) {
+        collapses[i].addEventListener("show.bs.collapse", () => {
+            for (let j = 0; j < bscollapse.length; j++) {
+                if (j != i) bscollapse[j].hide();
+            }
+        });
+    }
 
-        let sales = document.getElementById("sales_collapse");
-        let subs = document.getElementById("subscribers_collapse");
-        let installations = document.getElementById("installation_collapse");
+    let sales = document.getElementById("sales_collapse");
+    let subs = document.getElementById("subscribers_collapse");
+    let installations = document.getElementById("installation_collapse");
+    bscollapse[0].show();
+
+    bsSubs = new bootstrap.Collapse(subs, {
+        toggle: false,
+        show: true,
+    });
+    bsInstallations = new bootstrap.Collapse(installations, {
+        toggle: false,
+    });
+    bsSales = new bootstrap.Collapse(sales, {
+        toggle: false,
+    });
+
+    subs.addEventListener("show.bs.collapse", () => {
+        bsSales.hide();
+        bsInstallations.hide();
         bscollapse[0].show();
+    });
+    installations.addEventListener("show.bs.collapse", () => {
+        bsSales.hide();
+        bsSubs.hide();
+        bscollapse[3].show();
+    });
+    sales.addEventListener("show.bs.collapse", () => {
+        bsSubs.hide();
+        bsInstallations.hide();
+        bscollapse[6].show();
+    });
+    subs.addEventListener("hide.bs.collapse", () => {
+        bscollapse[0].hide();
+        bscollapse[1].hide();
+        bscollapse[2].hide();
+    });
+    installations.addEventListener("hide.bs.collapse", () => {
+        bscollapse[3].hide();
+        bscollapse[4].hide();
+        bscollapse[5].hide();
+    });
+    sales.addEventListener("hide.bs.collapse", () => {
+        bscollapse[6].hide();
+        bscollapse[7].hide();
+        bscollapse[8].hide();
+    });
 
-        bsSubs = new bootstrap.Collapse(subs, {
-            toggle: false,
-            show: true,
-        });
-        bsInstallations = new bootstrap.Collapse(installations, {
-            toggle: false,
-        });
-        bsSales = new bootstrap.Collapse(sales, {
-            toggle: false,
-        });
+</script>
 
-        subs.addEventListener("show.bs.collapse", () => {
-            bsSales.hide();
-            bsInstallations.hide();
-            bscollapse[0].show();
-        });
-        installations.addEventListener("show.bs.collapse", () => {
-            bsSales.hide();
-            bsSubs.hide();
-            bscollapse[3].show();
-        });
-        sales.addEventListener("show.bs.collapse", () => {
-            bsSubs.hide();
-            bsInstallations.hide();
-            bscollapse[6].show();
-        });
-        subs.addEventListener("hide.bs.collapse", () => {
-            bscollapse[0].hide();
-            bscollapse[1].hide();
-            bscollapse[2].hide();
-        });
-        installations.addEventListener("hide.bs.collapse", () => {
-            bscollapse[3].hide();
-            bscollapse[4].hide();
-            bscollapse[5].hide();
-        });
-        sales.addEventListener("hide.bs.collapse", () => {
-            bscollapse[6].hide();
-            bscollapse[7].hide();
-            bscollapse[8].hide();
-        });
-    </script>
 </html>
