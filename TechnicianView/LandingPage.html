@@ -1,206 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Technician Dashboard</title>
-        <style>
-            body,
-            html {
-                height: 100%;
-                background-color: #14274e !important;
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technician Dashboard</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            background-color: #14274e !important;
+        }
+
+        h1 {
+            font-size: 3.75em !important;
+        }
+
+        body {
+            animation: fadeInAnimation ease 0.75s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
             }
 
-            h1 {
-                font-size: 3.75em !important;
+            100% {
+                opacity: 1;
             }
+        }
 
-            body {
-                animation: fadeInAnimation ease 0.75s;
-                animation-iteration-count: 1;
-                animation-fill-mode: forwards;
-            }
+        .active>.nav-link {
+            color: #14274e !important;
+            background-color: #fff !important;
+            border-right: #14274e solid 1px;
+        }
 
-            @keyframes fadeInAnimation {
-                0% {
-                    opacity: 0;
-                }
+    </style>
+    <link rel="stylesheet" href="./Styles/tv.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
 
-                100% {
-                    opacity: 1;
-                }
-            }
-
-            .active > .nav-link {
-                color: #14274e !important;
-                background-color: #fff !important;
-                border-right: #14274e solid 1px;
-            }
-        </style>
-        <link rel="stylesheet" href="./Styles/tv.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-            crossorigin="anonymous"
-        />
-    </head>
-
-    <body>
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div
-                    class="col-md-12 col-lg-12 bg-light container-fluid"
-                    style="background-color: #f6f8fb"
-                >
-                    <div class="row d-block d-lg-none d-xl-none">
-                        <div class="collapse" id="navbarToggleExternalContent">
-                            <div class="bg-dark p-4">
-                                <h5 class="text-white h4">Collapsed content</h5>
-                                <span class="text-muted"
-                                    >Toggleable via the navbar brand.</span
-                                >
-                            </div>
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-md-12 col-lg-12 bg-light container-fluid" style="background-color: #f6f8fb">
+                <div class="row d-block d-lg-none d-xl-none">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
                         </div>
-                        <nav
-                            class="navbar navbar-dark"
-                            style="background-color: #14274e"
-                        >
-                            <div class="container-fluid">
-                                <button
-                                    class="navbar-toggler"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbarToggleExternalContent"
-                                >
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                            </div>
-                        </nav>
                     </div>
+                    <nav class="navbar navbar-dark" style="background-color: #14274e">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
 
-                    <div
-                        class="row pt-3 text-light border-bottom align-items-center"
-                        style="
+                <div class="row pt-3 text-light border-bottom align-items-center" style="
                             background-color: #14274e;
                             border-bottom: 3px #adb36e solid !important;
-                        "
-                    >
-                        <div class="col-2 me-0 pe-0">
-                            <img
-                                height="75px"
-                                class="d-block mx-auto mb-2"
-                                src="../Images/logo.png"
-                                alt=""
-                            />
-                            <p class="ms-3 pe-4 h6 text-center ff-logo">
-                                Lake Community Cable TV
-                            </p>
-                        </div>
-                        <div class="col ff-jumbo">
-                            <span class="fs-3">Technician</span>
-                            <span class="ms-3 border-start ps-3 fs-5"
-                                >Home</span
-                            >
-                        </div>
-                        <div class="col-2 text-end ms-auto">
-                            Technician123 |
-                            <a
-                                href="../index.html"
-                                class="text-muted text-decoration-none"
-                            >
-                                Logout</a
-                            >
-                        </div>
+                        ">
+                    <div class="col-2 me-0 pe-0">
+                        <img height="75px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
+                        <p class="ms-3 pe-4 h6 text-center ff-logo">
+                            Lake Community Cable TV
+                        </p>
                     </div>
+                    <div class="col ff-jumbo">
+                        <span class="fs-3">Technician</span>
+                        <span class="ms-3 border-start ps-3 fs-5">Home</span>
+                    </div>
+                    <div class="col-2 text-end ms-auto">
+                        Technician123 |
+                        <a href="../index.html" class="text-muted text-decoration-none">
+                            Logout</a>
+                    </div>
+                </div>
 
-                    <div class="row mt-3">
-                        <div class="col">
-                            <div class="row mt-4 pt-4 px-4 mb-4">
-                                <div class="row mt-2 justify-content-center">
-                                    <div class="col-lg-3 col-sm-12 mt-2">
-                                        <a
-                                            href="./Dispatch.html"
-                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
-                                        >
-                                            <i
-                                                class="bi bi-people"
-                                                style="font-size: 8rem"
-                                            ></i>
-                                            <p
-                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
-                                                style="
+                <div class="row mt-3">
+                    <div class="col">
+                        <div class="row mt-4 pt-4 px-4 mb-4">
+                            <div class="row mt-2 justify-content-center">
+                                <div class="col-lg-3 col-sm-12 mt-2">
+                                    <a href="./Dispatch.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
+                                        <i class="bi bi-people" style="font-size: 8rem"></i>
+                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
                                                     border-top-color: #adb36e !important;
-                                                "
-                                            >
-                                                DISPATCH
-                                            </p>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-3 col-sm-12 mt-2">
-                                        <a
-                                            href="./Calendar.html"
-                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
-                                        >
-                                            <i
-                                                class="bi bi-calendar-week"
-                                                style="font-size: 8rem"
-                                            ></i>
-                                            <p
-                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
-                                                style="
-                                                    border-top-color: #adb36e !important;
-                                                "
-                                            >
-                                                CALENDAR
-                                            </p>
-                                        </a>
-                                    </div>
+                                                ">
+                                            DISPATCH
+                                        </p>
+                                    </a>
                                 </div>
-                                <div class="row mt-2 justify-content-center">
-                                    <div class="col-lg-3 col-sm-12 mt-2">
-                                        <a
-                                            href="./DailyView.html"
-                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
-                                        >
-                                            <i
-                                                class="bi bi-eye"
-                                                style="font-size: 8rem"
-                                            ></i>
-                                            <p
-                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
-                                                style="
+                                <div class="col-lg-3 col-sm-12 mt-2">
+                                    <a href="./Calendar.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
+                                        <i class="bi bi-calendar-week" style="font-size: 8rem"></i>
+                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
                                                     border-top-color: #adb36e !important;
-                                                "
-                                            >
-                                                DAILY VIEW
-                                            </p>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-3 col-sm-12 mt-2">
-                                        <a
-                                            href="./Area.html"
-                                            class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4"
-                                        >
-                                            <i
-                                                class="bi bi-geo"
-                                                style="font-size: 8rem"
-                                            ></i>
-                                            <p
-                                                class="fs-5 fw-light pt-2 border-top ff-jumbo"
-                                                style="
+                                                ">
+                                            CALENDAR
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row mt-2 justify-content-center">
+                                <div class="col-lg-3 col-sm-12 mt-2">
+                                    <a href="./DailyView.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
+                                        <i class="bi bi-brightness-alt-high" style="font-size: 8rem"></i>
+                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
                                                     border-top-color: #adb36e !important;
-                                                "
-                                            >
-                                                AREA ASSIGNED
-                                            </p>
-                                        </a>
-                                    </div>
+                                                ">
+                                            DAILY VIEW
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-12 mt-2">
+                                    <a href="./Area.html" class="d-block btn btn-lg btn-jumbo text-light w-100 pb-2 px-4">
+                                        <i class="bi bi-geo" style="font-size: 8rem"></i>
+                                        <p class="fs-5 fw-light pt-2 border-top ff-jumbo" style="
+                                                    border-top-color: #adb36e !important;
+                                                ">
+                                            AREA ASSIGNED
+                                        </p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -208,11 +138,9 @@
                 </div>
             </div>
         </div>
-    </body>
-    <!-- JavaScript Bundle with Popper -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"
-    ></script>
+    </div>
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
 </html>
