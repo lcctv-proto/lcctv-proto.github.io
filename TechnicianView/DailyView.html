@@ -1,369 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Technician Dashboard</title>
-        <style>
-            body,
-            html {
-                height: 100%;
-                background-color: #14274e !important;
-            }
 
-            h1 {
-                font-size: 3.75em !important;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technician Dashboard</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            background-color: #14274e !important;
+        }
 
-            .active > .nav-link {
-                color: #14274e !important;
-                background-color: #fff !important;
-                border-right: #14274e solid 1px;
-            }
-        </style>
-        <link rel="stylesheet" href="./Styles/tv.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-            crossorigin="anonymous"
-        />
-    </head>
+        h1 {
+            font-size: 3.75em !important;
+        }
 
-    <body>
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
-                    <nav class="navbar mt-5">
-                        <ul class="navbar-nav fs-5">
-                            <a
-                                class="navbar-brand text-light fs-2 text-wrap text-center"
-                                href="./Login.html"
-                                ><img
-                                    height="100px"
-                                    class="d-block mx-auto mb-2"
-                                    src="../Images/logo.png"
-                                    alt=""
-                                />
-                                <p
-                                    class="ms-3 ff-logo pb-3 border-bottom"
-                                    style="
+        .active>.nav-link {
+            color: #14274e !important;
+            background-color: #fff !important;
+            border-right: #14274e solid 1px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="./Styles/tv.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-2 p-0 h-100 text-light d-none d-lg-block">
+                <nav class="navbar mt-5">
+                    <ul class="navbar-nav fs-5">
+                        <a class="navbar-brand text-light fs-2 text-wrap text-center" href="./Login.html"><img height="100px" class="d-block mx-auto mb-2" src="../Images/logo.png" alt="" />
+                            <p class="ms-3 ff-logo pb-3 border-bottom" style="
                                         border-bottom: 3px #adb36e solid !important;
-                                    "
-                                >
-                                    Lake Community Cable TV
-                                </p>
-                            </a>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./LandingPage.html"
-                                    ><i class="bi bi-speedometer2 pl-3"></i
-                                    ><span class="px-3">DASHBOARD</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Dispatch.html"
-                                    ><i class="bi bi-people"></i
-                                    ><span class="px-3">DISPATCH</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Calendar.html"
-                                    ><i class="bi bi-calendar-week"></i
-                                    ><span class="px-3">CALENDAR</span></a
-                                >
-                            </li>
-                            <li class="nav-item active">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./DailyView.html"
-                                    ><i class="bi bi-eye pl-3"></i
-                                    ><span class="px-3">DAILY VIEW</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href="./Area.html"
-                                    ><i class="bi bi-geo"></i
-                                    ><span class="px-3">AREA ASSIGNED</span></a
-                                >
-                            </li>
-                            <li class="nav-item mt-5">
-                                <a
-                                    class="nav-link text-light bg-dark-navy px-3"
-                                    href="../index.html"
-                                    ><i class="bi bi-box-arrow-left"></i
-                                    ><span class="px-3">LOGOUT</span></a
-                                >
-                            </li>
-                        </ul>
+                                    ">
+                                Lake Community Cable TV
+                            </p>
+                            <p class="ff-jumbo fs-5">TECHNICIAN MODULE</p>
+                        </a>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./LandingPage.html"><i class="bi bi-speedometer2 pl-3"></i><span class="px-3">DASHBOARD</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Dispatch.html"><i class="bi bi-people"></i><span class="px-3">DISPATCH</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Calendar.html"><i class="bi bi-calendar-week"></i><span class="px-3">CALENDAR</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light px-3" href="./DailyView.html"><i class="bi bi-eye pl-3"></i><span class="px-3">DAILY VIEW</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light px-3" href="./Area.html"><i class="bi bi-geo"></i><span class="px-3">AREA ASSIGNED</span></a>
+                        </li>
+                        <li class="nav-item mt-5">
+                            <a class="nav-link text-light bg-dark-navy px-3" href="../index.html"><i class="bi bi-box-arrow-left"></i><span class="px-3">LOGOUT</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid" style="background-color: #f6f8fb">
+                <div class="row d-block d-lg-none d-xl-none">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-dark" style="background-color: #14274e">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
                     </nav>
                 </div>
-                <div
-                    class="col-md-12 col-lg-10 bg-light p-lg-3 container-fluid"
-                    style="background-color: #f6f8fb"
-                >
-                    <div class="row d-block d-lg-none d-xl-none">
-                        <div class="collapse" id="navbarToggleExternalContent">
-                            <div class="bg-dark p-4">
-                                <h5 class="text-white h4">Collapsed content</h5>
-                                <span class="text-muted"
-                                    >Toggleable via the navbar brand.</span
-                                >
-                            </div>
-                        </div>
-                        <nav
-                            class="navbar navbar-dark"
-                            style="background-color: #14274e"
-                        >
-                            <div class="container-fluid">
-                                <button
-                                    class="navbar-toggler"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbarToggleExternalContent"
-                                >
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                            </div>
-                        </nav>
+
+                <div class="row py-3 border-bottom" style="border-bottom: 3px #adb36e solid !important">
+                    <div class="col-3">
+                        <h3>Daily View</h3>
                     </div>
-
-                    <div
-                        class="row py-3 border-bottom"
-                        style="border-bottom: 3px #adb36e solid !important"
-                    >
-                        <div class="col-3">
-                            <h3>Daily View</h3>
-                        </div>
-                        <div class="col-3 ms-auto text-end">
-                            Technician123 |
-                            <a
-                                href="../index.html"
-                                class="text-muted text-decoration-none"
-                            >
-                                Logout</a
-                            >
-                        </div>
+                    <div class="col-3 ms-auto text-end">
+                        Technician123 |
+                        <a href="../index.html" class="text-muted text-decoration-none">
+                            Logout</a>
                     </div>
+                </div>
 
-                    <!-- repeating component-->
-                    <div class="row mt-4">
-                        <h4>TODAY</h4>
-                        <h6>Saturday, April 3</h6>
-                        <hr />
-                        <p class="text-center">Nothing to do yet.</p>
-                    </div>
-                    <!-- end repeating component-->
+                <!-- repeating component-->
+                <div class="row mt-4">
+                    <h4>TODAY</h4>
+                    <h6>Saturday, April 3</h6>
+                    <hr />
+                    <p class="text-center">Nothing to do yet.</p>
+                </div>
+                <!-- end repeating component-->
 
-                    <div class="row">
-                        <h5>Tomorrow</h5>
-                        <h6>Sunday, April 4</h6>
-                        <hr />
-                        <p class="text-center">Nothing to do yet.</p>
-                    </div>
+                <div class="row">
+                    <h5>Tomorrow</h5>
+                    <h6>Sunday, April 4</h6>
+                    <hr />
+                    <p class="text-center">Nothing to do yet.</p>
+                </div>
 
-                    <div class="row">
-                        <div class="col">
-                            <h5>Monday</h5>
-                            <h6>April 5, 2021</h6>
+                <div class="row">
+                    <div class="col">
+                        <h5>Monday</h5>
+                        <h6>April 5, 2021</h6>
 
-                            <div
-                                class="row p-0 border-success card m-4 bg-light"
-                            >
-                                <div class="row g-0">
-                                    <div
-                                        class="col-2 d-flex justify-content-center bg-success"
-                                    >
-                                        <h4
-                                            class="text-center text-light p-3 m-0"
-                                        >
-                                            NO SIGNAL
-                                        </h4>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="card-body">
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="align-text-bottom h4 text-decoration-none"
-                                                >JO-000001</a
-                                            >
-                                        </div>
+                        <div class="row p-0 border-success card m-4 bg-light">
+                            <div class="row g-0">
+                                <div class="col-2 d-flex justify-content-center bg-success">
+                                    <h4 class="text-center text-light p-3 m-0">
+                                        NO SIGNAL
+                                    </h4>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="align-text-bottom h4 text-decoration-none">JO-000001</a>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="row p-0 border-warning card m-4 bg-light"
-                            >
-                                <div class="row g-0">
-                                    <div
-                                        class="col-2 d-flex justify-content-center bg-warning"
-                                    >
-                                        <h4
-                                            class="text-center text-light p-3 m-0"
-                                        >
-                                            INSTALLATION
-                                        </h4>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="card-body">
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="align-text-bottom h4 text-decoration-none"
-                                                >JO-000003</a
-                                            >
-                                        </div>
+                        </div>
+                        <div class="row p-0 border-warning card m-4 bg-light">
+                            <div class="row g-0">
+                                <div class="col-2 d-flex justify-content-center bg-warning">
+                                    <h4 class="text-center text-light p-3 m-0">
+                                        INSTALLATION
+                                    </h4>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="align-text-bottom h4 text-decoration-none">JO-000003</a>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="row p-0 border-danger card m-4 bg-light"
-                            >
-                                <div class="row g-0">
-                                    <div
-                                        class="col-2 d-flex justify-content-center bg-danger"
-                                    >
-                                        <h4
-                                            class="text-center text-light p-3 m-0"
-                                        >
-                                            RELOCATION
-                                        </h4>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="card-body">
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="align-text-bottom h4 text-decoration-none"
-                                                >JO-000004</a
-                                            >
-                                        </div>
+                        </div>
+                        <div class="row p-0 border-danger card m-4 bg-light">
+                            <div class="row g-0">
+                                <div class="col-2 d-flex justify-content-center bg-danger">
+                                    <h4 class="text-center text-light p-3 m-0">
+                                        RELOCATION
+                                    </h4>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="align-text-bottom h4 text-decoration-none">JO-000004</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="row">
-                        <div class="col">
-                            <h5>Tuesday</h5>
-                            <h6>April 6, 2021</h6>
+                <div class="row">
+                    <div class="col">
+                        <h5>Tuesday</h5>
+                        <h6>April 6, 2021</h6>
 
-                            <div
-                                class="row p-0 border-success card m-4 bg-light"
-                            >
-                                <div class="row g-0">
-                                    <div
-                                        class="col-2 d-flex justify-content-center bg-success"
-                                    >
-                                        <h4
-                                            class="text-center text-light p-3 m-0"
-                                        >
-                                            NO SIGNAL
-                                        </h4>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="card-body">
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="align-text-bottom h4 text-decoration-none"
-                                                >JO-000009</a
-                                            >
-                                        </div>
+                        <div class="row p-0 border-success card m-4 bg-light">
+                            <div class="row g-0">
+                                <div class="col-2 d-flex justify-content-center bg-success">
+                                    <h4 class="text-center text-light p-3 m-0">
+                                        NO SIGNAL
+                                    </h4>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="align-text-bottom h4 text-decoration-none">JO-000009</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-0 border-info card m-4 bg-light">
-                                <div class="row g-0">
-                                    <div
-                                        class="col-2 d-flex justify-content-center bg-info"
-                                    >
-                                        <h4
-                                            class="text-center text-light p-3 m-0"
-                                        >
-                                            DAMAGED REMOTE
-                                        </h4>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="card-body">
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="align-text-bottom h4 text-decoration-none"
-                                                >JO-000011</a
-                                            >
-                                        </div>
+                        </div>
+                        <div class="row p-0 border-info card m-4 bg-light">
+                            <div class="row g-0">
+                                <div class="col-2 d-flex justify-content-center bg-info">
+                                    <h4 class="text-center text-light p-3 m-0">
+                                        DAMAGED REMOTE
+                                    </h4>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="align-text-bottom h4 text-decoration-none">JO-000011</a>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="row p-0 border-warning card m-4 bg-light"
-                            >
-                                <div class="row g-0">
-                                    <div
-                                        class="col-2 d-flex justify-content-center bg-warning"
-                                    >
-                                        <h4
-                                            class="text-center text-light p-3 m-0"
-                                        >
-                                            INSTALLATION
-                                        </h4>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="card-body">
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="align-text-bottom h4 text-decoration-none"
-                                                >JO-000019</a
-                                            >
-                                        </div>
+                        </div>
+                        <div class="row p-0 border-warning card m-4 bg-light">
+                            <div class="row g-0">
+                                <div class="col-2 d-flex justify-content-center bg-warning">
+                                    <h4 class="text-center text-light p-3 m-0">
+                                        INSTALLATION
+                                    </h4>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="align-text-bottom h4 text-decoration-none">JO-000019</a>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="row p-0 border-danger card m-4 bg-light"
-                            >
-                                <div class="row g-0">
-                                    <div
-                                        class="col-2 d-flex justify-content-center bg-danger"
-                                    >
-                                        <h4
-                                            class="text-center text-light p-3 m-0"
-                                        >
-                                            RELOCATION
-                                        </h4>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="card-body">
-                                            <a
-                                                href="#joborder"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#joborder"
-                                                class="align-text-bottom h4 text-decoration-none"
-                                                >JO-000022</a
-                                            >
-                                        </div>
+                        </div>
+                        <div class="row p-0 border-danger card m-4 bg-light">
+                            <div class="row g-0">
+                                <div class="col-2 d-flex justify-content-center bg-danger">
+                                    <h4 class="text-center text-light p-3 m-0">
+                                        RELOCATION
+                                    </h4>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <a href="#joborder" data-bs-toggle="modal" data-bs-target="#joborder" class="align-text-bottom h4 text-decoration-none">JO-000022</a>
                                     </div>
                                 </div>
                             </div>
@@ -372,442 +223,252 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="joborder" tabindex="-1">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div
-                        class="modal-header text-light"
-                        style="
+    </div>
+    <div class="modal fade" id="joborder" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header text-light" style="
                             background-color: #14274e;
                             border-bottom: 5px #adb36e solid;
-                        "
-                    >
-                        <h5 class="modal-title" id="exampleModalLabel">
-                            JO INFORMATION
-                        </h5>
-                        <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                        ></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="row">
-                                <div class="col">
-                                    <label
-                                        for="subscriber_name"
-                                        class="form-label"
-                                        >JO Number:</label
-                                    >
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="subscriber_name"
-                                        value="JO-000001"
-                                        disabled
-                                    />
-                                </div>
+                        ">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        JO INFORMATION
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <label for="subscriber_name" class="form-label">JO Number:</label>
+                                <input type="text" class="form-control" id="subscriber_name" value="JO-000001" disabled />
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <label
-                                        for="subscriber_name"
-                                        class="form-label"
-                                        >Subscriber Name:</label
-                                    >
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="subscriber_name"
-                                        value="CHARLES EDWARD ALALAN UMALI"
-                                        disabled
-                                    />
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="subscriber_name" class="form-label">Subscriber Name:</label>
+                                <input type="text" class="form-control" id="subscriber_name" value="CHARLES EDWARD ALALAN UMALI" disabled />
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <label
-                                        for="account_number"
-                                        class="form-label"
-                                        >Account Number:</label
-                                    >
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="account_number"
-                                        value="0939302011369"
-                                        disabled
-                                    />
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="account_number" class="form-label">Account Number:</label>
+                                <input type="text" class="form-control" id="account_number" value="0939302011369" disabled />
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <label for="address" class="form-label"
-                                        >Address:</label
-                                    >
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="address"
-                                        value="#160 San Salvador St., Brgy. Maharlika, Pasig City"
-                                        disabled
-                                    />
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="address" class="form-label">Address:</label>
+                                <input type="text" class="form-control" id="address" value="#160 San Salvador St., Brgy. Maharlika, Pasig City" disabled />
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <label
-                                        for="subscription_plan"
-                                        class="form-label"
-                                        >Subscription Plan:</label
-                                    >
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="subscription_plan" class="form-label">Subscription Plan:</label>
 
-                                    <select class="form-select" disabled>
-                                        <option hidden>
-                                            SELECT SUBSCRIPTION PLAN
-                                        </option>
-                                        <option value="b640">
-                                            Basic 640 (59 SD PLUS 23 HD
-                                            Channels)
-                                        </option>
-                                        <option value="b640">
-                                            Premium 790 (91 SD PLUS 35 HD
-                                            Channels)
-                                        </option>
-                                        <option selected value="b640">
-                                            International 1099 (118 SD PLUS 54
-                                            HD Channel)
-                                        </option>
-                                    </select>
-                                </div>
+                                <select class="form-select" disabled>
+                                    <option hidden>
+                                        SELECT SUBSCRIPTION PLAN
+                                    </option>
+                                    <option value="b640">
+                                        Basic 640 (59 SD PLUS 23 HD
+                                        Channels)
+                                    </option>
+                                    <option value="b640">
+                                        Premium 790 (91 SD PLUS 35 HD
+                                        Channels)
+                                    </option>
+                                    <option selected value="b640">
+                                        International 1099 (118 SD PLUS 54
+                                        HD Channel)
+                                    </option>
+                                </select>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <label for="concern_type" class="form-label"
-                                        >Concern Type:</label
-                                    >
-                                    <select class="form-select" disabled>
-                                        <option hidden>
-                                            SELECT CONCERN TYPE
-                                        </option>
-                                        <option>Billing Related</option>
-                                        <option>
-                                            Follow Up New Installation
-                                        </option>
-                                        <option>New Application</option>
-                                        <option>Payment Related</option>
-                                        <option>Upgrade Subsription</option>
-                                        <option>Site Transfer</option>
-                                        <option selected>Reconnection</option>
-                                        <option>
-                                            Others (Please specify in the Text
-                                            Field Below.)
-                                        </option>
-                                    </select>
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="concern_type" class="form-label">Concern Type:</label>
+                                <select class="form-select" disabled>
+                                    <option hidden>
+                                        SELECT CONCERN TYPE
+                                    </option>
+                                    <option>Billing Related</option>
+                                    <option>
+                                        Follow Up New Installation
+                                    </option>
+                                    <option>New Application</option>
+                                    <option>Payment Related</option>
+                                    <option>Upgrade Subsription</option>
+                                    <option>Site Transfer</option>
+                                    <option selected>Reconnection</option>
+                                    <option>
+                                        Others (Please specify in the Text
+                                        Field Below.)
+                                    </option>
+                                </select>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <label for="add-info"
-                                        >Additional Information:</label
-                                    >
-                                    <textarea
-                                        class="form-control"
-                                        id="add-info"
-                                        rows="5"
-                                        disabled
-                                        style="resize: none"
-                                    >
-I have already paid my bill. Will you please reconnect my cable connection. I need to watch my movies ASAP!</textarea
-                                    >
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="add-info">Additional Information:</label>
+                                <textarea class="form-control" id="add-info" rows="5" disabled style="resize: none">
+I have already paid my bill. Will you please reconnect my cable connection. I need to watch my movies ASAP!</textarea>
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                        >
-                            CLOSE
-                        </button>
-                        <button
-                            type="button"
-                            data-bs-dismiss="modal"
-                            data-bs-toggle="modal"
-                            data-bs-target="#createReport"
-                            class="btn btn-primary"
-                        >
-                            CREATE REPORT
-                        </button>
-                    </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        CLOSE
+                    </button>
+                    <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#createReport" class="btn btn-primary">
+                        CREATE REPORT
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="createReport" tabindex="-2">
-            <div class="modal-dialog modal-dialog-scrollable modal-xl">
-                <div class="modal-content">
-                    <div
-                        class="modal-header text-light"
-                        style="
+    </div>
+    <div class="modal fade" id="createReport" tabindex="-2">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header text-light" style="
                             background-color: #14274e;
                             border-bottom: 5px #adb36e solid;
-                        "
-                    >
-                        <h5 class="modal-title" id="exampleModalLabel">
-                            Create Status Report
-                        </h5>
-                        <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                        ></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="row">
-                                <div class="col">
-                                    <label
-                                        for="subscriber_name"
-                                        class="form-label"
-                                        >Subscriber Name:</label
-                                    >
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="subscriber_name"
-                                        value="CHARLES EDWARD ALALAN UMALI"
-                                        disabled
-                                    />
-                                </div>
+                        ">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Create Status Report
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <label for="subscriber_name" class="form-label">Subscriber Name:</label>
+                                <input type="text" class="form-control" id="subscriber_name" value="CHARLES EDWARD ALALAN UMALI" disabled />
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <label
-                                        for="account_number"
-                                        class="form-label"
-                                        >Account Number:</label
-                                    >
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="account_number"
-                                        value="0939302011369"
-                                        disabled
-                                    />
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="account_number" class="form-label">Account Number:</label>
+                                <input type="text" class="form-control" id="account_number" value="0939302011369" disabled />
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <label
-                                        for="subscription_plan"
-                                        class="form-label"
-                                        >Subscription Plan:</label
-                                    >
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="subscription_plan" class="form-label">Subscription Plan:</label>
 
-                                    <select class="form-select" disabled>
-                                        <option hidden>
-                                            SELECT SUBSCRIPTION PLAN
-                                        </option>
-                                        <option value="b640">
-                                            Basic 640 (59 SD PLUS 23 HD
-                                            Channels)
-                                        </option>
-                                        <option value="b640">
-                                            Premium 790 (91 SD PLUS 35 HD
-                                            Channels)
-                                        </option>
-                                        <option selected value="b640">
-                                            International 1099 (118 SD PLUS 54
-                                            HD Channel)
-                                        </option>
-                                    </select>
-                                </div>
+                                <select class="form-select" disabled>
+                                    <option hidden>
+                                        SELECT SUBSCRIPTION PLAN
+                                    </option>
+                                    <option value="b640">
+                                        Basic 640 (59 SD PLUS 23 HD
+                                        Channels)
+                                    </option>
+                                    <option value="b640">
+                                        Premium 790 (91 SD PLUS 35 HD
+                                        Channels)
+                                    </option>
+                                    <option selected value="b640">
+                                        International 1099 (118 SD PLUS 54
+                                        HD Channel)
+                                    </option>
+                                </select>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <label for="concern_type" class="form-label"
-                                        >Concern Type:</label
-                                    >
-                                    <select class="form-select" disabled>
-                                        <option hidden>
-                                            SELECT CONCERN TYPE
-                                        </option>
-                                        <option>Billing Related</option>
-                                        <option>
-                                            Follow Up New Installation
-                                        </option>
-                                        <option>New Application</option>
-                                        <option>Payment Related</option>
-                                        <option>Upgrade Subsription</option>
-                                        <option>Site Transfer</option>
-                                        <option selected>Reconnection</option>
-                                        <option>
-                                            Others (Please specify in the Text
-                                            Field Below.)
-                                        </option>
-                                    </select>
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="concern_type" class="form-label">Concern Type:</label>
+                                <select class="form-select" disabled>
+                                    <option hidden>
+                                        SELECT CONCERN TYPE
+                                    </option>
+                                    <option>Billing Related</option>
+                                    <option>
+                                        Follow Up New Installation
+                                    </option>
+                                    <option>New Application</option>
+                                    <option>Payment Related</option>
+                                    <option>Upgrade Subsription</option>
+                                    <option>Site Transfer</option>
+                                    <option selected>Reconnection</option>
+                                    <option>
+                                        Others (Please specify in the Text
+                                        Field Below.)
+                                    </option>
+                                </select>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <label for="secret_key" class="form-label"
-                                        >Enter Secret Key:</label
-                                    >
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="secret_key"
-                                    />
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="secret_key" class="form-label">Enter Secret Key:</label>
+                                <input type="text" class="form-control" id="secret_key" />
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">Materials Used:</div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">Materials Used:</div>
+                        </div>
+                        <div class="row">
+                            <label for="number" class="col-sm-10 col-form-label">P61QVMRM, PPC PERFECTFLEX, 6-SERIES,
+                                QUAD-SHIELD CABLE, METER MARKINGS:</label>
+                            <div class="col-sm-2 justify-content-center align-items-center">
+                                <input type="number" class="form-control" id="surname" />
                             </div>
-                            <div class="row">
-                                <label
-                                    for="number"
-                                    class="col-sm-10 col-form-label"
-                                    >P61QVMRM, PPC PERFECTFLEX, 6-SERIES,
-                                    QUAD-SHIELD CABLE, METER MARKINGS:</label
-                                >
-                                <div
-                                    class="col-sm-2 justify-content-center align-items-center"
-                                >
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        id="surname"
-                                    />
-                                </div>
+                        </div>
+                        <div class="row mt-1">
+                            <label for="number" class="col-sm-10 col-form-label">PPC, EX6XLWSPLUS, RG6 UNIVERSAL COMPRESSION
+                                CONNECTOR, 60% THRU:</label>
+                            <div class="col-sm-2 justify-content-center align-items-center">
+                                <input type="number" class="form-control" id="surname" />
                             </div>
-                            <div class="row mt-1">
-                                <label
-                                    for="number"
-                                    class="col-sm-10 col-form-label"
-                                    >PPC, EX6XLWSPLUS, RG6 UNIVERSAL COMPRESSION
-                                    CONNECTOR, 60% THRU:</label
-                                >
-                                <div
-                                    class="col-sm-2 justify-content-center align-items-center"
-                                >
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        id="surname"
-                                    />
-                                </div>
+                        </div>
+                        <div class="row mt-1">
+                            <label for="number" class="col-sm-10 col-form-label">PPC, EX6XLPLUS, COMPRESSION CONNECTOR,
+                                CONTINUITY CONNECTOR, 60% THRU:</label>
+                            <div class="col-sm-2 justify-content-center align-items-center">
+                                <input type="number" class="form-control" id="surname" />
                             </div>
-                            <div class="row mt-1">
-                                <label
-                                    for="number"
-                                    class="col-sm-10 col-form-label"
-                                    >PPC, EX6XLPLUS, COMPRESSION CONNECTOR,
-                                    CONTINUITY CONNECTOR, 60% THRU:</label
-                                >
-                                <div
-                                    class="col-sm-2 justify-content-center align-items-center"
-                                >
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        id="surname"
-                                    />
-                                </div>
+                        </div>
+                        <div class="row mt-1">
+                            <label for="number" class="col-sm-10 col-form-label">CONCRETE TOKS SIZE 8:</label>
+                            <div class="col-sm-2 justify-content-center align-items-center">
+                                <input type="number" class="form-control" id="surname" />
                             </div>
-                            <div class="row mt-1">
-                                <label
-                                    for="number"
-                                    class="col-sm-10 col-form-label"
-                                    >CONCRETE TOKS SIZE 8:</label
-                                >
-                                <div
-                                    class="col-sm-2 justify-content-center align-items-center"
-                                >
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        id="surname"
-                                    />
-                                </div>
+                        </div>
+                        <div class="row mt-1">
+                            <label for="number" class="col-sm-10 col-form-label">CABLE TIE 6", 150 MM BLACK:</label>
+                            <div class="col-sm-2 justify-content-center align-items-center">
+                                <input type="number" class="form-control" id="surname" />
                             </div>
-                            <div class="row mt-1">
-                                <label
-                                    for="number"
-                                    class="col-sm-10 col-form-label"
-                                    >CABLE TIE 6", 150 MM BLACK:</label
-                                >
-                                <div
-                                    class="col-sm-2 justify-content-center align-items-center"
-                                >
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        id="surname"
-                                    />
-                                </div>
+                        </div>
+                        <div class="row mt-1">
+                            <label for="number" class="col-sm-10 col-form-label">DIGITAL REMOTE CONTROL:</label>
+                            <div class="col-sm-2 justify-content-center align-items-center">
+                                <input type="number" class="form-control" id="surname" />
                             </div>
-                            <div class="row mt-1">
-                                <label
-                                    for="number"
-                                    class="col-sm-10 col-form-label"
-                                    >DIGITAL REMOTE CONTROL:</label
-                                >
-                                <div
-                                    class="col-sm-2 justify-content-center align-items-center"
-                                >
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        id="surname"
-                                    />
-                                </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="remarks">Remarks</label>
+                                <textarea class="form-control" id="remarks" rows="3" style="resize: none"></textarea>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <label for="remarks">Remarks</label>
-                                    <textarea
-                                        class="form-control"
-                                        id="remarks"
-                                        rows="3"
-                                        style="resize: none"
-                                    ></textarea>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                            data-bs-toggle="modal"
-                            data-bs-target="#joborder"
-                        >
-                            BACK
-                        </button>
-                        <button
-                            type="button"
-                            data-bs-dismiss="modal"
-                            data-bs-toggle="modal"
-                            data-bs-target="#createReport"
-                            class="btn btn-primary"
-                        >
-                            CREATE REPORT
-                        </button>
-                    </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#joborder">
+                        BACK
+                    </button>
+                    <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#createReport" class="btn btn-primary">
+                        CREATE REPORT
+                    </button>
                 </div>
             </div>
         </div>
-    </body>
-    <!-- JavaScript Bundle with Popper -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"
-    ></script>
+    </div>
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
 </html>
