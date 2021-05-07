@@ -2,130 +2,144 @@
 
 body,
 html {
-    height: 100%;
-    background-color: #14274e !important;
+  height: 100%;
+  background-color: #14274e !important;
 }
 
 h1 {
-    font-size: 3.75em !important;
+  font-size: 3.75em !important;
 }
 
 .col-md-12.col-lg-10 {
-    animation: fadeInAnimation ease 0.75s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  animation: fadeInAnimation ease 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 .nav-link:hover {
-    color: #fff !important;
-    background-color: #c1a1d3 !important;
+  color: #fff !important;
+  background-color: #c1a1d3 !important;
 }
 
 .nav-link:hover * {
-    animation: fadeInAnimation ease 0.75s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  animation: fadeInAnimation ease 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-.pagination > li > a {
-    background-color: transparent;
-    color: #14274e;
-    border-color: #14274e !important;
+.pagination>li>a {
+  background-color: transparent;
+  color: #14274e;
+  border-color: #14274e !important;
 }
 
-.pagination > li > a:focus,
-.pagination > li > a:hover,
-.pagination > li > span:focus,
-.pagination > li > span:hover {
-    color: white;
-    background-color: #14274e;
-    border-color: white;
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+  color: white;
+  background-color: #14274e;
+  border-color: white;
 }
 
-.pagination > .active > a {
-    color: white;
-    background-color: #14274e !important;
-    border: solid 1px #14274e !important;
+.pagination>.active>a {
+  color: white;
+  background-color: #14274e !important;
+  border: solid 1px #14274e !important;
 }
 
-.pagination > .active > a:hover {
-    background-color: #14274e !important;
-    border: solid 1px #14274e;
+.pagination>.active>a:hover {
+  background-color: #14274e !important;
+  border: solid 1px #14274e;
 }
 
-.active > .nav-link {
-    color: #14274e !important;
-    background-color: #fff !important;
-    border-right: #14274e solid 1px;
+.active>.nav-link {
+  color: #14274e !important;
+  background-color: #fff !important;
+  border-right: #14274e solid 1px;
 }
 
 .bg-dark-navy {
-    background-color: rgb(11, 22, 42);
+  background-color: rgb(11, 22, 42);
 }
 
 .ff-logo {
-    font-family: "Mate SC";
+  font-family: "Mate SC";
 }
 
 .border-subscriber {
-    border-color: #161d6f !important;
+  border-color: #161d6f !important;
 }
 
 .btn-outline-subscriber {
-    border-color: #161d6f !important;
-    color: #161d6f !important;
+  border-color: #161d6f !important;
+  color: #161d6f !important;
 }
 
 .btn-outline-subscriber .active {
-    background-color: #161d6f !important;
-    color: white !important;
+  background-color: #161d6f !important;
+  color: white !important;
 }
 
 .border-installation {
-    border-color: #810000 !important;
+  border-color: #810000 !important;
 }
 
 .btn-outline-installation {
-    border-color: #810000 !important;
-    color: #810000 !important;
+  border-color: #810000 !important;
+  color: #810000 !important;
 }
 
 .btn-outline-installation .active {
-    background-color: #810000 !important;
-    color: white !important;
+  background-color: #810000 !important;
+  color: white !important;
 }
 
 .border-sales {
-    border-color: #1f441e !important;
+  border-color: #1f441e !important;
 }
 
 .btn-outline-sales {
-    border-color: #1f441e !important;
-    color: #1f441e !important;
+  border-color: #1f441e !important;
+  color: #1f441e !important;
 }
 
 .btn-outline-sales .active {
-    background-color: #1f441e !important;
-    color: white !important;
+  background-color: #1f441e !important;
+  color: white !important;
 }
 
 .btn-navy {
-    background-color: #14274e !important;
-    color: #fff !important;
+  background-color: #14274e !important;
+  color: #fff !important;
 }
 
 .btn-navy:hover {
-    background-color: #fff !important;
-    color: #14274e !important;
-    border-color: #14274e !important;
+  background-color: #fff !important;
+  color: #14274e !important;
+  border-color: #14274e !important;
+}
+
+.btn-jumbo {
+  background-color: #14274e !important;
+}
+
+.btn-jumbo:hover {
+  background-color: white !important;
+  color: #14274e !important;
+  border-color: #14274e !important;
+}
+
+.btn-jumbo:hover p {
+  border-color: #14274e !important;
 }
