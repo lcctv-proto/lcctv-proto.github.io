@@ -10,6 +10,33 @@ h1 {
     font-size: 3.75em !important;
 }
 
+.col-md-12.col-lg-10 {
+    animation: fadeInAnimation ease 0.75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    background-color: #c1a1d3 !important;
+}
+
+.nav-link:hover * {
+    animation: fadeInAnimation ease 0.75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 .pagination > li > a {
     background-color: transparent;
     color: #14274e;

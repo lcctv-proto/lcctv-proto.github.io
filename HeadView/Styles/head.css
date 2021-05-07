@@ -14,6 +14,11 @@
         opacity: 1;
     }
 }
+.nav-link:hover * {
+    animation: fadeInAnimation ease 0.75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 
 .nav-link:hover {
     color: #fff !important;
