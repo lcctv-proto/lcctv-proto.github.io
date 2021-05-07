@@ -51,6 +51,12 @@ input::-webkit-inner-spin-button {
     background-color: #adb36e !important;
 }
 
+.nav-link:hover * {
+    animation: fadeInAnimation ease 0.75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 .bg-dark-navy {
     background-color: rgb(11, 22, 42);
 }
